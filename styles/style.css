@@ -69,11 +69,13 @@ body {
 }
 
 .hero {
-  margin: 70px 0px 0px;  /*header랑 안겹치기*/
+  margin: 70px 0px 0px; /*header랑 안겹치기*/
 }
 
 .hero-inner {
-  margin: 200px 405px;
+  max-width: 1920px;
+  width: 100%;
+  margin: 200px auto;
 
   display: flex;
   justify-content: center;
@@ -88,6 +90,7 @@ body {
   justify-content: center;
 
   gap: 30px;
+
 }
 
 .hero-main {
@@ -131,4 +134,5 @@ body {
   
   width: 746px;
   height: 340px;
+
 }
