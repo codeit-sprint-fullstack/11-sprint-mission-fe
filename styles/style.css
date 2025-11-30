@@ -26,34 +26,44 @@ header {
 
 .logo {
   display: flex;
+
+  /* 피그마에서 값 참조 */
   width: 153px;
   height: 51px;
   padding: 5.017px 0 5.848px 0;
+
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .login {
   display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* 피그마에서 값 참조 */
   width: 128px;
   height: 48px;
   padding: 12px 23px;
-  justify-content: center;
-  align-items: center;
   gap: 10px;
   border-radius: 8px;
   background: #3692ff;
-
   color: #f3f4f6;
-  font-family: Pretendard;
+  font-family: Pretendard; /*폰트 링크 적용*/
   font-style: normal;
   font-weight: 600;
   line-height: 26px;
 
-  text-decoration: none;
+  text-decoration: none; /*밑줄 없애기!*/
+  cursor: pointer;
 }
 
 .logo,
 .login {
-  flex-shrink: 0;
+  flex-shrink: 0; /*겹치지 않으려고*/
+}
+
+body {
+  background-color: #cfe5ff;
 }
