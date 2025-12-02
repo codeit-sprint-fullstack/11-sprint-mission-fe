@@ -106,7 +106,7 @@ h1 {
   align-items: center;
   gap: 64px;
 
-  background-color: #fcfcfc; /*그림옆으로만 색 변해야하는데ㅠㅠ*/
+  /* background-color: #fcfcfc; */
 }
 
 /* .feature-content {
