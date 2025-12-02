@@ -134,3 +134,19 @@ p {
 }
 
 /* 인기상품 확인 양옆 마진 왜 흰색아닌지 모르겠음 */
+
+#bottom {
+  background-image: url(/images/bottombanner.png);
+  padding-bottom: 60px;
+  gap: 32px;
+}
+
+.bottom-banner {
+  background-color: #cfe5ff;
+  height: 540px;
+  display: flex;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: 80% bottom;
+  background-size: 55%;
+}
