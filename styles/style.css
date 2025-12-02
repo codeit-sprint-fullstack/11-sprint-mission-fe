@@ -57,6 +57,8 @@ h1 {
   font-style: normal;
   font-weight: 700;
   line-height: 56px;
+
+  margin-bottom: 24px;
 }
 
 .hero-button {
@@ -92,3 +94,38 @@ h1 {
   background-position: 80% bottom;
   background-size: 55%;
 }
+
+#features {
+  background-color: #ffffff;
+}
+
+.feature {
+  display: flex;
+  padding: 138px 0;
+  align-items: center;
+  gap: 64px;
+
+  background-color: #fcfcfc;
+}
+
+h2 {
+  color: #3692ff;
+  font-family: Pretendard;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px;
+
+  margin-bottom: 12px;
+}
+
+p {
+  color: #374151;
+  font-family: Pretendard;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+}
+
+/* 인기상품 확인 양옆 마진 왜 흰색아닌지 모르겠음 */
