@@ -6,7 +6,7 @@
 
 /* html {
   font-size: 62.5%;
-  
+  rem으로 표현하려면..해야하는데 피그마랑 달라서 더 헷갈려요
 } */
 
 body {
@@ -80,7 +80,7 @@ h1 {
 }
 
 #hero {
-  background-image: url(/images/bodysection-1.png);
+  background-image: url(/images/herobanner.png);
   padding-bottom: 60px;
   gap: 32px;
 }
@@ -102,11 +102,16 @@ h1 {
 .feature {
   display: flex;
   padding: 138px 0;
+  justify-content: center;
   align-items: center;
   gap: 64px;
 
-  background-color: #fcfcfc;
+  background-color: #fcfcfc; /*그림옆으로만 색 변해야하는데ㅠㅠ*/
 }
+
+/* .feature-content {
+  background-color: #fcfcfc;
+} */
 
 h2 {
   color: #3692ff;
