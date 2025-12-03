@@ -1,11 +1,50 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>login</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login</title>
+    <link rel="stylesheet" href="/styles/login-style.css" />
+  </head>
+  <body>
+    <div id="layout">
+      <header class="title">
+        <a href="/" alt="클릭시 홈으로 가기">
+          <img src="/images/pandalogo.svg" alt="판다마켓 로고" />
+        </a>
+      </header>
+      <main>
+        <form>
+          <label>
+            이메일
+            <input name="email" type="email" />
+          </label>
+          <label>
+            비밀번호
+            <input name="password" type="password" />
+          </label>
+          <button>로그인</button>
+        </form>
+        <section class="social-login">
+          <div class="social-login-inner">
+            <h2>간편 로그인하기</h2>
+            <div class="social-login-icon">
+              <a>
+                <img src="./images/google.png" alt="구글 로그인" />
+              </a>
+              <a>
+                <img src="./images/kakaotalk.png" alt="카카오톡 로그인" />
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <p>
+          판다마켓이 처음이신가요?
+          <a href="./signup.html">회원가입</a>
+        </p>
+      </footer>
+    </div>
+  </body>
 </html>

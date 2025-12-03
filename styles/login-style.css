@@ -1,0 +1,62 @@
+* {
+  box-sizing: brder-box;
+  margin: 0;
+  padding: 0;
+}
+
+#layout {
+}
+
+form {
+  margin: 0px;
+}
+
+label {
+  display: block;
+}
+
+input {
+  display: block;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.social-login {
+  display: flex;
+  width: 640px;
+  padding: 16px 23px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 8px;
+  background: #E6F2FF;
+}
+.social-login h2 {
+  color: #1F2937;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+}
+
+.social-login-inner {
+  display: flex;
+  width: 594px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-login-icon {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.social-login-icon img {
+  width: 40px;
+  height: 40px;
+}
