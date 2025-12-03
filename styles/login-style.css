@@ -1,22 +1,20 @@
 * {
-  box-sizing: brder-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 #layout {
+  width: 640px;
+  margin: 231px auto 284px;
 }
 
 form {
-  margin: 0px;
-}
-
-label {
-  display: block;
-}
-
-input {
-  display: block;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .title {
@@ -26,28 +24,27 @@ input {
 
 .social-login {
   display: flex;
-  width: 640px;
-  padding: 16px 23px;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
+  width: 100%;
   border-radius: 8px;
-  background: #E6F2FF;
+  background: #e6f2ff;
+  margin: 24px 0;
 }
+
+.inner {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+}
+
 .social-login h2 {
-  color: #1F2937;
+  color: #1f2937;
   font-family: Pretendard;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: 26px;
-}
-
-.social-login-inner {
-  display: flex;
-  width: 594px;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .social-login-icon {
@@ -59,4 +56,63 @@ input {
 .social-login-icon img {
   width: 40px;
   height: 40px;
+}
+
+footer {
+  text-align: center;
+}
+
+label {
+  display: block;
+  color: #1F2937;
+  font-family: Pretendard;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+input {
+  display: flex;
+  width: 100%;
+  padding: 16px 24px;
+  align-items: center;
+  gap: 10px;
+
+  border-radius: 12px;
+  background:  #F3F4F6;
+
+  border: 1px solid transparent;
+}
+
+input:focus {
+  border: 1px solid #3692ff;
+}
+
+button {
+  display: flex;
+  width: 640px;
+  height: 56px;
+  padding: 16px 124px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+  background: #9CA3AF;
+
+  color: #F3F4F6;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px; 
+  border: none;
+  
+
+  margin: 24px 0;
+}
+
+.set1 {
+  display: flex;
+  gap: 16px;
 }
