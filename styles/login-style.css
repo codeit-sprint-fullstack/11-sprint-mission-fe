@@ -13,13 +13,16 @@ form {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .title {
   text-align: center;
   margin-bottom: 40px;
+}
+
+.title img {
+  width: 396px;
+  height: 132px;
 }
 
 .social-login {
@@ -64,7 +67,7 @@ footer {
 
 label {
   display: block;
-  color: #1F2937;
+  color: #1f2937;
   font-family: Pretendard;
   font-size: 18px;
   font-style: normal;
@@ -73,20 +76,30 @@ label {
 }
 
 input {
-  display: flex;
+  display: block;
   width: 100%;
   padding: 16px 24px;
   align-items: center;
   gap: 10px;
 
   border-radius: 12px;
-  background:  #F3F4F6;
+  background: #f3f4f6;
 
   border: 1px solid transparent;
+  margin-top: 16px;
 }
 
 input:focus {
   border: 1px solid #3692ff;
+}
+
+input::placeholder {
+  color: #9ca3af;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
 }
 
 button {
@@ -97,22 +110,19 @@ button {
   justify-content: center;
   align-items: center;
   border-radius: 40px;
-  background: #9CA3AF;
+  background: #9ca3af;
 
-  color: #F3F4F6;
+  color: #f3f4f6;
   text-align: center;
   font-family: Pretendard;
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
-  line-height: 32px; 
+  line-height: 32px;
   border: none;
-  
-
-  margin: 24px 0;
 }
 
-.set1 {
-  display: flex;
-  gap: 16px;
+.set1,
+.set2 {
+  margin-bottom: 24px;
 }
