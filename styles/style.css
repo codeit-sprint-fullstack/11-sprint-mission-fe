@@ -183,29 +183,35 @@ p {
   width: 100%;
   padding-bottom: 140px;
 }
-.footer-left {
-  color: #9CA3AF;
-  text-align: center;
-  font-family: Pretendard;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
 
 .footer-right {
   display: flex;
   align-items: center;
   gap: 12px;
   width: 116px;
+  cursor: pointer;
 }
 
 .footer-middle {
   display: flex;
   align-items: center;
   gap: 30px;
+}
 
-  color: #E5E7EB;
+.footer-middle a {
+  color: #e5e7eb;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.footer-left p {
+  color: #9ca3af;
   text-align: center;
   font-family: Pretendard;
   font-size: 16px;
