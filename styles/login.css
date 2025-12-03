@@ -1,0 +1,154 @@
+/* begin - 로그인을 위한 Form화면 Style */
+
+header {
+    display:flex;
+    align-items: center;
+    justify-content:center
+}
+
+form {
+  margin: 16px auto;
+  width: 360px;
+  font-weight:bold;
+  font-size:16px;
+}
+
+label {
+  color: #2c2c2c;
+  display: block;
+  margin: 16px 0 8px;
+}
+
+input {
+  border: 1px solid #d1d1d1;
+  display: block;
+  font-size: 16px;
+  line-height: 24px;
+  border-color:white;
+  background-color: #f4efefeb;
+  border-radius:10px;
+  margin: 8px 0;
+  padding: 16px 24px;
+  width: 100%;
+}
+
+input:focus {
+  border-color: #3692FF;
+}
+
+button {
+  background: #888787;
+  border-radius: 50px;;
+  border: none;
+  color: #f3efef;
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 24px 0;
+  padding: 16px;
+  width: 100%;
+}
+
+.login-title {
+  color: #4e4e4e;
+  font-size: 36px;
+  font-weight: 700;
+  margin: 24px 0;
+  text-align: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* 가로 중앙 */
+  align-items: column;     /* 세로 중앙 */
+  height: 10vh;
+  margin:0 auto;
+}
+
+.input-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;        /* 필요하면 조정 */
+}
+
+.input-wrapper input {
+  width: 100%;        /* input을 전체 너비로 */
+  padding-right: 40px; /* 아이콘 자리 확보 */
+  box-sizing: border-box;
+}
+
+.input-wrapper .input-icon {
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  right: 10px;         /* 오른쪽 끝 위치 */
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;     /* 클릭 가능한 손가락 모양 */
+  opacity: 0.6;        /* 살짝 연하게 */
+  transition: opacity 0.2s;
+}
+
+.input-wrapper .input-icon:hover {
+  opacity: 1;
+}
+
+.heading-wrap {
+  display: flex;
+  align-items:center;
+  justify-content:center;
+  gap: 12px;
+  font-size:15px;
+}
+
+.link-button {
+  color: blue
+}
+
+
+.simple-login{
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: space-between; /* 가로 중앙 정렬 */
+    background-color: rgb(178, 178, 239);
+    padding: 12px 24px;
+ 
+}
+
+.simple-icon-align {
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content: space-between; 
+  gap: 5px; /* 아이콘 간격 */
+
+}
+
+/* 아이콘 스타일 */
+.simple-login a img {
+  width: 24px; /* 아이콘 크기 동일하게 조정 */
+}
+
+/* heading-wrap을 가로 정렬 */
+.heading-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* 가운데 정렬 */
+  gap: 12px;
+}
+
+/* heading-wrap 제목 스타일 */
+.heading-wrap h2 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+/* 회원가입 버튼 스타일(간단한 예시) */
+.link-button {
+  color: blue;
+  text-decoration: none;
+  font-size: 1rem;
+}
+/* end - 로그인을 위한 Form화면 Style 

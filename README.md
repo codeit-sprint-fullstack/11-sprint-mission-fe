@@ -43,8 +43,17 @@ _위 이미지는 판다마켓의 대표 이미지입니다._ 📸
    - **스프린트 미션 8부터** 시작하는 프론트엔드 내용을 포함하고 있어요.
    - 만약 스프린트 미션 9부터 프론트엔드 코드를 React가 아닌 Next로 구현하고 싶다면 next 브랜치를 사용해요.
 
-> _스프린트 미션 내 백엔드 요구사항은 [백엔드 레포지토리](https://github.com/codeit-sprint-fullstack/11-sprint-mission-be)의 브랜치에서 관리해주세요_
+[참조사이트]: http://fs11-swlee.netlify.app
 
----
 
-본 프로젝트는 [코드잇](https://www.codeit.kr)의 소유이며, 교육 목적으로만 사용됩니다. © 2025 Codeit. All rights reserved.
+## FS11기 이석우 진행자료 공유
+# sprint1 
+- 최초화면이 Open Layout을 구성함(모범답안 참조) 
+# sprint2 과정 내용을 HTML/CSS로 구성함
+- 로그인창과 회원가입 Layout을 별도 구성함
+- 로그인창과 회원가입 로직은 아직 반영되지 않았음
+
+# 강사님께 전하는 글
+- 여전히 HTML/CSS과 어렵게 느껴집니다.ㅠㅠ
+- Layout별로 CSS나누어 진행하다 그게 아닌것 같아 원복하였고 개발기준에 대한 가이드가 필요할 것 같습니다.
+
