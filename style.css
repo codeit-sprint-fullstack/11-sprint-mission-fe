@@ -1,4 +1,3 @@
-
 #global-navigation-bar {
   position: sticky;
   top: 0;
@@ -9,12 +8,12 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   padding: 9px 200px 9px 200px;
-  background-color: var(--color_background-white);
+  background-color: var(--color_white);
 }
 
 #login-button {
   text-decoration: none;
-  color: var(--font_color-white);
+  color: var(--color_white);
   background-color: var(--color_highlight);
   padding: 12px 32px;
   border-radius: 8px;
@@ -26,7 +25,7 @@ nav {
 }
 
 #main-header {
-  background-color: var(--color_main_background_blue);
+  background-color: var(--color_lightblue);
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -56,7 +55,7 @@ section {
   background-color: var(--color_highlight);
   border-radius: 40px;
   padding: 16px 124px;
-  color: var(--font_color-white);
+  color: var(--color_white);
   font-size: var(--font_blue_size);
   font-weight: var(--font_blue_weight);
   margin-top: 32px;
@@ -115,10 +114,10 @@ section {
   justify-content: space-between;
   font-size: var(--font_footer_size);
   font-weight: var(--font_footer_weight);
-  color: var(--font_color_footer);
+  color: var(--color_font_footer);
 }
 .copyright {
-  color: var(--color_copyright);
+  color: var(--color-darkgrey);
 }
 .footer-link {
   display: flex;
@@ -127,7 +126,7 @@ section {
 }
 .footer-link a {
   text-decoration: none;
-  color: var(--font_color_footer);
+  color: var(--color_font_footer);
 }
 
 .social {

@@ -1,9 +1,5 @@
-:root {
-  --color-login-darkgrey: #9ca3af;
-  --color-login-black: #1f2937;
-  --color-login-grey: #f3f4f6;
-  --color-login-alink: #3692ff;
-  --color-login-quick: #e6f2ff;
+/* 로그인, 회원가입에만 해당되는 공통요소들 */
+:root{
   --font-login-label-size: 18px;
   --font-login-quick-size: 16px;
   --font-login-placeholder-size: 14px;
@@ -65,11 +61,11 @@
   border-radius: 12px;
   padding: 16px 24px;
   border: none;
-  color: var(--color-login-darkgrey);
+  color: var(--color-darkgrey);
   background-color: var(--color-login-grey);
 }
 #login-form input:focus {
-  outline: 2px solid var(--color-login-alink);
+  outline: 2px solid var(--color_highlight);
 }
 #password-wrap {
   position: relative;
@@ -87,7 +83,7 @@
   color: var(--color-login-grey);
   font-size: var(--font-login-button-size);
   font-weight: var(--font-weight-600);
-  background-color: var(--color-login-darkgrey);
+  background-color: var(--color-darkgrey);
 }
 #quick-login {
   width: 100%;
@@ -113,7 +109,7 @@
   font-weight: var(--font-weight-500);
 }
 #login-bottom-link {
-  color: var(--color-login-alink);
+  color: var(--color_highlight);
 }
 @media (width<1800px) {
   :root {
