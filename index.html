@@ -1,29 +1,174 @@
 <!DOCTYPE html>
 
-<!-- HTML Code Style: 'HTML Best Practices'를 참고하여 작성함 -->
+<!-- HTML Code Style: 'HTML Best Practices' -->
 <!-- Reference: https://github.com/hail2u/html-best-practices -->
 
-<html lang="en">
+<!-- Follow BEM(Block Element Modifier) -->
+
+<!-- Validator: https://validator.w3.org/ -->
+
+<html lang="ko">
   <head>
-    <!-- 메타데이터 -->
+    <!-- meta -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- 제목 -->
+
+    <!-- title -->
     <title>판다마켓</title>
-    <!-- 파비콘 -->
+
+    <!-- favicon -->
     <link rel="icon" href="./assets/icons/favicon.svg" />
-    <!-- CSS -->
+
+    <!-- CSS link -->
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/variables.css" />
     <link rel="stylesheet" href="./css/global.css" />
     <link rel="stylesheet" href="./css/main.css" />
-    <!-- 폰트: Pretendard -->
+
+    <!-- font: Pretendard -->
     <link
       rel="stylesheet"
-      as="style"
-      crossorigin
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
     />
   </head>
-  <body></body>
+
+  <body>
+    <!-- header -->
+    <header class="header">
+      <img src="./assets/icons/logo.svg" alt="로고" />
+      <button class="btn-login">로그인</button>
+    </header>
+
+    <main>
+      <!-- hero -->
+      <section class="hero">
+        <div class="hero__inner container">
+          <!-- LEFT: text -->
+          <div class="hero__content">
+            <h1 class="hero__title">일상의 모든 물건을<br />거래해 보세요</h1>
+            <a href="./items.html" class="btn-primary hero__cta"> 구경하러 가기 </a>
+          </div>
+
+          <!-- RIGHT: image -->
+          <div class="hero__image">
+            <img
+              src="./assets/images/hero-illustration.png"
+              alt="반갑게 손을 흔들고 있는 판다 캐릭터"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- features -->
+      <section class="features">
+        <div class="features__inner container">
+          <!-- hot features -->
+          <div class="feature feature--hot">
+            <div class="feature__inner">
+              <!-- LEFT: image -->
+              <div class="feature__image">
+                <img
+                  src="./assets/images/feature-hot.png"
+                  alt="중고거래 물품을 보고 만족하는 고객"
+                />
+              </div>
+              <!-- Right: text -->
+              <div class="feature__content">
+                <span class="feature__label">Hot Item</span>
+                <h3 class="feature__title">인기 상품을<br />확인해 보세요</h3>
+                <p class="feature__description">
+                  가장 HOT한 중고거래 물품을<br />판다 마켓에서 확인해 보세요
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- search features -->
+          <div class="feature feature--search">
+            <div class="feature__inner">
+              <!-- Right: text -->
+              <div class="feature__content">
+                <span class="feature__label">Search</span>
+                <h3 class="feature__title">구매를 원하는<br />상품을 검색하세요</h3>
+                <p class="feature__description">
+                  구매하고 싶은 물품은 검색해서<br />쉽게 찾아보세요
+                </p>
+              </div>
+              <!-- LEFT: image -->
+              <div class="feature__image">
+                <img
+                  src="./assets/images/feature-search.png"
+                  alt="여러 상품 중 필요한 상품을 검색"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- register features -->
+          <div class="feature feature--register">
+            <div class="feature__inner">
+              <!-- LEFT: image -->
+              <div class="feature__image">
+                <img
+                  src="./assets/images/feature-register.png"
+                  alt="다양한 물건들을 사이트에 등록"
+                />
+              </div>
+              <!-- Right: text -->
+              <div class="feature__content">
+                <span class="feature__label">Register</span>
+                <h3 class="feature__title">판매를 원하는<br />상품을 등록하세요</h3>
+                <p class="feature__description">
+                  어떤 물건이든 판매하고 싶은 상품을<br />쉽게 등록하세요
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- trust -->
+      <section class="trust">
+        <div class="trust__inner container">
+          <!-- LEFT: text -->
+          <div class="trust__content">
+            <h2 class="trust__title">믿을 수 있는<br />판다마켓 중고 거래</h2>
+          </div>
+
+          <!-- Right: image -->
+          <div class="trust__image">
+            <img
+              src="./assets/images/trust-illustration.png"
+              alt="거래에 만족하고 있는 두 사용자"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer__inner">
+        <!-- LEFT -->
+        <div class="footer__left">
+          <small>©codeit - 2024</small>
+        </div>
+
+        <!-- CENTER -->
+        <div class="footer__center">
+          <small>Privacy Policy</small>
+          <small>FAQ</small>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="footer__right">
+          <img src="./assets/icons/facebook.svg" alt="facebook" />
+          <img src="./assets/icons/twitter.svg" alt="twitter" />
+          <img src="./assets/icons/youtube.svg" alt="youtube" />
+          <img src="./assets/icons/instagram.svg" alt="instagram" />
+        </div>
+      </div>
+    </footer>
+  </body>
+
 </html>
