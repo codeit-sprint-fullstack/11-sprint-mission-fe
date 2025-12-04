@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>판다마켓_회원가입</title>
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./login.css" />
+  </head>
+
+  <body>
+    <div class="signup_container">
+      <header>
+        <!-- 페이지 로고 -->
+        <div class="signup_logo">
+          <a href="./">
+            <img src="./img/logo.svg" alt="판다마켓 홈으로 가기" />
+          </a>
+        </div>
+      </header>
+
+      <main>
+        <!-- 이메일 -->
+        <div class="input_group">
+          <label for="email" class="input_label">이메일</label>
+          <input
+            type="email"
+            id="email"
+            class="input_box"
+            placeholder="이메일을 입력해주세요"
+          />
+        </div>
+
+        <!-- 닉네임 -->
+        <div class="input_group">
+          <label for="nickname" class="input_label">닉네임</label>
+          <input
+            type="text"
+            id="nickname"
+            class="input_box"
+            placeholder="닉네임을 입력해주세요"
+          />
+        </div>
+
+        <!-- 비밀번호 -->
+        <div class="input_group">
+          <label for="password" class="input_label">비밀번호</label>
+          <input
+            type="password"
+            id="password"
+            class="input_box"
+            placeholder="비밀번호를 입력해주세요"
+          />
+          <a class="input_eyes" href="#"></a>
+        </div>
+
+        <!-- 비밀번호 확인 -->
+        <div class="input_group">
+          <label for="password_check" class="input_label">비밀번호 확인</label>
+          <input
+            type="password"
+            id="password_check"
+            class="input_box"
+            placeholder="비밀번호를 다시 입력해주세요"
+          />
+          <a class="input_eyes" href="#"></a>
+        </div>
+
+        <!------ 회원가입 버튼 ----->
+        <button class="signup_btn">회원가입</button>
+
+        <!------ 간편 로그인(소셜 로그인) ------>
+        <div class="social_box">
+          <span class="social_text">간편 회원가입</span>
+          <div class="social_icon">
+            <a
+              href="https://www.google.com/"
+              target="_blank"
+              class="social_icon_link"
+            >
+              <img src="./img/ic_google.png" alt="구글 로그인" />
+            </a>
+            <a
+              href="https://www.kakao.com/"
+              target="_blank"
+              class="social_icon_link"
+            >
+              <img src="./img/ic_kakao.png" alt="카카오 로그인" />
+            </a>
+          </div>
+        </div>
+
+        <!----- 로그인 이동 ------>
+        <div class="login_link_box">
+          <span>이미 회원이신가요?</span>
+          <a href="./login.html">로그인</a>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

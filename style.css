@@ -1,0 +1,280 @@
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Pretendard, sans-serif;
+  font-size: 1.6rem;
+  color: #374151;
+  word-break: keep-all;
+  /* word-break는 텍스트 줄바꿈 방지 */
+} 
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* 화면 중앙 정렬 및 최대 너비 제한 */
+/* 1920px - 400px(좌우여백 200*2) = 1520px(152rem) */
+.hero_container,
+.bottom_container,
+.feature_item,
+#footer {
+  width: 100%;
+  max-width: 152rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+
+/* 화면이 1200px보다 작아지면 계산식을 끄고 고정 여백 */
+@media (max-width: 128rem) {
+  header,
+  #footer {
+    padding: 0 3.2rem;
+  }
+}
+
+.header_logo img {
+  width: 15.3rem;
+  display: block;
+}
+
+/* --- 위아래 배너 컨테이너 공통사항 --- */
+.hero_container,
+.bottom_container {
+  width: 100%;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+
+/* ----------- Header ----------- */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 7rem;
+  background-color: #ffffff;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header_logo img {
+  width: 15.3rem;
+  cursor: pointer;
+}
+
+.login-btn {
+  background-color: #3692ff;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 600;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 12.8rem;
+  height: 4.8rem;
+  border-radius: 0.8rem;
+  cursor: pointer;
+}
+
+/* ---------- Main ------------ */
+main {
+  margin-top: 7rem;
+}
+
+/* -------- Hero 섹션 --------- */
+#hero {
+  width: 100%;
+  height: 54rem;
+  background-color: #cfe5ff;
+
+  background-image: url(./img/Img_home_top.png);
+  background-repeat: no-repeat;
+  background-size: auto 70%;
+  background-position: calc(50% + 25rem) bottom;
+}
+
+.hero_container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#hero h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+}
+
+.item_btn {
+  background-color: #3692ff;
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 1.6rem 4rem;
+  border-radius: 4rem;
+  margin-top: 3.2rem;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* ------------- Feature 섹션 --------------- */
+#feature {
+  background-color: white;
+}
+
+.feature_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+  margin-bottom: 27.6rem;
+}
+
+.feature_item:first-child {
+  margin-top: 13.8rem;
+}
+
+/* Search만 순서 뒤집기 */
+.feature_item:nth-child(2) {
+  flex-direction: row-reverse;
+}
+
+/* Search 텍스트 박스만 오른쪽 정렬 */
+.feature_item:nth-child(2) .text_box {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.img_box,
+.text_box {
+  flex: 1;
+}
+
+.img_box {
+  display: flex;
+  justify-content: center;
+}
+
+.img_box img {
+  width: 100%;
+  max-width: 58rem;
+  height: auto;
+  vertical-align: bottom;
+}
+
+.text_box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* ------- 파란색 작은 제목 ------- */
+.sub_title {
+  color: #3692ff;
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
+  display: block;
+}
+
+/* -------- 검은색 큰 제목 ------- */
+.text_box h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 1.6rem;
+  color: #374151;
+}
+
+/* ------- 설명글 ------- */
+.text_box h2 {
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #374151;
+}
+
+/* ----------Bottom ---------- */
+#bottom {
+  background-color: #cfe5ff;
+  width: 100%;
+  height: 54rem;
+
+  background-image: url(./img/Img_home_bottom.png);
+  background-repeat: no-repeat;
+  background-size: auto 90%;
+  background-position: calc(50% + 25rem) bottom;
+}
+
+.bottom_container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.bottom_container h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.4;
+  position: relative;
+}
+
+/* ------------Footer--------------- */
+footer {
+  background-color: #111827;
+  color: #9ca3af;
+  padding: 3.2rem 0 10rem 0;
+}
+
+#footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#footer_left a {
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+#footer_center {
+  display: flex;
+  gap: 3rem;
+}
+
+#footer_center a {
+  color: #cfcfcf;
+  cursor: pointer;
+}
+
+#sns_icon {
+  display: flex;
+  gap: 1.2rem;
+}
+
+#sns_icon img {
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+}
