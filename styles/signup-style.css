@@ -130,3 +130,16 @@ button {
 .set4 {
   margin-bottom: 24px;
 }
+
+/* 눈모양 아이콘 오른쪽 끝에 배치 */
+.pw-group {
+  position: relative;
+}
+.pw-eye {
+  position: absolute;
+  right: 16px;
+  top: 13px;
+
+  width: 25px;
+  height: 25px;
+}
