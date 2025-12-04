@@ -44,16 +44,16 @@
 │ ├─ global.css
 │ ├─ main.css
 │ └─ pages/
-│ ├─ login.css
-│ └─ signup.css
+│    ├─ login.css
+│    └─ signup.css
 │
 ├─ assets/
 │ ├─ images/
 │ └─ icons/
 │
 └─ js/
-├─ main.js
-└─ interactions.js
+  ├─ main.js
+  └─ interactions.js
 ```
 
 ---

@@ -161,7 +161,6 @@ select {
 }
 /* select::-ms-expand {
     display: none;
-    /* 화살표없애기 for ie10, 11 */
 } */
 
 /* 폼 요소나 버튼 등의 기본 스타일을 좀 더 명확하게 초기화 */
