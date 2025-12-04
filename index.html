@@ -32,11 +32,12 @@
     />
   </head>
 
-  <body>
     <!-- header -->
     <header class="header">
-      <img src="./assets/icons/logo.svg" alt="로고" />
-      <button class="btn-login">로그인</button>
+      <a href="./index.html" class="header__logo">
+        <img src="./assets/icons/logo.svg" alt="판다마켓 로고" />
+      </a>
+      <button type="button" onclick="location.href='./login.html'" class="btn-login">로그인</button>
     </header>
 
     <main>
@@ -69,7 +70,7 @@
               <div class="feature__image">
                 <img
                   src="./assets/images/feature-hot.png"
-                  alt="중고거래 물품을 보고 만족하는 고객"
+                  alt="상품 인기 목록을 나타내는 일러스트"
                 />
               </div>
               <!-- Right: text -->
@@ -98,7 +99,7 @@
               <div class="feature__image">
                 <img
                   src="./assets/images/feature-search.png"
-                  alt="여러 상품 중 필요한 상품을 검색"
+                  alt="상품 검색 기능을 보여주는 일러스트"
                 />
               </div>
             </div>
@@ -111,7 +112,7 @@
               <div class="feature__image">
                 <img
                   src="./assets/images/feature-register.png"
-                  alt="다양한 물건들을 사이트에 등록"
+                  alt="상품 등록 기능을 표현한 일러스트"
                 />
               </div>
               <!-- Right: text -->
@@ -149,26 +150,33 @@
     <!-- footer -->
     <footer class="footer">
       <div class="footer__inner">
-        <!-- LEFT -->
+        <!-- LEFT: Codeit -->
         <div class="footer__left">
           <small>©codeit - 2024</small>
         </div>
 
-        <!-- CENTER -->
+        <!-- CENTER: Policy, FAQ -->
         <div class="footer__center">
-          <small>Privacy Policy</small>
-          <small>FAQ</small>
+          <a href="./privacy.html" class="privacy">Privacy Policy</a>
+          <a href="./faq.html" class="faq">FAQ</a>
         </div>
 
-        <!-- RIGHT -->
-        <div class="footer__right">
-          <img src="./assets/icons/facebook.svg" alt="facebook" />
-          <img src="./assets/icons/twitter.svg" alt="twitter" />
-          <img src="./assets/icons/youtube.svg" alt="youtube" />
-          <img src="./assets/icons/instagram.svg" alt="instagram" />
+        <!-- RIGHT: SNS Icons -->
+        <div class="footer__right" style="background-color: blue">
+          <a href="https://www.facebook.com/" class="footer__sns">
+            <img src="./assets/icons/facebook.svg" alt="facebook" />
+          </a>
+          <a href="https://x.com/" class="footer__sns">
+            <img src="./assets/icons/twitter.svg" alt="twitter" />
+          </a>
+          <a href="https://www.youtube.com/" class="footer__sns">
+            <img src="./assets/icons/youtube.svg" alt="youtube" />
+          </a>
+          <a href="https://instagram.com/" class="footer__sns">
+            <img src="./assets/icons/instagram.svg" alt="instagram" />
+          </a>
         </div>
       </div>
     </footer>
   </body>
-
 </html>
