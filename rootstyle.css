@@ -1,0 +1,35 @@
+:root {
+  --color_background-white: #ffffff;
+  --color_main_background_blue: #cfe5ff;
+  --color_footer_background: #111827;
+  --color_highlight: #3692ff;
+  --color_main_content_background: #fcfcfc;
+  --color_copyright: #9ca3af;
+  --font_color_title: #374151;
+  --font_color-white: #ffffff;
+  --font_color_footer: #e5e7eb;
+  --font_title_weight: 700;
+  --font_content_weight: 500;
+  --font_title_size: 40px;
+  --font_highlight_size: 18px;
+  --font_highlight_weight: 700;
+  --font_content_size: 24px;
+  --font_footer_size: 16px;
+  --font_footer_weight: 400;
+  --font_blue_size: 16px;
+  --font_blue_weight: 600;
+  --font-height: 32px;
+
+}
+  a:hover {
+    cursor: pointer;
+  }
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  font-family: Pretendard;
+  font-size: 10px;
+}
+

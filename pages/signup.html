@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-9RT50W9P36"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-9RT50W9P36");
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/reset.css" />
+    <link rel="stylesheet" href="/rootstyle.css" />
+    <link rel="stylesheet" href="/pages/css/sign.css" />
+    <link rel="icon" href="/img/favicon.ico" />
+    <title>판다마켓</title>
+  </head>
+  <body>
+    <main id="login-main">
+      <div id="login-wrap-gap">
+        <a href="/"><img id="login-logo-img" src="/img/logo.png" /></a>
+        <form id="login-form">
+          <div id="email-wrap">
+            <label for="email">이메일</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="이메일을 입력해주세요"
+              required
+              pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+            />
+          </div>
+          <div id="nickname-wrap">
+            <label for="nickname">닉네임</label>
+            <input
+              type="text"
+              id="nickname"
+              placeholder="이메일을 입력해주세요"
+              required
+              pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+            />
+          </div>
+          <div id="password-wrap">
+            <label for="password">비밀번호</label>
+            <input
+              id="password"
+              type="password"
+              placeholder="비밀번호를 입력해주세요"
+              minlength="8"
+              required
+            />
+            <img id="input-visibility" src="/img/visibility_off.svg" />
+          </div>
+          <div id="password-wrap">
+            <label for="password">비밀번호 확인</label>
+            <input
+              id="password"
+              type="password"
+              placeholder="비밀번호를 입력해주세요"
+              minlength="8"
+              required
+            />
+            <img id="input-visibility" src="/img/visibility_off.svg" />
+          </div>
+
+          <button id="login-button" type="submit">로그인</button>
+        </form>
+      </div>
+      <div id="quick-login">
+        간편 로그인하기
+        <div id="quick-login-wrap">
+          <a href="https://www.google.com"><img src="/img/google.png" /></a>
+
+          <a href="https://www.kakaocorp.com/page/">
+            <img src="/img/Kakaotalk.png" />
+          </a>
+        </div>
+      </div>
+      <div id="login-bottom">
+        이미 회원이신가요?
+        <a id="login-bottom-link" href="./login.html">로그인</a>
+      </div>
+    </main>
+  </body>
+</html>
