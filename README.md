@@ -1,4 +1,4 @@
-# 판다마켓(Panda Market)
+# 🐼 판다마켓(Panda Market)
 
 판다마켓은 따뜻한 중고거래를 위한 커뮤니티 플랫폼입니다.
 
@@ -55,3 +55,7 @@
 ├─ main.js
 └─ interactions.js
 ```
+
+---
+
+본 프로젝트는 [코드잇](www.codeit.kr)의 소유이며, 교육 목적으로만 사용됩니다. © 2025 Codeit. All rights reserved.
