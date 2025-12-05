@@ -34,11 +34,19 @@
 
       <section class="login__form">
         <form>
-          <label for="email">이메일</label>
-          <input id="email" type="email" placeholder="이메일을 입력해주세요" />
-          
-          <label for="password">비밀번호</label>
-          <input id="password" type="input" placeholder="비밀번호를 입력해주세요" />
+          <div class="login__email">
+            <label for="input__email">이메일</label>
+            <input id="input__email" type="email" placeholder="이메일을 입력해주세요" />
+          </div>
+
+          <div class="login__password">
+            <label for="input__password">비밀번호</label>
+            <div>
+              <input id="input__password" type="input" placeholder="비밀번호를 입력해주세요" />
+              <!-- i태그 사용 고려 -->
+              <img src="./assets/icons/eye-open.svg" alt="눈 모양 아이콘"/>
+            </div>
+          </div>
 
           <button type="submit" class="btn-login">로그인</button>
         </form>
