@@ -10,6 +10,29 @@ html {
   box-sizing: border-box;
 }
 
+:root {
+  --primary-100: #3692ff;
+  --primary-200: #1967d6;
+  --primary-300: #1251aa;
+
+  --error: #f74747;
+  --bg-blue: #cfe5ff;
+  --bg-gray: #fcfcfc;
+  --bg-white: #ffffff;
+
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
+}
+
+/* 변수 사용은 color: var(--gray-700);와 같이 사용합니다. */
+
 body {
   font-family: 'Pretendard Variable', sans-serif;
   font-size: 1.6rem;
@@ -63,9 +86,12 @@ header {
   position: fixed;
   top: 0;
   left: 0;
+
+  padding: 0 8rem;
   width: 100%;
   height: 7rem;
-  background-color: #ffffff;
+
+  background-color: var(--bg-white);
 
   display: flex;
   justify-content: space-between;
@@ -78,8 +104,8 @@ header {
 }
 
 .login-btn {
-  background-color: #3692ff;
-  color: white;
+  background-color: var(--primary-100);
+  color: var(--bg-white);
   font-size: 1.6rem;
   font-weight: 600;
 
@@ -102,7 +128,7 @@ main {
 #hero {
   width: 100%;
   height: 54rem;
-  background-color: #cfe5ff;
+  background-color: var(--bg-blue);
 
   background-image: url(./img/Img_home_top.png);
   background-repeat: no-repeat;
@@ -126,20 +152,27 @@ main {
 }
 
 .item_btn {
-  background-color: #3692ff;
-  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35.7rem;
+  height: 5.6rem;
+
+  background-color: var(--primary-100);
+  color: var(--bg-white);
   font-size: 2rem;
   font-weight: 700;
+
   padding: 1.6rem 4rem;
   border-radius: 4rem;
   margin-top: 3.2rem;
-  display: inline-block;
+
   cursor: pointer;
 }
 
 /* ------------- Feature 섹션 --------------- */
 #feature {
-  background-color: white;
+  background-color: var(--bg-white) e;
 }
 
 .feature_item {
@@ -193,7 +226,7 @@ main {
 
 /* ------- 파란색 작은 제목 ------- */
 .sub_title {
-  color: #3692ff;
+  color: var(--primary-100);
   font-weight: 700;
   font-size: 1.8rem;
   margin-bottom: 1.2rem;
@@ -214,12 +247,12 @@ main {
   font-size: 2.4rem;
   font-weight: 500;
   line-height: 1.4;
-  color: #374151;
+  color: var(--gray-700);
 }
 
 /* ----------Bottom ---------- */
 #bottom {
-  background-color: #cfe5ff;
+  background-color: var(--bg-blue);
   width: 100%;
   height: 54rem;
 
@@ -244,8 +277,8 @@ main {
 
 /* ------------Footer--------------- */
 footer {
-  background-color: #111827;
-  color: #9ca3af;
+  background-color: var(--gray-900);
+  color: var(--gray-400);
   padding: 3.2rem 0 10rem 0;
 }
 
