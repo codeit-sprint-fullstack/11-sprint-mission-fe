@@ -20,14 +20,17 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    
 }
 
 #login_page.container {
     margin-top: 231px;
+    margin-bottom: 284px;
 }
 
 #signup_page.container {
     margin-top: 60px;
+    margin-bottom: 178px;
 }
 
 .container > a {
