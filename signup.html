@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang=ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style/reset.css" />
+        <link rel="stylesheet" href="style/loginstyle.css" />
+        <title>회원가입 페이지</title>
+    </head>
+    <body>
+        <div id="signup_page" class="container">
+            <a href="/">
+                <img src="images/mission2/logo.svg" alt="판다마켓 로고"/>
+            </a>
+            <div class="loginbox">
+                <form>
+                    <div class="inputbox">
+                        <label for="email">이메일</label>
+                        <input id="email" name="email" type="email" placeholder="이메일을 입력해주세요" />
+                    </div>
+                    <div class="inputbox">
+                        <label for="nickname">닉네임</label>
+                        <input id="nickname" name="nickname" type="text" placeholder="이메일을 입력해주세요" />
+                    </div>
+                    <div class="inputbox">
+                        <label for="password">비밀번호</label>
+                        <div class="wrap">
+                            <input id="password" name="password" type="password" placeholder="비밀번호를 입력해주세요" />
+                            <span class="eye">
+                                    <img id="eyelogo" src="images/mission2/eye.svg" alt="눈 모양 아이콘" />
+                            </span>
+                        </div>
+                    </div>
+
+
+                    <div class="inputbox">
+                        <label for="password_repeat">비밀번호 확인</label>
+                        <div class="wrap">
+                            <input id="password_repeat" name="password_repeat" type="password" placeholder="비밀번호를 다시 한 번 입력해주세요" />
+                            <span class="eye">
+                                    <img class="eyelogo" src="images/mission2/eye.svg" alt="눈 모양 아이콘" />
+                            </span>
+                        </div>
+                    </div>
+                        <button>회원가입</button>
+                </form>
+
+                <div class="easy_login">
+                    <div class="bar">
+                        <p>간편 로그인하기</p>
+                        <div class="easy_logo">
+                            <a href="https://www.google.com/">
+                                <img src="images/mission2/Component 2.svg" alt="구글 로고" />
+                            </a>
+                            <a href="https://www.kakaocorp.com/page/">
+                                <img src="images/mission2/Component 3.svg" alt="카카오톡 로고" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sign_up">
+                    <p>
+                        이미 회원이신가요?
+                    </p>
+                    <a href="/login.html">로그인</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
