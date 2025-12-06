@@ -1,0 +1,100 @@
+:root {
+  --brand-blue: #3692ff;
+  --Cool-Gray-100: #f9fafb;
+  --Cool-Gray-100: #f3f4f6;
+  --Cool-Gray-600: #4b5563;
+  --Primary-100: #3692ff;
+  --Secondary-400: #9ca3af;
+  --Secondary-800: #1f2937;
+}
+
+.loginform {
+  display: flex;
+  width: 64rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  flex-shrink: 0;
+  margin: 10rem auto;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.4rem;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.6rem;
+  position: relative;
+}
+
+label {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--Secondary-800);
+}
+
+input {
+  display: flex;
+  height: 5.6rem;
+  width: 64rem;
+  padding: 1rem 1.5rem;
+  align-items: center;
+  border-radius: 1.2rem;
+  background: var(--Cool-Gray-100);
+  line-height: 1.5rem;
+}
+
+.eyes {
+  background-image: url(/images/icon/btn_visibility_off.svg);
+  background-position: center;
+  width: 2rem;
+  height: 1.5rem;
+  position: absolute;
+  right: 2rem;
+  top: 6rem;
+}
+
+button {
+  display: flex;
+  width: 64rem;
+  height: 5.6rem;
+  padding: 1.6rem 12.4rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4rem;
+  background: var(--Secondary-400);
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--Cool-Gray-100);
+}
+
+.simplelogin-container {
+  display: flex;
+  width: 64rem;
+  height: 7.4rem;
+  padding: 1.6rem 2.3rem;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  background-color: #e6f2ff;
+}
+.simplelogin-container h3 {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.loginMore {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--Secondary-800);
+}
+.loginMore a {
+  text-decoration: underline;
+  color: var(--brand-blue);
+}

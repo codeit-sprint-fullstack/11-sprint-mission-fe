@@ -1,0 +1,102 @@
+:root {
+  --brand-blue: #3692ff;
+  --Cool-Gray-100: #f9fafb;
+  --Cool-Gray-100: #f3f4f6;
+  --Cool-Gray-600: #4b5563;
+  --Primary-100: #3692ff;
+  --Secondary-400: #9ca3af;
+  --Secondary-800: #1f2937;
+}
+
+body {
+  color: #374151;
+  word-break: keep-all;
+  font-family: "Pretendard", sans-serif;
+}
+
+header {
+  width: 100%;
+  height: 7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20rem;
+  background-color: #ffffff;
+  border-bottom: 0.1rem solid #dfdfdf;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+footer {
+  background-color: #111827;
+  color: var(--Secondary-400);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3.2rem 20rem 10.8rem 20rem;
+  font-size: 1.6rem;
+}
+
+input:focus {
+  outline: none;
+  border: 3px solid var(--brand-blue);
+}
+
+#footerMenu {
+  display: flex;
+  gap: 3rem;
+  color: #e5e7eb;
+}
+
+#socialMedia {
+  display: flex;
+  gap: 1.2rem;
+}
+
+#socialLogin {
+  display: flex;
+  gap: 1.6rem;
+}
+
+.wrapper {
+  max-width: 120rem;
+  margin: 0 auto;
+  width: 100%;
+}
+
+h2 {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 5.6rem;
+  letter-spacing: 0.02em;
+}
+
+.button {
+  background-color: var(--brand-blue);
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button:hover {
+  background-color: #1967d6;
+}
+
+.button:focus {
+  background-color: #1251aa;
+}
+
+.button:disabled {
+  background-color: var(--Secondary-400);
+  cursor: default;
+  pointer-events: none;
+}
+
+.pill-button {
+  font-size: 2rem;
+  font-weight: 700;
+  border-radius: 99.9rem;
+  padding: 1.6rem 12.4rem;
+}
