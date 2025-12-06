@@ -45,7 +45,7 @@
 ├─ image/ 
 │  └─ ...            # 로고, 아이콘 등
 │
-├─ style/            # 스타일 파일 모음 폴더
+├─ style/         
 │  ├─ style.css          # 메인 페이지 스타일
 │  ├─ loginstyle.css     # 로그인/회원가입 페이지 공통 스타일
 │  └─ reset.css          # 모든 페이지 공통 reset 스타일
