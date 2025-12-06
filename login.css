@@ -1,3 +1,24 @@
+:root {
+--primary-100: #3692ff;
+--primary-200: #1967d6;
+--primary-300: #1251aa;
+
+--error: #f74747;
+--bg-blue: #cfe5ff;
+--bg-gray: #fcfcfc;
+--bg-whith:#ffffff;
+
+--gray-50: #f9fafb;
+--gray-100: #f3f4f6;
+--gray-200: #e5e7eb;
+--gray-400: #9ca3af;
+--gray-500: #6b7280;
+--gray-600: #4b5563;
+--gray-700: #374151;
+--gray-800: #1f2937;
+--gray-900: #111827;
+}
+
 *{
   box-sizing: border-box;
   font-family: Pretendard;
@@ -59,7 +80,7 @@ input{
   align-items: center;
   gap: 0.625rem;
   border-radius: 0.75rem;
-  background-color: #F3F4F6;
+  background-color: var(--gray-100);
   border-style: none;
 }
 
@@ -67,7 +88,7 @@ input{
   font-size: 1.125rem;
   font-weight: 700;
   line-height: 1.625rem;
-  color: #1F2937;
+  color: var(--gray-800);
 }
 
 .input-content{
@@ -87,8 +108,8 @@ button{
   align-items: center;
   gap: 0.625rem;
   border-radius: 2.5rem;
-  background-color: #9CA3AF;
-  color: #F3F4F6;
+  background-color: var(--gray-400);
+  color: var(--gray-100);
   cursor: pointer;
 }
 
@@ -129,10 +150,10 @@ button{
 }
 
 input:focus {
-    border: 1px solid #3692FF;
+    border: 1px solid var(--primary-100);
     outline: none; 
 }
 
 button:focus{
-  background-color: #3692FF;
+  background-color: var(--primary-100);
 }
