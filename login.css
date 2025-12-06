@@ -1,0 +1,138 @@
+*{
+  box-sizing: border-box;
+  font-family: Pretendard;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 2rem;
+  border-style: none;
+}
+
+body{
+  width: 100%;
+  padding: 14.4375rem 40rem 17.75rem 40rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main{
+  display: flex;
+  width: 40rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  flex-shrink: 0;
+}
+
+.big-logo{
+  width: 24.75rem;
+  height: 8.25rem;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+/*  */
+.password{
+  position: relative;
+  display: inline-block; 
+}
+
+.eye-icon {
+  position: absolute;
+  right: 1.5rem;
+  top: 70%;
+  width: 1.5rem; /* 너비 조정 */
+  height: 1.5rem; /* 높이 조정 */
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+input{
+  display: flex;
+  width: 40rem;
+  height: 3.5rem;
+  padding: 1rem 1.5rem;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 0.75rem;
+  background-color: #F3F4F6;
+  border-style: none;
+}
+
+.label{
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.625rem;
+  color: #1F2937;
+}
+
+.input-content{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+
+button{
+  display: flex;
+  width: 40rem;
+  height: 3.5rem;
+  padding: 1rem 7.75rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 2.5rem;
+  background-color: #9CA3AF;
+  color: #F3F4F6;
+  cursor: pointer;
+}
+
+.login-button-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.simple-login{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.4375rem;
+  width: 40rem;
+  height: 4.625rem;
+  background-color: #E6F2FF;
+  border-radius: 0.5rem;
+  
+}
+
+.sns-buttons{
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  height: 2.625rem;
+  position: relative;
+  top: 0.3rem;
+}
+
+.sns-button{
+  width: 2.625rem;
+  height: 2.625rem;
+  cursor: pointer;
+}
+
+input:focus {
+    border: 1px solid #3692FF;
+    outline: none; 
+}
+
+button:focus{
+  background-color: #3692FF;
+}

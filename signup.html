@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="login.css">
+  <title>판다마켓</title>
+</head>
+<body>
+  <main>
+    <a href="/">
+      <img class="big-logo" src="./imgs/big-logo.png" alt="판다마켓 큰 로고">
+    </a>
+
+    <div>
+      <form>
+        <div class="input-content">
+          <label for="signup-email">이메일</label>
+          <input id="signup-email" type="email" placeholder="이메일을 입력해주세요">
+        </div>
+        
+        <div class="input-content">
+          <label for="signup-email">닉네임</label>
+          <input id="signup-email" type="email" placeholder="닉네임을 입력해주세요">
+        </div>
+
+        <div class="password">
+          <label for="singup-password">비밀번호</label>
+          <input id="password" type="password" placeholder="비밀번호를 입력해주세요">
+          <img id="togglePassword" class="eye-icon" src="./imgs/password-eye.png" alt="비밀번호 확인" />
+        </div>
+
+        <div class="password">
+          <label for="singup-password">비밀번호 확인</label>
+          <input id="password" type="password" placeholder="비밀번호를 다시 입력해주세요">
+          <img id="togglePassword" class="eye-icon" src="./imgs/password-eye.png" alt="비밀번호 확인" />
+        </div>
+
+      </form>              
+<!--                     -->
+      <div class="login-button-box">
+        <button>
+          회원가입
+        </button>
+
+        <div class="simple-login">
+          <a>간편 로그인 하기</a>        
+          <div class="sns-buttons">
+            <a href="https://www.google.com/">
+              <img class="sns-button" src="./imgs/google.png" alt="구글 버튼">
+            </a>
+            <a href="https://www.kakaocorp.com/page/">
+              <img class="sns-button" src="./imgs/kakao.png" alt="카카오 버튼">
+            </a>
+          </div>
+        </div>
+
+        <div>
+          이미 회원이신가요?
+          <a href="/login.html">
+          로그인
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="./login.js"></script>
+</body>
+</html>
