@@ -5,25 +5,25 @@
 
 /* 큰 덩어리 레이아웃 */
 body {
-  margin-top: 4.375rem;
-  min-width: 69.375rem;
+  margin-top: 70px;
+  min-width: 1110px;
 }
 
 section {
-  width: 120rem;
+  width: 1920px;
 }
 
 /* header >내비게이션>메인링크,로그인링크 */
 
 header {
-  height: 4.375rem;
+  height: 70px;
   width: 100%;
   background-color: #ffffff;
-  border-bottom: #dfdfdf solid 0.0625rem;
-  padding: 0.5625rem 12.5rem;
+  border-bottom: #dfdfdf solid 1px;
+  padding: 9px 200px;
   position: fixed;
-  top: 0rem;
-  left: 0rem;
+  top: 0px;
+  left: 0px;
   display: flex;
   justify-content: center;
 }
@@ -35,7 +35,7 @@ nav {
 }
 
 .logo {
-  width: 9.5625rem;
+  width: 153px;
 }
 
 /* 버튼들 */
@@ -52,36 +52,36 @@ nav {
 }
 
 .btn-login {
-  border-radius: 0.5rem;
-  width: 8rem;
-  padding: 0.75rem 1.4375rem;
+  border-radius: 8px;
+  width: 128px;
+  padding: 12px 23px;
   color: #f3f4f6;
-  /* pretendard/lg-1rem-semibold */
+  /* pretendard/lg-16px-semibold */
   font-family: Pretendard;
-  font-size: 1rem;
+  font-size: 16px;
   font-style: normal;
   font-weight: 600;
-  line-height: 1.625rem; /* 162.5% */
+  line-height: 26px; /* 162.5% */
 }
 
 .btn-items {
-  border-radius: 2.5rem;
-  height: 3.5rem;
-  padding: 1rem 7.75rem;
+  border-radius: 40px;
+  height: 56px;
+  padding: 16px 124px;
   color: #f9fafb;
-  /* pretendard/xl-1.25rem-semibold */
+  /* pretendard/xl-20px-semibold */
   font-family: Pretendard;
-  font-size: 1.25rem;
+  font-size: 20px;
   font-style: normal;
   font-weight: 600;
-  line-height: 2rem; /* 160% */
+  line-height: 32px; /* 160% */
 }
 
 /* banner 상,하단 공통*/
 .banner {
-  height: 33.75rem;
+  height: 540px;
   width: 100%;
-  min-width: 69.375rem; /*화면 폭 줄였을때 찌그러지면 예쁘지 않아서 넣었슴당*/
+  min-width: 1110px; /*화면 폭 줄였을때 찌그러지면 예쁘지 않아서 넣었슴당*/
   background-color: #cfe5ff;
   display: flex;
   justify-content: center;
@@ -89,7 +89,7 @@ nav {
 }
 
 .contents {
-  width: 69.375rem;
+  width: 1110px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -100,25 +100,25 @@ nav {
   flex-direction: column;
   justify-content: flex-start;
   align-content: center;
-  gap: 2rem;
-  margin-bottom: 3.75rem;
+  gap: 32px;
+  margin-bottom: 60px;
 }
 
 h1 {
   color: #374151;
   font-family: Pretendard;
-  font-size: 2.5rem;
+  font-size: 40px;
   font-style: normal;
   font-weight: 700;
-  line-height: 140%; /* 3.5rem */
+  line-height: 140%; /* 56px */
   text-wrap: nowrap;
 }
 
 /* main */
 main {
   width: 100%;
-  min-width: 69.375rem;
-  height: 135rem;
+  min-width: 1110px;
+  height: 2160px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -126,8 +126,8 @@ main {
 }
 
 section.box_main {
-  height: 45rem;
-  padding: 8.625rem 21.5rem;
+  height: 720px;
+  padding: 138px 344px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -136,8 +136,8 @@ section.box_main {
 .content_box {
   background-color: #fcfcfc;
   display: flex;
-  width: 61.75rem;
-  margin: 8.625rem auto;
+  width: 988px;
+  margin: 138px auto;
   justify-content: space-around;
   align-items: center;
 }
@@ -160,33 +160,33 @@ section.box_main {
 
 h3 {
   color: #3692ff;
-  /* pretendard/2lg-1.125rem-bold */
+  /* pretendard/2lg-18px-bold */
   font-family: Pretendard;
-  font-size: 1.125rem;
+  font-size: 18px;
   font-style: normal;
   font-weight: 700;
-  line-height: 1.625rem; /* 144.444% */
+  line-height: 26px; /* 144.444% */
 }
 
 h2 {
   color: #374151;
-  margin: 0.75rem 0 1.5rem;
+  margin: 12px 0 24px;
   font-family: Pretendard;
-  font-size: 2.5rem;
+  font-size: 40px;
   font-style: normal;
   font-weight: 700;
-  line-height: 140%; /* 3.5rem */
-  letter-spacing: 0.05rem;
+  line-height: 140%; /* 56px */
+  letter-spacing: 0.8px;
 }
 
 p {
   color: #374151;
-  /* pretendard/2xl-1.5rem-medium */
+  /* pretendard/2xl-24px-medium */
   font-family: Pretendard;
-  font-size: 1.5rem;
+  font-size: 24px;
   font-style: normal;
   font-weight: 500;
-  line-height: 2rem; /* 133.333% */
+  line-height: 32px; /* 133.333% */
 }
 
 /* footer */
@@ -194,8 +194,8 @@ footer {
   background-color: #111827;
   display: flex;
   width: 100%;
-  height: 10rem;
-  padding: 2rem 12.5rem;
+  height: 160px;
+  padding: 32px 200px;
   justify-content: center;
 }
 
@@ -207,20 +207,20 @@ footer {
 
 .links_bottom {
   display: flex;
-  gap: 1.875rem;
+  gap: 30px;
 }
 
 .SNS {
   display: flex;
-  width: 7.25rem;
-  gap: 0.75rem;
+  width: 116px;
+  gap: 12px;
 }
 
 .info_com,
 .links_bottom a {
   text-align: center;
   font-family: Pretendard;
-  font-size: 1rem;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
