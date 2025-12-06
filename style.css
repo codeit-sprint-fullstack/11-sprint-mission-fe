@@ -72,6 +72,19 @@ a {
   display: block;
 }
 
+/* -------- h1 태그 숨기기 -------- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 /* --- 위아래 배너 컨테이너 공통사항 --- */
 .hero_container,
 .bottom_container {
@@ -144,7 +157,7 @@ main {
   align-items: flex-start;
 }
 
-#hero h1 {
+#hero h2 {
   font-size: 4rem;
   font-weight: 700;
   line-height: 1.4;
@@ -234,7 +247,7 @@ main {
 }
 
 /* -------- 검은색 큰 제목 ------- */
-.text_box h1 {
+.text_box h2 {
   font-size: 4rem;
   font-weight: 700;
   line-height: 1.4;
@@ -243,7 +256,7 @@ main {
 }
 
 /* ------- 설명글 ------- */
-.text_box h2 {
+.text_box h3 {
   font-size: 2.4rem;
   font-weight: 500;
   line-height: 1.4;
@@ -268,11 +281,10 @@ main {
   align-items: center;
 }
 
-.bottom_container h1 {
+.bottom_container h2 {
   font-size: 4rem;
   font-weight: 700;
   line-height: 1.4;
-  position: relative;
 }
 
 /* ------------Footer--------------- */
