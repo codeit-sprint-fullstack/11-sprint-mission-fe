@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-100: #3692ff;
+  --cool-gray-100: #f3f4f6;
+  --secondry-800: #1f2937;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'pretendard', sans-serif;
+  font-style: normal;
+  white-space: nowrap;
+  display: flex;
+  width: 100%;
+  padding: 23.1rem 64rem 28.4rem;
+  justify-content: center;
+  align-items: center;
+}
+
+body#signup_page {
+  padding: 0.6rem 64rem 17.8rem;
+}
+
+main {
+  display: flex;
+  width: 64rem;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+a #logo {
+  width: 39.6rem;
+  height: 13.2rem;
+  margin-bottom: 4rem;
+}
+
+.forms,
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  width: 100%;
+}
+
+.inputs input {
+  width: 100%;
+  margin-top: 1.6rem;
+  padding: 1.6rem 2.4rem;
+  border: 0rem;
+  border-radius: 1.2rem;
+  background-color: var(--cool-gray-100);
+}
+
+.inputs label {
+  color: var(--secondry-800);
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 2.6rem;
+}
+
+input:focus {
+  border: 0.1rem solid var(--primary-100);
+}
+
+.login-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5.6rem;
+  padding: 1.6rem 12.4rem;
+  border-radius: 4rem;
+  background-color: #9ca3af;
+  color: var(--cool-gray-100);
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 3.2rem;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: var(--primary-100);
+}
+
+h1 {
+  color: var(--secondry-800);
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 2.6rem;
+}
+
+.easy-login {
+  width: 100%;
+  padding: 1.6rem 2.3rem;
+  margin: 2.4rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.8rem;
+  background-color: #e6f2ff;
+}
+
+.icons {
+  display: flex;
+  gap: 1.6rem;
+}
+
+.signup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--secondry-800);
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 2.4rem;
+}
+
+.signup a {
+  color: var(--primary-100);
+}
