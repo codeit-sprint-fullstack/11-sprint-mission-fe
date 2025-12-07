@@ -39,7 +39,8 @@ body{
 }
 
 .button{
-  cursor: pointer; }
+  cursor: pointer; 
+}
 
 /* header */
 header{ 
@@ -81,7 +82,7 @@ main{
   background-color: var(--bg-whith);
 }
 
- article{
+article{
   background-color: var(--bg-blue);
   height: 33.75rem;
   width: 120rem;
