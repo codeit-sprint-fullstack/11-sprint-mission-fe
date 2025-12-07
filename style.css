@@ -41,27 +41,28 @@ body{
 .button{
   cursor: pointer; }
 
+/* header */
 header{ 
-display: flex;
-width: 120rem;
-height: 4.375rem;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-gap: 0.625rem;
+  display: flex;
+  width: 120rem;
+  height: 4.375rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
 }
 
 .header-fix{
-display: flex;
-justify-content: space-between;
-align-items: center;
-align-self: stretch;
-width: 100%;
-padding: 0.5625rem 12.5rem;
-background-color: var(--bg-whith);
-position: fixed;
-top: 0;
-z-index: 99;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  width: 100%;
+  padding: 0.5625rem 12.5rem;
+  background-color: var(--bg-whith);
+  position: fixed;
+  top: 0;
+  z-index: 99;
 } 
 
 .login{
@@ -70,6 +71,15 @@ z-index: 99;
   border-radius: 0.5rem;
   color: var(--gray-100);
 } 
+
+/* main */
+main{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--bg-whith);
+}
 
  article{
   background-color: var(--bg-blue);
@@ -115,7 +125,7 @@ z-index: 99;
   margin-bottom: 3.75rem;
 }
 
-.panda{
+.panda-photo{
   display: flex;
   width: 46.625rem;
   height: 21.25rem;
@@ -124,14 +134,7 @@ z-index: 99;
   align-items: center;
 } 
 
-main{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: var(--bg-whith);
-}
-
+/* section */
 section{
   background-color: var(--bg-whith);
   padding: 8.62rem 21.5rem;
@@ -191,7 +194,7 @@ section{
   bottom: -4.5rem;
 }
 
-.panda2{
+.panda2-photo{
   display: flex;
   width: 46.625rem;
   height: 24.8125rem;
@@ -200,6 +203,7 @@ section{
   align-items: center;
 }
 
+/* footer */
 footer{
   background-color: var(--gray-900);
   display: flex;
@@ -215,7 +219,6 @@ footer{
   color: var(--gray-400);
   font-weight: 400;
 }
-
 
 #bottom-center{
   display: flex;
@@ -233,8 +236,7 @@ footer{
   gap: 0.75rem;
 } 
 
-
-
+/* media */
 @media (min-width: 1920px) {
     body {
         flex-wrap: nowrap; 
