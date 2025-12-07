@@ -2,16 +2,12 @@
 
 판다마켓은 따뜻한 중고거래를 위한 커뮤니티 플랫폼입니다.
 
-- 기간: 2025.12 ~
+- 기간: 2025.12 ~ 진행중
 - Codeit 풀스택 개발자 과정
 
 ## 🚀 Demo
 
-🔗 (링크)
-
-## 🖼 Screenshots
-
-(이미지)
+🔗 https://pandamarket-esther.netlify.app/
 
 ## 🛠 Tech Stack
 
@@ -31,12 +27,13 @@
 ```
 11-SPRINT-MISSION-FE/
 │
-├─ index.html
-├─ login.html
-├─ items.html
-├─ privacy.html
-├─ faq.html
-├─ signup.html
+├─ html/
+│ ├─ index.html
+│ ├─ login.html
+│ ├─ items.html
+│ ├─ privacy.html
+│ ├─ faq.html
+│ └─ signup.html
 │
 ├─ css/
 │ ├─ reset.css

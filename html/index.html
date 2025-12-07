@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<!-- HTML Code Style: 'HTML Best Practices' -->
+<!-- Reference: https://github.com/hail2u/html-best-practices -->
+
+<!-- Follow BEM(Block Element Modifier) -->
+
+<!-- Validator: https://validator.w3.org/ -->
+
+<html lang="ko">
+  <head>
+    <!-- meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- title -->
+    <title>판다마켓</title>
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/icons/favicon.svg" />
+
+    <!-- CSS link -->
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/variables.css" />
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <!-- font: Pretendard -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- header -->
+    <header>
+      <nav class="nav container">
+        <a class="nav-logo" href="/index.html">
+          <img src="./assets/icons/logo.svg" alt="판다마켓 로고" />
+          <h1 class="sr-only">판다마켓 메인 페이지</h1>
+        </a>
+        <a class="nav-login" href="/login.html">로그인</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- hero -->
+      <section class="hero">
+        <div class="hero__inner">
+          <!-- LEFT: text -->
+          <div class="hero__content">
+            <h2 class="hero__title">
+              일상의 모든 물건을<br />
+              거래해 보세요
+            </h2>
+            <!-- 확인필요 -->
+            <a class="btn-market href="/items.html" "> 구경하러 가기 </a>
+          </div>
+
+          <!-- RIGHT: image -->
+          <div class="hero__image">
+            <img
+              src="./assets/images/hero-illustration.png"
+              alt="중고거래를 하고 있는 판다를 표현한 일러스트"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- features -->
+      <section class="features">
+        <!-- hot features -->
+          <div class="feature__container hot">
+            <div class="feature__inner">
+              <!-- LEFT: image -->
+              <div class="feature__image hot__image">
+                <img
+                  src="./assets/images/feature-hot.png"
+                  alt="상품 인기 목록을 나타내는 일러스트"
+                />
+              </div>
+              <!-- Right: text -->
+              <div class="feature__content hot__content">
+                <span class="feature__label">Hot Item</span>
+                <h2 class="feature__title">
+                  인기 상품을<br />
+                  확인해 보세요
+                </h2>
+                <p class="feature__description">
+                  가장 HOT한 중고거래 물품을<br />
+                  판다 마켓에서 확인해 보세요
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- search features -->
+          <div class="feature__container search">
+            <div class="feature__inner row-reverse">
+              <!-- LEFT: image -->
+              <div class="feature__image hot-image">
+                <img
+                  src="./assets/images/feature-search.png"
+                  alt="상품 검색 기능을 보여주는 일러스트"
+                />
+              </div>
+              <!-- Right: text -->
+              <div class="feature__content search__content">
+                <span class="feature__label">Search</span>
+                <h2 class="feature__title">
+                  구매를 원하는<br />
+                  상품을 검색하세요
+                </h2>
+                <p class="feature__description">
+                  구매하고 싶은 물품은 검색해서<br />
+                  쉽게 찾아보세요
+                </p>
+              </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- register features -->
+          <div class="feature__container register">
+            <div class="feature__inner">
+              <!-- LEFT: image -->
+              <div class="feature__image register-image">
+                <img
+                  src="./assets/images/feature-register.png"
+                  alt="상품 등록 기능을 표현한 일러스트"
+                />
+              </div>
+              <!-- Right: text -->
+              <div class="feature__content register__content">
+                <span class="feature__label">Register</span>
+                <h2 class="feature__title">
+                  판매를 원하는<br />
+                  상품을 등록하세요
+                </h2>
+                <p class="feature__description">
+                  어떤 물건이든 판매하고 싶은 상품을<br />
+                  쉽게 등록하세요
+                </p>
+              </div>
+            </div>
+          </div>
+      </section>
+
+      <!-- trust -->
+      <section class="trust">
+        <div class="trust__inner">
+          <!-- LEFT: text -->
+          <div class="trust__content">
+              <h2 class="trust__title">
+                믿을 수 있는<br />
+                판다마켓 중고 거래
+              </h2>
+          </div>
+
+          <!-- Right: image -->
+          <div class="trust__image">
+            <img
+              src="./assets/images/trust-illustration.png"
+              alt="거래에 만족하고 있는 사용자를 표현한 일러스트"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer -->
+    <footer>
+      <div class="footer__inner">
+        <!-- LEFT: Company -->
+        <div class="footer__company">
+          <span>©codeit - 2024</span>
+        </div>
+
+        <!-- CENTER: Policy, FAQ -->
+        <div class="footer__links">
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/faq.html">FAQ</a>
+        </div>
+
+        <!-- RIGHT: SNS Icons -->
+        <ul class="footer__icons">
+          <li>
+            <a target="_blank" href="https://www.facebook.com/">
+              <img src="./assets/icons/facebook.svg" alt="facebook" />
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://x.com/">
+                <img src="./assets/icons/twitter.svg" alt="twitter" />
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://www.youtube.com/">
+              <img src="./assets/icons/youtube.svg" alt="youtube" />
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://instagram.com/">
+              <img src="./assets/icons/instagram.svg" alt="instagram" />
+            </a>
+          </li>
+        </ul>          
+      </div>
+    </footer>
+  </body>
+</html>
