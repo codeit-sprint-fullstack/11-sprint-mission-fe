@@ -1,0 +1,195 @@
+/* import reset.css */
+/* https://meyerweb.com/eric/tools/css/reset/
+에서 구한 css reset code에 커서, 박스사이징 보더박스 내용 추가함 */
+@import '/styles/reset.css';
+@import '/styles/style.css';
+
+/* 기본 폰트 크기(16px) 기준, px → rem 단위 수정*/
+
+body {
+  margin-top: 4.375rem;
+  min-width: 69.375rem;
+}
+
+section {
+  width: 120rem;
+}
+/* header > 내비게이션 */
+header {
+  height: 4.375rem;
+  width: 100%;
+  background-color: var(--white, #ffffff);
+  border-bottom: #dfdfdf solid 1px;
+  padding: 0.5625rem 12.5rem;
+  position: fixed;
+  top: 0;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-self: stretch;
+}
+
+.logo {
+  width: 9.5625rem;
+}
+
+/* banner 상,하단 공통*/
+.banner {
+  height: 33.75rem;
+  width: 100%;
+  background-color: var(--bannerblue, #cfe5ff);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.contents {
+  width: 69.375rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.txt_container {
+  justify-content: flex-start;
+  gap: 2rem;
+  margin-bottom: 3.75rem;
+}
+
+/* main */
+main {
+  width: 100%;
+  height: 135rem;
+  margin-bottom: 8.625rem;
+}
+
+.box-main {
+  height: 45rem;
+  padding: 8.625rem 21.5rem;
+  background-color: var(--white, #ffffff);
+}
+
+.content_box {
+  background-color: #fcfcfc;
+  width: 61.75rem;
+  margin: 0 auto;
+  gap: 4rem;
+}
+
+.txt-right {
+  text-align: left;
+}
+
+.txt-left {
+  text-align: right;
+}
+
+p.blue_bold {
+  color: var(--blue100, #3692ff);
+  font-family: Pretendard;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.444;
+}
+
+.content_box h1 {
+  margin: 0.75rem 0 1.5rem;
+  letter-spacing: 0.05rem;
+}
+
+p.feature_info {
+  color: var(--gray700, #374151);
+  font-family: Pretendard;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.333;
+  white-space: nowrap;
+  /* 시안처럼 폰트 설정했으나 3번째 항목의 내용이 넘쳐 nowrap 추가함 */
+}
+
+/* footer */
+footer {
+  background-color: var(--gray900, #111827);
+  display: flex;
+  width: 100%;
+  height: 10rem;
+  padding: 2rem 12.5rem;
+  justify-content: center;
+}
+
+.content_footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.links_footer {
+  display: flex;
+  gap: 1.875rem;
+}
+
+.SNS {
+  display: flex;
+  width: 7.25rem;
+  gap: 0.75rem;
+}
+
+.info_com,
+.links_footer a {
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.info_com {
+  color: var(--gray400, #9ca3af);
+}
+
+.links_footer a {
+  color: var(--gray200, #e5e7eb);
+}
+
+/* buttons */
+.btn-login,
+.banner .btn-large {
+  background: var(--blue100, #3692ff);
+}
+
+.btn-login {
+  border-radius: 0.5rem;
+  width: 8rem;
+  padding: 0.75rem 1.4375rem;
+  color: var(--gray100, #f3f4f6);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.625;
+}
+
+.banner .btn-large {
+  color: var(--gray50, #f9fafb);
+  line-height: 1.6;
+}
+
+/* imgs */
+.content_box > img {
+  width: 36.75rem;
+  height: 27.75rem;
+}
+
+img.panda {
+  width: 46.625rem;
+  height: 21.25rem;
+}
+
+img.two_panda {
+  width: 46.625rem;
+  height: 24.81rem;
+}
