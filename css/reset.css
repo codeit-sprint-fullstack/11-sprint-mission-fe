@@ -40,15 +40,11 @@ footer, header, menu, nav, section, picture, source {
 }
 
 /* 모든 요소에 box-sizing 설정해 요소 크기 계산 쉽도록 함 */
-body {
-    line-height: 1.5;
-    box-sizing: border-box;
-    /* box-sizng 꼭 체크할 것 */
-}
+/* 기본값은 content-box */
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
+    box-sizing: border-box;
 }
 
 /* 텍스트 요소의 일관된 스타일링 위해 폰트 사이즈와 라인 높이 설정 */
