@@ -120,7 +120,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
+  content: '';
   content: none;
 }
 table {
@@ -128,11 +128,10 @@ table {
   border-spacing: 0;
 }
 
-
 /* add box-sizing and pointer cursor
 reduce text-decoration of buttons or links */
 
-*{
+* {
   box-sizing: border-box;
 }
 

@@ -1,5 +1,120 @@
 /* import reset.css */
 /* https://meyerweb.com/eric/tools/css/reset/
 에서 구한 css reset code에 커서, 박스사이징 보더박스 내용 추가함 */
-@import "./reset.css";
-@import "./style.css";
+@import '/styles/reset.css';
+@import '/styles/style.css';
+
+main {
+  margin: 14.4375rem auto 17.75rem;
+  display: flex;
+  width: 40rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  flex-shrink: 0;
+}
+
+.to_index img {
+  width: 24.75rem;
+  height: 8.25rem;
+}
+
+.contents {
+  gap: 1.5rem;
+  align-self: stretch;
+}
+
+.contents form {
+  gap: 1.5rem;
+}
+
+label div {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+}
+
+label {
+  color: var(--gray800);
+  font-family: Pretendard;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.444;
+}
+
+input {
+  border: 0;
+  display: flex;
+  width: 40rem;
+  height: 3.5rem;
+  padding: 1rem 1.5rem;
+  margin-top: 1rem;
+  align-items: flex-start;
+  gap: 0.625rem;
+  border-radius: 0.75rem;
+  background: var(--gray100);
+}
+
+input:focus {
+  outline: 2px var(--blue100) solid;
+}
+
+#see-pw {
+  position: absolute;
+  bottom: 0.875rem;
+  right: 1.5rem;
+  margin: auto;
+  height: 1.875rem;
+  font-size: 1.375rem;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.btn-large.login {
+  background: var(--gray400);
+  color: var(--gray100);
+  line-height: 1.6;
+}
+
+.btn-large.login:hover {
+  background-color: var(--blue100);
+}
+
+.easy_login {
+  width: 40rem;
+  height: 4.625rem;
+  padding: 1rem 1.4375rem;
+  border-radius: 0.5rem;
+  background: #e6f2ff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.sns_login_links {
+  display: flex;
+  gap: 1rem;
+}
+
+.join_us {
+  gap: 0.25rem;
+  color: var(--Secondary-800, #1f2937);
+  font-family: Pretendard;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.714; /* 171.429% */
+}
+
+.join_us a {
+  color: var(--Primary-100, #3692ff);
+  line-height: normal;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+}
