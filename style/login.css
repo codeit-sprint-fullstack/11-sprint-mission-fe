@@ -1,0 +1,153 @@
+:root {
+--primary-100: #3692ff;
+--primary-200: #1967d6;
+--primary-300: #1251aa;
+
+--error: #f74747;
+--bg-blue: #cfe5ff;
+--bg-gray: #fcfcfc;
+--bg-whith:#ffffff;
+
+--gray-50: #f9fafb;
+--gray-100: #f3f4f6;
+--gray-200: #e5e7eb;
+--gray-400: #9ca3af;
+--gray-500: #6b7280;
+--gray-600: #4b5563;
+--gray-700: #374151;
+--gray-800: #1f2937;
+--gray-900: #111827;
+}
+
+*{
+  box-sizing: border-box;
+  font-family: Pretendard;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 2rem;
+  border-style: none;
+}
+
+body{
+  width: 100%;
+  padding: 14.4375rem 40rem 17.75rem 40rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main{
+  display: flex;
+  width: 40rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  flex-shrink: 0;
+}
+
+.big-logo{
+  width: 24.75rem;
+  height: 8.25rem;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.eye-icon {
+  position: absolute;
+  top: 4rem;
+  right: 1.5rem;
+  width: 1.5rem; 
+  height: 1.5rem; 
+  cursor: pointer;
+}
+
+input{
+  display: flex;
+  width: 40rem;
+  height: 3.5rem;
+  padding: 1rem 3rem 1rem 1.5rem;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 0.75rem;
+  background-color: var(--gray-100);
+  border-style: none;
+}
+
+.label{
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.625rem;
+  color: var(--gray-800);
+}
+
+.input-content{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  position: relative;
+}
+
+button{
+  display: flex;
+  width: 40rem;
+  height: 3.5rem;
+  padding: 1rem 7.75rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 2.5rem;
+  background-color: var(--gray-400);
+  color: var(--gray-100);
+  cursor: pointer;
+}
+
+.login-button-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.simple-login{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.4375rem;
+  width: 40rem;
+  height: 4.625rem;
+  background-color: #E6F2FF;
+  border-radius: 0.5rem;
+  
+}
+
+.sns-buttons{
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  height: 2.625rem;
+  position: relative;
+  top: 0.3rem;
+}
+
+.sns-button{
+  width: 2.625rem;
+  height: 2.625rem;
+  cursor: pointer;
+}
+
+input:focus {
+    border: 1px solid var(--primary-100);
+    outline: none; 
+}
+
+button:focus{
+  background-color: var(--primary-100);
+}
