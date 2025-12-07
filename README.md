@@ -2,7 +2,9 @@
 ![PandaMarket](https://github.com/user-attachments/assets/3784b99f-73c9-4349-a9a9-92b2a7563574)  
 _위 이미지는 판다마켓의 대표 이미지입니다._ 📸
 
-
+##
+![Netlify 배포 링크]
+( https://zoe-panda-market.netlify.app/ )
 ## 주요 기능 ✨
 
 1. **상품 등록**: 내가 가진 물건을 올리고, 사진과 설명을 추가해 직접 판매할 수 있어요!
