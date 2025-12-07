@@ -1,0 +1,137 @@
+:root {
+  --primary-100: #3692ff;
+  --primary-200: #1967d6;
+  --primary-300: #1251aa;
+
+  --error: #f74747;
+  --bg-blue: #cfe5ff;
+  --bg-gray: #fcfcfc;
+  --bg-white: #ffffff;
+
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
+}
+html,
+body {
+  height: 100%;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.auth-section {
+  gap: 40px;
+  display: flex;
+  flex-direction: column;
+}
+.auth-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  max-width: 640px;
+  padding: 32px;
+  margin: 0 auto;
+}
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.submit-btn {
+  padding: 16px;
+  background-color: var(--primary-100);
+  border-radius: 40px;
+  color: var(--gray-100);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+  white-space: nowrap;
+  border: none;
+}
+.logo {
+  width: 396px;
+  height: 132px;
+}
+.logo-link {
+  margin: 0 auto;
+}
+.login-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-weight: 500;
+}
+.social-login {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 23px;
+  gap: 10px;
+  background-color: #e6f2ff;
+  border-radius: 8px;
+}
+.social-login-buttons {
+  display: flex;
+  gap: 16px;
+}
+.social-login-button {
+  width: 42px;
+  height: 42px;
+}
+.link-text {
+  font-size: 14px;
+  text-align: center;
+}
+.link-text a {
+  color: var(--primary-100);
+  text-decoration: underline;
+}
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.input-group input {
+  padding: 16px 24px;
+  border-radius: 12px;
+  background-color: var(--gray-100);
+  border: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.input-group label {
+  font-size: 18px;
+  font-weight: 700;
+}
+.password-input-group {
+  position: relative;
+}
+.password-input-group in put {
+  width: 100%;
+  padding-right: 54px;
+}
+.visibility-toggle-button {
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+}
