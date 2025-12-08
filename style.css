@@ -1,0 +1,161 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  border-bottom: 1px solid #dfdfdf;
+  display: flex;
+  justify-content: center;
+}
+
+.header_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px 200px;
+  width: 1920px;
+  height: 70px;
+}
+
+.login_button {
+  padding: 12px 23px;
+  background-color: #3692ff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  line-height: 26px;
+  color: #f3f4f6;
+  width: 128px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.go_button {
+  background-color: #3692ff;
+  border-radius: 40px;
+  padding: 16px 124px;
+  color: #f9fafb;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.main_heading {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #374151;
+  margin-bottom: 32px;
+}
+
+.banner_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner {
+  width: 100%;
+  background-color: #cfe5ff;
+  padding-top: 200px;
+}
+
+.middle_content {
+  width: 988px;
+  background-color: #fcfcfc;
+
+  margin: 0 auto 276px;
+  display: flex;
+  justify-content: center;
+}
+
+.banner_margin {
+  margin-top: 138px;
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 64px;
+}
+
+.content_image {
+  width: 58.9%;
+}
+
+.content_align {
+  text-align: right;
+}
+
+.tag {
+  color: #3692ff;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+}
+.heading {
+  color: #374151;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 56px;
+  margin-top: 12px;
+  margin-bottom: 24px;
+}
+.description {
+  color: #374151;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+  white-space: nowrap;
+}
+
+.footer {
+  background-color: #111827;
+  padding: 32px 200px;
+  height: 160px;
+}
+
+.footer_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer_1 {
+  color: #9ca3af;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.privacy_policy_FAQ {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.footer_2 {
+  margin-right: 30px;
+  color: #e5e7eb;
+  text-decoration: none;
+}
+
+.footer_3 {
+  color: #e5e7eb;
+  text-decoration: none;
+}
+
+.footer_4 {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer_4 a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
