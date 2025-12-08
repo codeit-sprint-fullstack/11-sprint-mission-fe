@@ -1,0 +1,92 @@
+html {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+form {
+  padding: 231 640 284;
+  margin: 16px auto;
+  width: 640px;
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
+  color: #2c2c2c;
+  display: block;
+  padding: 0;
+  margin: auto;
+}
+
+input {
+  border-radius: 1rem;
+  color: #ababab;
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  margin: 8px 0;
+  padding: 16px 24px;
+  width: 100%;
+}
+
+button {
+  background-color: Secondary/400;
+  border: none;
+  color: Cool Gray/100;
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 24px 0;
+  padding: 16px;
+  width: 100%;
+}
+
+.login-title {
+  color: var(--brand-blue, #3692ff);
+  font-family: 'ROKAF Sans';
+  font-size: 66.344px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  display: flex;
+  justify-content: center; /* 가로 가운데 정렬 */
+  align-items: center; /* 세로 가운데 정렬(필요 시) */
+  margin: 0% auto;
+}
+
+#easyLogin {
+  background-color: #cfe5ff;
+  height: 74px;
+  display: flex;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: 80% bottom;
+  background-size: 55%;
+}
+
+.loginWrap {
+  font-weight: 700;
+  width: 40rem;
+  display: flex;
+  justify-content: space-between; /* justify    space-between 가운데 사이간격 조절용 */
+  align-items: center;
+  padding: 2rem;
+  margin: 0% auto; /* margin : 도각 외부 사이즈 조절 */
+}
+
+#Register {
+  font-weight: 700;
+  width: 16.8%;
+  display: flex;
+  justify-content: space-between; /* justify    space-between 가운데 사이간격 조절용 */
+  align-items: center;
+  padding: 2rem;
+  margin: 0% auto;
+}
