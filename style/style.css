@@ -74,7 +74,7 @@ main{
 article{
   background-color: var(--bg-blue);
   height: 33.75rem;
-  width: 120rem;
+  width: 100%;
   position: relative;
 }
 
@@ -175,6 +175,7 @@ section{
   display: flex;
   align-items: center;
   justify-self: center;
+  width: 100%;
 }
 
 #bottom-position{
