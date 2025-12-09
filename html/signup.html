@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="/css/reset.css" />
     <link rel="stylesheet" href="/css/variables.css" />
     <link rel="stylesheet" href="/css/global.css" />
-    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/pages/signup.css" />
 
     <!-- font: Pretendard -->
     <link
@@ -25,63 +25,58 @@
   </head>
 
   <body>
-    <main class="login">
-      <section class="login__logo">
-        <a href="index.html">
+    <section class="login__section">
+      <div class="login__logo">
+        <a href="/">
           <img src="/assets/icons/login-logo.svg" alt="로그인 로고" />
         </a>
-      </section>
+      </div>
 
-      <section class="signup__form">
-        <form>
-          <div>
-            <label for="input__email">이메일</label>
-            <input id="input__email" type="email" placeholder="이메일을 입력해주세요" />
-          </div>
-
-          <div>
-            <label for="input__password">닉네임</label>
-            <input id="input__password" type="input" placeholder="닉네임을 입력해주세요" />
-          </div>
-
-          <div>
-            <label for="input__email">비밀번호</label>
-            <div>
-              <input id="input__email" type="email" placeholder="비밀번호를 입력해주세요" />
-              <!-- i태그 사용 고려 -->
-              <img src="/assets/icons/eye-open.svg" alt="눈 모양 아이콘" />
+      <div class="login__box">
+        <div class="login__form">
+          <form>
+            <div class="login__input">
+              <label for="userEmail">이메일</label>
+              <input id="userEmail" type="email" placeholder="이메일을 입력해주세요" />
             </div>
-          </div>
 
-          <div>
-            <label for="input__email">비밀번호 확인</label>
-            <input
-              id="input__email"
-              type="email"
-              placeholder="비밀번호를 다시 한 번 입력해주세요"
-            />
-          </div>
+            <div class="login__input">
+              <label for="userNickname">닉네임</label>
+              <input id="userNickname" type="text" placeholder="닉네임을 입력해주세요" />
+            </div>
 
-          <button type="submit" class="btn-signup">회원가입</button>
-        </form>
-      </section>
+            <div class="login__input input__password">
+              <label for="userPassword">비밀번호</label>
+              <input id="userPassword" type="password" placeholder="비밀번호를 입력해주세요" />
+            </div>
 
-      <section class="login__social">
-        <div>
+            <div class="login__input input__password">
+              <label for="confirmPassword">비밀번호 확인</label>
+              <input id="confirmPassword" type="password" placeholder="비밀번호를 다시 한 번 입력해주세요" />
+            </div>
+
+            <button type="submit" class="submit-btn">회원가입</button>
+          </form>
+          <!-- </div> -->
+        </div>
+
+        <div class="login__social">
           <p>간편 로그인하기</p>
           <div class="social-buttons">
-            <a href=""><img src="/assets/icons/google.svg" /></a>
-            <a href=""><img src="/assets/icons/kakao.svg" /></a>
+            <a href="https://www.google.com/" target="_blank">
+              <img src="/assets/icons/google.svg" />
+            </a>
+            <a href="https://www.kakaocorp.com/page/" target="_blank">
+              <img src="/assets/icons/kakao.svg" />
+            </a>
           </div>
         </div>
-      </section>
 
-      <section class="login__signup">
-        <p>
-          이미 회원이신가요?
+        <div class="login__signup">
+          <p>이미 회원이신가요?</p>
           <a href="/html/login.html">로그인</a>
-        </p>
-      </section>
-    </main>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
