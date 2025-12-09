@@ -124,6 +124,7 @@ header {
   margin: 138px 0;
 
   background-color: var(--bg-white);
+  white-space: nowrap;
 }
 
 .feature__inner {
@@ -139,7 +140,6 @@ header {
 .feature__image img {
   width: 588px;
   height: 444px;
-  flex-shrink: 0;
 }
 
 .feature__label {
@@ -231,7 +231,7 @@ footer {
 .footer__links {
   display: flex;
   gap: 30px;
-  
+
   color: var(--Secondary-200);
 }
 

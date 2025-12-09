@@ -15,7 +15,7 @@ body {
 /* 공통 요소 */
 img {
   max-width: 100%;
-  display: block;
+  /* display: block; */
 }
 
 a, button {
