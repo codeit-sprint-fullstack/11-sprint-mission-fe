@@ -88,7 +88,7 @@ header {
   line-height: var(--lh-4xl);
 }
 
-.hero-btn {
+.hero-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -121,7 +121,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   margin: 138px 0;
   background-color: var(--bg-white);
 }
