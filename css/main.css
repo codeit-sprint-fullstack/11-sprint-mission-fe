@@ -1,0 +1,245 @@
+/* -----------------------
+  main.css
+  - 메인 랜딩 페이지
+----------------------- */
+
+/* -----------------------
+  HEADER
+----------------------- */
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 200px;
+
+  position: sticky;
+  top: 0;
+
+  height: 70px;
+  background-color: #ffffff;
+
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+
+  max-width: 1520px;
+  margin: 0 auto;
+}
+
+.nav-logo {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.nav-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 128px;
+  height: 48px;
+
+  background-color: var(--Primary-100);
+  border-radius: 8px;
+
+  font-weight: var(--weight-semibold);
+  color: var(--Secondary-100);
+}
+
+.nav-login:hover {
+  background-color: var(--Primary-200);
+}
+
+/* -----------------------
+  HERO, TRUST
+----------------------- */
+
+.hero,
+.trust {
+  background-color: var(--bg-blue);
+}
+
+.hero__inner,
+.trust__inner {
+  display: flex;
+
+  width: 1110px;
+  padding-top: 200px;
+  margin: 0 auto;
+}
+
+.hero__content,
+.trust__content {
+  padding: 2.5rem 0; /* 40px */
+}
+
+.hero__title,
+.trust__title {
+  margin-bottom: 2rem; /* 32px */
+
+  font-size: var(--font-4xl);
+  font-weight: var(--weight-bold);
+  line-height: var(--lh-4xl);
+}
+
+.hero-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 357px;
+  height: 56px;
+  background-color: var(--Primary-100);
+  border-radius: 40px;
+
+  color: var(--Secondary-50);
+  font-size: var(--font-xl);
+  font-weight: var(--weight-semibold);
+}
+
+.hero-btn:hover {
+  background-color: var(--Primary-200);
+}
+
+/* -----------------------
+  FEATURES
+----------------------- */
+
+.features {
+  padding-bottom: 138px;
+  background-color: var(--bg-gray);
+}
+
+/* 공통 부분 */
+.feature__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 138px 0;
+
+  background-color: var(--bg-white);
+  white-space: nowrap;
+}
+
+.feature__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 64px;
+
+  width: 988px;
+  background-color: var(--bg-gray);
+}
+
+.feature__image img {
+  width: 588px;
+  height: 444px;
+}
+
+.feature__label {
+  color: var(--Primary-100);
+  font-size: var(--font-2lg);
+  font-weight: var(--weight-bold);
+}
+
+.feature__title {
+  padding: 12px 0 24px 0;
+
+  font-size: var(--font-4xl);
+  font-weight: var(--weight-bold);
+  line-height: var(--lh-4xl);
+  letter-spacing: 0.05rem;
+}
+
+.feature__description {
+  line-height: var(--lh-2xl);
+
+  font-size: var(--font-2xl);
+  font-weight: var(--weight-medium);
+}
+
+/* 개별 부분 */
+.hot__content {
+  width: 274px;
+}
+
+.search {
+  text-align: right;
+}
+
+.search__content {
+  width: 317px;
+}
+
+.row-reverse {
+  flex-direction: row-reverse;
+}
+
+.register__content {
+  width: 335px;
+}
+
+/* -----------------------
+  TRUST 일부 수정, 추가
+----------------------- */
+
+.trust__inner {
+  padding-top: 143px;
+}
+
+.trust__image {
+  width: 746px;
+  height: 397px;
+}
+
+.trust__content {
+  padding: 0;
+  margin: 112.5px 69px 112.5px 0;
+}
+
+.trust__title {
+  padding: 0;
+  margin-bottom: 60px;
+}
+
+/* -----------------------
+  FOOTER
+----------------------- */
+
+footer {
+  padding: 32px 200px;
+  height: 160px;
+  background-color: var(--Secondary-900);
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+
+  height: 20px;
+}
+
+.footer__company span {
+  color: var(--Secondary-400);
+}
+
+.footer__links {
+  display: flex;
+  gap: 30px;
+
+  color: var(--Secondary-200);
+}
+
+.footer__icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}

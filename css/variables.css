@@ -1,0 +1,70 @@
+/* ---------------------------------------------------------
+  variables.css
+  - 전역 색상, 폰트, 간격 등 공통 디자인 토큰 정의
+  - 모든 CSS 파일에서 공통 변수로 사용(var)
+---------------------------------------------------------- */
+
+/* 전역 스코프 */
+:root {
+  /* CSS 변수는 '--'로 시작 */
+  /* 사용예시: var(--Primary-100, #3692ff) */
+
+  /* 컬러 디자인 토큰 */
+  /* Primary Color */
+  --Primary-100: #3692ff;
+  --Primary-200: #1967d6;
+  --Primary-300: #1251aa;
+
+  /* Error */
+  --error-red: #f74747;
+
+  /* Gray scale (Secondary) */
+  --Secondary-50: #f9fafb;
+  --Secondary-100: #f3f4f6;
+  --Secondary-200: #e5e7eb;
+  --Secondary-400: #9ca3af;
+  --Secondary-500: #6b7280;
+  --Secondary-600: #4b5563;
+  --Secondary-700: #374151;
+  --Secondary-800: #1f2937;
+  --Secondary-900: #111827;
+
+  /* Background Color 추가 */
+  --bg-blue: #cfe5ff;
+  --bg-gray: #fcfcfc;
+  --bg-white: #ffffff;
+  --bg-sky: #e6f2ff;
+  
+  /* 폰트 디자인 토큰 */
+  /* Font Family */
+  --font-family-base: 'Pretendard', sans-serif;
+
+  /* Font Weight */
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /* Font Sizes */
+  --font-4xl: 2.5rem;     /* 40px */
+  --font-3xl: 2rem;       /* 32px */
+  --font-2xl: 1.5rem;     /* 24px */
+  --font-xl: 1.25rem;     /* 20px */
+  --font-2lg: 1.125rem;   /* 18px */
+  --font-lg: 1rem;        /* 16px */
+  --font-md: 0.875rem;    /* 14px */
+  --font-sm: 0.8125rem;   /* 13px */
+  --font-xs: 0.75rem;     /* 12px */
+
+  /* Line Heights */
+  --lh-4xl: 3.5rem;       /* 56px */
+  --lh-3xl: 2.625rem;     /* 42px */
+  --lh-2xl: 2rem;         /* 32px */
+  --lh-xl: 2rem;          /* 32px */
+  --lh-2lg: 1.625rem;     /* 26px */
+  --lh-lg: 1.625rem;      /* 26px */
+  --lh-md: 1.5rem;        /* 24px */
+  --lh-sm: 1.375rem;      /* 22px */
+  --lh-xs: 1.25rem;       /* 20px */
+  --lh-xs-tight: 1.125rem; /* 18px */
+}

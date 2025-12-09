@@ -1,0 +1,56 @@
+/* ---------------------------------------------------------
+  global.css - 공통 스타일
+---------------------------------------------------------- */
+
+/* 폰트 설정 */
+body {
+    line-height: 1.5;
+    font-family: 'Pretendard Variable', Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI',
+    'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 공통 요소 */
+img {
+  max-width: 100%;
+  /* display: block; */
+}
+
+a, button {
+  cursor: pointer;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+body {
+  /* 폰트 */
+  font-family: var(--font-family-base);
+  /* margin: 0; */
+  background-color: var(--bg-white);
+  color: var(--Secondary-700);
+}
+
+/* container: 모든 섹션의 공통 너비 규칙 */
+/* .container {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: var(--side-space); 200px */
+/* } */
+
+/* 화면이 1920px 이상일 경우 */
+/* @media (min-width: 1920rem) {
+    max-width: var();
+    padding-inline: 0;
+  } */
