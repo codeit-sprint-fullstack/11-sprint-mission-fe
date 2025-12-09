@@ -111,9 +111,18 @@ header {
   FEATURES
 ----------------------- */
 
+.features {
+  background-color: var(--bg-gray);
+  padding-bottom: 138px;
+}
+
 /* 공통 부분 */
 .feature__container {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  margin: 138px 0;
   background-color: var(--bg-white);
 }
 
@@ -121,9 +130,9 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 64px;
 
   width: 988px;
-  margin: 0 auto;
   background-color: var(--bg-gray);
 }
 
@@ -155,39 +164,24 @@ header {
 }
 
 /* 개별 부분 */
-.hot {
-  padding: 138px 344px;
+.hot__content {
+  width: 274px;
 }
 
 .search {
-  padding: 138px 342px;
   text-align: right;
 }
 
-.register {
-  padding: 138px 360px;
-}
-
-.hot__content {
-  padding: 103px 31px 103px 64px;
-}
-
 .search__content {
-  padding: 103px 64px 103px 9.5px;
-}
-
-.register__content {
-  padding: 103px 0.5px 103px 64px;
+  width: 317px;
 }
 
 .row-reverse {
   flex-direction: row-reverse;
 }
 
-/* feature 섹션 하단 */
-.features {
-  background-color: var(--bg-gray);
-  padding-bottom: 138px;
+.register__content {
+  width: 335px;
 }
 
 /* -----------------------
