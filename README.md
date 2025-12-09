@@ -27,8 +27,9 @@
 ```
 11-SPRINT-MISSION-FE/
 │
+├─ index.html
+│
 ├─ html/
-│ ├─ index.html
 │ ├─ login.html
 │ ├─ items.html
 │ ├─ privacy.html

@@ -222,6 +222,8 @@ footer {
   display: flex;
   justify-content: space-between;
   flex-grow: 1;
+
+  height: 20px;
 }
 
 .footer__company span {
