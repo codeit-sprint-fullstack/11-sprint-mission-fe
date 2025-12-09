@@ -11,13 +11,13 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 200px;
 
   position: sticky;
   top: 0;
 
   height: 70px;
   background-color: #ffffff;
-  padding: 0 200px;
 
   border-bottom: 1px solid #dfdfdf;
 }
@@ -75,7 +75,6 @@ header {
 
 .hero__content,
 .trust__content {
-  /* flex-grow: 1; */
   padding: 2.5rem 0; /* 40px */
 }
 
@@ -98,9 +97,9 @@ header {
   background-color: var(--Primary-100);
   border-radius: 40px;
 
+  color: var(--Secondary-50);
   font-size: var(--font-xl);
   font-weight: var(--weight-semibold);
-  color: var(--Secondary-50);
 }
 
 .hero-btn:hover {
@@ -112,8 +111,8 @@ header {
 ----------------------- */
 
 .features {
-  background-color: var(--bg-gray);
   padding-bottom: 138px;
+  background-color: var(--bg-gray);
 }
 
 /* 공통 부분 */
@@ -123,6 +122,7 @@ header {
   align-items: center;
 
   margin: 138px 0;
+
   background-color: var(--bg-white);
 }
 
@@ -146,21 +146,22 @@ header {
   color: var(--Primary-100);
   font-size: var(--font-2lg);
   font-weight: var(--weight-bold);
-  line-height: var(--lh-lg);
 }
 
 .feature__title {
+  padding: 12px 0 24px 0;
+
   font-size: var(--font-4xl);
   font-weight: var(--weight-bold);
   line-height: var(--lh-4xl);
   letter-spacing: 0.05rem;
-  padding: 12px 0 24px 0;
 }
 
 .feature__description {
+  line-height: var(--lh-2xl);
+
   font-size: var(--font-2xl);
   font-weight: var(--weight-medium);
-  line-height: var(--lh-2xl);
 }
 
 /* 개별 부분 */
@@ -212,9 +213,9 @@ header {
 ----------------------- */
 
 footer {
+  padding: 32px 200px;
   height: 160px;
   background-color: var(--Secondary-900);
-  padding: 32px 200px;
 }
 
 .footer__inner {
@@ -230,6 +231,7 @@ footer {
 .footer__links {
   display: flex;
   gap: 30px;
+  
   color: var(--Secondary-200);
 }
 
