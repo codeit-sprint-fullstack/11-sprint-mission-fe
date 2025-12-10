@@ -1,0 +1,123 @@
+main {
+  width: 1920px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+}
+
+.login-form .pandalogo {
+  width: 396px;
+  height: 132px;
+  padding-bottom: 40px;
+}
+
+.login-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.login-input div {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.login-input h2 {
+  color: #1f2937;
+  font-family: Pretendard;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.login-input input {
+  font-size: 16px;
+  font-weight: 400;
+  color: #9ca3af;
+  display: flex;
+  align-items: center;
+  width: 592px;
+  height: 24px;
+  padding: 16px 24px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  background-color: #f3f4f6;
+}
+
+.login-input input:focus {
+  border: 1px solid #3692ff;
+  outline: none;
+}
+
+.login-btn {
+  display: flex;
+  width: 392px;
+  height: 24px;
+  padding: 16px 124px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: #9ca3af;
+  border-radius: 40px;
+  margin-bottom: 24px;
+}
+
+.login-simple {
+  border-radius: 8px;
+  padding: 16px 23px;
+  width: 594px;
+  border-radius: 8px;
+  background: #e6f2ff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+.login-simple p {
+  color: #1f2937;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+}
+
+.login-simple-ico {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.login-signup {
+  color: #1f2937;
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.pwd-wrap {
+  position: relative;
+}
+
+.eye {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>판다마켓 - 로그인</title>
+    <link rel="stylesheet" href="style/login.css" />
+    <link rel="stylesheet" href="style/reset.css" />
+    <link rel="stylesheet" href="stye/palette.css" />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-E3TR5L4ZF4"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-E3TR5L4ZF4");
+    </script>
+  </head>
+  <body>
+    <main>
+      <form class="login-form">
+        <a href="/">
+          <img class="pandalogo" src="/imgs/logo.svg" alt="판다마켓 로고" />
+        </a>
+        <div class="login-input">
+          <div class="login-email">
+            <h2>이메일</h2>
+            <input placeholder="이메일을 입력해주세요" type="email" />
+          </div>
+          <div class="login-pwd">
+            <h2>비밀번호</h2>
+            <div class="pwd-wrap">
+              <input placeholder="비밀번호를 입력해주세요" type="password" />
+              <img
+                class="eye"
+                src="/imgs/ico_eye.svg"
+                alt="비밀번호 보기 아이콘"
+              />
+            </div>
+          </div>
+
+          <a class="login-btn" href="/login.html">로그인</a>
+        </div>
+        <div class="login-simple">
+          <p>간편 로그인하기</p>
+          <div class="login-simple-ico">
+            <a href="https://www.google.com/">
+              <img src="/imgs/ico_google.svg" alt="구글 로고" />
+            </a>
+            <a href="https://wwww.kakaocorp.com/page/">
+              <img src="/imgs/ico_kakaotalk.svg" alt="카카오톡 로고" />
+            </a>
+          </div>
+        </div>
+
+        <div class="login-signup">
+          <p>
+            판다마켓이 처음이신가요?
+            <a href="/signup.html">회원가입</a>
+          </p>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
