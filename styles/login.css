@@ -38,7 +38,7 @@ input:focus {
 
 button {
   background: #888787;
-  border-radius: 50px;;
+  border-radius: 50px;
   border: none;
   color: #f3efef;
   display: block;
@@ -108,6 +108,7 @@ button {
 
 
 .simple-login{
+    font-size : 1.2rem;
     display:flex;
     flex-direction:row;
     align-items: center;
