@@ -21,7 +21,9 @@ export function getArticleList(page = 1, pageSize = 10, keyword = '') {
   fetch(`${articleUrl}?${listQuery}`)
     .then((response) => {
       if (!response.ok) {
-        throw new Error('조회 실패');
+        throw new Error(
+          `조회 실패, status: ${response.status}, text: ${response.statusText}`
+        );
       }
       return response.json();
     })
@@ -30,6 +32,7 @@ export function getArticleList(page = 1, pageSize = 10, keyword = '') {
     })
     .catch((error) => {
       console.error(error);
+      throw error;
     });
 }
 
@@ -38,7 +41,9 @@ export function getArticle(id) {
   fetch(`${articleUrl}/${id}`)
     .then((response) => {
       if (!response.ok) {
-        throw new Error('데이터 조회 실패');
+        throw new Error(
+          `데이터 조회 실패, , status: ${response.status}, text: ${response.statusText}`
+        );
       }
       return response.json();
     })
@@ -47,6 +52,7 @@ export function getArticle(id) {
     })
     .catch((error) => {
       console.error(error);
+      throw error;
     });
 }
 
@@ -66,7 +72,9 @@ export function createArticle(title, content, image) {
   })
     .then((response) => {
       if (!response.ok) {
-        throw new Error('게시글 등록 실패');
+        throw new Error(
+          `게시글 등록 실패, status: ${response.status}, text: ${response.statusText}`
+        );
       }
       return response.json();
     })
@@ -75,6 +83,7 @@ export function createArticle(title, content, image) {
     })
     .catch((error) => {
       console.error(error);
+      throw error;
     });
 }
 
@@ -89,7 +98,9 @@ export function patchArticle(id, data) {
   })
     .then((response) => {
       if (!response.ok) {
-        throw new Error('게시글 수정 실패');
+        throw new Error(
+          `게시글 수정 실패, status: ${response.status}, text: ${response.statusText}`
+        );
       }
       return response.json();
     })
@@ -98,6 +109,7 @@ export function patchArticle(id, data) {
     })
     .catch((error) => {
       console.error(error);
+      throw error;
     });
 }
 
@@ -108,7 +120,9 @@ export function deleteArticle(id) {
   })
     .then((response) => {
       if (!response.ok) {
-        throw new Error('게시글 삭제 실패');
+        throw new Error(
+          `게시글 삭제 실패, status: ${response.status}, text: ${response.statusText}`
+        );
       }
       return response.json().catch(() => ({ message: '삭제 성공(내용 없음)' }));
     })
@@ -117,5 +131,6 @@ export function deleteArticle(id) {
     })
     .catch((error) => {
       console.error(error);
+      throw error;
     });
 }

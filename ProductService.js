@@ -19,12 +19,13 @@ export async function getProductList(page = 1, pageSize = 10, keyword = '') {
     const response = await fetch(`${productUrl}?${listQuery}`);
 
     if (!response.ok) {
-      throw new Error('상품 목록 조회 실패');
+      throw new Error(`상품 목록 조회 실패, status: ${response.status}, text: ${response.statusText}`);
     }
     const data = await response.json();
     console.log('상품목록:', data);
   } catch (error) {
     console.error(error);
+    throw error;
   }
 }
 
@@ -34,13 +35,14 @@ export async function getProduct(id) {
     const response = await fetch(`${productUrl}/${id}`);
 
     if (!response.ok) {
-      throw new Error('상품 상세 조회 실패');
+      throw new Error(`상품 상세 조회 실패, status: ${response.status}, text: ${response.statusText}`);
     }
 
     const data = await response.json();
     console.log(`상품 (${id}) 조회 성공:`, data);
   } catch (error) {
     console.error(error);
+    throw error;
   }
 }
 
@@ -63,13 +65,14 @@ export async function createProduct(name, description, price, tags, images) {
     });
 
     if (!response.ok) {
-      throw new Error('상품 등록 실패');
+      throw new Error(`상품 등록 실패, status: ${response.status}, text: ${response.statusText}`);
     }
 
     const data = await response.json();
     console.log('상품 등록 성공:', data);
   } catch (error) {
     console.error(error);
+    throw error;
   }
 }
 
@@ -85,13 +88,14 @@ export async function patchProduct(id, data) {
     });
 
     if (!response.ok) {
-      throw new Error('상품 수정 실패');
+      throw new Error(`상품 수정 실패, status: ${response.status}, text: ${response.statusText}`);
     }
 
     const result = await response.json();
     console.log(`상품(${id}) 수정 성공:`, result);
   } catch (error) {
     console.error(error);
+    throw error;
   }
 }
 
@@ -103,7 +107,7 @@ export async function deleteProduct(id) {
     });
 
     if (!response.ok) {
-      throw new Error('상품 삭제 실패');
+      throw new Error(`상품 삭제 실패, status: ${response.status}, text: ${response.statusText}`);
     }
 
     const data = await response
@@ -113,5 +117,6 @@ export async function deleteProduct(id) {
     console.log(`상품(${id}) 삭제 성공:`, data);
   } catch (error) {
     console.error(error);
+    throw error;
   }
 }
