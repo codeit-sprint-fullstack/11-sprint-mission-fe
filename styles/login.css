@@ -27,8 +27,8 @@ input {
   border-color:white;
   background-color: #f4efefeb;
   border-radius:10px;
-  margin: 8px 0;
-  padding: 16px 24px;
+  margin: 8px 0 24px;  /* 에러표시를 위해 수정 24->0 at 2025.12.18*/
+  padding: 16px 24px;  
   width: 100%;
 }
 
@@ -152,4 +152,20 @@ button {
   text-decoration: none;
   font-size: 1rem;
 }
-/* end - 로그인을 위한 Form화면 Style 
+/* end - 로그인을 위한 Form화면 Style */
+
+
+input.error {
+  border: 1px solid red;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  min-height: 14px;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
