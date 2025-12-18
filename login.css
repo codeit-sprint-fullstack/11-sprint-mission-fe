@@ -51,7 +51,7 @@ a {
 }
 
 /* -------- h1 태그 숨기기 -------- */
-.sr-only {
+.srOnly {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -64,8 +64,8 @@ a {
 }
 
 /* ----------- 컨테이너  ----------- */
-.login_container,
-.signup_container {
+.loginContainer,
+.signupContainer {
   width: 100%;
   width: 64rem;
   max-width: 40rem;
@@ -86,8 +86,8 @@ header {
 }
 
 /* --------- 로고 이미지 -------- */
-.login-logo img,
-.signup_logo img {
+.loginLogo img,
+.signupLogo img {
   width: 30rem;
   display: block;
 }
@@ -100,7 +100,7 @@ main {
 }
 
 /* ---------- 인풋 그룹 ---------- */
-.input_group {
+.inputGroup {
   width: 100%;
   margin-bottom: 1.6rem;
   position: relative;
@@ -109,13 +109,13 @@ main {
   gap: 1rem;
 }
 
-.input_label {
+.inputLabel {
   font-size: 1.8rem;
   font-weight: 700;
   color: var(--gray-800);
 }
 
-.input_box {
+.inputBox {
   width: 100%;
   height: 4.8rem;
   padding: 1.6rem 2.4rem;
@@ -130,14 +130,14 @@ main {
   transition: border-color 0.2s, color 0.2s;
 }
 
-.input_box:focus {
+.inputBox:focus {
   border-color: var(--primary-100);
   color: var(--gray-800);
 }
 
 /* ------- 비밀번호 눈 아이콘 (로그인/회원가입) ------- */
-.login_eyes,
-.input_eyes {
+.loginEyes,
+.inputEyes {
   position: absolute;
   bottom: 1.4rem;
   right: 1.6rem;
@@ -151,8 +151,8 @@ main {
 }
 
 /* -------- 버튼 --------- */
-.login_btn,
-.signup_btn {
+.loginBtn,
+.signupBtn {
   width: 100%;
   height: 4.8rem;
 
@@ -168,13 +168,13 @@ main {
   transition: background-color 0.2s;
 }
 
-.login_btn:hover,
-.signup_btn:hover {
+.loginBtn:hover,
+.signupBtn:hover {
   background-color: var(--primary-100);
 }
 
 /* ------ 소셜 박스 -------- */
-.social_box {
+.socialBox {
   width: 100%;
   margin-top: 2.4rem;
   padding: 1.6rem 2rem;
@@ -187,19 +187,19 @@ main {
   align-items: center;
 }
 
-.social_text {
+.socialText {
   font-size: 1.4rem;
   color: var(--gray-700);
   font-weight: 500;
 }
 
-.social_icon {
+.socialIcon {
   display: flex;
   gap: 1.6rem;
   align-items: center;
 }
 
-.social_icon img {
+.socialIcon img {
   width: 4.2rem;
   height: 4.2rem;
   display: block;
@@ -207,7 +207,7 @@ main {
 
 /* -------- 하단 링크 --------- */
 .signup,
-.login_link_box {
+.loginLinkBox {
   margin-top: 2.4rem;
   font-size: 1.4rem;
   color: var(--gray-700);
@@ -215,7 +215,7 @@ main {
 }
 
 .signup a,
-.login_link_box a {
+.loginLinkBox a {
   color: var(--primary-100);
   font-weight: 600;
   margin-left: 0.8rem;

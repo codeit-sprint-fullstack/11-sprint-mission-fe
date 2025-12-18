@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <!-- <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-XXXXXXXXXX'); // 여기에 측정 ID 수정필요
+    </script> -->
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>판다마켓</title>
@@ -15,33 +30,33 @@
   </head>
   <body>
     <header>
-      <a class="header_logo" href="/">
+      <a class="headerLogo" href="/">
         <img src="./img/logo.svg" alt="판다마켓 로고" />
-        <h1 class="sr-only">판다마켓 메인 페이지</h1>
+        <h1 class="srOnly">판다마켓 메인 페이지</h1>
       </a>
-      <a class="login-btn" href="./login.html">로그인</a>
+      <a class="loginBtn" href="./login.html">로그인</a>
     </header>
 
     <main>
       <section id="hero">
-        <div class="hero_container">
+        <div class="heroContainer">
           <h2>
             일상의 모든 물건을
             <br />
             거래해 보세요
           </h2>
-          <a class="item_btn" href="./items.html">구경하러 가기</a>
+          <a class="itemBtn" href="./items.html">구경하러 가기</a>
         </div>
       </section>
 
       <section id="feature">
         <!-- 핫 아이템 섹션 -->
-        <div class="feature_item">
-          <div class="img_box">
+        <div class="featureItem">
+          <div class="imgBox">
             <img src="./img/hot_item.png" alt="인기 상품 예시 이미지" />
           </div>
-          <div class="text_box">
-            <a class="sub_title">Hot item</a>
+          <div class="textBox">
+            <a class="subTitle">Hot item</a>
             <h2>
               인기 상품을
               <br />
@@ -56,12 +71,12 @@
         </div>
 
         <!-- 서치 섹션 -->
-        <div class="feature_item">
-          <div class="img_box">
+        <div class="featureItem">
+          <div class="imgBox">
             <img src="./img/search.png" alt="검색 예시 이미지" />
           </div>
-          <div class="text_box">
-            <a class="sub_title">Search</a>
+          <div class="textBox">
+            <a class="subTitle">Search</a>
             <h2>
               구매를 원하는
               <br />
@@ -76,12 +91,12 @@
         </div>
 
         <!-- 레지스터 섹션 -->
-        <div class="feature_item">
-          <div class="img_box">
+        <div class="featureItem">
+          <div class="imgBox">
             <img src="./img/register.png" alt="레지스터 예시 이미지" />
           </div>
-          <div class="text_box">
-            <a class="sub_title">Register</a>
+          <div class="textBox">
+            <a class="subTitle">Register</a>
             <h2>
               판매를 원하는
               <br />
@@ -99,7 +114,7 @@
 
       <!-- bottom 배너 섹션 -->
       <section id="bottom">
-        <div class="bottom_container">
+        <div class="bottomContainer">
           <h2>
             믿을 수 있는
             <br />
@@ -110,14 +125,14 @@
     </main>
     <footer>
       <div id="footer">
-        <div id="footer_left">
+        <div id="footerLeft">
           <a>@codeit - 2024</a>
         </div>
-        <div id="footer_center">
+        <div id="footerCenter">
           <a href="./privacy.html">Privacy Policy</a>
           <a href="./faq.html">FAQ</a>
         </div>
-        <div id="sns_icon">
+        <div id="snsIcon">
           <a href="https://www.facebook.com/">
             <img src="./img/ic_facebook.png" alt="페이스북 바로가기" />
           </a>
