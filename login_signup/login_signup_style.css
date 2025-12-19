@@ -1,4 +1,4 @@
-@import '/reset.css';
+@import "/reset.css";
 
 /* 기본 설정 */
 :root {
@@ -28,8 +28,8 @@ header {
 }
 
 /* 정보 입력창 */
-.login-form,
-.sighup-form {
+.login-container,
+.signup-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -38,7 +38,7 @@ header {
 
 input,
 button,
-.easy-login {
+.social-login {
   width: 64rem;
   height: 5.6rem;
   margin-bottom: 2.4rem;
@@ -64,7 +64,7 @@ input {
   margin: 1.6rem 0 2.4rem;
 
   /* input에 font-family가 적용되지 않아 재지정 */
-  font-family: 'Pretendard', sans-serif;
+  font-family: "Pretendard", sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 2.6rem;
@@ -75,11 +75,11 @@ input:focus {
   outline: 1px solid var(--focus-color);
 }
 
-.pwd-privacy {
+.pwd-wrapper {
   position: relative;
 }
 
-#visible-button {
+.btn-password-toggle {
   width: 24px;
   height: 24px;
 
@@ -96,7 +96,7 @@ input:focus {
   border: none;
 
   /* button에 font-family가 적용되지 않아 재지정 */
-  font-family: 'Pretendard', sans-serif;
+  font-family: "Pretendard", sans-serif;
   font-size: 2rem;
   font-weight: 600;
   line-height: 3.2rem;
@@ -110,7 +110,7 @@ button:focus {
 }
 
 /* 간편 로그인 */
-.easy-login {
+.social-login {
   background-color: var(--point-color);
   border-radius: 8px;
   height: 7.4rem;

@@ -10,45 +10,48 @@
       crossorigin
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
     />
-    <link rel="stylesheet" href="/login_signup_style.css" />
-    <link rel="icon" href="/images/icon.svg" />
+    <link rel="stylesheet" href="/login_signup/login_signup_style.css" />
+    <link rel="icon" href="/login_signup/images/panda-icon.svg" />
   </head>
 
   <body>
     <header>
       <a href="#">
-        <img src="/images/logo.svg" alt="판다마켓 로고" />
+        <img
+          src="/login_signup/images/pandamarket-logo.svg"
+          alt="판다마켓 로고"
+        />
       </a>
     </header>
 
     <main>
       <!-- 정보 입력 영역 -->
-      <div class="signup-form">
-        <form id="insert-info">
+      <div class="signup-container">
+        <form class="signup-wrapper">
           <!-- 이메일 입력 -->
-          <div class="insert-email">
+          <div class="email-container">
             <label for="useremail">이메일</label>
             <input
               id="useremail"
-              name="useremail"
+              name="email"
               type="email"
               placeholder="이메일을 입력해주세요"
             />
           </div>
           <!-- 닉네임 입력 -->
-          <div class="set-nickname">
+          <div class="nickname-container">
             <label for="usernickname">닉네임</label>
             <input
               id="usernickname"
-              name="usernickname"
-              type="test"
+              name="nickname"
+              type="text"
               placeholder="닉네임을 입력해주세요"
             />
           </div>
           <!-- 비밀번호 입력 -->
-          <div class="insert-pwd">
+          <div class="pwd-container">
             <label for="password">비밀번호</label>
-            <div class="pwd-privacy">
+            <div class="pwd-wrapper">
               <input
                 id="password"
                 name="password"
@@ -56,25 +59,25 @@
                 placeholder="비밀번호를 입력해주세요"
               />
               <img
-                id="visible-button"
-                src="/images/btn_visibility_off_24px.png"
+                class="btn-password-toggle"
+                src="/login_signup/images/btn_visibility_off_24px.png"
                 alt="비밀번호 보기 버튼"
               />
             </div>
           </div>
           <!-- 비밀번호 재입력 -->
-          <div class="rewrite-pwd">
-            <label for="password">비밀번호 확인</label>
-            <div class="pwd-privacy">
+          <div class="pwd-container">
+            <label for="password-confirm">비밀번호 확인</label>
+            <div class="pwd-wrapper">
               <input
-                id="password"
-                name="password"
+                id="password-confirm"
+                name="passwordConfirm"
                 type="password"
                 placeholder="비밀번호를 다시 한 번 입력해주세요"
               />
               <img
-                id="visible-button"
-                src="/images/btn_visibility_off_24px.png"
+                class="btn-password-toggle"
+                src="/login_signup/images/btn_visibility_off_24px.png"
                 alt="비밀번호 보기 버튼"
               />
             </div>
@@ -84,21 +87,21 @@
         </form>
       </div>
 
-      <div class="easy-login">
+      <div class="social-login">
         간편 로그인하기
         <div class="icons">
           <a href="https://www.google.com/" class="social-icon">
-            <img src="/images/Component 2@2x.png" alt="구글 로그인" />
+            <img src="/login_signup/images/Component 2@2x.png" alt="구글 로그인" />
           </a>
           <a href="https://www.kakaocorp.com/page/" class="social-icon">
-            <img src="/images/Component 3@2x.png" alt="카카오 로그인" />
+            <img src="/login_signup/images/Component 3@2x.png" alt="카카오 로그인" />
           </a>
         </div>
       </div>
 
       <div class="login-link">
         이미 회원이신가요?
-        <a href="/login.html">로그인</a>
+        <a href="/login_signup/login.html">로그인</a>
       </div>
     </main>
   </body>
