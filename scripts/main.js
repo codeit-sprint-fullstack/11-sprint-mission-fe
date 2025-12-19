@@ -5,7 +5,7 @@
 
 // console.log(testresult);
 
-
+/*
 //get one article
 const article1 = await fetch("https://panda-market-api-crud.vercel.app/articles/1583")
 
@@ -76,6 +76,8 @@ try {
   console.log('삭제 실패했습니다.', error);
 }
 
+*/
+
 //fetch products list test
 /*
 const test2 = await fetch('https://panda-market-api-crud.vercel.app/products');
@@ -84,3 +86,71 @@ const testresult2 = await test2.json();
 
 console.log(testresult2);
 */
+
+//get one product
+const getProduct = await fetch(
+  'https://panda-market-api-crud.vercel.app/products/2800'
+);
+
+const getProductResult = await getProduct.json();
+
+console.log(getProductResult);
+
+//create product(POST)
+const productPostData = {
+  images: ['https://example.com/...'],
+  tags: ['학용품'],
+  price: 30000,
+  description: 'string',
+  name: '고급 샤프',
+};
+
+const createProduct = await fetch(
+  'https://panda-market-api-crud.vercel.app/products',
+  {
+    method: 'POST',
+    body: JSON.stringify(productPostData),
+    headers: { 'Content-Type': 'application/json' },
+  }
+);
+
+console.log(createProduct);
+
+//patch article
+const productPatchData = {
+  images: ['https://example.com/...'],
+  tags: ['학용품'],
+  price: 3000,
+  description: 'string',
+  name: '샤프',
+};
+
+const patchProduct = await fetch(
+  'https://panda-market-api-crud.vercel.app/products/2890',
+  {
+    method: 'PATCH',
+    body: JSON.stringify(productPatchData),
+    headers: { 'Content-Type': 'application/json' },
+  }
+);
+console.log(patchProduct);
+
+//delete artiicle
+const deleteProduct = await fetch(
+  'https://panda-market-api-crud.vercel.app/products/2890',
+  {
+    method: 'DELETE',
+    headers: { 'Content-Type': 'application/json' },
+  }
+);
+
+console.log(deleteProduct);
+
+//delete 확인
+const test2 = await fetch(
+  'https://panda-market-api-crud.vercel.app/products/2890'
+);
+
+const testresult2 = await test2.json();
+
+console.log(testresult2);
