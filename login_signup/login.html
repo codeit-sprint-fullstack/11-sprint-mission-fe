@@ -16,7 +16,7 @@
 
   <body>
     <header>
-      <a href="#">
+      <a href="/main/index.html">
         <img
           src="/login_signup/images/pandamarket-logo.svg"
           alt="판다마켓 로고"
@@ -37,6 +37,7 @@
               type="email"
               placeholder="이메일을 입력해주세요"
             />
+            <span class="error-message"></span>
           </div>
           <!-- 비밀번호 입력 -->
           <div class="pwd-container">
@@ -48,8 +49,9 @@
                 type="password"
                 placeholder="비밀번호를 입력해주세요"
               />
+              <span class="error-message"></span>
               <img
-                class ="btn-password-toggle"
+                class="btn-password-toggle"
                 src="/login_signup/images/btn_visibility_off_24px.png"
                 alt="비밀번호 보기 버튼"
               />
@@ -64,10 +66,16 @@
         간편 로그인하기
         <div class="icons">
           <a href="https://www.google.com/" class="social-icon">
-            <img src="/login_signup/images/Component 2@2x.png" alt="구글 로그인" />
+            <img
+              src="/login_signup/images/Component 2@2x.png"
+              alt="구글 로그인"
+            />
           </a>
           <a href="https://www.kakaocorp.com/page/" class="social-icon">
-            <img src="/login_signup/images/Component 3@2x.png" alt="카카오 로그인" />
+            <img
+              src="/login_signup/images/Component 3@2x.png"
+              alt="카카오 로그인"
+            />
           </a>
         </div>
       </div>
@@ -77,5 +85,7 @@
         <a href="/login_signup/signup.html">회원가입</a>
       </div>
     </main>
+
+    <script src="/login_signup/login_signup.js"></script>
   </body>
 </html>

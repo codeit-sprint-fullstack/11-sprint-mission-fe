@@ -16,7 +16,7 @@
 
   <body>
     <header>
-      <a href="#">
+      <a href="/main/index.html">
         <img
           src="/login_signup/images/pandamarket-logo.svg"
           alt="판다마켓 로고"
@@ -37,6 +37,7 @@
               type="email"
               placeholder="이메일을 입력해주세요"
             />
+            <span class="error-message"></span>
           </div>
           <!-- 닉네임 입력 -->
           <div class="nickname-container">
@@ -58,6 +59,7 @@
                 type="password"
                 placeholder="비밀번호를 입력해주세요"
               />
+              <span class="error-message"></span>
               <img
                 class="btn-password-toggle"
                 src="/login_signup/images/btn_visibility_off_24px.png"
@@ -75,6 +77,7 @@
                 type="password"
                 placeholder="비밀번호를 다시 한 번 입력해주세요"
               />
+              <span class="error-message"></span>
               <img
                 class="btn-password-toggle"
                 src="/login_signup/images/btn_visibility_off_24px.png"
@@ -104,5 +107,7 @@
         <a href="/login_signup/login.html">로그인</a>
       </div>
     </main>
+
+    <script src="/login_signup/login_signup.js"></script>
   </body>
 </html>
