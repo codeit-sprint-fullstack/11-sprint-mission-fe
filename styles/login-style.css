@@ -60,7 +60,7 @@ input:focus {
   outline: 2px var(--blue100) solid;
 }
 
-#see-pw {
+.see-pw {
   position: absolute;
   bottom: 0.875rem;
   right: 1.5rem;
