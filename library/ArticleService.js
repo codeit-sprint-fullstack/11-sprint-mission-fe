@@ -1,3 +1,5 @@
+const baseUrl = 'https://panda-market-api-crud.vercel.app';
+
 
 //list get
 export const getArticleList = ({
