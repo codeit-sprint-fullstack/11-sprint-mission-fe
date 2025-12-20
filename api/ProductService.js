@@ -16,7 +16,6 @@ const getProductList = async ({
         `HTTP ERROR, status: ${response.status}, text: ${response.statusText}`
       );
     }
-
     const result = await response.json();
     return result;
   } catch (error) {
@@ -35,7 +34,6 @@ const getProduct = async (productId) => {
         `HTTP ERROR, status: ${response.status}, text: ${response.statusText}`
       );
     }
-
     const result = await response.json();
     return result;
   } catch (error) {
@@ -58,7 +56,6 @@ const createProduct = async (data) => {
         `HTTP ERROR, status: ${response.status}, text: ${response.statusText}`
       );
     }
-
     const result = await response.json();
     return result;
   } catch (error) {
@@ -81,7 +78,6 @@ const patchProduct = async (productId, data) => {
         `HTTP ERROR, status: ${response.status}, text: ${response.statusText}`
       );
     }
-
     const result = await response.json();
     return result;
   } catch (error) {
@@ -102,7 +98,6 @@ const deleteProduct = async (productId) => {
         `HTTP ERROR, status: ${response.status}, text: ${response.statusText}`
       );
     }
-
     return true;
   } catch (error) {
     console.error(error);
