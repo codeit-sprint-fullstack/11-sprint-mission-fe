@@ -1,11 +1,16 @@
 :root {
-  --brand-blue: #3692ff;
+
+  /* Gray scale */
   --Cool-Gray-100: #f9fafb;
   --Cool-Gray-100: #f3f4f6;
   --Cool-Gray-600: #4b5563;
-  --Primary-100: #3692ff;
   --Secondary-400: #9ca3af;
   --Secondary-800: #1f2937;
+  /* Primary color */ 
+  --brand-blue: #3692ff;
+  --Primary-100: #3692ff;
+  /* Layout dimensions */
+  --header-height: 7rem;
 }
 
 body {
@@ -38,10 +43,7 @@ footer {
   font-size: 1.6rem;
 }
 
-input:focus {
-  outline: none;
-  border: 3px solid var(--brand-blue);
-}
+
 
 #footerMenu {
   display: flex;
@@ -99,4 +101,8 @@ h2 {
   font-weight: 700;
   border-radius: 99.9rem;
   padding: 1.6rem 12.4rem;
+}
+
+.full-width {
+  width: 100%;
 }
