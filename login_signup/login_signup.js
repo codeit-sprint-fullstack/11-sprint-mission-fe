@@ -3,7 +3,7 @@ const passwordInput = document.getElementById("password");
 const passwordConfirm = document.getElementById("password-confirm");
 const loginButton = document.querySelector(".login-button");
 const sighupButton = document.querySelector(".signup-button");
-const passwordToggleButton = document.querySelector(".btn-password-toggle");
+const passwordToggleButton = document.querySelectorAll(".btn-password-toggle");
 
 // 유효성 검사
 function validEmail(email) {
@@ -33,3 +33,22 @@ function passwordConfirmed(password, confirm) {
   return "";
 }
 
+// 에러 메시지
+
+
+// 버튼 
+
+
+// 비밀번호 보안 토글
+passwordToggleButton.forEach((button) => {
+  button.addEventListener("click", () => {
+    const input = button.parentElement.querySelector("input");
+    if (input.type === "password") {
+      input.type = "text";
+      button.src = "/login_signup/images/btn_visibility_on.png";
+    } else {
+      input.type = 'password';
+      button.src = "/login_signup/images/btn_visibility_off.png";
+    }
+  });
+});
