@@ -7,6 +7,7 @@
   --point-color: #e6f2ff;
   --primary-color: #f3f4f6;
   --secondary-color: #9ca3af;
+  --error-color: #f74747;
 }
 
 html {
@@ -90,6 +91,19 @@ input:focus {
   cursor: pointer;
 }
 
+/* 에러 관련 */
+.input-error {
+  border: 1px solid var(--error-color);
+}
+
+.error-message{
+  color: var(--error-color);
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 8px;
+  margin-left: 16px;
+}
+
 /* 로그인, 회원가입 버튼 */
 .login-button,
 .signup-button {
@@ -109,6 +123,13 @@ input:focus {
 
 button:focus {
   background-color: var(--focus-color);
+}
+
+/* 버튼 비활성화 */
+.login-button:disabled, .signup-button:disabled {
+  background-color: var(--secondary-color);
+  color: white;
+  cursor: not-allowed;
 }
 
 /* 간편 로그인 */
