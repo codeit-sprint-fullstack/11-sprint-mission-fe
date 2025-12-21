@@ -77,7 +77,7 @@ throw error;
 };
 
 
-//상품 수정
+//상품 수정 (PATCH)
 export const patchProduct = async (productId,productData) => {
 try {
 const response = await fetch(
@@ -103,7 +103,7 @@ throw error;
 }
 };
 
-//상품 삭제
+//상품 삭제 (DELETE)
 export const deleteProduct = async (productId) => {
 try {
 const response = await fetch(
@@ -126,5 +126,5 @@ console.error(error);
 throw error;
 }
 };
-//
+
 
