@@ -96,12 +96,14 @@ input:focus {
   border: 1px solid var(--error-color);
 }
 
-.error-message{
+.error-message {
   color: var(--error-color);
   font-size: 15px;
   font-weight: 600;
-  margin-top: 8px;
+  /* margin-top: 8px; */
   margin-left: 16px;
+
+  display: block;
 }
 
 /* 로그인, 회원가입 버튼 */
@@ -126,7 +128,8 @@ button:focus {
 }
 
 /* 버튼 비활성화 */
-.login-button:disabled, .signup-button:disabled {
+.login-button:disabled,
+.signup-button:disabled {
   background-color: var(--secondary-color);
   color: white;
   cursor: not-allowed;

@@ -1,14 +1,14 @@
-const emailInput = document.getElementById('useremail');
-const passwordInput = document.getElementById('password');
-const passwordConfirmInput = document.getElementById('password-confirm');
-const loginButton = document.querySelector('.login-button');
-const sighupButton = document.querySelector('.signup-button');
-const passwordToggleButton = document.querySelectorAll('.btn-password-toggle');
+const emailInput = document.getElementById("useremail");
+const passwordInput = document.getElementById("password");
+const passwordConfirmInput = document.getElementById("password-confirm");
+const loginButton = document.querySelector(".login-button");
+const sighupButton = document.querySelector(".signup-button");
+const passwordToggleButton = document.querySelectorAll(".btn-password-toggle");
 
 // 유효성 검사 함수
 function validEmail(email) {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailRegex.test(email); 
+  return emailRegex.test(email);
 }
 
 function validPassword(password) {
@@ -16,71 +16,97 @@ function validPassword(password) {
 }
 
 function passwordConfirmed(password, confirm) {
-  return confirm.length > 0 && password === confirm; 
+  return confirm.length > 0 && password === confirm;
 }
 
 // 에러 표시
 function showError(input, message) {
-  const errorContainer = input.parentElement.querySelector('.error_message');
+  const errorContainer = input.parentElement.querySelector(".error-message");
 
   if (message) {
-    input.classList.add('input-error');
+    input.classList.add("input-error");
     errorContainer.textContent = message;
   } else {
-    input.classList.remove('input-error');
-    errorContainer.textContent = '';
+    input.classList.remove("input-error");
+    errorContainer.textContent = "";
   }
 }
 
 // 검사 후 에러 처리
 function checkEmail() {
   const value = emailInput.value.trim(); // 앞뒤 공백 있을 가능성
-  if (value === '') {
-    showError(emailInput, '이메일을 입력해주세요');
+  if (value === "") {
+    showError(emailInput, "이메일을 입력해주세요");
     return false;
   } else if (!validEmail(value)) {
-    showError(emailInput, '잘못된 이메일 형식입니다.');
+    showError(emailInput, "잘못된 이메일 형식입니다.");
     return false;
   } else {
-    showError(emailInput, '');
+    showError(emailInput, "");
     return true;
   }
 }
 
 function checkPassword() {
   const value = passwordInput.value.trim(); // 앞뒤 공백 있을 가능성
-  if (value === '') {
-    showError(passwordInput, '비밀번호을 입력해주세요');
+  if (value === "") {
+    showError(passwordInput, "비밀번호을 입력해주세요");
     return false;
   } else if (!validPassword(value)) {
-    showError(passwordInput, '비밀번호를 8자 이상 입력해주세요.');
+    showError(passwordInput, "비밀번호를 8자 이상 입력해주세요.");
     return false;
   } else {
-    showError(passwordInput, '');
+    showError(passwordInput, "");
     return true;
   }
 }
 
 function checkPasswordConfirm() {
-  if (!passwordConfirmInput) return true; // 로그인 페이지에 없는 기능
+  if (!passwordConfirmInput) return true; // 로그인 페이지에는 없으니까 항상 true 만들어주기
   const value = passwordConfirmInput.value.trim(); // 앞뒤 공백 있을 가능성
-  if (value === '') {
-    showError(passwordConfirmInput, '비밀번호를 다시 한 번 입력해주세요');
+  if (value === "") {
+    showError(passwordConfirmInput, "비밀번호를 다시 한 번 입력해주세요");
     return false;
   } else if (!passwordConfirmed(passwordInput.value.trim(), value)) {
-    showError(passwordConfirmInput, '비밀번호가 일치하지 않습니다.');
+    showError(passwordConfirmInput, "비밀번호가 일치하지 않습니다.");
     return false;
   } else {
-    showError(passwordConfirmInput, '');
+    showError(passwordConfirmInput, "");
     return true;
   }
 }
 
 // 버튼 상태 변화
+function changeButtonState() {
+  if (loginButton) {
+    loginButton.disabled = !(checkEmail() && checkPassword());
+  }
+  if (sighupButton) {
+    sighupButton.disabled = !(
+      checkEmail() &&
+      checkPassword() &&
+      checkPasswordConfirm()
+    );
+  }
+}
 
+// focus out 설정
+emailInput.addEventListener("focusout", () => {
+  checkEmail();
+  changeButtonState();
+});
 
+passwordInput.addEventListener("focusout", () => {
+  checkPassword();
+  changeButtonState();
+});
 
-
+if (passwordConfirmInput) {
+  passwordConfirmInput.addEventListener("focusout", () => {
+    checkPasswordConfirm();
+    changeButtonState();
+  });
+}
 
 // 비밀번호 보안 토글
 passwordToggleButton.forEach((button) => {
@@ -97,4 +123,9 @@ passwordToggleButton.forEach((button) => {
 });
 
 // 버튼 클릭 시 이동
-
+if (loginButton) {
+  loginButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    if (!loginButton.disabled) location.href = "/main/items.html";
+  })
+}
