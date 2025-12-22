@@ -21,14 +21,16 @@ function passwordConfirmed(password, confirm) {
 
 // 에러 표시
 function showError(input, message) {
-  const errorContainer = input.parentElement.querySelector(".error-message");
+  const errorContainer = input.closest('.containers').querySelector('.error-message'); // input 기준 container -> span으로 갈 수 있도록
 
   if (message) {
     input.classList.add("input-error");
     errorContainer.textContent = message;
+    errorContainer.style.display = 'block';
   } else {
     input.classList.remove("input-error");
     errorContainer.textContent = "";
+    errorContainer.style.display = 'none';
   }
 }
 
@@ -126,6 +128,6 @@ passwordToggleButton.forEach((button) => {
 if (loginButton) {
   loginButton.addEventListener("click", (event) => {
     event.preventDefault();
-    if (!loginButton.disabled) location.href = "/main/items.html";
+    if (!loginButton.disabled) location.href = "../main/items.html";
   })
 }

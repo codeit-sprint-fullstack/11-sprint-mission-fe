@@ -94,17 +94,18 @@ input:focus {
 /* 에러 관련 */
 .input-error {
   border: 1px solid var(--error-color);
+  margin-bottom: 8px;
 }
 
 .error-message {
   color: var(--error-color);
   font-size: 15px;
   font-weight: 600;
-  /* margin-top: 8px; */
+  margin-bottom: 24px;
   margin-left: 16px;
-
-  display: block;
 }
+
+
 
 /* 로그인, 회원가입 버튼 */
 .login-button,
