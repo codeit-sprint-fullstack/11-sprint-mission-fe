@@ -2,7 +2,7 @@ const emailInput = document.getElementById("useremail");
 const passwordInput = document.getElementById("password");
 const passwordConfirmInput = document.getElementById("password-confirm");
 const loginButton = document.querySelector(".login-button");
-const sighupButton = document.querySelector(".signup-button");
+const signupButton = document.querySelector(".signup-button");
 const passwordToggleButton = document.querySelectorAll(".btn-password-toggle");
 
 // 유효성 검사 함수
@@ -21,16 +21,18 @@ function passwordConfirmed(password, confirm) {
 
 // 에러 표시
 function showError(input, message) {
-  const errorContainer = input.closest('.containers').querySelector('.error-message'); // input 기준 container -> span으로 갈 수 있도록
+  const errorContainer = input
+    .closest(".containers")
+    .querySelector(".error-message"); // input 기준 container -> span으로 갈 수 있도록
 
   if (message) {
     input.classList.add("input-error");
     errorContainer.textContent = message;
-    errorContainer.style.display = 'block';
+    errorContainer.style.display = "block";
   } else {
     input.classList.remove("input-error");
     errorContainer.textContent = "";
-    errorContainer.style.display = 'none';
+    errorContainer.style.display = "none";
   }
 }
 
@@ -43,10 +45,10 @@ function checkEmail() {
   } else if (!validEmail(value)) {
     showError(emailInput, "잘못된 이메일 형식입니다.");
     return false;
-  } else {
-    showError(emailInput, "");
-    return true;
   }
+
+  showError(emailInput, "");
+  return true;
 }
 
 function checkPassword() {
@@ -57,10 +59,10 @@ function checkPassword() {
   } else if (!validPassword(value)) {
     showError(passwordInput, "비밀번호를 8자 이상 입력해주세요.");
     return false;
-  } else {
-    showError(passwordInput, "");
-    return true;
   }
+
+  showError(passwordInput, "");
+  return true;
 }
 
 function checkPasswordConfirm() {
@@ -72,22 +74,30 @@ function checkPasswordConfirm() {
   } else if (!passwordConfirmed(passwordInput.value.trim(), value)) {
     showError(passwordConfirmInput, "비밀번호가 일치하지 않습니다.");
     return false;
-  } else {
-    showError(passwordConfirmInput, "");
-    return true;
   }
+
+  showError(passwordConfirmInput, "");
+  return true;
 }
 
 // 버튼 상태 변화
 function changeButtonState() {
+  const isEmailValid = validEmail(emailInput.value.trim());
+  const isPasswordValid = validPassword(passwordInput.value.trim());
+
   if (loginButton) {
-    loginButton.disabled = !(checkEmail() && checkPassword());
+    loginButton.disabled = !(isEmailValid && isPasswordValid);
   }
-  if (sighupButton) {
-    sighupButton.disabled = !(
-      checkEmail() &&
-      checkPassword() &&
-      checkPasswordConfirm()
+  if (signupButton) {
+    const isConfirmValid = passwordConfirmed(
+      passwordInput.value.trim(),
+      passwordConfirmInput.value.trim()
+    );
+
+    signupButton.disabled = !(
+      isEmailValid &&
+      isPasswordValid &&
+      isConfirmValid
     );
   }
 }
@@ -110,6 +120,23 @@ if (passwordConfirmInput) {
   });
 }
 
+// input 실시간 반영
+emailInput.addEventListener("input", () => {
+  checkEmail();
+  changeButtonState();
+});
+
+passwordInput.addEventListener("input", () => {
+  checkPassword();
+  changeButtonState();
+});
+
+if (passwordConfirmInput)
+  passwordConfirmInput.addEventListener("input", () => {
+    checkPasswordConfirm();
+    changeButtonState();
+  });
+
 // 비밀번호 보안 토글
 passwordToggleButton.forEach((button) => {
   button.addEventListener("click", () => {
@@ -129,5 +156,12 @@ if (loginButton) {
   loginButton.addEventListener("click", (event) => {
     event.preventDefault();
     if (!loginButton.disabled) location.href = "../main/items.html";
-  })
+  });
+}
+
+if (signupButton) {
+  signupButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    if (!signupButton.disabled) location.href = "../main/items.html";
+  });
 }

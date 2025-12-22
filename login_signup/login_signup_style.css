@@ -36,6 +36,11 @@ header {
   justify-content: center;
   align-items: center;
 }
+.containers {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2.4rem;
+}
 
 input,
 button,
@@ -62,7 +67,7 @@ input {
   box-sizing: border-box;
 
   padding: 1.6rem 2.4rem;
-  margin: 1.6rem 0 2.4rem;
+  margin: 1.6rem 0 0;
 
   /* input에 font-family가 적용되지 않아 재지정 */
   font-family: "Pretendard", sans-serif;
@@ -78,6 +83,7 @@ input:focus {
 
 .pwd-wrapper {
   position: relative;
+  width: 100%;
 }
 
 .btn-password-toggle {
@@ -85,27 +91,29 @@ input:focus {
   height: 24px;
 
   position: absolute;
-  top: 35%;
+  top: 50%;
   right: 24px;
+  transform: translateY(-25%);
 
   cursor: pointer;
 }
 
 /* 에러 관련 */
-.input-error {
+input.input-error {
   border: 1px solid var(--error-color);
-  margin-bottom: 8px;
+  outline: none;
 }
 
 .error-message {
   color: var(--error-color);
-  font-size: 15px;
+  font-size: 1.5rem;
   font-weight: 600;
-  margin-bottom: 24px;
-  margin-left: 16px;
+
+  margin-top: 0.8rem;
+  margin-left: 1.6rem;
+
+  display: none;
 }
-
-
 
 /* 로그인, 회원가입 버튼 */
 .login-button,
@@ -124,15 +132,17 @@ input:focus {
   cursor: pointer;
 }
 
-button:focus {
-  background-color: var(--focus-color);
-}
-
 /* 버튼 비활성화 */
 .login-button:disabled,
 .signup-button:disabled {
   background-color: var(--secondary-color);
-  color: white;
+  cursor: not-allowed;
+}
+
+/* 버튼 활성화 */
+.login-button:not(:disabled),
+.signup-button:not(:disabled) {
+  background-color: var(--focus-color);
   cursor: not-allowed;
 }
 
