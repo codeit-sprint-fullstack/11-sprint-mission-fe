@@ -48,7 +48,6 @@ function checkEmail() {
     showError(emailInput, "잘못된 이메일 형식입니다.");
     return false;
   }
-
   showError(emailInput, "");
   return true;
 }
@@ -62,7 +61,6 @@ function checkPassword() {
     showError(passwordInput, "비밀번호를 8자 이상 입력해주세요.");
     return false;
   }
-
   showError(passwordInput, "");
   return true;
 }
@@ -77,7 +75,6 @@ function checkPasswordConfirm() {
     showError(passwordConfirmInput, "비밀번호가 일치하지 않습니다.");
     return false;
   }
-
   showError(passwordConfirmInput, "");
   return true;
 }
@@ -90,12 +87,12 @@ function changeButtonState() {
   if (loginButton) {
     loginButton.disabled = !(isEmailValid && isPasswordValid);
   }
+
   if (signupButton) {
     const isConfirmValid = passwordConfirmed(
       passwordInput.value.trim(),
       passwordConfirmInput.value.trim()
-    );
-
+    ); // 로그인 페이지에는 없으니까 함수 안에서 선언
     signupButton.disabled = !(
       isEmailValid &&
       isPasswordValid &&
@@ -158,7 +155,7 @@ const popup = document.querySelector('.modal-popup');
 const popupButton = popup.querySelector('.modal-button');
 
 function openPopup() {
-  popup.classList.remove('popup-hidden');
+  popup.classList.remove('popup-hidden'); // 안보이는게 기본이라 제거해야 함
 }
 function closePopup() {
   popup.classList.add('popup-hidden');
@@ -178,7 +175,7 @@ if (loginButton) {
     );
 
     if (user) {
-      location.href = "../main/items.html";
+      location.href = "../main/items.html"; // 조건 만족하면 통과
     } else {
       openPopup();
     }
@@ -188,6 +185,17 @@ if (loginButton) {
 if (signupButton) {
   signupButton.addEventListener("click", (event) => {
     event.preventDefault();
-    if (!signupButton.disabled) location.href = "../main/items.html";
+
+    const email = emailInput.value.trim();
+    const user = USER_DATA.find(
+      (data) => data.email === email 
+    );
+
+    if (user) {
+      openPopup(); // 조건 만족하면 에러
+    } else {
+      alert('회원가입이 완료되었습니다.')
+      location.href = "./login.html";
+    }
   });
 }
