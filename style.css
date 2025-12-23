@@ -15,44 +15,45 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+time, mark, audio, video  {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-	display: block;
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
 ol, ul {
-	list-style: none;
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+  content: '';
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
-
 
 * {
   box-sizing: border-box;
 }
 
-html, body{
+html,
+body {
   font-family: Pretendard, sans-serif;
 }
 
@@ -76,12 +77,11 @@ header {
   z-index: 10;
 }
 
-#logo {
+.logo {
   cursor: pointer;
 }
 
 .login-btn {
-  padding-top: 4.375rem;
   background-color: #3692ff;
   color: white;
   width: 8rem;
@@ -96,27 +96,26 @@ header {
   align-items: center;
 }
 
-
-#hero {
+.hero {
   background-color: #cfe5ff;
   height: 33.75rem;
   margin-top: 4.375rem;
 }
 
-#hero-text {
+.hero-text {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
-#hero-text h1 {
+.hero-text h1 {
   font-size: 2.5rem;
   line-height: 140%;
   font-weight: bold;
   color: #374151;
 }
 
-#hero-text a {
+.hero-text a {
   font-size: 1.25rem;
   width: 22.3rem;
   height: 3.5rem;
@@ -131,49 +130,46 @@ header {
   justify-content: center;
 }
 
-#hero img{
+.hero img {
   width: 46.62rem;
   height: 21.25rem;
   position: relative;
   bottom: -5.625rem;
 }
 
-.container{
+.container {
   display: flex;
   justify-content: center;
   align-items: flex-end;
   gap: 0 3.125rem;
 }
 
-#hero .container{
+.hero .container {
   height: 28.125rem;
 }
 
-.feature-box {
-  height: 45rem;
-  padding: 8.625rem 21.5rem;
-  gap: 0.625rem;
-
+.feature {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  gap: 8.625rem;
+  padding: 8.625rem 8rem;
 }
 
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
 
-.feature-1 {
   width: 61.75rem;
   height: 27.75rem;
-  gap: 4rem;
+  margin: 0 auto;
   background-color: #fcfcfc;
-
-  display: flex;
-  justify-content: center;
 }
 
-.feature img {
+.feature-item img {
   width: 36.75rem;
   height: 27.75rem;
-  justify-content: flex-start;
-  align-items: center;
+  object-fit: cover;
 }
 
 .feature-description {
@@ -185,20 +181,15 @@ header {
 
 .feature span {
   font-weight: 700;
-  font-style: Bold;
   font-size: 1.125rem;
   line-height: 1.625rem;
-  vertical-align: middle;
   color: #3692ff;
 }
 
 .feature h2 {
   font-weight: 700;
-  font-style: Bold;
   font-size: 2.5rem;
   line-height: 140%;
-  letter-spacing: 2%;
-  vertical-align: middle;
   color: #374151;
 }
 
@@ -206,23 +197,21 @@ header {
   font-weight: 500;
   font-size: 1.5rem;
   line-height: 2rem;
-  vertical-align: middle;
   width: 21.875rem;
+  color: #374151;
 }
 
-.feature-reverse {
-  display: flex;
+.feature-item.reverse {
   flex-direction: row-reverse;
-  gap: 4rem;
 }
 
-#pre-footer {
+.banner {
   background-color: #cfe5ff;
   height: 33.75rem;
   margin-top: 8.9375rem;
 }
 
-#pre-footer p {
+.banner p {
   font-weight: 700;
   font-style: Bold;
   font-size: 2.5rem;
@@ -231,7 +220,7 @@ header {
   color: #374151;
 }
 
-#pre-footer img{
+.banner img {
   width: 46.624rem;
   height: 24.8125rem;
   position: relative;
@@ -240,7 +229,6 @@ header {
 
 footer {
   height: 10rem;
-  top: 3448px;
   padding: 2rem 12.5rem;
   gap: 0.625rem;
   background-color: #111827;
@@ -257,7 +245,7 @@ footer {
   color: #e5e7eb;
 }
 
-#policy-faq {
+.policy-faq {
   display: flex;
   gap: 1.875rem;
   color: #e5e7eb;
@@ -270,7 +258,7 @@ footer img {
   gap: 0.75rem;
 }
 
-#logo-image {
+.logo-image {
   display: flex;
   gap: 0.75rem;
 }

@@ -7,96 +7,75 @@
   <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
   <header>
     <a href="/">
       <img src="/imgs/logo.svg" alt="판다마켓 로고"/>
     </a>
     <a class="login-btn" href="/login.html">로그인</a>
   </header>
+
   <main>
-    <section id="hero">
+    <section class="hero">
       <div class="container">
-        <div id="hero-text">
-          <h1>
-            일상의 모든 물건을<br>
-            거래해 보세요
-          </h1>
-          <a id="logo" href="/items.html">구경하러 가기</a>
+        <div class="hero-text">
+          <h1>일상의 모든 물건을<br>거래해 보세요</h1>
+          <a class="logo" href="/items.html">구경하러 가기</a>
         </div>
         <img src="/imgs/Img_home_top.png" alt="판다마켓 사진">
       </div>
     </section>
+
     <section class="feature">
-        <div class="feature-box">
-          <div class="feature-1">
-            <img src="/imgs/Img_home_01.png" alt="Hot item 이미지">
-            <div class="feature-description">
-              <span>Hot item</span>
-              <h2>
-              인기 상품을<br>
-              확인해 보세요
-              </h2>
-              <p>
-              가장 HOT한 중고거래 물품을<br>
-              판다 마켓에서 확인해 보세요
-              </p>
-            </div>
-          </div>
+      <article class="feature-item">
+        <img src="/imgs/Img_home_01.png" alt="Hot item 이미지">
+        <div class="feature-description">
+          <span>Hot item</span>
+          <h2>인기 상품을<br>확인해 보세요</h2>
+          <p>가장 HOT한 중고거래 물품을<br>판다 마켓에서 확인해 보세요</p>
         </div>
-        <div class="feature-box">
-          <div class="feature-1">
-            <div class="feature-reverse">
-              <img src="/imgs/Img_home_02.png" alt="Search 이미지">
-              <div class="feature-description">
-                <span>Search</span>
-                <h2>
-                  구매를 원하는<br>
-                  상품을 검색하세요
-                </h2>
-                <p>
-                  구매하고 싶은 물품은 검색해서<br>
-                  쉽게 찾아보세요
-                </p>
-              </div>
-            </div>
-          </div>
+      </article>
+
+      <article class="feature-item reverse">
+        <img src="/imgs/Img_home_02.png" alt="Search 이미지">
+        <div class="feature-description">
+          <span>Search</span>
+          <h2>구매를 원하는<br>상품을 검색하세요</h2>
+          <p>구매하고 싶은 물품은 검색해서<br>쉽게 찾아보세요</p>
         </div>
-          <div class="feature-box">
-            <div class="feature-1">
-              <img src="/imgs/Img_home_03.png" alt="Register 이미지">
-              <div class="feature-description">
-                <span>Register</span>
-                 <h2>
-                   판매를 원하는<br>
-                   상품을 등록하세요
-                 </h2>
-                 <p>
-                   어떤 물건이든 판매하고 싶은 상품을<br>
-                   쉽게 등록하세요
-                </p>
-              </div>
-            </div>
-          </div>
-    <section id="pre-footer">
+      </article>
+
+      <article class="feature-item">
+        <img src="/imgs/Img_home_03.png" alt="Register 이미지">
+        <div class="feature-description">
+          <span>Register</span>
+          <h2>판매를 원하는<br>상품을 등록하세요</h2>
+          <p>어떤 물건이든 판매하고 싶은 상품을<br>쉽게 등록하세요</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="banner">
       <div class="container">
-        <div id="pre-footer-text">
-          <p>
-            믿을 수 있는<br>
-            판다마켓 중고 거래
-          </p>
+        <div class="pre-footer-text">
+          <p>믿을 수 있는<br>판다마켓 중고 거래</p>
         </div>
-        <img src="/imgs/Img_home_bottom.png" alt="판다마켓 사진"
+        <img src="/imgs/Img_home_bottom.png" alt="판다마켓 사진">
       </div>
     </section>
   </main>
+
   <footer>
     <p>©codeit - 2024</p>
-    <div id="policy-faq">
+
+    <nav class="policy-faq">
       <a href="/privacy.html">Privacy Policy</a>
       <a href="/faq.html">FAQ</a>
-    </div>
-    <div id="logo-image">
+    </nav>
+    
+    <nav class="logo-image">
       <a href="https://www.facebook.com" target="_blank">
         <img src="/imgs/ic_facebook.png" alt="페이스북 로고">
       </a>
@@ -109,7 +88,8 @@
       <a href="https://www.instagram.com" target="_blank">
         <img src="/imgs/ic_instagram.png" alt="인스타그램 로고">
       </a>
-    </div>
+    </nav>
   </footer>
+
 </body>
 </html>
