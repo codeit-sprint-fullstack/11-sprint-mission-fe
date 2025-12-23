@@ -143,7 +143,7 @@ input.input-error {
 .login-button:not(:disabled),
 .signup-button:not(:disabled) {
   background-color: var(--focus-color);
-  cursor: not-allowed;
+  cursor: pointer;
 }
 
 /* 간편 로그인 */
@@ -192,4 +192,54 @@ input.input-error {
 .login-link a,
 .signup-link a {
   color: var(--focus-color);
+}
+
+/* 경고 메시지 모달 */
+.modal-popup {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  width: 54rem;
+  height: 25rem;
+  border-radius: 16px;
+  background-color: var(--primary-color);
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-message {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.modal-button {
+  width: 12rem;
+  height: 4.8rem;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--focus-color);
+  
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--primary-color);
+
+  position: absolute;
+  bottom: 2.8rem;
+  right: 2.8rem;
+
+  cursor: pointer;
+}
+
+.popup-hidden {
+  display: none;
 }

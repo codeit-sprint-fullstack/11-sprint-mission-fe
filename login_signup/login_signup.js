@@ -1,3 +1,5 @@
+import { USER_DATA } from "./user_data.js";
+
 const emailInput = document.getElementById("useremail");
 const passwordInput = document.getElementById("password");
 const passwordConfirmInput = document.getElementById("password-confirm");
@@ -52,7 +54,7 @@ function checkEmail() {
 }
 
 function checkPassword() {
-  const value = passwordInput.value.trim(); // 앞뒤 공백 있을 가능성
+  const value = passwordInput.value.trim();
   if (value === "") {
     showError(passwordInput, "비밀번호을 입력해주세요");
     return false;
@@ -67,7 +69,7 @@ function checkPassword() {
 
 function checkPasswordConfirm() {
   if (!passwordConfirmInput) return true; // 로그인 페이지에는 없으니까 항상 true 만들어주기
-  const value = passwordConfirmInput.value.trim(); // 앞뒤 공백 있을 가능성
+  const value = passwordConfirmInput.value.trim(); 
   if (value === "") {
     showError(passwordConfirmInput, "비밀번호를 다시 한 번 입력해주세요");
     return false;
@@ -151,11 +153,35 @@ passwordToggleButton.forEach((button) => {
   });
 });
 
-// 버튼 클릭 시 이동
+// 경고창
+const popup = document.querySelector('.modal-popup');
+const popupButton = popup.querySelector('.modal-button');
+
+function openPopup() {
+  popup.classList.remove('popup-hidden');
+}
+function closePopup() {
+  popup.classList.add('popup-hidden');
+}
+
+popupButton.addEventListener('click', closePopup);
+
+// 버튼 클릭 시 이동 또는 경고 팝업
 if (loginButton) {
   loginButton.addEventListener("click", (event) => {
     event.preventDefault();
-    if (!loginButton.disabled) location.href = "../main/items.html";
+
+    const email = emailInput.value.trim();
+    const password = passwordInput.value.trim();
+    const user = USER_DATA.find(
+      (data) => data.email === email && data.password === password
+    );
+
+    if (user) {
+      location.href = "../main/items.html";
+    } else {
+      openPopup();
+    }
   });
 }
 
