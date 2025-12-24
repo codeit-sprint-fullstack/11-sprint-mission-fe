@@ -104,7 +104,7 @@ document.getElementById("btnGet").addEventListener("click", async () => {
   try {
     const data = await getProductList({
       page: 1,
-      pageSize: 50, // 넉넉히
+      pageSize: 50, 
     });
 
     // 🔍 [TEST-dolby] 테스트 상품 찾기
@@ -113,15 +113,15 @@ document.getElementById("btnGet").addEventListener("click", async () => {
     );
 
     if (!found) {
-      console.log("❌ [TEST-dolby] 테스트 상품을 찾지 못했습니다.");
+      console.log("[TEST-dolby] 테스트 상품을 찾지 못했습니다.");
       testProductId = null;
       return;
     }
 
     testProductId = found.id;
-    console.log("📦 테스트 상품 찾음", found);
+    console.log("테스트 상품 찾음", found);
   } catch (error) {
-    console.error("❌ 조회 실패", error);
+    console.error("조회 실패", error);
   }
 });
 
@@ -136,10 +136,10 @@ document.getElementById("btnCreate").addEventListener("click", async () => {
     });
 
     testProductId = created.id; // ⭐ 중요
-    console.log("✅ 생성 성공", created);
+    console.log("생성 성공", created);
     await renderProductList();
   } catch (error) {
-    console.error("❌ 생성 실패", error);
+    console.error("생성 실패", error);
   }
 });
 document.getElementById("btnPatch").addEventListener("click", async () => {
@@ -153,10 +153,10 @@ document.getElementById("btnPatch").addEventListener("click", async () => {
       price: 7777,
     });
 
-    console.log("✏️ 수정 성공", updated);
+    console.log("수정 성공", updated);
     await renderProductList();
   } catch (error) {
-    console.error("❌ 수정 실패", error);
+    console.error("수정 실패", error);
   }
 });
 document.getElementById("btnDelete").addEventListener("click", async () => {
@@ -167,12 +167,12 @@ document.getElementById("btnDelete").addEventListener("click", async () => {
 
   try {
     await deleteProduct(testProductId);
-    console.log("🗑 [TEST-dolby] 테스트 상품 삭제 완료");
+    console.log("[TEST-dolby] 테스트 상품 삭제 완료");
 
     testProductId = null;
     await renderProductList();
   } catch (error) {
-    console.error("❌ 삭제 실패", error);
+    console.error("삭제 실패", error);
   }
 });
 
@@ -189,16 +189,16 @@ document
             (article) => article.title === "[TEST-dolby] 테스트 게시글"
           );
           if (!found) {
-            console.log("❌ 테스트 게시글을 찾지 못했습니다.");
+            console.log("테스트 게시글을 찾지 못했습니다.");
             testArticleId = null;
             return;
           }
 
           testArticleId = found.id;
-          console.log("📝 테스트 게시글 찾음", found);
+          console.log("테스트 게시글 찾음", found);
         })
         .catch((error) => {
-          console.error("❌ 게시글 조회 실패", error);
+          console.error("게시글 조회 실패", error);
         });
     } catch (error) {
       console.error(error);
@@ -215,10 +215,11 @@ document
       })
         .then((data) => {
           testArticleId = data.id;
-          console.log("✅ 게시글 생성 완료", data);          
+          console.log("게시글 생성 완료", data);
+          renderArticleList();          
         })
         .catch((error) => {
-          console.error("❌ 게시글 생성 실패", error);
+          console.error("게시글 생성 실패", error);
         });
     });
   }
@@ -236,12 +237,14 @@ document
       content: "게시글 내용이 수정되었습니다.",
     })
       .then((data) => {
-        console.log("✏ 게시글 수정 완료", data);
+        console.log("게시글 수정 완료", data);
+        renderArticleList(); 
       })
-      .catch((error) => {
-        console.error("❌ 게시글 수정 실패", error);
+     .catch((error) => {
+        console.error("게시글 수정 실패", error);
       });
   });
+
   document
   .getElementById("btnArticleDelete")
   .addEventListener("click", async () => {
@@ -252,9 +255,10 @@ document
 
     try {
       await deleteArticle(testArticleId);
-      console.log("🗑 테스트 게시글 삭제 완료");
+      console.log("테스트 게시글 삭제 완료");
       testArticleId = null;
+      renderArticleList();
     } catch (error) {
-      console.error("❌ 게시글 삭제 실패", error);
+      console.error("게시글 삭제 실패", error);
     }
   });

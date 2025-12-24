@@ -3,15 +3,20 @@ const BASE_URL = "https://panda-market-api-crud.vercel.app/products";
 /**
  * 상품 목록 조회
  */
-export async function getProductList({ page = 1, pageSize = 10, keyword = "" }) {
+export async function getProductList({ 
+  page = 1, 
+  pageSize = 10, 
+  keyword = "",
+  sort = 'recent',
+  }) {
   try {
     const res = await fetch(
-      `${BASE_URL}?page=${page}&pageSize=${pageSize}&keyword=${keyword}`
+      `${BASE_URL}?page=${page}&pageSize=${pageSize}&keyword=${keyword}&sort=${sort}}`
     );
 
     if (!res.ok) {
       console.error("Product list error:", res.status);
-      throw new Error("상품 목록 조회 실패");
+      throw new Error(`상품 목록 조회 실패 :${res.status}, text:${res.statustext}` );
     }
 
     return await res.json();
@@ -29,7 +34,7 @@ export async function getProduct(productId) {
 
     if (!res.ok) {
       console.error("Get product error:", res.status);
-      throw new Error("상품 조회 실패");
+      throw new Error(`상품 조회 실패 :${res.status}, text:${res.statustext}`);
     }
 
     return await res.json();
@@ -57,7 +62,7 @@ export async function createProduct({
 
     if (!res.ok) {
       console.error("Create product error:", res.status);
-      throw new Error("상품 생성 실패");
+      throw new Error(`상품 생성 실패 :${res.status}, text:${res.statustext}`);
     }
 
     return await res.json();
@@ -79,7 +84,7 @@ export async function patchProduct(productId, data) {
 
     if (!res.ok) {
       console.error("Patch product error:", res.status);
-      throw new Error("상품 수정 실패");
+      throw new Error(`상품 수정 실패 :${res.status}, text:${res.statustext}`);
     }
 
     return await res.json();
@@ -99,7 +104,7 @@ export async function deleteProduct(productId) {
 
     if (!res.ok) {
       console.error("Delete product error:", res.status);
-      throw new Error("상품 삭제 실패");
+      throw new Error(`상품 삭제 실패 :${res.status}, text:${res.statustext}`);
     }
 
     console.log("상품 삭제 성공");

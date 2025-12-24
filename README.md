@@ -61,4 +61,28 @@ _위 이미지는 판다마켓의 대표 이미지입니다._ 📸
   3) 뛰어쓰기 반영
   4) 인라인 스타일 제거
   5) CSS 오타 수정
+   
+### sprint3 과정 내용 반영
+## FS 스프린트 미션3(V2) & 미션3(old버전에서 로그인 페이지 요청내용 일부)
+    (1) 아래 기능을 알려준 메서드 사용하여 구현
+      - getArticleList() : GET  
+      - getArticle() : GET
+      - createArticle() : POSTgit
+      - patchArticle() : PATCH 
+      - deleteArticle() : DELETE 
+      * fetch 사용 에러 메시지 콘솔 출력
+      * .then() 이용 비동기 처리
+      * .catch() 이용 오류 처리
 
+     (2) ProductList(), product(),createProduct(), patchProduct(),deleteProuduct()도 
+         1과 동일하게 구현
+      * async/await 비동기 처리
+      * try/catch 이용 오류 처리
+
+     (3)구현한 함수들을 아래와 같이 파일 분리
+      * export 활용
+      * ProductService.js 파일 Product API 관련 함수들을 작성
+      * ArticleService.js 파일에 Article API 관련 함수들을 작성
+      * 이외의 코드들은 모두 main.js 파일에 작성
+      * import를 활용
+      * 각 함수를 실행하는 코드를 작성하고, 제대로 동작하는지 확인
