@@ -9,7 +9,7 @@
 }
 
 #hero {
-  background-image: url("../images/home/hero-image.png");
+  background-image: url('../images/home/hero-image.png');
 }
 
 #features {
@@ -17,7 +17,7 @@
 }
 
 #bottomBanner {
-  background-image: url("../images/home/bottom-banner-image.png");
+  background-image: url('../images/home/bottom-banner-image.png');
 }
 
 #loginLinkButton {
