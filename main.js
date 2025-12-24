@@ -1,5 +1,5 @@
-import { createArticle, deleteArticle, getArticle, getArticleList, patchArticle } from "./api/ArticleService.mjs"
-import { createProduct, deleteProduct, getProduct, getProductList, patchProduct } from "./api/ProductService.mjs"
+import { createArticle, deleteArticle, getArticle, getArticleList, patchArticle } from "./api/ArticleService.js"
+import { createProduct, deleteProduct, getProduct, getProductList, patchProduct } from "./api/ProductService.js"
 
 // //getProductList (GET) 실행
 const productList = await getProductList(1)
@@ -40,7 +40,7 @@ const updatedProduct = await patchProduct(2898,{
 console.log(updatedProduct)
 
 // //deleteProduct (DELETE) 실행
-const deletedProduct = await deleteProduct(2898);
+const deletedProduct = await deleteProduct(2880);
   console.log('삭제 완료', deletedProduct);
 
 
@@ -68,4 +68,4 @@ const updateArticle = {
 patchArticle(2334,updateArticle)
 
 //deleteArticle (DELETE) 실행
-deleteArticle(2207)
+deleteArticle(2003)
