@@ -1,116 +1,151 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-NXNMB8PH');
+    </script>
+    <!-- End Google Tag Manager -->
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>판다마켓</title>
+    <link rel="icon" href="images/logo/favicon.ico" />
     <link
       rel="stylesheet"
       as="style"
       crossorigin
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
     />
-    <link rel="stylesheet" href="styles/reset.css" />
-    <link rel="stylesheet" href="styles/style.css" />
-    <link rel="icon" href="imgs\favicon.ico" />
-  </head>
-  <body>
-    <!-- 각각의 태그에는 의미가 있고, 목적이 있다. -라이브코딩-->
-    <header>
-      <a href="Index.html">
-        <img src="imgs\logo.svg" alt="판다마켓 로고" />
-      </a>
+    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/home.css" />
 
-      <a id="login-btn" href="/login.html">로그인</a>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=GTM-NXNMB8PH"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'GTM-NXNMB8PH');
+    </script>
+  </head>
+
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-NXNMB8PH"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header>
+      <a href="/">
+        <img src="images/logo/logo.svg" alt="판다마켓 홈" width="153" />
+      </a>
+      <a href="login.html" id="loginLinkButton" class="button">로그인</a>
     </header>
-    <main>
-      <section id="hero">
-        <div class="container">
+
+    <main class="with-header">
+      <section id="hero" class="banner">
+        <div class="wrapper">
           <h1>
             일상의 모든 물건을
             <br />
             거래해 보세요
           </h1>
-          <a href="/items.html">구경하러 가기</a>
+          <a href="items.html" class="button pill-button">구경하러 가기</a>
         </div>
       </section>
 
-      <!-- 여기까지 1차 라이브 코딩 내용 -->
-
-      <section id="homes">
-        <section class="home1">
-          <img src="imgs\Img_home_01.png" alt="인기 상품 확인" />
-          <div class="home-wrapper1">
-            <div class="home-head">Hot item</div>
-
-            <div class="home-body">
-              <h1>
-                인기 상품을
-                <br />
-                확인해 보세요
-              </h1>
-            </div>
-
-            <div class="home-foot">
+      <section id="features" class="wrapper">
+        <div class="feature">
+          <img
+            src="images/home/feature1-image.png"
+            alt="인기 상품"
+            width="50%"
+          />
+          <div class="feature-content">
+            <h2 class="feature-tag">Hot item</h2>
+            <h1>
+              인기 상품을
+              <br />
+              확인해 보세요
+            </h1>
+            <p class="feature-description">
               가장 HOT한 중고거래 물품을
               <br />
-              판다 마켓에서 확인해 보세요
-            </div>
+              판다마켓에서 확인해 보세요
+            </p>
           </div>
-        </section>
-
-        <section class="home2">
-          <div class="home-wrapper2">
-            <div class="home-head">Search</div>
-
-            <div class="home-body">
-              <h1>
-                구매를 원하는
-                <br />
-                상품을 검색하세요
-              </h1>
-            </div>
-
-            <div class="home-foot">
+        </div>
+        <div class="feature">
+          <div class="feature-content">
+            <h2 class="feature-tag">Search</h2>
+            <h1>
+              구매를 원하는
+              <br />
+              상품을 검색하세요
+            </h1>
+            <p class="feature-description">
               구매하고 싶은 물품은 검색해서
               <br />
               쉽게 찾아보세요
-            </div>
+            </p>
           </div>
-          <img src="imgs\Img_home_02.png" alt="인기 상품 검색" />
-        </section>
-
-        <section class="home3">
-          <img src="imgs\Img_home_03.png" alt="판매 상품 등록" />
-          <div class="home-wrapper3">
-            <div class="home-head">Register</div>
-
-            <div class="home-body">
-              <h1>
-                판매를 원하는
-                <br />
-                상품을 등록하세요
-              </h1>
-            </div>
-
-            <div class="home-foot">
+          <img
+            src="images/home/feature2-image.png"
+            alt="검색 기능"
+            width="50%"
+          />
+        </div>
+        <div class="feature">
+          <img
+            src="images/home/feature3-image.png"
+            alt="판매 상품 등록"
+            width="50%"
+          />
+          <div class="feature-content">
+            <h2 class="feature-tag">Register</h2>
+            <h1>
+              판매를 원하는
+              <br />
+              상품을 등록하세요
+            </h1>
+            <p class="feature-description">
               어떤 물건이든 판매하고 싶은 상품을
               <br />
               쉽게 등록하세요
-            </div>
+            </p>
           </div>
-        </section>
+        </div>
       </section>
-      <footer id="body-bottom">
-        <div class="container2">
+
+      <section id="bottomBanner" class="banner">
+        <div class="wrapper">
           <h1>
             믿을 수 있는
             <br />
-            판다마켓 중고 거래
+            판다마켓 중고거래
           </h1>
         </div>
-        <img src="imgs\Img_home_bottom.png" alt="믿을 수 있는 중고마켓" />
-      </footer>
+      </section>
     </main>
 
     <footer>
@@ -120,20 +155,41 @@
         <a href="faq.html">FAQ</a>
       </div>
       <div id="socialMedia">
-        <a href="https://www.facebook.com/">
-          <img src="imgs\ic_facebook.png" alt="페이스북" width="20" />
+        <a
+          href="https://www.facebook.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="images/social/facebook-logo.svg"
+            alt="페이스북"
+            width="20"
+          />
         </a>
-
-        <a href="https://twitter.com/">
-          <img src="imgs\ic_twitter.png" alt="트위터" width="20" />
+        <a
+          href="https://twitter.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="images/social/twitter-logo.svg" alt="트위터" width="20" />
         </a>
-
-        <a href="https://www.youtube.com/">
-          <img src="imgs\ic_youtube.png" alt="유튜브" width="20" />
+        <a
+          href="https://www.youtube.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="images/social/youtube-logo.svg" alt="유튜브" width="20" />
         </a>
-
-        <a href="https://www.instagram.com/">
-          <img src="imgs\ic_instagram.png" alt="인스타그램" width="20" />
+        <a
+          href="https://www.instagram.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="images/social/instagram-logo.svg"
+            alt="인스타그램"
+            width="20"
+          />
         </a>
       </div>
     </footer>
