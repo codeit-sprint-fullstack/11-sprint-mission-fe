@@ -4,7 +4,6 @@ html {
 }
 
 :root {
-  /* Gray scale */
   --gray-900: #1b1d1f;
   --gray-800: #26282b;
   --gray-600: #454c53;
@@ -14,10 +13,8 @@ html {
   --gray-100: #e8ebed;
   --gray-50: #f7f7f8;
 
-  /* Primary color */
   --blue: #3692ff;
 
-  /* Layout dimensions */
   --header-height: 7rem;
 }
 
