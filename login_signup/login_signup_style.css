@@ -1,31 +1,4 @@
-@import "/reset.css";
-
-/* 기본 설정 */
-:root {
-  --text-color: #1f2937;
-  --focus-color: #3692ff;
-  --point-color: #e6f2ff;
-  --primary-color: #f3f4f6;
-  --secondary-color: #9ca3af;
-  --error-color: #f74747;
-}
-
-html {
-  font-size: 62.5%;
-}
-
-body {
-  font-family: "Pretendard", sans-serif;
-  color: var(--text-color);
-  margin: 0;
-}
-
 /* 페이지 디자인 */
-header {
-  max-width: 64rem;
-  margin: 0 auto;
-}
-
 .home-logo {
   text-align: center;
   margin: 6rem auto 4rem;
@@ -70,7 +43,7 @@ label {
 }
 
 input {
-  background-color: var(--primary-color);
+  background-color: var(--gray-05);
   border-radius: 12px;
   border: none;
   box-sizing: border-box;
@@ -80,11 +53,11 @@ input {
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 2.6rem;
-  color: var(--secondary-color);
+  color: var(--gray-03);
 }
 
 input:focus {
-  outline: 1px solid var(--focus-color);
+  outline: 1px solid var(--main);
 }
 
 .pwd-wrapper {
@@ -105,12 +78,12 @@ input:focus {
 
 /* 에러 관련 */
 input.input-error {
-  border: 1px solid var(--error-color);
+  border: 1px solid var(--error);
   outline: none;
 }
 
 .error-message {
-  color: var(--error-color);
+  color: var(--error);
   font-size: 1.5rem;
   font-weight: 600;
 
@@ -130,7 +103,7 @@ input.input-error {
   font-size: 2rem;
   font-weight: 600;
   line-height: 3.2rem;
-  color: var(--primary-color);
+  color: var(--gray-05);
 
   cursor: pointer;
 }
@@ -138,19 +111,19 @@ input.input-error {
 /* 버튼 비활성화 */
 .login-button:disabled,
 .signup-button:disabled {
-  background-color: var(--secondary-color);
+  background-color: var(--gray-03);
   cursor: not-allowed;
 }
 
 /* 버튼 활성화 */
 .login-button:not(:disabled),
 .signup-button:not(:disabled) {
-  background-color: var(--focus-color);
+  background-color: var(--main);
 }
 
 /* 간편 로그인 */
 .social-login {
-  background-color: var(--point-color);
+  background-color: var(--blue-03);
   border-radius: 8px;
   width: 100%;
   max-width: 64rem;
@@ -196,7 +169,7 @@ input.input-error {
 
 .login-link a,
 .signup-link a {
-  color: var(--focus-color);
+  color: var(--main);
 }
 
 /* 경고 메시지 모달 */
@@ -213,7 +186,7 @@ input.input-error {
   width: 54rem;
   height: 25rem;
   border-radius: 16px;
-  background-color: var(--primary-color);
+  background-color: var(--gray-05);
 
   position: relative;
   display: flex;
@@ -234,11 +207,11 @@ input.input-error {
   height: 4.8rem;
   border-radius: 8px;
   border: none;
-  background-color: var(--focus-color);
+  background-color: var(--main);
 
   font-size: 1.6rem;
   font-weight: 600;
-  color: var(--primary-color);
+  color: var(--gray-05);
 
   position: absolute;
   bottom: 2.8rem;
@@ -253,8 +226,7 @@ input.input-error {
 
 /* 반응형 디자인 */
 /* pc, 태블릿 사이즈 */
-@media (min-width: 744px) {
-}
+@media (min-width: 744px) {}
 
 /* 모바일 사이즈 */
 @media (min-width: 375px) and (max-width: 743px) {
@@ -263,7 +235,6 @@ input.input-error {
     padding: 0 1.6rem;
   }
 
-  header,
   .login-container,
   .signup-container,
   .social-login {

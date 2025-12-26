@@ -1,0 +1,118 @@
+@import "/reset.css";
+
+/* 기본 설정 */
+:root {
+  --main: #3692ff;
+
+  --blue-01: #2d68ae;
+  --blue-02: #cfe5ff;
+  --blue-03: #e6f2ff;
+
+  --gray-01: #111827;
+  --gray-02: #374151;
+  --gray-03: #9ca3af;
+  --gray-04: #e5e7eb;
+  --gray-05: #f3f4f6;
+  --gray-06: #fcfcfc;
+
+  --error: #f74747;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Pretendard", sans-serif;
+  color: var(--gray-02);
+  word-break: keep-all;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: var(--gray-04);
+}
+
+h2 {
+  font-size: 4rem;
+  line-height: 140%;
+}
+
+span {
+  color: var(--main);
+  font-size: 1.8rem;
+  line-height: 2.6rem;
+}
+
+p {
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 3.2rem;
+}
+
+/* header */
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+
+  height: 7rem;
+  background-color: white;
+  border-bottom: 0.1rem solid var(--gray-04);
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 20rem;
+}
+
+.button {
+  background-color: var(--main);
+  border-radius: 8px;
+  padding: 12px 23px;
+
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--gray-05);
+
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--blue-01);
+}
+
+/* footer */
+footer {
+  height: 16rem;
+  background-color: var(--gray-01);
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--gray-03);
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3.2rem 20rem 0;
+}
+
+.footer-links {
+  display: flex;
+  gap: 3rem;
+}
+
+.social-media {
+  display: flex;
+  gap: 1.2rem;
+}
