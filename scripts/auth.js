@@ -25,3 +25,26 @@ function validateEmail() {
 }
 
 emailInput.addEventListener('focusout', validateEmail);
+
+const passwordInput = document.querySelector('#password');
+
+function validatePassword() {
+  const value = passwordInput.value;
+  const inputItem = passwordInput.closest('.input-item');
+  const errorMsg = inputItem.querySelector('.error-message');
+
+  inputItem.classList.remove('error');
+  passwordInput.classList.remove('input-error');
+
+  if (!value) {
+    errorMsg.textContent = '비밀번호를 입력해주세요.';
+    inputItem.classList.add('error');
+    passwordInput.classList.add('input-error');
+  } else if (value.length < 8) {
+    errorMsg.textContent = '비밀번호를 8자 이상 입력해주세요.';
+    inputItem.classList.add('error');
+    passwordInput.classList.add('input-error');
+  }
+}
+
+passwordInput.addEventListener('focusout', validatePassword);
