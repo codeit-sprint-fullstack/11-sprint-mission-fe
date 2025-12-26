@@ -84,3 +84,18 @@
   text-decoration: underline;
   text-underline-offset: 2px;
 }
+
+.input-error {
+  border: 1px solid red !important;
+}
+
+.error-message {
+  color: red;
+  font-size: 1.2rem;
+  margin-top: 0.8rem;
+  display: none;
+}
+
+.input-item.error .error-message {
+  display: block;
+}
