@@ -79,7 +79,7 @@ export const createProduct = async ({
   }
 };
 
-export const patchProducts = async (productId, patchData) => {
+export const patchProduct = async (productId, patchData) => {
   try {
     const response = await fetch(
       `https://panda-market-api-crud.vercel.app/products/${productId}`,
@@ -125,3 +125,12 @@ export const deleteProduct = async ({ productId }) => {
     throw error;
   }
 };
+
+const ProductService = {
+  getProduct,
+  getProductList,
+  createProduct,
+  patchProduct,
+  deleteProduct,
+};
+export default ProductService;

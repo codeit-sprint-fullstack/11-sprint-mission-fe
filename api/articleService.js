@@ -1,4 +1,4 @@
-export const getArticleList = async ({ page, pageSize, keyword }) => {
+const getArticleList = async ({ page, pageSize, keyword }) => {
   const params = new URLSearchParams({
     page,
     pageSize,
@@ -33,7 +33,7 @@ export const getArticleList = async ({ page, pageSize, keyword }) => {
 // };
 // getArticleList(articleQuery);//잘나옴
 
-export const getArticle = async ({ id }) => {
+const getArticle = async ({ id }) => {
   fetch(`https://panda-market-api-crud.vercel.app/articles/${id}`)
     .then((response) => {
       if (!response.ok) {
@@ -55,7 +55,7 @@ export const getArticle = async ({ id }) => {
 };
 // getArticle({id:5494}); //잘나옴!
 
-export const createArticle = async ({ title, content, image }) => {
+const createArticle = async ({ title, content, image }) => {
   fetch('https://panda-market-api-crud.vercel.app/articles', {
     method: 'POST',
     headers: {
@@ -111,7 +111,7 @@ const patchArticle = async (articleId, patchData) => {
     .catch((error) => console.log(` article patch - 에러발생${error.message}`));
 };
 
-export const deleteArticle = async ({ articleId }) => {
+const deleteArticle = async ({ articleId }) => {
   fetch(`https://panda-market-api-crud.vercel.app/articles/${articleId}`, {
     method: 'DELETE',
     headers: {
@@ -131,3 +131,12 @@ export const deleteArticle = async ({ articleId }) => {
     })
     .catch((error) => console.log(`article delete - 에러발생${error.message}`));
 };
+
+const ArticleService = {
+  getArticle,
+  getArticleList,
+  createArticle,
+  patchArticle,
+  deleteArticle,
+};
+export default ArticleService;
