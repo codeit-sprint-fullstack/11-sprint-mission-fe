@@ -48,3 +48,26 @@ function validatePassword() {
 }
 
 passwordInput.addEventListener('focusout', validatePassword);
+
+const loginButton = document.querySelector('.button.pill-button');
+
+function checkButtonState() {
+  const isEmailValid = isValidEmail(emailInput.value);
+  const isPasswordValid = passwordInput.value.length >= 8;
+
+  if (isEmailValid && isPasswordValid) {
+    loginButton.disabled = false;
+  } else {
+    loginButton.disabled = true;
+  }
+}
+
+emailInput.addEventListener('input', checkButtonState);
+passwordInput.addEventListener('input', checkButtonState);
+
+loginButton.addEventListener('click', (event) => {
+  event.preventDefault();
+  if (!loginButton.disabled) {
+    window.location.href = 'items.html';
+  }
+});
