@@ -1,19 +1,18 @@
-export const getProductList = async ({ page, pageSize, keyword }) => {
+import axios from 'axios';
+
+//console.log(data);나중에 삭제하기
+const instance = axios.create({
+  baseURL: 'https://panda-market-api-crud.vercel.app',
+});
+const getProductList = async ({ page, pageSize, keyword }) => {
   try {
-    const params = new URLSearchParams({
+    const params = {//new urlSearchParams()삭제
       page,
       pageSize,
       ...(keyword && { keyword: keyword }),
-    });
-    const response = await fetch(
-      `https://panda-market-api-crud.vercel.app/products?${params.toString()}`
-    );
-    if (!response.ok) {
-      throw new Error(
-        `[product getList] - 정보를 불러올 수 없음. 상태코드 : ${response.status}`
-      );
-    }
-    const data = await response.json();
+    };
+    const response = await instance.get('/products', { params });
+    const data = response.data;
     console.log(data);
     return data;
   } catch (error) {
@@ -22,17 +21,11 @@ export const getProductList = async ({ page, pageSize, keyword }) => {
   }
 };
 
-export const getProduct = async ({ id }) => {
+const getProduct = async ({ id }) => {
   try {
-    const response = await fetch(
-      `https://panda-market-api-crud.vercel.app/products/${id}`
-    );
-    if (!response.ok) {
-      throw new Error(
-        `[product get] - 정보를 불러올 수 없음. 상태코드 : ${response.status}`
-      );
-    }
-    const data = await response.json();
+    const response = await instance.get(`/products/${id}`);
+
+    const data = response.data;
     console.log(data);
     return data;
   } catch (error) {
@@ -41,7 +34,7 @@ export const getProduct = async ({ id }) => {
   }
 };
 
-export const createProduct = async ({
+const createProduct = async ({
   name,
   description,
   price,
@@ -49,28 +42,15 @@ export const createProduct = async ({
   images,
 }) => {
   try {
-    const response = await fetch(
-      'https://panda-market-api-crud.vercel.app/products',
-      {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name,
-          description,
-          price,
-          tag,
-          images,
-        }),
-      }
-    );
-    if (!response.ok) {
-      throw new Error(
-        `[product create] - 정보를 불러올 수 없음. 상태코드 : ${response.status}`
-      );
-    }
-    const data = await response.json();
+    const response = await instance.post('/products', {
+      name,
+      description,
+      price,
+      tag,
+      images,
+    });
+
+    const data = response.data;
     console.log(data);
     return data;
   } catch (error) {
@@ -79,24 +59,11 @@ export const createProduct = async ({
   }
 };
 
-export const patchProduct = async (productId, patchData) => {
+const patchProduct = async (productId, patchData) => {
   try {
-    const response = await fetch(
-      `https://panda-market-api-crud.vercel.app/products/${productId}`,
-      {
-        method: 'PATCH',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(patchData),
-      }
-    );
-    if (!response.ok) {
-      throw new Error(
-        `[product patch] - 정보를 불러올 수 없음. 상태코드 : ${response.status}`
-      );
-    }
-    const data = await response.json();
+    const response = await instance.patch(`/products/${productId}`, patchData);
+
+    const data = response.data;
     console.log(data);
     return data;
   } catch (error) {
@@ -105,21 +72,12 @@ export const patchProduct = async (productId, patchData) => {
   }
 };
 
-export const deleteProduct = async ({ productId }) => {
+const deleteProduct = async ({ productId }) => {
   try {
-    const response = await fetch(
-      `https://panda-market-api-crud.vercel.app/products/${productId}`,
-      {
-        method: 'DELETE',
-      }
-    );
-    if (!response.ok) {
-      throw new Error(
-        `[product delete] - 정보를 불러올 수 없음. 상태코드 : ${response.status}`
-      );
-    } else {
+    const response = await instance.delete( `/products/${productId}`);
+
       return response.status;
-    }
+    
   } catch (error) {
     console.log(`[product delete] - 에러발생${error.message}`);
     throw error;
