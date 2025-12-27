@@ -18,9 +18,9 @@
   <body>
     <main class="auth-container">
       <div class="logo-home-button-wrapper">
-        <a href="/"
-          ><img src="images/logo/logo.svg" alt="판다마켓 홈" width="396"
-        /></a>
+        <a a href="index.html">
+          <img src="images/logo/logo.svg" alt="판다마켓 홈" width="396" />
+        </a>
       </div>
 
       <form method="post">
@@ -32,7 +32,9 @@
             type="email"
             placeholder="이메일을 입력해 주세요"
           />
+          <p class="error-message">이메일을 입력해주세요.</p>
         </div>
+
         <div class="input-item">
           <label for="nickname">닉네임</label>
           <input
@@ -62,6 +64,7 @@
               />
             </button>
           </div>
+          <p class="error-message">비밀번호를 입력해주세요.</p>
         </div>
         <div class="input-item">
           <label for="passwordConfirmation">비밀번호 확인</label>
@@ -98,26 +101,31 @@
             target="_blank"
             rel="noopener noreferrer"
             aria-label="구글 로그인"
-            ><img
+          >
+            <img
               src="images/social/google-logo.png"
               alt="구글 로그인"
               width="42"
-          /></a>
+            />
+          </a>
           <a
             href="https://www.kakaocorp.com/page/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="카카오톡 로그인"
-            ><img
+          >
+            <img
               src="images/social/kakao-logo.png"
               alt="카카오톡 로그인"
               width="42"
-          /></a>
+            />
+          </a>
         </div>
       </div>
 
       <div class="auth-switch">
-        이미 회원이신가요? <a href="login.html">로그인</a>
+        이미 회원이신가요?
+        <a href="login.html">로그인</a>
       </div>
     </main>
     <script src="scripts/auth.js"></script>
