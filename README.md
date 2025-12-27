@@ -1,50 +1,52 @@
-# 🐼 판다마켓 프로젝트
+# 📝 [판다마켓 웹페이지(스프린트 미션)]
 
-> _이 저장소는 판다마켓 프로젝트의 프론트엔드 코드를 관리하는 곳입니다. 프로젝트를 클론하여 개발 환경을 설정하고, 각 브랜치에서 해당 스프린트 미션을 수행해 주세요!_ 🛠️
+![배너 이미지](/images/Group%2019.svg)
+<br/>
+**한 줄 소개**: 거래사이트 "판다마켓"의 웹페이지를 만듭니다. 
 
-## 소개
+<br>
 
-안녕하세요! 판다마켓 프로젝트에 오신 것을 환영합니다! 🥳  
-판다마켓은 따뜻한 중고거래를 위한 커뮤니티 플랫폼이에요. 여러분은 이곳에서 상품을 등록하고, 다른 사용자들과 소통하며, 자유롭게 이야기를 나눌 수 있어요. 매주 스프린트 미션을 통해 기능을 하나씩 만들어 가며 성장해 나가는 여정을 함께해요. 🚀
+<!-- 버전 수정필요!-->
+## 🔗 배포 링크 (v2.2.1) 
+👉 [웹사이트 보러가기](https://sprint-project-min.netlify.app/)
 
-![PandaMarket](https://github.com/user-attachments/assets/3784b99f-73c9-4349-a9a9-92b2a7563574)  
-_위 이미지는 판다마켓의 대표 이미지입니다._ 📸
+<br>
 
-## 스프린트 미션이란? 🤔
+## 💡 프로젝트 소개 (Description)
+**어떤 웹사이트인가요?**
+이 프로젝트는 웹 개발 학습을 위해 제작되었습니다. 스프린트 과제를 수행하며 코딩실력을 향상시키는데 도움이 될 것입니다. ```VS code, Git, Figma``` 등 다양한 도구와 ```netfliy``` 등의 사이트를 통해 코드작성, 디자인, 공유 및 배포의 과정을 익힐 것입니다. 초반에는 ```html/ css/ javascript``` 등의 개발에 필요한 기본 스택을 익히며 나중에는 ```react/ express``` 등을 배우고 활용할 것입니다.
 
-스프린트 미션은 **하나의 개인 프로젝트를 길게 진행하면서, 그 과정에서 주기적으로 피드백을 받을 수 있는 시스템**이에요. 각 스프린트마다 배운 이론을 적용해 보고, **멘토님께 코드 리뷰를 받아가며 실력을 쑥쑥 키워갈 수 있는 중요한 개인 과제**랍니다. 💪
+**개발 기간**
+* 2025.12.01 ~ 게속
 
-## 주요 기능 ✨
+<br>
 
-1. **상품 등록**: 내가 가진 물건을 올리고, 사진과 설명을 추가해 직접 판매할 수 있어요!
-2. **문의 댓글**: 상품에 대한 궁금한 점이나 의견을 자유롭게 남길 수 있답니다. 📝
-3. **자유게시판**: 다양한 주제로 친구들과 이야기를 나누고, 정보를 공유할 수 있는 공간이에요! 🗣️
+## 🛠 기술 스택 (Tech Stack)
 
-## 프로젝트 브랜치 구조 🏗️
+| 분류 | 기술 |
+| :-- | :-- |
+| **Frontend** | ![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black) ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)|
+| **Backend** | ![node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white) ![express](https://img.shields.io/badge/Express.js-000000?style=flat&logo=express&logoColor=white)| 
+| **Styling** |![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)|
+| **Tools** | ![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white) ![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=flat&logo=visual-studio-code&logoColor=white)|
 
-프로젝트는 단계별로 나뉘어 있고, 각 스프린트 미션에 맞는 브랜치가 있어요. 각 브랜치를 통해 체계적으로 개발하며 학습할 수 있어요. 🎯
+<br>
 
-### 브랜치 설명
+## ✨ 주요 기능 (Key Features)
+* ✅ **기능 1**: 각 페이지 작성 및 디자인
+* ✅ **기능 2**: 링크를 통한 페이지 연결
+* ✅ **기능 3**: github를 활용한 공유
 
-1. **basic (part1): 스프린트 미션 1 ~ 4 FE 요구사항**
+<br>
 
-   - 기본적인 웹 애플리케이션 기능 구현을 위한 초기 브랜치입니다. HTML, CSS, JavaScript 등을 사용해 기본을 다집니다.
-   - **스프린트 미션 1부터 4까지**의 프론트엔드 내용을 포함하고 있어요.
+## 📸 스크린샷 (Screenshots)
+| 메인 화면 | 기능 화면 |
+| :--: | :--: |
+| ![Main](/images/screenshots/스크린샷%202025-12-05%20오후%201.16.00.png) | ![Feature](/images/screenshots/스크린샷%202025-12-05%20오후%201.15.37.png) |
+<br>
 
-2. **react (part2): 스프린트 미션 5 ~ 7 FE 요구사항**
+## 💻 실행 방법 (Installation)
+이 프로젝트를 로컬 컴퓨터에서 실행하려면 터미널에 아래 명령어를 입력하세요.
 
-   - React 라이브러리를 사용해 프론트엔드 기능을 구현하는 브랜치입니다. 컴포넌트 기반 아키텍처와 상태 관리를 배웁니다.
-   - **스프린트 미션 5부터 7까지, 그 이후**의 프론트엔드 내용을 포함하고 있어요.
-   - 만약 스프린트 미션 9부터 프론트엔드 코드를 Next가 아닌 React로 구현하고 싶다면 react 브랜치를 사용해요.
-
-3. **next (part3,4): 스프린트 미션 8 FE 요구사항~**
-
-   - Next.js를 사용해 서버 사이드 렌더링(SSR)과 정적 사이트 생성(SSG) 등 고급 기능을 구현합니다.
-   - **스프린트 미션 8부터** 시작하는 프론트엔드 내용을 포함하고 있어요.
-   - 만약 스프린트 미션 9부터 프론트엔드 코드를 React가 아닌 Next로 구현하고 싶다면 next 브랜치를 사용해요.
-
-> _스프린트 미션 내 백엔드 요구사항은 [백엔드 레포지토리](https://github.com/codeit-sprint-fullstack/11-sprint-mission-be)의 브랜치에서 관리해주세요_
-
----
-
-본 프로젝트는 [코드잇](https://www.codeit.kr)의 소유이며, 교육 목적으로만 사용됩니다. © 2025 Codeit. All rights reserved.
+```bash
+git clone https://github.com/alstjddl0513-sys/11-sprint-mission-fe.git
