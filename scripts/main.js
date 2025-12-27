@@ -1,9 +1,22 @@
 //fetch articles list test(GET)
-// const test = await fetch('https://panda-market-api-crud.vercel.app/articles');
+const getArticleList = function (
+  page = 1,
+  pageSize = 10,
+  order = 'recent',
+  keyword = ''
+) {
+  const result = fetch(
+    `https://panda-market-api-crud.vercel.app/articles?page=${page}&pageSize=${pageSize}&orderBy=${order}&keyword=${keyword}`,
+    { method: 'GET' }
+  )
+    .then((res) => res.json())
+    .catch((e) => {
+      console.error(e);
+    });
+  return result;
+};
 
-// const testresult = await test.json();
-
-// console.log(testresult);
+// getArticleList(6, 10).then(r => console.log(r));//test
 
 /*
 //get one article
@@ -79,14 +92,27 @@ try {
 */
 
 //fetch products list test
+const getProductList = async function (
+  page = 1,
+  pageSize = 10,
+  order = 'recent',
+  keyword = ''
+) {
+  try {
+    const fetchResult = await fetch(
+      `https://panda-market-api-crud.vercel.app/products?page=${page}&pageSize=${pageSize}&orderBy=${order}&keyword=${keyword}`
+    );
+    if (!fetchResult.ok) {
+      throw new Error(`HTTP error: ${fetchResult.status}`);
+    }
+    const pdResult = await fetchResult.json();
+    return pdResult;
+  } catch (e) {
+    console.log(e);
+  }
+};
+// getProductList().then(r => console.log(r));//test
 /*
-const test2 = await fetch('https://panda-market-api-crud.vercel.app/products');
-
-const testresult2 = await test2.json();
-
-console.log(testresult2);
-*/
-
 //get one product
 const getProduct = await fetch(
   'https://panda-market-api-crud.vercel.app/products/2800'
@@ -154,3 +180,4 @@ const test2 = await fetch(
 const testresult2 = await test2.json();
 
 console.log(testresult2);
+*/
