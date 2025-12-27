@@ -19,6 +19,9 @@ function validateEmail() {
   const inputItem = emailInput.closest('.input-item');
   const errorMsg = inputItem.querySelector('.error-message');
 
+  //추가 : 현재 페이지가 로그인 페이지인지 확인하는 변수
+  const isLoginPage = !document.querySelector('#passwordConfirmation');
+
   inputItem.classList.remove('error');
   emailInput.classList.remove('input-error');
 
@@ -28,6 +31,12 @@ function validateEmail() {
     emailInput.classList.add('input-error');
   } else if (!isValidEmail(value)) {
     errorMsg.textContent = '잘못된 이메일 형식입니다.';
+    inputItem.classList.add('error');
+    emailInput.classList.add('input-error');
+  }
+  // [추가] 회원가입 페이지일 때만 중복 체크 실행
+  else if (!isLoginPage && USER_DATA.some((user) => user.email === value)) {
+    errorMsg.textContent = '이미 사용 중인 이메일입니다.';
     inputItem.classList.add('error');
     emailInput.classList.add('input-error');
   }
@@ -63,6 +72,8 @@ const loginButton = document.querySelector('.button.pill-button');
 function checkButtonState() {
   const isEmailValid = isValidEmail(emailInput.value);
   const isPasswordValid = passwordInput.value.length >= 8;
+  //이메일 중복 여부 확인
+  const isLoginPage = !document.querySelector('#passwordConfirmation');
 
   // 기본적으로는 이메일과 비밀번호만 체크 (로그인 페이지 기준)
   let isAllValid = isEmailValid && isPasswordValid;
@@ -72,7 +83,14 @@ function checkButtonState() {
     const isPasswordMatch =
       passwordInput.value === passwordConfirmInput.value &&
       passwordConfirmInput.value !== '';
-    isAllValid = isAllValid && isPasswordMatch;
+
+    // 추가: 이메일이 중복되지 않았는지 확인하는 조건
+    const isEmailNotDuplicate = !USER_DATA.some(
+      (user) => user.email === emailInput.value.trim()
+    );
+
+    // 이메일 유효 + 비번 유효 + 비번 일치 + 중복 아님까지 다 맞아야 함
+    isAllValid = isAllValid && isPasswordMatch && isEmailNotDuplicate;
   }
 
   loginButton.disabled = !isAllValid;
@@ -107,7 +125,8 @@ loginButton.addEventListener('click', (event) => {
     }
   } else {
     // 3. 회원가입 페이지일 때: 바로 이동 혹은 회원가입 완료 처리
-    window.location.href = 'items.html';
+    alert('회원가입이 완료되었습니다!'); // 성공 메시지 추가
+    window.location.href = 'login.html'; // 로그인 페이지로 이동시키기
   }
 });
 
