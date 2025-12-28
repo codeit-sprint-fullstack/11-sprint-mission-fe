@@ -1,3 +1,5 @@
+const articleApi = 'https://panda-market-api-crud.vercel.app/articles';
+
 //error validation
 const isThereError = (result) => {
   if (!result.ok) {
@@ -19,14 +21,13 @@ const printError = (error) => {
 
 //fetch articles list test(GET)
 export const getArticleList = function (
-  baseApi,
   page = 1,
   pageSize = 10,
   order = 'recent',
   keyword = ''
 ) {
   const fetchArticleList = fetch(
-    `${baseApi}articles?page=${page}&pageSize=${pageSize}&orderBy=${order}&keyword=${keyword}`,
+    `${articleApi}?page=${page}&pageSize=${pageSize}&orderBy=${order}&keyword=${keyword}`,
     { method: 'GET' }
   )
     .then(thisIsResult)
@@ -34,23 +35,21 @@ export const getArticleList = function (
   return fetchArticleList;
 };
 
-
 //GET one article
-export const getArticle = function (baseApi, articleId) {
-  const fetchArticle = fetch(`${baseApi}articles/${articleId}`)
+export const getArticle = function (articleId) {
+  const fetchArticle = fetch(`${articleApi}/${articleId}`)
     .then(thisIsResult)
     .catch(printError);
   return fetchArticle;
 };
 
-
 //create article(POST)
-export const createArticle = function (baseApi, articleData) {
+export const createArticle = function (articleData) {
   if (!articleData) {
-    console.error("게시할 내용이 없습니다.");
-    return
+    console.error('게시할 내용이 없습니다.');
+    return;
   }
-  const postArticle = fetch(`${baseApi}articles`, {
+  const postArticle = fetch(`${articleApi}`, {
     method: 'POST',
     body: JSON.stringify(articleData),
     headers: { 'Content-Type': 'application/json' },
@@ -60,10 +59,9 @@ export const createArticle = function (baseApi, articleData) {
   return postArticle;
 };
 
-
 //patch article
-export const patchArticle = function (baseApi, articleId, articleData = {}) {
-  const patchData = fetch(`${baseApi}articles/${articleId}`, {
+export const patchArticle = function (articleId, articleData = {}) {
+  const patchData = fetch(`${articleApi}/${articleId}`, {
     method: 'PATCH',
     body: JSON.stringify(articleData),
     headers: { 'Content-Type': 'application/json' },
@@ -73,14 +71,12 @@ export const patchArticle = function (baseApi, articleId, articleData = {}) {
   return patchData;
 };
 
-
 //delete article
-export const deleteArticle = function (baseApi, articleId) {
-  const deletedArticle = fetch(`${baseApi}articles/${articleId}`, {
+export const deleteArticle = function (articleId) {
+  const deletedArticle = fetch(`${articleApi}/${articleId}`, {
     method: 'DELETE',
   })
     .then(thisIsResult)
     .catch(printError);
   return deletedArticle;
 };
-
