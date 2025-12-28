@@ -1,135 +1,38 @@
-//fetch articles list test(GET)
-const getArticleList = function (
-  page = 1,
-  pageSize = 10,
-  order = 'recent',
-  keyword = ''
-) {
-  const fetchArticleList = fetch(
-    `https://panda-market-api-crud.vercel.app/articles?page=${page}&pageSize=${pageSize}&orderBy=${order}&keyword=${keyword}`,
-    { method: 'GET' }
-  )
-    .then((articleList) => {
-      if (!articleList.ok) {
-        throw new Error(`HTTP error: ${articleList.status}`);
-      }
-      return articleList.json();
-    })
-    .catch((error) => {
-      console.error(error);
-      return null;
-    });
-  return fetchArticleList;
-};
+import {
+  createArticle,
+  deleteArticle,
+  getArticle,
+  getArticleList,
+  patchArticle,
+} from './ArticleService.js';
 
-getArticleList(10, 10).then((r) => console.log(r)); //test
+const baseApi = 'https://panda-market-api-crud.vercel.app/';
 
-//GET one article
-const getArticle = function (articleId) {
-  const fetchArticle = fetch(
-    `https://panda-market-api-crud.vercel.app/articles/${articleId}`
-  )
-    .then((article) => {
-      if (!article.ok) {
-        throw new Error(`HTTP error: ${article.status}`);
-      }
-      return article.json();
-    })
-    .catch((error) => {
-      console.error(error);
-      return null;
-    });
-  return fetchArticle;
-};
-// getArticle(1583).then((r)=>console.log(r));//test
+//articles
+getArticleList(baseApi).then((x) => console.log(x));
+getArticle(baseApi, articleId).then((x) => console.log(x));
+createArticle(baseApi, newArticle).then((x) => console.log(x));
+patchArticle(baseApi, articleId, fixArticle).then((x) => console.log(x));
+deleteArticle(baseApi, articleId);
 
-//create article(POST)
-const exampleData = {
+/*
+//articles test
+const newArticle = {
   image: 'https://example.com/...',
   content: '게시글 내용입니까?',
   title: '게시글 제목입니까?',
 };
-
-const createArticle = function (articleData = {}) {
-  const postArticle = fetch(
-    'https://panda-market-api-crud.vercel.app/articles',
-    {
-      method: 'POST',
-      body: JSON.stringify(articleData),
-      headers: { 'Content-Type': 'application/json' },
-    }
-  )
-    .then((article) => {
-      if (!article.ok) {
-        throw new Error(`HTTP errer:${article.status}`);
-      }
-      return article.json();
-    })
-    .catch((error) => {
-      console.log(error);
-      return null;
-    });
-  return postArticle;
-};
-// createArticle(exampleData).then((r) => console.log(r)); //test
-
-//patch article
-const patchSample = {
+const fixArticle = {
   image: 'https://example.com/...',
   content: '게시글 내용입니다!!!',
   title: '게시글 제목입니다!!!!!',
 };
-
-const patchArticle = function (articleId, articleData = {}) {
-  const patchData = fetch(
-    `https://panda-market-api-crud.vercel.app/articles/${articleId}`,
-    {
-      method: 'PATCH',
-      body: JSON.stringify(articleData),
-      headers: { 'Content-Type': 'application/json' },
-    }
-  )
-    .then((patchedArticle) => {
-      if (!patchedArticle.ok) {
-        throw new Error(`HTTP error: ${patchedArticle.status}`);
-      }
-      return patchedArticle.json();
-    })
-    .catch((error) => {
-      console.log(error);
-      return null;
-    });
-  return patchData;
-};
-
-// patchArticle(5520, patchSample).then((r) => console.log(r)); //test
-
-//delete artiicle
-const deleteArticle = function (articleId) {
-  const deletedArticle = fetch(
-    `https://panda-market-api-crud.vercel.app/articles/${articleId}`,
-    {
-      method: 'DELETE',
-    }
-  )
-    .then((deletedData) => {
-      if (!deletedData.ok) {
-        throw new Error(`HTTP error: ${deletedData.status}`);
-      }
-      return deletedData.json();
-    })
-    .catch((error) => {
-      console.log(error);
-      return null;
-    });
-  return deletedArticle;
-};
-/*
-//delete test
-const testdelete = await fetch(
-  `https://panda-market-api-crud.vercel.app/articles/5520`
-);
-console.log(await testdelete.json());
+getArticleList(baseApi).then((x) => console.log(x));
+getArticle(baseApi, 5516).then((x) => console.log(x));
+createArticle(baseApi, newArticle).then((x) => console.log(x));
+patchArticle(baseApi, 5523,fixArticle).then((x) => console.log(x));;
+deleteArticle(baseApi, 5522);
+getArticle(baseApi, 5522).then((x) => console.log(x));
 */
 
 /*
@@ -204,7 +107,7 @@ const patchProduct = await fetch(
 );
 console.log(patchProduct);
 
-//delete artiicle
+//delete article
 const deleteProduct = await fetch(
   'https://panda-market-api-crud.vercel.app/products/2890',
   {
