@@ -14,14 +14,10 @@ import {
   deleteProduct
 } from './ProductService.js'
 
-
-
-
 //article 호출s
-
 //list
-// const articles = await getArticleList({});
-// console.log(articles);
+const articles = await getArticleList({});
+console.log(articles);
 
 //id
 // const articlesId = await getArticleId(5416);
@@ -53,8 +49,8 @@ console.log('------------------');
 
 //product 호출s
 //list
-// const product = await getProductList({});
-// console.log(product);
+const product = await getProductList({});
+console.log(product);
 
 //id
 // const productId = await getProductId (2875);
