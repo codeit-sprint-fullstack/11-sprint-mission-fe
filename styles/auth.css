@@ -124,7 +124,7 @@ body {
 .password-input-group {
   position: relative;
 }
-.password-input-group in put {
+.password-input-group input {
   width: 100%;
   padding-right: 54px;
 }
