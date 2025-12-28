@@ -151,3 +151,46 @@ input:focus {
 button:focus{
   background-color: var(--primary-100);
 }
+
+/* tablet media */
+@media (max-width: 1199px) and (min-width: 744px){
+  body{
+    width: 46.5rem;
+    height: 70.8rem;
+    margin: 0 auto;
+    padding: 3rem 3.3125rem 17.0625rem 3.1875rem;
+  }
+}
+
+/* mobile media */
+@media (max-width: 743px) and (min-width: 375px){
+  body{
+    width: 23.43rem;
+    margin: 0 auto;
+    padding: 1.5rem 1rem 19.1875rem 1rem;
+  }
+
+  main{
+    width: 23.43rem;
+  }
+
+  .big-logo{
+    width: 12.375rem;
+    height: 4.125rem;
+  }
+
+  form{
+    align-items: center;
+  }
+
+  input{
+    width: 21.43rem;
+  }
+
+  button{
+    width: 21.43rem;
+  }
+  .simple-login{
+    width: 21.43rem;
+  }
+}
