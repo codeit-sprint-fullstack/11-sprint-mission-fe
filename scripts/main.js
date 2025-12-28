@@ -5,92 +5,134 @@ const getArticleList = function (
   order = 'recent',
   keyword = ''
 ) {
-  const result = fetch(
+  const fetchArticleList = fetch(
     `https://panda-market-api-crud.vercel.app/articles?page=${page}&pageSize=${pageSize}&orderBy=${order}&keyword=${keyword}`,
     { method: 'GET' }
   )
-    .then((res) => res.json())
-    .catch((e) => {
-      console.error(e);
+    .then((articleList) => {
+      if (!articleList.ok) {
+        throw new Error(`HTTP error: ${articleList.status}`);
+      }
+      return articleList.json();
+    })
+    .catch((error) => {
+      console.error(error);
+      return null;
     });
-  return result;
+  return fetchArticleList;
 };
 
-// getArticleList(6, 10).then(r => console.log(r));//test
+getArticleList(10, 10).then((r) => console.log(r)); //test
 
-/*
-//get one article
-const article1 = await fetch("https://panda-market-api-crud.vercel.app/articles/1583")
-
-const artclresult1 = await article1.json();
-
-console.log(artclresult1)
+//GET one article
+const getArticle = function (articleId) {
+  const fetchArticle = fetch(
+    `https://panda-market-api-crud.vercel.app/articles/${articleId}`
+  )
+    .then((article) => {
+      if (!article.ok) {
+        throw new Error(`HTTP error: ${article.status}`);
+      }
+      return article.json();
+    })
+    .catch((error) => {
+      console.error(error);
+      return null;
+    });
+  return fetchArticle;
+};
+// getArticle(1583).then((r)=>console.log(r));//test
 
 //create article(POST)
-const articlePostData = {
+const exampleData = {
   image: 'https://example.com/...',
-  content: '게시글 내용입니다?',
-  title: '게시글 제목입니다?',
+  content: '게시글 내용입니까?',
+  title: '게시글 제목입니까?',
 };
 
-const createArticle = await fetch(
-  'https://panda-market-api-crud.vercel.app/articles',
-  {
-    method: 'POST',
-    body: JSON.stringify(articlePostData),
-    headers: { 'Content-Type': 'application/json' },
-  }
-);
-
-console.log(createArticle);
+const createArticle = function (articleData = {}) {
+  const postArticle = fetch(
+    'https://panda-market-api-crud.vercel.app/articles',
+    {
+      method: 'POST',
+      body: JSON.stringify(articleData),
+      headers: { 'Content-Type': 'application/json' },
+    }
+  )
+    .then((article) => {
+      if (!article.ok) {
+        throw new Error(`HTTP errer:${article.status}`);
+      }
+      return article.json();
+    })
+    .catch((error) => {
+      console.log(error);
+      return null;
+    });
+  return postArticle;
+};
+// createArticle(exampleData).then((r) => console.log(r)); //test
 
 //patch article
-const articlePatchData = {
+const patchSample = {
   image: 'https://example.com/...',
   content: '게시글 내용입니다!!!',
   title: '게시글 제목입니다!!!!!',
 };
 
-const patchArticle = await fetch(
-  'https://panda-market-api-crud.vercel.app/articles/5415',
-  {
-    method: 'PATCH',
-    body: JSON.stringify(articlePostData),
-    headers: { 'Content-Type': 'application/json' },
-  }
-);
+const patchArticle = function (articleId, articleData = {}) {
+  const patchData = fetch(
+    `https://panda-market-api-crud.vercel.app/articles/${articleId}`,
+    {
+      method: 'PATCH',
+      body: JSON.stringify(articleData),
+      headers: { 'Content-Type': 'application/json' },
+    }
+  )
+    .then((patchedArticle) => {
+      if (!patchedArticle.ok) {
+        throw new Error(`HTTP error: ${patchedArticle.status}`);
+      }
+      return patchedArticle.json();
+    })
+    .catch((error) => {
+      console.log(error);
+      return null;
+    });
+  return patchData;
+};
 
-console.log(patchArticle);
-
+// patchArticle(5520, patchSample).then((r) => console.log(r)); //test
 
 //delete artiicle
-const deleteArticle = await fetch(
-  'https://panda-market-api-crud.vercel.app/articles/5414',
-  {
-    method: 'DELETE',
-    headers: { 'Content-Type': 'application/json' },
-  }
+const deleteArticle = function (articleId) {
+  const deletedArticle = fetch(
+    `https://panda-market-api-crud.vercel.app/articles/${articleId}`,
+    {
+      method: 'DELETE',
+    }
+  )
+    .then((deletedData) => {
+      if (!deletedData.ok) {
+        throw new Error(`HTTP error: ${deletedData.status}`);
+      }
+      return deletedData.json();
+    })
+    .catch((error) => {
+      console.log(error);
+      return null;
+    });
+  return deletedArticle;
+};
+/*
+//delete test
+const testdelete = await fetch(
+  `https://panda-market-api-crud.vercel.app/articles/5520`
 );
-
-console.log(deleteArticle);
-
-const test = await fetch(
-  'https://panda-market-api-crud.vercel.app/articles/5414'
-);
-
-const testresult = await test.json();
-
-console.log(testresult);
-//오류 처리 test
-try {
-  deleteArticle.ok;
-  console.log('삭제되었습니다.');
-} catch (error) {
-  console.log('삭제 실패했습니다.', error);
-}
-
+console.log(await testdelete.json());
 */
 
+/*
 //fetch products list test
 const getProductList = async function (
   page = 1,
@@ -100,18 +142,19 @@ const getProductList = async function (
 ) {
   try {
     const fetchResult = await fetch(
-      `https://panda-market-api-crud.vercel.app/products?page=${page}&pageSize=${pageSize}&orderBy=${order}&keyword=${keyword}`
+      `https://panda-market-api-crudsdadafads.vercel.app/prddoducts?page=${page}&pageSize=${pageSize}&orderBy=${order}&keyword=${keyword}`
     );
     if (!fetchResult.ok) {
       throw new Error(`HTTP error: ${fetchResult.status}`);
     }
     const pdResult = await fetchResult.json();
     return pdResult;
-  } catch (e) {
-    console.log(e);
+  } catch (error) {
+    console.log(error);
   }
 };
-// getProductList().then(r => console.log(r));//test
+*/
+// getProductList().then((r) => console.log(r)); //test
 /*
 //get one product
 const getProduct = await fetch(
