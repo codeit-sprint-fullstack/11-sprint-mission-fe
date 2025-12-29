@@ -24,7 +24,7 @@
   font-size: 16px;
   font-weight: 600;
   border-radius: 8px;
-  padding: 12px 23px;
+  padding: 11.5px 23px;
 }
 
 .banner .pill-button {
@@ -47,7 +47,7 @@
 }
 
 .feature-tag {
-  color: #3692ff;
+  color: var(--blue);
   font-size: 18px;
   line-height: 25px;
   font-weight: 700;
