@@ -54,6 +54,35 @@ _위 이미지는 판다마켓의 대표 이미지입니다._ 📸
 - 로그인창과 회원가입 로직은 아직 반영되지 않았음
 
 ### 강사님께 전하는 글
-- 여전히 HTML/CSS과 어렵게 느껴집니다.ㅠㅠ
-- Layout별로 CSS나누어 진행하다 그게 아닌것 같아 원복하였고 개발기준에 대한 가이드가 필요할 것 같습니다.
+- 멘토님 꼼꼼한 PR 감사드립니다.
+- PR 반영하여 변경한 사항 (2025-12-12)
+  1) 닉네임 입력 필드의 name 속성이 email이 되도록 하고, id 및 name도 email로 변경
+  2) Label 연결 잘못된 문장 수정
+  3) 뛰어쓰기 반영
+  4) 인라인 스타일 제거
+  5) CSS 오타 수정
+   
+### sprint3 과정 내용 반영
+## FS 스프린트 미션3(V2) & 미션3(old버전에서 로그인 페이지 요청내용 일부)
+    (1) 아래 기능을 알려준 메서드 사용하여 구현
+      - getArticleList() : GET  
+      - getArticle() : GET
+      - createArticle() : POSTgit
+      - patchArticle() : PATCH 
+      - deleteArticle() : DELETE 
+      * fetch 사용 에러 메시지 콘솔 출력
+      * .then() 이용 비동기 처리
+      * .catch() 이용 오류 처리
 
+     (2) ProductList(), product(),createProduct(), patchProduct(),deleteProuduct()도 
+         1과 동일하게 구현
+      * async/await 비동기 처리
+      * try/catch 이용 오류 처리
+
+     (3)구현한 함수들을 아래와 같이 파일 분리
+      * export 활용
+      * ProductService.js 파일 Product API 관련 함수들을 작성
+      * ArticleService.js 파일에 Article API 관련 함수들을 작성
+      * 이외의 코드들은 모두 main.js 파일에 작성
+      * import를 활용
+      * 각 함수를 실행하는 코드를 작성하고, 제대로 동작하는지 확인

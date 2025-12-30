@@ -23,7 +23,7 @@ input {
   display: block;
   font-size: 16px;
   line-height: 24px;
-  margin: 8px 0;
+  margin: 8px 0 24px;  /* 에러표시를 위해 수정 24->0 at 2025.12.18*/
   padding: 16px 24px;
   width: 100%;
 }
