@@ -1,0 +1,277 @@
+/* 페이지 디자인 */
+.home-logo {
+  text-align: center;
+  margin: 6rem auto 4rem;
+}
+
+/* 정보 입력창 */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-container,
+.signup-container {
+  width: 100%;
+  max-width: 64rem;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.containers {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2.4rem;
+}
+
+input,
+button,
+.social-login {
+  width: 100%;
+  height: 5.6rem;
+}
+
+label {
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 2.6rem;
+  margin-bottom: 1.6rem;
+}
+
+input {
+  background-color: var(--gray-05);
+  border-radius: 12px;
+  border: none;
+  box-sizing: border-box;
+  padding: 1.6rem 2.4rem;
+
+  font-family: "Pretendard", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.6rem;
+  color: var(--gray-03);
+}
+
+input:focus {
+  outline: 1px solid var(--main);
+}
+
+.pwd-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.btn-password-toggle {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  right: 24px;
+
+  cursor: pointer;
+}
+
+/* 에러 관련 */
+input.input-error {
+  border: 1px solid var(--error);
+  outline: none;
+}
+
+.error-message {
+  color: var(--error);
+  font-size: 1.5rem;
+  font-weight: 600;
+
+  margin-top: 0.8rem;
+  margin-left: 1.6rem;
+
+  display: none;
+}
+
+/* 로그인, 회원가입 버튼 */
+.login-button,
+.signup-button {
+  border-radius: 999px;
+  border: none;
+
+  font-family: "Pretendard", sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 3.2rem;
+  color: var(--gray-05);
+
+  cursor: pointer;
+}
+
+/* 버튼 비활성화 */
+.login-button:disabled,
+.signup-button:disabled {
+  background-color: var(--gray-03);
+  cursor: not-allowed;
+}
+
+/* 버튼 활성화 */
+.login-button:not(:disabled),
+.signup-button:not(:disabled) {
+  background-color: var(--main);
+}
+
+/* 간편 로그인 */
+.social-login {
+  background-color: var(--blue-03);
+  border-radius: 8px;
+  width: 100%;
+  max-width: 64rem;
+  height: 7.4rem;
+  padding: 1.6rem 2.3rem;
+  margin: 2.4rem auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 2.6rem;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.social-icon img {
+  display: block;
+  width: 4.2rem;
+  height: 4.2rem;
+}
+
+/* 로그인, 회원가입 링크 */
+.login-link,
+.signup-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 2.4rem;
+
+  margin-bottom: 4rem;
+}
+
+.login-link a,
+.signup-link a {
+  color: var(--main);
+}
+
+/* 경고 메시지 모달 */
+.modal-popup {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  width: 54rem;
+  height: 25rem;
+  border-radius: 16px;
+  background-color: var(--gray-05);
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-message {
+  font-size: 1.6rem;
+  font-weight: 500;
+
+  position: relative;
+  bottom: 1rem;
+}
+
+.modal-button {
+  width: 12rem;
+  height: 4.8rem;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--main);
+
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--gray-05);
+
+  position: absolute;
+  bottom: 2.8rem;
+  right: 2.8rem;
+
+  cursor: pointer;
+}
+
+.popup-hidden {
+  display: none;
+}
+
+/* 반응형 디자인 */
+/* pc, 태블릿 사이즈 */
+@media (min-width: 744px) {}
+
+/* 모바일 사이즈 */
+@media (min-width: 375px) and (max-width: 743px) {
+  body {
+    margin: 4rem 0;
+    padding: 0 1.6rem;
+  }
+
+  .login-container,
+  .signup-container,
+  .social-login {
+    max-width: 40rem;
+  }
+
+  .home-logo {
+    width: 19.8rem;
+    margin: 2.4rem auto;
+  }
+
+  .home-logo img {
+    width: 100%;
+    height: auto;
+  } 
+
+  label {
+    margin-bottom: 0.8rem;
+  }
+
+  .containers {
+    margin-bottom: 1.6em;
+  }
+
+  .modal-content {
+    width: 32.7rem;
+    height: 22rem;
+
+    flex-direction: column;
+  }
+
+  .modal-message {
+    bottom: 2rem;
+  }
+
+  .modal-button {
+      bottom: 2.3rem;
+      right: auto;
+  }
+}

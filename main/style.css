@@ -1,0 +1,183 @@
+/* banner */
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.banner {
+  background-color: var(--blue-02);
+  height: 54rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: hidden;
+  margin-top: 7rem;
+}
+
+.banner-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  text-align: center;
+}
+
+.btn-round {
+  border-radius: 999px;
+  width: 36rem;
+  padding: 1.6rem 0;
+  display: inline-block;
+  margin-top: 3.2rem;
+  text-align: center;
+}
+
+/* feature 디자인 */
+.feature {
+  display: flex;
+  justify-content: center;
+  padding: 5rem 2.4rem 0;
+}
+
+.feature-content {
+  background-color: var(--gray-06);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.feature-text {
+  padding: 2.4rem 1.2rem;
+}
+
+.feature-text h2 {
+  margin: 1.2rem 0 2.4rem;
+}
+
+.pc-only {
+  display: none;
+}
+
+.left {
+  text-align: right;
+}
+
+/* 반응형 디자인 */
+/* pc 사이즈 */
+@media (min-width: 1200px) {
+  .banner {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  .banner img {
+    max-width: 40%;
+  }
+
+  .banner-content {
+    max-width: 36rem;
+    text-align: left;
+    margin-bottom: 0;
+    position: relative;
+    top: -30%;
+  }
+
+  .feature {
+    padding: 13.8rem 0;
+  }
+
+  .feature-content {
+    background-color: var(--gray-06);
+    width: 98.8rem;
+    height: 44.4rem;
+
+    flex-direction: row;
+    align-items: center;
+    gap: 6rem;
+  }
+
+  .feature-content img {
+    height: 100%;
+    width: auto;
+  }
+
+  .feature:nth-child(2) .feature-content {
+    flex-direction: row-reverse;
+  }
+
+  .feature-text {
+    padding: 0;
+  }
+
+  .pc-only {
+    display: inline;
+  }
+}
+
+/* 태블릿 사이즈 */
+@media (min-width: 744px) and (max-width: 1199px) {
+  .header-nav {
+    padding: 0 2.4rem;
+  }
+
+  .banner {
+    height: auto;
+    padding-top: 4rem;
+  }
+
+  .banner img {
+    margin-top: 3.2rem;
+  }
+
+  .feature-content {
+    max-width: 65rem;
+    display: block;
+  }
+
+  .footer-nav {
+    padding: 3.2rem 2.4rem 0;
+  }
+}
+
+/* 모바일 사이즈 */
+@media (min-width: 375px) and (max-width: 743px) {
+  .header-nav {
+    padding: 0 1.6rem;
+  }
+
+  .banner-content {
+    max-width: 30rem;
+  }
+
+  .btn-round {
+    width: 24rem;
+  }
+
+  .feature {
+    padding: 5rem 1.6rem 0;
+  }
+
+  .footer-nav {
+    padding: 3.2rem 1.6rem 0;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "links social"
+      "copyright copyright";
+    gap: 1.2rem;
+  }
+
+  .footer-copyright {
+    grid-area: copyright;
+  }
+  .footer-links {
+    grid-area: links;
+  }
+  .social-media {
+    grid-area: social;
+  }
+}
