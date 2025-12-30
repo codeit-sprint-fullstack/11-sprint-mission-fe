@@ -13,6 +13,19 @@ a {
   color: inherit;
 }
 
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 button {
   background: none;
   border: none;
@@ -25,6 +38,3 @@ img {
   vertical-align: bottom;
 }
 
-form input {
-  border: none;
-}
