@@ -1,0 +1,56 @@
+footer {
+  width: 100%; /* 화면 전체 */
+  height: 160px;
+  padding: 0px 200px 100px 200px; 
+  background-color: #000;
+  display: flex;
+  justify-content: space-between; /* left / center / right 배치 */
+  align-items: center;
+  border-top: 1px solid #333;
+  position: fixed; /* 화면 하단 고정 */
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+
+/* 왼쪽: 저작권 */
+.left {
+  color: #fff;
+  font-size: 14px;
+}
+
+/* 중앙: 메뉴 */
+.center {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.center a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.center a:hover {
+  text-decoration: underline;
+}
+
+/* 오른쪽: 소셜 아이콘 */
+.right {
+  display: flex;
+  flex-direction:row-reverse;
+  justify-content: flex-start;
+  gap: 10px;
+  width: 200px; 
+  flex-shrink: 0; /* 화면이 작아도 압축되지 않음 */
+}
+
+.right img {
+  width: 20px;
+  height: 20px;
+  display: block;
+  filter: brightness(0) invert(1); /* 흰색으로 보정 */
+}
