@@ -139,9 +139,8 @@
 .pagination {
   display: flex;
   justify-content: center;
-  align-items: center;
   gap: 8px;
-  margin-top: 40px;
+  margin: 16px 0 100px; /* 아래쪽 여백 충분히 확보 */
 }
 
 .pageButton {
@@ -156,7 +155,7 @@
 }
 
 .pageButton:hover {
-  background-color: #7b00e6;
+  background-color:  #7b00e6;
 }
 
 .pageButton:disabled {
