@@ -14,7 +14,7 @@ main {
   flex-shrink: 0;
 }
 
-.to_index img {
+.to-index img {
   width: 24.75rem;
   height: 8.25rem;
 }
@@ -60,7 +60,7 @@ input:focus {
   outline: 2px var(--blue100) solid;
 }
 
-#see-pw {
+.see-pw {
   position: absolute;
   bottom: 0.875rem;
   right: 1.5rem;
@@ -81,7 +81,7 @@ input:focus {
   background-color: var(--blue100);
 }
 
-.easy_login {
+.easy-login {
   width: 40rem;
   height: 4.625rem;
   padding: 1rem 1.4375rem;
@@ -93,12 +93,12 @@ input:focus {
   gap: 0.625rem;
 }
 
-.sns_login_links {
+.links-sns-login {
   display: flex;
   gap: 1rem;
 }
 
-.join_us {
+.join-us {
   gap: 0.25rem;
   color: var(--Secondary-800, #1f2937);
   font-family: Pretendard;
@@ -108,7 +108,7 @@ input:focus {
   line-height: 1.714; /* 171.429% */
 }
 
-.join_us a {
+.join-us a {
   color: var(--Primary-100, #3692ff);
   line-height: normal;
   text-decoration-line: underline;

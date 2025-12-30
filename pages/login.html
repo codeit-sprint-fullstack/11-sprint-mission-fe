@@ -29,29 +29,34 @@
 </head>
 <body>
   <main>
-    <a class="to_index" href="/">
+    <a class="to-index" href="/">
       <img src="/imgs/logo/Property 1=lg.png" />
     </a>
     <div class="contents column">
       <form action="#" method="post" class="column">
-        <div class="input_what">
+        <div class="input-what">
           <label>
             <span>이메일</span>
             <br />
-            <input type="text" placeholder="이메일을 입력해주세요" />
+            <input
+              name="email"
+              type="text"
+              placeholder="이메일을 입력해주세요"
+            />
           </label>
         </div>
-        <div class="input_what">
+        <div class="input-what">
           <label>
             <span>비밀번호</span>
             <br />
             <div>
               <input
                 id="password"
+                name="password"
                 type="password"
                 placeholder="비밀번호를 입력해주세요"
               />
-              <button type="button" id="see-pw">
+              <button type="button" class="see-pw">
                 <img
                   src="/imgs/button/btn_visibility_off_24px.svg"
                   alt="입력한 비밀번호 보기"
@@ -62,9 +67,9 @@
         </div>
       </form>
       <button type="submit" class="btn-large center login">로그인</button>
-      <div class="easy_login">
+      <div class="easy-login">
         간편 로그인하기
-        <div class="sns_login_links">
+        <div class="links-sns-login">
           <a href="https://www.google.com/">
             <svg
               width="43"
@@ -143,7 +148,7 @@
           </a>
         </div>
       </div>
-      <div class="join_us center">
+      <div class="join-us center">
         판다마켓이 처음이신가요?
         <a href="/pages/signup.html">회원가입</a>
       </div>
