@@ -15,8 +15,8 @@ export default function Market() {
   const [products, setProducts] = useState([]);
   const [totalCount, setTotalCount] = useState(0);
 
-  const [inputValue, setInputValue] = useState('');     // 🔹 타이핑용
-  const [searchKeyword, setSearchKeyword] = useState(''); // 🔹 검색 실행 기준
+  const [inputValue, setInputValue] = useState('');       // 타이핑용
+  const [searchKeyword, setSearchKeyword] = useState(''); // 검색 실행 기준
 
   const [orderBy, setOrderBy] = useState('recent');
   const [page, setPage] = useState(1);
@@ -31,24 +31,33 @@ export default function Market() {
         const bestRes = await fetch(
           `${API_URL}?orderBy=favorite&page=1&pageSize=4`
         );
+        if (!bestRes.ok) {
+          console.error("Product list error:", bestRes.status);
+          throw new Error(`베스트 상품데이타를 가져오지 못하였습니다:${bestRes.status}, text:${bestRes.statusText}` );
+        }
         const bestData = await bestRes.json();
         setBestProducts(bestData.list ?? []);
 
-        /* ===== 판매중 상품 ===== */
+        /* ===== 판매중인 상품 ===== */
         const productRes = await fetch(
           `${API_URL}?orderBy=${orderBy}&page=${page}&limit=${PAGE_SIZE}&keyword=${searchKeyword}`
         );
+
+        if (!productRes.ok) {
+          console.error("Product list error:", productRes.status);
+          throw new Error(`일반 상품데이타를 가져오지 못하였습니다:${productRes.status}, text:${productRes.statusText}` );
+        }
         const productData = await productRes.json();
 
         setProducts(productData.list ?? []);
         setTotalCount(productData.totalCount ?? 0);
       } catch (error) {
-        console.error('상품 데이터를 불러오지 못했습니다.', error);
+        console.error(error);
       }
     }
 
     fetchProducts();
-  }, [orderBy, page, searchKeyword]); // ✅ 검색 확정 시만 실행
+  }, [orderBy, page, searchKeyword]); 
 
   /* =====================
      Pagination Logic
@@ -139,7 +148,7 @@ export default function Market() {
         <button
           className={styles.pageButton}
           disabled={page === 1}
-          onClick={() => setPage(page - 1)}
+          onClick={() => setPage((page) => Math.max(page - 1, 1))}
         >
           &lt;
         </button>
@@ -162,7 +171,9 @@ export default function Market() {
         <button
           className={styles.pageButton}
           disabled={page === totalPages}
-          onClick={() => setPage(page + 1)}
+          onClick={() =>
+            setPage((page) => Math.min(page + 1, totalPages))
+          }
         >
           &gt;
         </button>
