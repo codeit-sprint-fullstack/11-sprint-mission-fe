@@ -1,0 +1,9 @@
+.menuLink {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+    color: var(--secondary-color-gray600);
+    text-decoration: none;
+    padding: 21px 15px;
+}
