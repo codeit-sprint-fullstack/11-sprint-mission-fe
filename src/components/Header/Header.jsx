@@ -7,6 +7,7 @@ import { Login } from './Login';
 export function Header() {
   return (
     <header className={styles.headerBar}>
+      <h1 class={styles.srOnly}>판다마켓 중고마켓 페이지</h1>
       <div className={styles.container}>
         <Logo src={logo} alt="판다로고" />
         <div className={styles.menuContainer}>
@@ -18,3 +19,4 @@ export function Header() {
     </header>
   );
 }
+
