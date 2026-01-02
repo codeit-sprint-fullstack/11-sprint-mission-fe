@@ -2,12 +2,12 @@ body {
   background: #fff;
 }
 
-#wrap.login_wrapper {
+.wrap.login-wrapper {
   max-width: 640px;
-  margin: 231px auto 284px auto;
+  margin: 60px auto 284px auto;
 }
 
-#wrap.login_wrapper .login_logo {
+.wrap.login-wrapper .login-logo {
   width: 100%;
   display: flex;
   align-items: center;
@@ -15,14 +15,18 @@ body {
   margin: 0 0 40px 0;
 }
 
-#wrap.login_wrapper .login_logo img {
+.wrap.login-wrapper .login-logo img {
   width: 100%;
   max-width: 396px;
 }
 
-.login_wrapper form {
+.login-wrapper form {
   display: flex;
   flex-direction: column;
+}
+
+form .box {
+  margin: 0 0 24px 0;
 }
 
 form label {
@@ -38,11 +42,11 @@ form label {
 form input {
   width: 640px;
   height: 56px;
+  margin: 16px 0 0 0;
   padding: 16px 24px;
   border-radius: 12px;
   background: var(--Secondary-100);
   border: 1px solid var(--Secondary-100);
-  margin: 0 0 24px 0;
   color: var(--Secondary-400);
   font-family: Pretendard;
   font-size: 1rem;
@@ -56,6 +60,22 @@ form input {
 
 form input:focus {
   border: 1px solid #3692ff;
+}
+
+form input.input-out:not(:focus) {
+  border: 1px solid var(--error-red);
+}
+
+form .error-text {
+  width: 100%;
+  padding: 8px 16px 0 16px;
+  display: none;
+}
+
+form .error-text.active {
+  width: 100%;
+  padding: 8px 16px 0 16px;
+  display: inline-block;
 }
 
 form button {
@@ -78,35 +98,53 @@ form button {
   line-height: 32px;
 }
 
-form button:hover {
+form button.active {
   background: var(--Primary-100);
   border: 1px solid var(--Primary-100);
 }
 
-form .password_input {
+form button:hover {
+  opacity: 0.9;
+}
+
+form .error-text {
+  color: var(--error-red);
+  font-family: Pretendard;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+form .pw-box {
   position: relative;
 }
 
-form .password_input .eyes {
+form .pw-box .eyes {
   position: absolute;
   top: 18px;
   right: 24px;
   z-index: 1;
 }
 
-form .password_input .eyes:hover {
+form .pw-box .eyes:hover {
   cursor: pointer;
 }
 
-form .password_input .eyes .eyes_on {
+form .pw-box .eyes .eyes-icon {
   width: 24px;
   height: 24px;
   display: inline-block;
+  background: url(/img/login/btn_visibility_off.svg) no-repeat;
+  background-size: 100% auto;
+}
+
+form .pw-box .eyes.active .eyes-icon {
   background: url(/img/login/btn_visibility_on.svg) no-repeat;
   background-size: 100% auto;
 }
 
-.sns_login {
+.sns-login {
   display: flex;
   justify-content: space-between;
   width: 640px;
@@ -120,7 +158,7 @@ form .password_input .eyes .eyes_on {
   margin: 24px 0;
 }
 
-.sns_login p {
+.sns-login p {
   color: var(--Secondary-800);
   font-family: Pretendard;
   font-size: 1rem;
@@ -129,13 +167,13 @@ form .password_input .eyes .eyes_on {
   line-height: 26px;
 }
 
-.sns_login ul {
+.sns-login ul {
   display: flex;
   gap: 16px;
 }
 
-.sns_login ul li,
-.sns_login ul li a {
+.sns-login ul li,
+.sns-login ul li a {
   width: 42px;
   height: 42px;
 }
@@ -153,4 +191,35 @@ form .password_input .eyes .eyes_on {
 .singup a {
   color: var(--Primary-100);
   text-decoration: underline;
+}
+
+@media (max-width: 1199px) {
+  /* tablet 사이즈  */
+  .wrap.login-wrapper {
+    margin: 48px auto 48px auto;
+  }
+}
+
+@media screen and (max-width: 743px) {
+  /* mobile 사이즈  */
+  .wrap.login-wrapper {
+    max-width: 343px;
+    margin: 24px auto;
+  }
+
+  .wrap.login-wrapper .login-logo img {
+    max-width: 198px;
+  }
+
+  form input,
+  form button,
+  .sns-login {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .wrap.login-wrapper {
+    margin: 24px 16px;
+  }
 }
