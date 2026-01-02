@@ -1,3 +1,3 @@
-export function Logo({ src, alt }) {
-  return <img src={src} alt={alt} />;
+export function Logo({ src, alt, className }) {
+  return <img src={src} alt={alt} className={className} />;
 }

@@ -1,0 +1,18 @@
+.section {
+    width: 100%;
+    border: 1px solid black;    
+     /* border 나중에 삭제 */
+}
+
+.productsBar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.productsTitle {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 32px;
+    color: var(--secondary-color-gray900);
+}
+

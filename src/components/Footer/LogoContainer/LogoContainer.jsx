@@ -1,9 +1,9 @@
-import styles from './LogoContainer.module.css';
+import { Logo } from '@/components/common/Logo';
 import facebook from '@/assets/ic_facebook.svg';
 import twitter from '@/assets/ic_twitter.svg';
 import youtube from '@/assets/ic_youtube.svg';
 import instagram from '@/assets/ic_instagram.svg';
-import { Logo } from '@/components/common/Logo';
+import styles from './LogoContainer.module.css';
 
 export function LogoContainer() {
   return (

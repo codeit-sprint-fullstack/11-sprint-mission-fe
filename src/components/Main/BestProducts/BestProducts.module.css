@@ -1,6 +1,26 @@
+.section {
+    width: 100%;
+    border: 1px solid black;    
+     /* border 나중에 삭제 */
+}
+
 .productsTitle {
     font-weight: 700;
     font-size: 20px;
     line-height: 32px;
     color: var(--secondary-color-gray900);
+    margin-bottom: 16px;
+}
+.bestProductList {
+    display: grid;
+    grid-template-columns: repeat(4, 282px);
+    gap: 24px;
+}
+
+.bestProduct {
+    width: 282px;
+    height: 378px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
 }

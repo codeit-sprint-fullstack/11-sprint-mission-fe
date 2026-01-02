@@ -1,8 +1,8 @@
 import { Logo } from '../common/Logo';
-import logo from '@/assets/logo.svg';
 import { Menu } from './Menu';
-import styles from './Header.module.css';
 import { Login } from './Login';
+import logo from '@/assets/logo.svg';
+import styles from './Header.module.css';
 
 export function Header() {
   return (
