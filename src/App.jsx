@@ -1,6 +1,8 @@
 import './styles/reset.css'
 import './styles/index.css'
 import { Header } from './components/Header'
+import { Main } from './components/Main'
+import { Footer } from './components/Footer'
 
 
 function App() {
@@ -9,10 +11,10 @@ function App() {
   return (
     <>
       <Header />
+      <Main />
+      <Footer />
     </>
   )
 }
 
 export default App
-
-// 까먹지말고 폰트적용해라

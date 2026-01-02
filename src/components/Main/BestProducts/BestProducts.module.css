@@ -1,0 +1,6 @@
+.productsTitle {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 32px;
+    color: var(--secondary-color-gray900);
+}

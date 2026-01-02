@@ -1,4 +1,4 @@
-import { Logo } from './Logo';
+import { Logo } from '../common/Logo';
 import logo from '@/assets/logo.svg';
 import { Menu } from './Menu';
 import styles from './Header.module.css';
@@ -19,4 +19,3 @@ export function Header() {
     </header>
   );
 }
-
