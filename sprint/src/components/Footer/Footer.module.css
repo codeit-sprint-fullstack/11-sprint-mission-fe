@@ -1,0 +1,11 @@
+.footerContainer{
+  display: flex;
+  width: 120rem;
+  height: 10rem;
+  padding: 2rem 12.5rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.625rem;  
+
+  background-color: var(--Secondary-900);
+}
