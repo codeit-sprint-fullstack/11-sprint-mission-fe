@@ -1,7 +1,22 @@
+import { FaRegHeart } from "react-icons/fa";
 import './ProductCard.css';
 
-function ProductCard() {
-    return ()
+function ProductCard({product}) {
+    return (
+        <div className='product-card'>
+            <div className='img-container'>
+                <img src={product.src} alt={product.name} className='product-img' />
+            </div>
+            <div className='info-container'>
+                <h3 className='product-name'>{product.name}</h3>
+                <p className='product-price'>{product.price.toLocaleString()}원</p>
+                <div className='product-like'>
+                    <span className='heart-icon'><FaRegHeart /></span>
+                    <span className='like-count'>{product.favoriteCount}</span>
+                </div>
+            </div>
+        </div>
+    )
 }
 
 export default ProductCard;
