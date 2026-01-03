@@ -25,7 +25,7 @@ function Header() {
               <a href="#">자유게시판</a>
             </li>
             <li>
-              <a href="#"></a>중고마켓
+              <a href="#">중고마켓</a>
             </li>
           </ul>
         </div>
