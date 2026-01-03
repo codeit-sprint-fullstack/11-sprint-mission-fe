@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 120rem;
+  background-color: #fff;
 
   position: fixed;
   top: 0;

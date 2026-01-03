@@ -1,0 +1,43 @@
+.bestItemGrid{
+  display: grid;
+  grid-template-columns: repeat(4,17.625rem);
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.bestItemContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  gap: 1rem;
+  margin: 1rem 0 2.5rem;
+}
+
+.bestItemImg{
+  width: 17.625rem;
+  height: 17.6rem;
+  background-color: green;
+  border-radius: 1rem;
+}
+
+.postInfo{
+  display: flex;
+  flex-direction: column;
+  
+  gap: 0.37rem;
+  font-size: 0.75rem;
+  line-height: 150%;
+
+    a{
+      font-size: 0.875rem;
+      font-weight: 500;
+      line-height: 171.429%;
+    }
+}
+
+.price{
+  color: var(var(--Secondary-800));
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 171.429%;
+}
