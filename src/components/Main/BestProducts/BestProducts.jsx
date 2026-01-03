@@ -36,5 +36,3 @@ export function BestProducts() {
     </section>
   );
 }
-
-// Product({ src, title, price, favoriteCount, className })

@@ -1,7 +1,5 @@
 .section {
     width: 100%;
-    border: 1px solid black;    
-     /* border 나중에 삭제 */
 }
 
 .productsBar {
@@ -29,10 +27,16 @@
     display: flex;
     flex-direction: column;
     gap: 6px;
-    border: 1px solid black;
-    /* border 나중에 삭제 */
 }
 
 .pagination {
     margin : 43px auto 140px auto;
 }
+
+/* @media (max-width: 768px) {
+    
+}
+
+@media (max-width: 375px) {
+    
+} */
