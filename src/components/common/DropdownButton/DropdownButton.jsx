@@ -3,13 +3,12 @@ import clsx from 'clsx';
 import arrowDown from '@/assets/ic_arrow_down.svg';
 import styles from './DropdownButton.module.css';
 
-export function DropdownButton() {
+export function DropdownButton({ selected, onSelect }) {
   const [isOpen, setIsOpen] = useState(false);
-  const [selected, setSelected] = useState('최신순');
 
   const handleSelect = (value) => {
     setIsOpen(false);
-    setSelected(value);
+    onSelect(value);
   };
 
   return (

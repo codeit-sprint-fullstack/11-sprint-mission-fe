@@ -1,14 +1,20 @@
 import { useEffect, useState } from 'react';
+import { useDebounce } from 'use-debounce';
 import { usePagination } from '@/hooks/usePagination';
 import { getProductList } from '@/apis/fetchProducts';
 import { getPageButtons } from '@/utils/getPageButtons';
 import { SearchProducts } from './SearchProducts';
 import { Product } from '@/components/common/Product';
-import styles from './SellingProducts.module.css';
 import { Pagination } from './Pagination';
+import styles from './SellingProducts.module.css';
 
 export function SellingProducts() {
   const [products, setProducts] = useState([]);
+  const [keyword, setKeyword] = useState('');
+  const [orderBy, setOrderBy] = useState('recent');
+
+  const DELAY = 300;
+  const [debouncedKeyword] = useDebounce(keyword, DELAY); // 디바운싱
 
   const { currentPage, totalPages, setTotalItems, goToPage, next, prev } =
     usePagination();
@@ -17,6 +23,8 @@ export function SellingProducts() {
     async function fetchProducts() {
       const result = await getProductList({
         page: currentPage,
+        orderBy,
+        keyword: debouncedKeyword,
       });
       //   객체 프로퍼티 이름으로 가져오기!
       setProducts(result.list); // 프로덕트 배열 가져옴
@@ -24,7 +32,7 @@ export function SellingProducts() {
     }
 
     fetchProducts();
-  }, [currentPage, setTotalItems]); // setTotalItems는 함수라서 무한루프 x
+  }, [currentPage, orderBy, debouncedKeyword, setTotalItems]); // setTotalItems는 함수라서 무한루프 x
 
   const pageButtons = getPageButtons(currentPage, totalPages);
 
@@ -32,7 +40,13 @@ export function SellingProducts() {
     <section className={styles.section}>
       <div className={styles.productsBar}>
         <h2 className={styles.productsTitle}>판매 중인 상품</h2>
-        <SearchProducts />
+        <SearchProducts
+          keyword={keyword}
+          setKeyword={setKeyword}
+          orderBy={orderBy}
+          setOrderBy={setOrderBy}
+          goToPage={goToPage}
+        />
       </div>
 
       <ul className={styles.sellingProductList}>
