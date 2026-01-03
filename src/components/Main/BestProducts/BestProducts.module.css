@@ -1,7 +1,5 @@
 .section {
     width: 100%;
-    border: 1px solid black;    
-     /* border 나중에 삭제 */
 }
 
 .productsTitle {
@@ -12,8 +10,7 @@
     margin-bottom: 16px;
 }
 .bestProductList {
-    display: grid;
-    grid-template-columns: repeat(4, 282px);
+    display: flex;
     gap: 24px;
 }
 

@@ -2,12 +2,18 @@
     text-decoration: none;
 }
 
-.productImg {
-    width: 282px;
-    height: 282px;
-    object-fit: cover;
+.imgWrapper {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
     border-radius: 16px;
     margin-bottom: 16px;
+}
+
+.productImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .title {
