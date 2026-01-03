@@ -1,6 +1,6 @@
 import Footer from "./components/Footer/Footer"
 import Header from "./components/Header/Header"
-import BestItem from "./context/BestItem"
+import BestItemList from "./context/BestItemList"
 import ProductList from "./context/ProductList"
 
 import styles from "./App.module.css"
@@ -16,7 +16,7 @@ function App() {
           <section>
             <div>
               <h2>베스트 상품</h2>
-              <BestItem/>
+              <BestItemList/>
             </div>
           </section>
 
