@@ -1,6 +1,7 @@
 import Footer from "./components/Footer/Footer"
 import Header from "./components/Header/Header"
 import BestItemList from "./context/BestItemList"
+import ProductListSection from "./context/ProductListSection"
 import ProductList from "./context/ProductList"
 
 import styles from "./App.module.css"
@@ -21,10 +22,9 @@ function App() {
           </section>
 
           <section>
-            <div>
-              <h2>판매 중인 상품</h2>
-              <ProductList/>
-            </div>
+            <ProductList/>
+            <ProductListSection/>
+
           </section>
         </main>
         
