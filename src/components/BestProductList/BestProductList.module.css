@@ -1,4 +1,21 @@
+h2 {
+  color: var(--Secondary-900, #111827);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 3.2rem;
+}
+
 .productListContainer {
   display: flex;
-  
+  gap: 24px;
+}
+
+.productImage {
+  width: 201px;
+  height: 201px;
+}
+
+.bestProductImage {
+  width: 282px;
+  height: 282px;
 }

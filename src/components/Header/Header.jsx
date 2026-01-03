@@ -1,4 +1,6 @@
 import logo from '../../assets/logo/logo.svg';
+import { Button } from '@/components/Button';
+
 import styles from './Header.module.css';
 
 export function Header() {
@@ -13,11 +15,11 @@ export function Header() {
           <li><a href="/">중고마켓</a></li>
         </ul>
       </div>
-      <button>
-        <a href="login.html" id="loginLinkButton">
+      <Button variant={'primary'}>
+        {/* <a href="login.html" id="loginLinkButton"> */}
           로그인
-        </a>
-      </button>
+        {/* </a> */}
+      </Button>
     </header>
   );
 }

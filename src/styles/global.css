@@ -3,6 +3,7 @@
   /* Gray scale */
   --Cool-Gray-100: #f9fafb;
   --Cool-Gray-100: #f3f4f6;
+  --Cool-Gray-200: #e5e7eb;
   --Cool-Gray-600: #4b5563;
   --Secondary-400: #9ca3af;
   --Secondary-600: #4B5563;
@@ -27,9 +28,9 @@ body {
 
 
 
-h2 {
+/* h2 {
   font-size: 4rem;
   font-weight: 700;
   line-height: 5.6rem;
   letter-spacing: 0.02em;
-}
+} */

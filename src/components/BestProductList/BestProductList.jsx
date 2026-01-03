@@ -7,7 +7,7 @@ import styles from './BestProductList.module.css';
 const PAGE_SIZE = 4; 
 const INITIAL_PAGE = 1;
 
-export function BestProductList({ itemWidth = 200, itemheight = 280 }) {
+export function BestProductList() {
   const [bestProducts, setBestProducts] = useState([]);
 
   useEffect(() => {
@@ -36,12 +36,15 @@ export function BestProductList({ itemWidth = 200, itemheight = 280 }) {
   }, []);
 
   return (
+    <>
+    <h2>베스트 상품</h2>
     <ul className={styles.productListContainer}>
-      {bestProducts.map((product) => (
-        <li key={product.id}>
-          <ProductListItem item={product} />
+      {bestProducts.map((bestProduct) => (
+        <li key={bestProduct.id}>
+          <ProductListItem item={bestProduct} imgWidth="282px" imgHeight="282px" />
         </li>
       ))}
     </ul>
+    </>
   );
 }

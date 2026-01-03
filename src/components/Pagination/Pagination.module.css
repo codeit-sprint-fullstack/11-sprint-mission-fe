@@ -4,33 +4,39 @@
   align-items: center;
   margin-top: 2.5rem;
   gap: 0.5rem;
+  margin: 5rem;
 
   & button {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 2.5rem;
-    height: 2.5rem;
-    background-color: var(--card-background);
-    border: 1px solid var(--border-color);
-    color: var(--subtle-text-color);
+    width: 4rem;
+    height: 4rem;
+    background-color: #fff;
+    border: 1px solid var(--Cool-Gray-200);
+    border-radius: 4rem;
+    color: var(--Cool-Gray-600);
     padding: 0.5rem;
     cursor: pointer;
-    border-radius: var(--border-radius);
-    font-size: 1rem;
+    font-size: 1.6rem;
     font-weight: 500;
     transition: all var(--transition-speed) ease-in-out;
 
     &:hover {
-      border-color: var(--primary-color);
-      color: var(--primary-color);
+      border: none;
+      color: #fff;
+      background-color: var(--Primary-100);
     }
 
     &.active {
-      background-color: var(--primary-color);
-      color: white;
-      border-color: var(--primary-color);
-      box-shadow: var(--shadow-sm);
+      background-color: var(--Primary-100);
+      color: #fff;
+      border: none;
     }
   }
+}
+
+
+.right {
+  transform: rotate(180deg);
 }

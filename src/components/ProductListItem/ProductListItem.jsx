@@ -1,17 +1,20 @@
 import styles from './ProductListItem.module.css';
-export function ProductListItem({ item }) {
+import favoriteIcon from '../../assets/icon/ic_heart.svg'
+export function ProductListItem({ item, imgWidth, imgHeight }) {
 
-   const [imgSrc] = item.images
-  // const priceFormat = new
+  const intl = new Intl.NumberFormat('ko-KR', { maximumSignificantDigits: 3 });
   return (
     <div className={styles.productContainer}>
-      <img className={styles.ProductImage}
-        src={[imgSrc]}
-        art={item.title}
+      <img 
+        src={item.images}
+        alt={item.title}
+        style={{ width: imgWidth, height: imgHeight }}
       />
       <h3>{item.name}</h3>
-      <h3>가격 {item.price}원</h3>
-      <p>좋아요{item.favoriteCount}</p>
+      <p className={styles.price}>{intl.format(item.price)}원</p>
+      <p className={styles.favoriteCount}>
+        <img src={favoriteIcon} alt='favoriteIcon' width="16"/>
+          {item.favoriteCount}</p>
     </div>
-  );
+  )
 }

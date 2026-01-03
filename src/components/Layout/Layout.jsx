@@ -4,11 +4,10 @@ import styles from './Layout.module.css';
 
 export function Layout({ children }) {
   return (
-    <div>
+    <>
       <Header />
-      <div className={styles.wrapper}
-      >{children}</div>
+      <main className={styles.wrapper}>{children}</main>
       <Footer />
-    </div>
+    </>
   );
 }
