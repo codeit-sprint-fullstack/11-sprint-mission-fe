@@ -1,0 +1,86 @@
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  height: 7rem;
+  background-color: white;
+  border-bottom: 1px solid var(--gray-07);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 1.6rem;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  height: 100%;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-menu li {
+  height: 100%;
+}
+
+.nav-menu li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 7.4rem;
+  height: 100%;
+
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--gray-04);
+}
+
+.login-button {
+  width: 8.8rem;
+  height: 4.2rem;
+}
+
+/* 반응형 디자인 */
+/* 핸드폰 사이즈 */
+@media (min-width: 375px) {
+}
+
+/* 태블릿 사이즈 */
+@media (min-width: 744px) {
+  .header-container {
+    padding: 0 2.4rem;
+  }
+
+  .header-nav {
+    gap: 2rem;
+  }
+
+  .nav-menu li a {
+    width: 10.8rem;
+    font-size: 1.8rem;
+  }
+}
+
+/* 컴퓨터 사이즈 */
+@media (min-width: 1200px) {
+  .header-container {
+    padding: 0 20rem;
+  }
+
+  .header-nav {
+    gap: 2.4rem;
+  }
+}
