@@ -1,3 +1,8 @@
 .appContainer{
   width: 120rem;
+  margin: 0 auto;
+}
+
+main{
+  padding-top: 5.87rem;
 }

@@ -10,12 +10,12 @@ function Footer (){
       <div className={styles.footerContainer}>
         <p>©codeit-2024</p>
 
-        <div>
-        <a>Privacy Policy</a>
-        <a> FAQ</a>
+        <div className={styles.footerCenter}>
+          <a>Privacy Policy</a>
+          <a> FAQ</a>
         </div>
 
-        <div>
+        <div className={styles.snsBtn}>
           <img src={facebook} alt='페이스북'/>
           <img src={twitter} alt='트위터'/>
           <img src={youtube} alt='유투브'/>
