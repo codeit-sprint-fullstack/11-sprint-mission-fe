@@ -5,7 +5,7 @@ const API_BASE_URL = 'https://panda-market-api.vercel.app';
 export async function fetchProductList(
   page = 1,
   pageSize = 10,
-  orderBy = 'favorite',
+  orderBy = 'recent',
   keyword = '',
 ) {
   try {

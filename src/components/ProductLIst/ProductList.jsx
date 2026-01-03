@@ -1,15 +1,15 @@
 import { useProducts } from '@/contexts/ProductContext';
-import { Spinner } from '../Spinner';
 import { Pagination } from '@/components/Pagination';
 import { ProductListItem } from '@/components/ProductListItem';
-import { useState } from 'react';
+import { useState } from 'react'
+import styles from './ProductList.module.css';
+
+
 
 export function ProductList() {
 
   const { 
     products, 
-    // isLoading, 
-    error, 
     currentPage, 
     totalPages, 
     goToPage,
@@ -26,16 +26,7 @@ export function ProductList() {
     setInputValue(value);
     changeKeyword(value); // keyword 변경 + 페이지 1로 이동
   };
- 
 
-
-  // if (isLoading) {
-  //   return <Spinner />;
-  // }
-
-  if (error) {
-    return <div>에러: {error}</div>;
-  }
 
   return (
     <div>
@@ -53,7 +44,7 @@ export function ProductList() {
       </select>
       </div>
     
-      <ul>
+      <ul className={styles.productListContainer}>
         {products.map((product) => (
           <li key={product.id}>
             <ProductListItem item={product}/>

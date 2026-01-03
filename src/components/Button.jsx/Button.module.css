@@ -1,0 +1,32 @@
+.button {
+  background-color: var(--brand-blue);
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button:hover {
+  background-color: #1967d6;
+}
+
+.button:focus {
+  background-color: #1251aa;
+}
+
+.button:disabled {
+  background-color: var(--Secondary-400);
+  cursor: default;
+  pointer-events: none;
+}
+
+.pill-button {
+  font-size: 2rem;
+  font-weight: 700;
+  border-radius: 99.9rem;
+  padding: 1.6rem 12.4rem;
+}
+
+.full-width {
+  width: 100%;
+}

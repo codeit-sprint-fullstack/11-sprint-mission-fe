@@ -2,8 +2,6 @@ import { createContext, useContext } from 'react';
 
 const defaultContextValue = {
   products: [],
-  isLoading: false,
-  error: null,
   currentPage: 1,
   totalPage: 1,
   orderBy: 'recent',
