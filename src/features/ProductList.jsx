@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { getProductList } from '@/api/productApi';
 import { useDeviceType } from '@/hooks/useDeviceType';
 import ProductCard from '@/components/ProductCard';
+import SortDropdown from '@/components/SortDropdown';
 import { FiSearch } from 'react-icons/fi'; // 돋보기
 import './ProductList.css';
 
@@ -12,6 +13,11 @@ function ProductList() {
   const device = useDeviceType();
 
   const pageSize = device === 'mobile' ? 4 : device === 'tablet' ? 6 : 10;
+
+  const sortOptions = [
+    {value: 'recent', label: '최신순'},
+    {value: 'favorite', label: '좋아요순'},
+  ]
 
   useEffect(() => {
     const getProducts = async () => {
@@ -47,14 +53,7 @@ function ProductList() {
           </div>
           
           <button className="button registration-button">상품 등록하기</button>
-          <select
-            className="sort-dropdown"
-            value={orderBy}
-            onChange={(event) => setOrderBy(event.target.value)}
-          >
-            <option className="recent">최신순</option>
-            <option className="favorite">좋아요순</option>
-          </select>
+          <SortDropdown options={sortOptions} defaultValue={orderBy} onSelect={(value) => setOrderBy(value)} />
         </div>
       </div>
 
