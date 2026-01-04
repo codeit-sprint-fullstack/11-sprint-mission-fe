@@ -2,6 +2,7 @@ import facebookIcon from '@/assets/images/ic_facebook.svg';
 import twitterIcon from '@/assets/images/ic_twitter.svg';
 import youtubeIcon from '@/assets/images/ic_youtube.svg';
 import instagramIcon from '@/assets/images/ic_instagram.svg';
+import { Link } from 'react-router-dom';
 import './Footer.css';
 
 function Footer() {
@@ -11,10 +12,10 @@ function Footer() {
         <div className="footer-copyright">©codeit - 2024</div>
         <ul className="footer-links">
           <li>
-            <a href="#">Privacy Policy</a>
+            <Link to="/policy">Privacy Policy</Link>
           </li>
           <li>
-            <a href="#">FAQ</a>
+            <Link to="/faq">FAQ</Link>
           </li>
         </ul>
         <div className="social-media">

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { getProductList } from '@/api/productApi';
 import { useDeviceType } from '@/hooks/useDeviceType';
 import { usePagination } from '@/hooks/usePagination';
@@ -64,7 +65,10 @@ function ProductList() {
             />
           </div>
 
-          <button className="button registration-button">상품 등록하기</button>
+          <Link to='/registration'>
+            <button className="button registration-button">상품 등록하기</button>
+          </Link>
+          
           
           <SortDropdown
             options={sortOptions}
