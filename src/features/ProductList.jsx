@@ -12,6 +12,7 @@ function ProductList() {
   const [products, setProducts] = useState([]);
   const [orderBy, setOrderBy] = useState('recent');
   const [keyword, setKeyword] = useState('');
+
   const device = useDeviceType();
 
   const pageSize = device === 'mobile' ? 4 : device === 'tablet' ? 6 : 10;
@@ -26,7 +27,7 @@ function ProductList() {
 
   useEffect(() => {
     setCurrentPage(1);
-  }, [orderBy, keyword, setCurrentPage]);
+  }, [orderBy, keyword, pageSize, setCurrentPage]);
 
   useEffect(() => {
     const getProducts = async () => {
