@@ -1,9 +1,7 @@
 import { MdNavigateBefore, MdNavigateNext } from 'react-icons/md';
 import './Pagination.css';
 
-function Pagination({ currentPage, totalPages, onPageChange }) {
-  const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
-
+function Pagination({ currentPage, totalPages, pageNumbers, onPageChange }) {
   return (
     <div className="pagination">
       <button
@@ -14,10 +12,10 @@ function Pagination({ currentPage, totalPages, onPageChange }) {
         <MdNavigateBefore />
       </button>
       <div className="page-numbers">
-        {pages.map((page) => (
+        {pageNumbers.map((page) => (
           <button
             key={page}
-            className="page-button"
+            className={`page-button ${currentPage === page ? 'active' : ''}`}
             onClick={() => onPageChange(page)}
           >
             {page}
@@ -27,6 +25,7 @@ function Pagination({ currentPage, totalPages, onPageChange }) {
       <button
         className="arrow-icon"
         onClick={() => onPageChange(currentPage + 1)}
+        disabled={currentPage === totalPages}
       >
         <MdNavigateNext />
       </button>

@@ -66,6 +66,7 @@
   justify-content: center;
   grid-template-columns: repeat(2, auto);
   gap: 3.2rem 0.8rem;
+  margin-bottom: 4rem;
 }
 
 /* 반응형 디자인 */
