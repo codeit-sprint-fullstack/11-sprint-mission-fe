@@ -1,11 +1,12 @@
+import { useState } from 'react'
+import searchIcon from '../../assets/icon/ic_search.svg'
 import { useProducts } from '@/contexts/ProductContext';
 import { Pagination } from '@/components/Pagination';
+import { Button } from '@/components/Button';
+
 import { ProductListItem } from '@/components/ProductListItem';
-import { useState } from 'react'
 import styles from './ProductList.module.css';
-import searchIcon from '../../assets/icon/ic_search.svg'
-import { Button } from '../Button';
-import { OrderDropdown } from '../Dropdown';
+import { OrderDropdown } from '@/components/OrderDropdown';
 
 
 export function ProductList() {

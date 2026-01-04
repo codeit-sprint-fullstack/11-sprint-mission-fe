@@ -36,3 +36,11 @@
 .dropdownItem:hover {
   background-color: #f0f0f0;
 }
+
+.arrow {
+  transition: transform 0.2s ease;
+}
+
+.open .arrow {
+  transform: rotate(180deg);
+}

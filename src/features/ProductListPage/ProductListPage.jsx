@@ -1,7 +1,9 @@
-import { BestProductList } from '@/components/BestProductList';
+
 import { Layout } from '@/components/Layout';
-import { ProductList } from '@/components/ProductLIst';
+
 import styles from './ProductListPage.module.css';
+import { BestProductList } from '../BestProductList';
+import { ProductList } from '../ProductList'
 export function ProductListPage() {
   return (
     <Layout>

@@ -1,7 +1,8 @@
-import { ProductListItem } from '../ProductListItem';
+
 import { useEffect, useState } from 'react';
 import { fetchProductList } from '@/api/productList';
 import styles from './BestProductList.module.css';
+import { ProductListItem } from '@/components/ProductListItem';
 
 
 const PAGE_SIZE = 4; 
