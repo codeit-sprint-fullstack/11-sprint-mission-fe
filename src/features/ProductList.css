@@ -1,0 +1,129 @@
+.best-section {
+  width: 100%;
+}
+
+.section-header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    'title registration registration'
+    'search search sort';
+  gap: 1.2rem;
+
+  margin-bottom: 2.4rem;
+}
+
+.section-nav {
+  display: contents;
+}
+
+.section-title {
+  grid-area: title;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 3.2rem;
+  color: var(--gray-01);
+  align-items: center;
+}
+
+.search-container {
+  grid-area: search;
+  height: 4.2rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  left: 1.2rem;
+  font-size: 2rem;
+  color: var(--gray-06);
+  pointer-events: none;
+}
+
+.item-search {
+  width: 100%;
+  height: 4.2rem;
+  background-color: var(--gray-09);
+  border-radius: 1.2rem;
+  border: none;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.6rem;
+  color: var(--gray-06);
+  padding: 0 0.4rem 0 4.4rem ;
+}
+
+.registration-button {
+  grid-area: registration;
+  width: 13.3rem;
+  height: 4.2rem;
+}
+
+.sort-dropdown {
+  grid-area: sort;
+  width: 4.2rem;
+  height: 4.2rem;
+  background-color: white;
+  border-radius: 1.2rem;
+  border: 1px solid var(--gray-08);
+}
+
+.product-container {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(2, auto);
+  gap: 3.2rem 0.8rem;
+}
+
+/* 반응형 디자인 */
+/* 핸드폰 사이즈 */
+@media (min-width: 375px) {
+}
+
+/* 태블릿 사이즈 */
+@media (min-width: 744px) {
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 2.4rem;
+  }
+
+  .section-nav {
+    display: flex;
+    gap: 1.2rem;
+  }
+
+  .search-container {
+    width: 32.5rem;
+    height: 4.2rem;
+  }
+
+  .item-search {
+  }
+
+  .registration-button {
+    width: 13.3rem;
+    height: 4.2rem;
+  }
+
+  .sort-dropdown {
+    width: 13rem;
+    height: 4.2rem;
+  }
+
+  .product-container {
+    grid-template-columns: repeat(3, auto);
+    gap: 4rem 1.6rem;
+  }
+}
+
+/* 컴퓨터 사이즈 */
+@media (min-width: 1200px) {
+  .product-container {
+    grid-template-columns: repeat(5, auto);
+    gap: 4rem 2.4rem;
+  }
+}

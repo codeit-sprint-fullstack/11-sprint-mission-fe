@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { getProductList } from '@/api/productApi';
 import { useDeviceType } from '@/hooks/useDeviceType';
 import ProductCard from '@/components/ProductCard';
+import { FiSearch } from 'react-icons/fi'; // 돋보기
 import './ProductList.css';
 
 function ProductList() {
@@ -35,13 +36,16 @@ function ProductList() {
       <div className="section-header">
         <h2 className="section-title">판매 중인 상품</h2>
         <div className="section-nav">
-          <input
+          <div className='search-container'>
+            <FiSearch className="search-icon" />
+            <input
             type="text"
             placeholder="검색할 상품을 입력해주세요"
             className="item-search"
             value={keyword}
-            onChange={(event) => setKeyword(event.target.value)}
-          ></input>
+            onChange={(event) => setKeyword(event.target.value)} />
+          </div>
+          
           <button className="button registration-button">상품 등록하기</button>
           <select
             className="sort-dropdown"
