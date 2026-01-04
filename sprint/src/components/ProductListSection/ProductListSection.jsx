@@ -2,16 +2,20 @@ import styles from './ProductListSection.module.css'
 import { FiSearch } from "react-icons/fi";
 import { BsCaretDownFill } from "react-icons/bs";
 import { BsCaretUpFill } from "react-icons/bs";
-import ProductList from './ProductList';
-import { useState } from 'react';
+import ProductList from '../ProductList/ProductList';
+import { useState, useEffect } from 'react';
 import { useDebouncedCallback } from 'use-debounce';
+import {Pagination} from '../Pagination/Pagination';
 
+
+const BASE_URL= 'https://panda-market-api.vercel.app'
 const DELAY = 500;
 
 function ProductListSection (){
   const [orderBy, setOrderBy]= useState('recent');
   const [isOpen, setIsOpen]= useState(false);
   const [keyword, setKeyword] = useState('');
+
 
   const handleOrderBy = (orderBy)=>{
     setOrderBy(orderBy);
@@ -24,7 +28,6 @@ function ProductListSection (){
     const value = e.target.value;
     setKeyword(value); 
   },DELAY);
-
 
   return(
     <>
@@ -44,8 +47,6 @@ function ProductListSection (){
               />
           </div>
   
-
-
           {/* 상품등록 */}
           <a className={styles.addItemBtn}>상품 등록하기</a>
 
@@ -58,7 +59,6 @@ function ProductListSection (){
               {orderBy === 'recent' ? "최신순" : "좋아요순"}
               {isOpen ? <BsCaretUpFill /> : <BsCaretDownFill />}
           </button>
-
           {isOpen ? (
             <ul className={styles.dropDownList}>
               <li>
@@ -82,7 +82,16 @@ function ProductListSection (){
           </div>
       </div>
 
+    {/* 상품리스트 */}
     <ProductList orderBy={orderBy} keyword={keyword}/>
+    
+    {/* 페이지네이션ㅠㅠ 왜 안되지.... */}
+    {/* <Pagination 
+      totalCount={products.totalCount}
+      pageSize={10}
+      currentPage={currentPage}
+      handlePageChange={handlePageChange}
+      /> */}
     </>
   )
 }

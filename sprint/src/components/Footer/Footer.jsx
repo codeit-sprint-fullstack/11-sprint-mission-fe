@@ -8,7 +8,7 @@ function Footer (){
   return(
     <>
       <div className={styles.footerContainer}>
-        <p>©codeit-2024</p>
+        <p className={styles.footerLogo}>©codeit-2024</p>
 
         <div className={styles.footerCenter}>
           <a>Privacy Policy</a>

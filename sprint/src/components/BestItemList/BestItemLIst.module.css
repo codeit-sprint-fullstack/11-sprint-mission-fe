@@ -1,3 +1,5 @@
+
+
 .bestItemGrid{
   display: grid;
   grid-template-columns: repeat(4,17.625rem);
@@ -46,3 +48,31 @@
   align-items: center;
   gap: 0.25rem;
 }
+
+
+/* tablet media */
+/* @media (max-width: 1199px) and (min-width: 744px){
+  .bestItemGrid{
+    display: grid;
+    grid-template-columns: repeat(2,21.4375rem);
+    gap: 1.5rem;
+    justify-content: center;
+  }
+
+  .bestItembox{
+    justify-content: center;
+  }
+} */
+
+/* mobile media */
+/* @media (max-width: 743px) and (min-width: 375px) {
+    .bestItemGrid{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+
+  .bestItembox{
+    justify-content: center;
+  }
+} */

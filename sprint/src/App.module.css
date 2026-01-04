@@ -1,5 +1,9 @@
+
 .appContainer{
   margin: 0 auto;
+  background-color:#FCFCFC;
+  width: 120rem;
+
 }
 
 main{
@@ -9,3 +13,19 @@ main{
   line-height: 160%;
 }
 
+
+
+
+/* tablet media */
+/* @media (max-width: 1199px) and (min-width: 744px){
+  main{
+    padding: 5.88rem 1.5rem 25.31rem;
+  }
+} */
+
+/* mobile media */
+/* @media (max-width: 743px) and (min-width: 375px) {
+  main{
+    padding: 5.44rem 1rem 23.44rem;
+  }
+} */

@@ -49,5 +49,23 @@
 }
 
 
-/* 리스트
- */
+
+
+/* tablet media */
+/* @media (max-width: 1199px) and (min-width: 744px){
+  .productGrid{
+    display: grid;
+    grid-template-columns: repeat(3,13.8125rem);
+    gap: 1rem;
+    justify-content: center;
+  }
+} */
+
+/* mobile media */
+/* @media (max-width: 743px) and (min-width: 375px) {
+    .bestItemGrid{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+} */

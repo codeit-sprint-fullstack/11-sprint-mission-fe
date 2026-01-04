@@ -1,8 +1,7 @@
 import Footer from "./components/Footer/Footer"
 import Header from "./components/Header/Header"
-import BestItemList from "./context/BestItemList"
-import ProductList from "./context/ProductList"
-import ProductListSection from "./context/ProductListSection"
+import BestItemList from "./components/BestItemList/BestItemList"
+import ProductListSection from "./components/ProductListSection/ProductListSection"
 
 import styles from "./App.module.css"
 
@@ -13,16 +12,8 @@ function App() {
         <Header />
 
         <main>
-
-          <section>
-            <div>
-              <BestItemList/>
-            </div>
-          </section>
-
-          <section>
-            <ProductListSection/>
-          </section>
+          <BestItemList/>
+          <ProductListSection/>
         </main>
         
         <Footer />

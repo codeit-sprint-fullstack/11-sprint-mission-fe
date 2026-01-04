@@ -1,4 +1,6 @@
 import pandaLogo from '@/assets/panda-Logo.svg'
+import pandaLogoWord from '@/assets/panda-Logo-word .svg'
+
 import styles from "./Header.module.css"
 
 function Header (){
@@ -7,6 +9,8 @@ function Header (){
       <div className={styles.HeaderContainer}>
         <div className={styles.headerSideMenu}>
           <img className={styles.logo} src = {pandaLogo} alt="판다마켓로고"/>
+          <img className={styles.logoWord} src = {pandaLogoWord} alt="모바일 판다마켓로고"/>
+
           <div>
             <a>자유게시판</a>
             <a>중고마켓</a>
