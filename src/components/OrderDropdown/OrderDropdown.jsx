@@ -18,8 +18,10 @@ export function OrderDropdown({ orderBy, setOrderBy }) {
 
   return (
     <div className={styles.dropdown} ref={dropdownRef}>
-      <div className={`${styles.dropdownToggle} ${isOpen ? '': styles.open }`} 
-           onClick={() => setIsOpen((prev)=> !prev)}>
+      <div
+        className={`${styles.dropdownToggle} ${isOpen ? '' : styles.open}`}
+        onClick={() => setIsOpen((prev) => !prev)}
+      >
         <img className={styles.arrow} src={arrowDown} alt="정렬옵션" />
         {orderBy === 'recent' ? '최신순' : '좋아요순'}
       </div>

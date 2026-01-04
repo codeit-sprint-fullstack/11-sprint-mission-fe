@@ -6,15 +6,14 @@ const defaultContextValue = {
   totalPage: 1,
   orderBy: 'recent',
   goToPage: () => console.warn('goToPage not implemented'),
-  setOrderBy: () => console.warn('goToPage not implemented'),
+  setOrderBy: () => console.warn('setOrderBy not implemented'),
   keyword: '',
-  setKeyword: () => console.warn('goToPage not implemented'),
-  changeKeyword: () => console.warn('goToPage not implemented'),
-}
+  setKeyword: () => console.warn('setKeyword not implemented'),
+  changeKeyword: () => console.warn('changeKeyword not implemented'),
+};
 
-export const ProductContext = createContext(defaultContextValue)
+export const ProductContext = createContext(defaultContextValue);
 
 export const useProducts = () => {
-  return useContext(ProductContext)
-}
-
+  return useContext(ProductContext);
+};

@@ -11,13 +11,17 @@ export function Header() {
           <img src={logo} alt="판다마켓 홈" width="153" />
         </a>
         <ul className={styles.gnb}>
-          <li><a href="/">자유게시판</a></li>
-          <li><a href="/">중고마켓</a></li>
+          <li>
+            <a href="/">자유게시판</a>
+          </li>
+          <li>
+            <a href="/">중고마켓</a>
+          </li>
         </ul>
       </div>
       <Button variant={'primary'}>
         {/* <a href="login.html" id="loginLinkButton"> */}
-          로그인
+        로그인
         {/* </a> */}
       </Button>
     </header>
