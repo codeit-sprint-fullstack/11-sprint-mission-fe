@@ -29,26 +29,27 @@ function BestItemList(){
     },[]);
   
     return(
-      <ul className={styles.bestItemGrid}>
-        {products.map((prev)=>{
-          return(
-            <li key={prev.id} className={styles.bestItemContainer}>        
-              <img className={styles.bestItemImg} src={prev.images} alt="상품이미지"/>
-  
-              <div className={styles.postInfo}>
-                <h2>{prev.name}</h2>
-                <span className={styles.price}>{priceFormat.format(prev.price)}원</span>
-            
-                <div className={styles.likePart}>
-                  <FaRegHeart />{prev.favoriteCount}
+      <>
+        <h2>베스트 상품</h2>
+        <ul className={styles.bestItemGrid}>
+          {products.map((prev)=>{
+            return(
+              <li key={prev.id} className={styles.bestItembox}>        
+                <img className={styles.bestItemImg} src={prev.images} alt="상품이미지"/>
+    
+                <div className={styles.postInfo}>
+                  <h2>{prev.name}</h2>
+                  <span className={styles.price}>{priceFormat.format(prev.price)}원</span>
+              
+                  <div className={styles.likePart}>
+                    <FaRegHeart />{prev.favoriteCount}
+                  </div>
                 </div>
-              </div>
-            </li>          
-
-          );
-        })}
-  
-      </ul>
+              </li>          
+            );
+          })}
+        </ul>
+      </>
     );
   }
   

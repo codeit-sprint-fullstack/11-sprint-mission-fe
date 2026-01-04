@@ -1,49 +1,108 @@
-.productGrid{
-  display: grid;
-  grid-template-columns: repeat(5,13.625rem);
-  gap: 2.5rem 1.5rem;
-  justify-content: center;
-
-}
-
-.productItemContainer{
+.searchContainer{
   display: flex;
-  flex-direction: column;
-  align-items: baseline;
-  gap: 1rem;
-
-}
-
-.productItemImg{
-  width: 13.625rem;
-  height: 13.625rem;
-  border-radius: 1rem;
-}
-
-.postInfo{
-  display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   
-  gap: 0.37rem;
-  font-size: 0.75rem;
-  line-height: 150%;
-
-    h2, .likePart{
-      font-size: 0.875rem;
-      font-weight: 500;
-      line-height: 171.429%;
-    }
+  margin: 1.5rem 0;
+  width: 75rem;
+  height: 2.625rem;
 }
 
-.price{
-  color: var(var(--Secondary-800));
-  font-size: 1rem;
-  font-weight: 700;
-  line-height: 171.429%;
-}
-
-.likePart{
+.searchSection{
   display: flex;
   align-items: center;
-  gap: 0.25rem;
+  gap: 0.75rem;
+  
 }
+
+.searchIcon{
+  position: relative;
+  left: 2.2rem;
+  bottom: -0.2rem;
+  color: var(--Secondary-400);
+}
+
+input{
+  width: 20.3125rem;
+  height: 2.625rem; 
+  padding: 0.5625rem 1.25rem 0.5625rem 2.5rem;
+
+  border-radius: 0.75rem;
+  background-color: var(--Secondary-100);
+  border: none;
+  color: var(--Secondary-400);
+
+  cursor: pointer;
+}
+
+.addItemBtn{
+  height: 2.625rem;
+  padding: 0.75rem 1.4375rem;
+  border-radius: 0.5rem;
+  border: none;
+  color: var(--Cool-Gray-100);
+  background-color:var(--primary-100);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 162.5%;
+
+  display: flex;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+
+.dropDownMenu{
+  /* z-index: 100;;
+  display: flex;
+  flex-direction: column;
+  align-items: center; */
+
+  position: relative;;
+  display: inline-block;
+
+
+}
+
+.toggleBtn{
+  width: 8.125rem;
+  height: 2.625rem;
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 0.75rem;
+  border: 1px solid var(--Cool-Gray-200);
+  background-color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.dropdown-icon rotated{
+  transform: rotate(180deg);
+}
+
+.dropDownList{
+  position:absolute;
+  margin-top: 0.5rem;
+}
+
+
+.dropDownNew, .dropDownLike{
+  width: 8.125rem;
+  height: 2.625rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.75rem 0.75rem 0 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--Cool-Gray-200);
+  background-color: #fff;
+
+  cursor: pointer;
+}
+.dropDownLike{
+  border-radius: 0 0 0.75rem 0.75rem;
+} 
+/* 리스트 섹션 */

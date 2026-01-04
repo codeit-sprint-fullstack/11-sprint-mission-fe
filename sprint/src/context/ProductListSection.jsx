@@ -1,66 +1,92 @@
+import styles from './ProductListSection.module.css'
+import { FiSearch } from "react-icons/fi";
+import { BsCaretDownFill } from "react-icons/bs";
+import { BsCaretUpFill } from "react-icons/bs";
+import ProductList from './ProductList';
+import { useState } from 'react';
+import { useDebouncedCallback } from 'use-debounce';
 
-import { useEffect, useState } from 'react';
-import styles from './ProductListSection.module.css';
-import { FaRegHeart } from "react-icons/fa";
+const DELAY = 500;
 
+function ProductListSection (){
+  const [orderBy, setOrderBy]= useState('recent');
+  const [isOpen, setIsOpen]= useState(false);
+  const [keyword, setKeyword] = useState('');
 
-
-function ProductListSection(){
-  const BASE_URL= 'https://panda-market-api.vercel.app'
-  const [products, setProducts] = useState([]);
-
-  //한국 원화로 포맷팅
-  const priceFormat = new Intl.NumberFormat('ko-KR', { maximumSignificantDigits: 3 });
-
-  useEffect(()=>{
-    const params = new URLSearchParams ({
-      page : 1,
-      pageSize : 10,
-      orderBy: 'recent',
-    });
-    
-    const getProductList = async()=>{
-        const response = await fetch(
-          `${BASE_URL}/products?${params.toString()}`
-        );
-        const data = await response.json();
-        setProducts(data.list);
-      };
-      getProductList();
-    },[]);
-  
-    return(
-      <>
-
-        <ul className={styles.productGrid}>
-          {products.map((prev)=>{
-            return(
-              <li key={prev.id} className={styles.productItemContainer}>        
-                <img className={styles.productItemImg} src={prev.images} alt="상품이미지"/>
-    
-                <div className={styles.postInfo}>
-                  <h2>{prev.name}</h2>
-                  <span className={styles.price}>{priceFormat.format(prev.price)}원</span>
-              
-                  <div className={styles.likePart}>
-                    <FaRegHeart />{prev.favoriteCount}
-                  </div>
-                </div>
-              </li>          
-
-            );
-          })}
-    
-        </ul>
-      </>
-    );
+  const handleOrderBy = (orderBy)=>{
+    setOrderBy(orderBy);
+    setIsOpen(false);
   }
+  const handleIsOpen=()=>{
+    setIsOpen(!isOpen);
+  }
+  const handleChange= useDebouncedCallback((e)=>{
+    const value = e.target.value;
+    setKeyword(value); 
+  },DELAY);
+
+
+  return(
+    <>
+      <div className={styles.searchContainer}>
+        <p>판매중인 상품</p>
+
+        <div className={styles.searchSection}>
+          {/* 검색창 */}
+          <div>
+            <FiSearch className={styles.searchIcon}/>
+            <input 
+              name="search"
+              type='text' 
+              placeholder='상품을 입력해주세요'
+              defaultValue={keyword}
+              onChange={handleChange}
+              />
+          </div>
   
-  export default ProductListSection;
-
-  
-  
-      
 
 
+          {/* 상품등록 */}
+          <a className={styles.addItemBtn}>상품 등록하기</a>
 
+          {/* drop down menu */}
+          <div className={styles.dropDownMenu}>
+            <button 
+              onClick={handleIsOpen}
+              type="button" 
+              className={styles.toggleBtn}>
+              {orderBy === 'recent' ? "최신순" : "좋아요순"}
+              {isOpen ? <BsCaretUpFill /> : <BsCaretDownFill />}
+          </button>
+
+          {isOpen ? (
+            <ul className={styles.dropDownList}>
+              <li>
+                <button
+                  onClick={()=>{handleOrderBy('recent')}} 
+                  className={styles.dropDownNew}
+                  >
+                    최신순
+                  </button>
+                </li>
+              <li>
+                <button 
+                  onClick={()=>{handleOrderBy('favorite')}}
+                  className={styles.dropDownLike}
+                >
+                좋아요순</button>
+              </li>
+            </ul>
+          ) : null}
+            </div>
+          </div>
+      </div>
+
+    <ProductList orderBy={orderBy} keyword={keyword}/>
+    </>
+  )
+}
+
+export default ProductListSection
+
+//리스트 섹션
