@@ -6,9 +6,19 @@ export const Header = () => {
     <>
       <header className={styles.globalNavigationBar}>
         <nav className={styles.innerNav}>
-          <a href="./">
-            <img className={styles.logoImg} src={logo} />
-          </a>
+          <section className={styles.menuContent}>
+            <a href="./">
+              <img className={styles.logoImg} src={logo} />
+            </a>
+            <div className={styles.menuStyle}>
+              <a href="./">
+                <p className={styles.menu}>자유게시판</p>
+              </a>
+              <a href="./">
+                <p className={styles.menu}>중고마켓</p>
+              </a>
+            </div>
+          </section>
 
           <a className={styles.loginButton} href="/pages/login.html">
             로그인

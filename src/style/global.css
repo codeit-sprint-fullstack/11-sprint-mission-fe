@@ -26,6 +26,7 @@
   @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css');
 }
 /* 해당하는 요소들에게 공통적으로 적용한 css */
+
 a:hover {
   cursor: pointer;
 }
