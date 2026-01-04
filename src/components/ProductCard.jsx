@@ -1,9 +1,9 @@
 import { FaRegHeart } from "react-icons/fa";
 import './ProductCard.css';
 
-function ProductCard({product}) {
+function ProductCard({product, type}) {
     return (
-        <div className='product-card'>
+        <div className={`product-card ${type}`}>
             <div className='img-container'>
                 <img src={product.images[0]} alt={product.name} className='product-img' />
             </div>

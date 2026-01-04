@@ -28,13 +28,11 @@ function BestProduct() {
 
   return (
     <section className="best-section">
-      <div className="section-wrapper">
-        <h2 className="section-title">베스트 상품</h2>
-        <div className="product-container">
-          {products.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
-        </div>
+      <h2 className="section-title">베스트 상품</h2>
+      <div className="product-container">
+        {products.map((product) => (
+          <ProductCard key={product.id} product={product} type='best' />
+        ))}
       </div>
     </section>
   );

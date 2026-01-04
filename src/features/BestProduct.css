@@ -1,0 +1,39 @@
+.best-section {
+  width: 100%;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 3.2rem;
+  color: var(--gray-01);
+
+  margin-bottom: 1.6rem;
+}
+
+.product-container {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(1, auto);
+}
+
+/* 반응형 디자인 */
+/* 핸드폰 사이즈 */
+@media (min-width: 375px) {
+}
+
+/* 태블릿 사이즈 */
+@media (min-width: 744px) {
+  .product-container {
+    grid-template-columns: repeat(2, auto);
+    gap: 1rem;
+  }
+}
+
+/* 컴퓨터 사이즈 */
+@media (min-width: 1200px) {
+  .product-container {
+    grid-template-columns: repeat(4, auto);
+    gap: 2.4rem;
+  }
+}

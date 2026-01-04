@@ -10,13 +10,15 @@ function App() {
       <Header />
 
       <main>
-        <BestProduct />
-        <ProductList />
+        <div className="main-container">
+          <BestProduct />
+          <ProductList />
+        </div>
       </main>
 
       <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
