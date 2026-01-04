@@ -1,0 +1,25 @@
+.globalNavigationBar {
+  position: sticky;
+  top: 0;
+}
+.innerNav {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 9px 200px 9px 200px;
+  background-color: var(--color_white);
+}
+
+.loginButton {
+  text-decoration: none;
+  color: var(--color_white);
+  background-color: var(--color_highlight);
+  padding: 12px 32px;
+  border-radius: 8px;
+  font-size: var(--font_blue_size);
+}
+.logoImg {
+  margin-left: 20px;
+  width: 153px;
+}

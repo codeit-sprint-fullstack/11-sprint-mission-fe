@@ -1,0 +1,38 @@
+/* 공통 컬러 변수값으로 지정 */
+:root {
+  --color_white: #ffffff;
+  --color-darkgrey: #9ca3af;
+  --color-login-black: #1f2937;
+  --color-login-grey: #f3f4f6;
+  --color_highlight: #3692ff;
+  --color-login-quick: #e6f2ff;
+  --color_lightblue: #cfe5ff;
+  --color_footer_background: #111827;
+  --color_main_content_background: #fcfcfc;
+  --font_color_title: #374151;
+  --color_font_footer: #e5e7eb;
+
+  --font_title_weight: 700;
+  --font_content_weight: 500;
+  --font_title_size: 40px;
+  --font_highlight_size: 18px;
+  --font_highlight_weight: 700;
+  --font_content_size: 24px;
+  --font_footer_size: 16px;
+  --font_footer_weight: 400;
+  --font_blue_size: 16px;
+  --font_blue_weight: 600;
+  --font-height: 32px;
+  @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css');
+}
+/* 해당하는 요소들에게 공통적으로 적용한 css */
+a:hover {
+  cursor: pointer;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  font-family: Pretendard;
+  font-size: 1rem;
+}
