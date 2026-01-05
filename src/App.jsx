@@ -1,3 +1,21 @@
+import './App.css';
+import Header from './components/Header';
+import Footer from './components/Footer';
+
+function App() {
+  return (
+    <div className="body">
+      {/* header */}
+      <Header />
+
+      {/* footer */}
+      <Footer />
+    </div>
+  );
+}
+
+export default App;
+
 /*main.js의 내용을 옮겨 옴
 import {
   createArticle,
