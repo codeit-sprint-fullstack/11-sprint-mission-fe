@@ -13,6 +13,7 @@ function App() {
       price: 99009,
       description: '조억억원치상당',
       name: '최애템',
+      likes: 240,
     },
     {
       id: 2,
@@ -21,6 +22,7 @@ function App() {
       price: 1010,
       description: '오만조원어치상당',
       name: '강아지밥그릇!',
+      likes: 20,
     },
     {
       id: 3,
@@ -29,6 +31,7 @@ function App() {
       price: 19009,
       description: '조억억원치상당',
       name: '아이패드팔아용',
+      likes: 40,
     },
     {
       id: 4,
@@ -37,6 +40,7 @@ function App() {
       price: 4300,
       description: '오만조원어치상당',
       name: '안입는옷팔아요~',
+      likes: 2,
     },
   ];
   return (
