@@ -1,37 +1,33 @@
-import { useState, useEffect } from 'react';
-import ProductCard from './ProductCard';
-import { getProducts } from './api/products';
+import likeIcon from '../assets/icons/like.svg';
+import { priceFormat } from '../utils/format';
 
-const ProductList = () => {
-  const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const loadProducts = async () => {
-      try {
-        setLoading(true);
-        const data = await getProducts();
-        setProducts(data);
-      } catch (error) {
-        console.error(error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    loadProducts();
-  }, []);
-
-  if (loading) return <div className="p-8 text-center">로딩 중...</div>;
+export function ProductList({ products }) {
+  const productList = products || [];
 
   return (
-    <main className="p-4 max-w-7xl mx-auto pb-24">
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {products.map(product => (
-          <ProductCard key={product.id} product={product} />
-        ))}
-      </div>
-    </main>
-  );
-};
+    <ul className="grid gap-6 mt-4 grid-cols-5">
+      {productList.map((product) => {
+        const [imgSrc] = product.images;
 
-export default ProductList;
+        return (
+          <li key={product.id}>
+            <img
+              width={221}
+              height={221}
+              src={imgSrc}
+              alt="thumbnail"
+              className="aspect-square rounded-2xl"
+            />
+            <div className="flex flex-col gap-1.5 mt-4 text-[#1F2937] font-medium">
+              <h3 className="text-[14px]">{product.name}</h3>
+              <span className="font-bold">{priceFormat(product.price)}원</span>
+              <div className="text-[12px] flex gap-1 text-[#rB5563]">
+                <img src={likeIcon} alt="" /> {product.favoriteCount}
+              </div>
+            </div>
+          </li>
+        );
+      })}
+    </ul>
+  );
+}
