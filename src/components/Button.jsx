@@ -7,7 +7,7 @@ export const Button = (buttonName,onChange) => {
     }
   return(
     <>
-        <button onClick={handle}>{buttonName}</button>
+        <button className={styles.button} onClick={handle}>{buttonName}</button>
 
     </>
   ) 
