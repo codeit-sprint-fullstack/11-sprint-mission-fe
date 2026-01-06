@@ -1,0 +1,217 @@
+/* reset: margin, padding, box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* reset: button, link */
+button,
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/*sprint1,2 css 발췌*/
+/* 전역 설정 및 변수*/
+/* color variables */
+:root {
+  --white: #ffffff;
+  --bg-white: #fcfcfc;
+  --gray50: #f9fafb;
+  --gray100: #f3f4f6;
+  --gray200: #e5e7eb;
+  --gray400: #9ca3af;
+  --gray500: #6b7280;
+  --gray600: #4b5563;
+  --gray700: #374151;
+  --gray800: #1f2937;
+  --gray900: #111827;
+  --bannerblue: #cfe5ff;
+  --blue100: #3692ff;
+  --blue200: #1967d6;
+  --blue300: #1251aa;
+  --error: #f74747;
+}
+
+body {
+  background-color: var(--bg-white);
+  min-width: 69.375rem;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  border: none;
+  box-sizing: border-box;
+  text-align: center;
+  text-wrap: nowrap;
+  font-family: Pretendard;
+}
+
+.btn-large {
+  border-radius: 2.5rem;
+  width: 100%;
+  height: 3.5rem;
+  padding: 1rem 7.75rem;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 600;
+}
+
+h1 {
+  color: var(--gray700, #374151);
+  font-family: Pretendard;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.4;
+  text-wrap: nowrap;
+}
+
+/* header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 12.5rem;
+  width: 100%;
+  height: 4.375rem;
+  background-color: var(--white, #ffffff);
+  border-bottom: #dfdfdf solid 1px;
+  //상단 고정, 가려짐 방지
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.board-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.board {
+  display: flex;
+  height: 100%;
+  padding: 0 15px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: var(--Secondary-600, #4b5563);
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.625rem;
+}
+
+.logo {
+  width: 9.5625rem;
+  display: flex;
+}
+
+
+/* products */
+.content {
+  
+  max-width: 75rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.5rem;
+}
+
+.best-products {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+/* grid */
+.grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+
+/* footer */
+footer {
+  background-color: var(--gray900, #111827);
+  display: flex;
+  width: 100%;
+  height: 10rem;
+  padding: 2rem 12.5rem;
+  justify-content: center;
+}
+
+.content-footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.links-footer {
+  display: flex;
+  gap: 1.875rem;
+}
+
+.SNS {
+  display: flex;
+  width: 7.25rem;
+  gap: 0.75rem;
+}
+
+.info-com,
+.links-footer a {
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.info-com {
+  color: var(--gray400, #9ca3af);
+}
+
+.links-footer a {
+  color: var(--gray200, #e5e7eb);
+}
+
+/* buttons */
+.btn-login,
+.banner .btn-large {
+  background: var(--blue100, #3692ff);
+}
+
+.btn-login {
+  border-radius: 0.5rem;
+  width: 8rem;
+  padding: 0.75rem 1.4375rem;
+  color: var(--gray100, #f3f4f6);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.625;
+}
+
+.banner .btn-large {
+  color: var(--gray50, #f9fafb);
+  line-height: 1.6;
+}
