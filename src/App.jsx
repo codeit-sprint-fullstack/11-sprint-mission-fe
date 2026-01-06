@@ -28,26 +28,33 @@ function App() {
   }, [order]);
 
   return (
-    <div className="body">
+    <>
       {/* header */}
       <Header />
-
-      <div className="main-content">
-        <div className="best-products"></div>
-        {products.map((product) => (
-          <ProductCard
-            key={product.id}
-            name={product.name}
-            price={product.price}
-            images={product.images}
-            favoriteCount={product.favoriteCount}
-          />
-        ))}
+      {/* products */}
+      <div className="content">
+        <div className="best-products">
+          <p>베스트 상품</p>
+        </div>
+        <div className="main-products">
+          <div className="products-title">
+            <p>판매 중인 상품</p>
+          </div>
+          <div className="grid">
+            {products.map((product) => (
+              <ProductCard
+                key={product.id}
+                name={product.name}
+                price={product.price}
+                images={product.images}
+              />
+            ))}
+          </div>
+        </div>
       </div>
       {/* footer */}
-
       <Footer />
-    </div>
+    </>
   );
 }
 

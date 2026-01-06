@@ -54,11 +54,11 @@ button {
 }
 
 .btn-large {
-  border-radius: 40px;
+  border-radius: 2.5rem;
   width: 100%;
-  height: 56px;
-  padding: 16px 124px;
-  font-size: 20px;
+  height: 3.5rem;
+  padding: 1rem 7.75rem;
+  font-size: 1.25rem;
   font-style: normal;
   font-weight: 600;
 }
@@ -121,6 +121,33 @@ nav {
   width: 9.5625rem;
   display: flex;
 }
+
+
+/* products */
+.content {
+  
+  max-width: 75rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.5rem;
+}
+
+.best-products {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+/* grid */
+.grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(5, 1fr);
+}
+
 
 /* footer */
 footer {
