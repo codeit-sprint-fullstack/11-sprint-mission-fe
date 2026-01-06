@@ -1,13 +1,13 @@
 function Footer() {
   return (
     <footer>
-      <div class="content-footer">
-        <div class="info-com">©codeit - 2024</div>
-        <div class="links-footer">
+      <div className="content-footer">
+        <div className="info-com">©codeit - 2024</div>
+        <div className="links-footer">
           <a href="/pages/privacy.html">Privacy Policy</a>
           <a href="/pages/faq.html">FAQ</a>
         </div>
-        <div class="SNS">
+        <div className="SNS">
           <a href="https://www.facebook.com/" target="_blank">
             <img src="/src/assets/facebook.svg" />
           </a>

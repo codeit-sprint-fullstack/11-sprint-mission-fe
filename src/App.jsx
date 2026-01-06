@@ -1,78 +1,54 @@
 import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import { useEffect, useState } from 'react';
+import { getProductList } from '/src/api/ProductService';
+import ProductCard from './components/ProductCard/Card';
 
 function App() {
+  //state 만들기: 제품 불러오기, 게시글 정렬
+  const [products, setProducts] = useState([]);
+  const [order, setOrder] = useState('recent');
+
+  //데이터 요청
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const data = await getProductList(1, 10, order, '');
+
+        console.log('가져온 데이터: ', data);
+
+        setProducts(data.list);
+      } catch (error) {
+        console.error('응애', error);
+      }
+    };
+
+    fetchProducts();
+  }, [order]);
+
   return (
     <div className="body">
       {/* header */}
       <Header />
 
+      <div className="main-content">
+        <div className="best-products"></div>
+        {products.map((product) => (
+          <ProductCard
+            key={product.id}
+            name={product.name}
+            price={product.price}
+            images={product.images}
+            favoriteCount={product.favoriteCount}
+          />
+        ))}
+      </div>
       {/* footer */}
+
       <Footer />
     </div>
   );
 }
 
 export default App;
-
-/*main.js의 내용을 옮겨 옴
-import {
-  createArticle,
-  deleteArticle,
-  getArticle,
-  getArticleList,
-  patchArticle,
-} from './ArticleService.js';
-
-import {
-  createProduct,
-  deleteProduct,
-  getProduct,
-  getProductList,
-  patchProduct,
-} from './ProductService.js';
-
-
-//articles test
-const newArticle = {
-  image: 'https://example.com/...',
-  content: '게시글 내용입니까?',
-  title: '게시글 제목입니까?',
-};
-const fixArticle = {
-  image: 'https://example.com/...',
-  content: '게시글 내용입니다!!!',
-  title: '게시글 제목입니다!!!!!',
-};
-getArticleList().then((x) => console.log(x));
-getArticle(5516).then((x) => console.log(x));
-createArticle( newArticle).then((x) => console.log(x));
-patchArticle( 5523,fixArticle).then((x) => console.log(x));;
-deleteArticle( 5522);
-getArticle( 5522).then((x) => console.log(x));
-
-//products test
-const newProduct = {
-  images: ['https://example.com/...'],
-  tags: ['학용품'],
-  price: 30000,
-  description: 'string',
-  name: '고급 샤프',
-};
-const fixProduct = {
-  images: ['https://example.com/...'],
-  tags: ['학용품'],
-  price: 3000,
-  description: 'string',
-  name: '샤프',
-};
-
-getProductList().then((r) => console.log(r)); //test
-getProduct(1800).then((r) => console.log(r)); //test
-createProduct(newProduct).then((r) => console.log(r)); //test
-patchProduct( 2940, fixProduct).then((r) => console.log(r)); //test
-// delete 확인
-deleteProduct(2940).then((r) => console.log(r));//test
-getProduct( 2938).then((r) => console.log(r)); //test
-*/

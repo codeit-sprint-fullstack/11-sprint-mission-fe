@@ -1,4 +1,4 @@
-//스프린트3의 파일을 복사해옴
+//스프린트3의 파일을 침고
 
 const productApi = 'https://panda-market-api-crud.vercel.app/products';
 
