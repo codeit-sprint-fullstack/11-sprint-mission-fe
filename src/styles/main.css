@@ -1,0 +1,68 @@
+@import './reset.css';
+
+/* 기본 설정 */
+:root {
+  --main: #3692ff;
+
+  --blue-01: #2d68ae;
+  --blue-02: #cfe5ff;
+  --blue-03: #e6f2ff;
+
+  --gray-01: #111827;
+  --gray-02: #1F2937;
+  --gray-03: #374151;
+  --gray-04: #4b5563;
+  --gray-05: #6B7280; 
+  --gray-06: #9ca3af;
+  --gray-07: #DFDFDF;
+  --gray-08: #e5e7eb;
+  --gray-09: #f3f4f6;
+  --gray-10: #fcfcfc;
+
+  --red: #f74747;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Pretendard", sans-serif;
+  color: var(--gray-03);
+  word-break: keep-all;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+main {
+  margin-top: 7rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 0.8rem;
+  background-color: var(--main);
+
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--gray-09);
+  text-decoration: none;
+
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--blue-01);
+}

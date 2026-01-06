@@ -1,0 +1,100 @@
+.sort-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.sort-toggle {
+  background-color: white;
+  border-radius: 1.2rem;
+  border: 0.1rem solid var(--gray-08);
+  color: var(--gray-02);
+
+  width: 4.2rem;
+  height: 4.2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+.mobile-sort {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+  font-size: 2.4rem;
+}
+
+.desktop-sort {
+  display: none;
+}
+
+.sort-menu {
+  position: absolute;
+  top: calc(100% + 0.4rem);
+  right: 0;
+  background-color: white;
+  border-radius: 1.2rem;
+  border: 0.1rem solid var(--gray-08);
+  z-index: 1;
+
+  width: 13rem;
+  height: 8.4rem;
+}
+
+.sort-option {
+    box-sizing: border-box;
+    height: 4.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--gray-02);
+
+  cursor: pointer;
+}
+
+.sort-option:not(:last-child) {
+    border-bottom: 0.1rem solid var(--gray-08);
+}
+
+.sort-option:hover {
+    background-color: var(--gray-08);
+}
+
+/* 반응형 디자인 */
+/* 핸드폰 사이즈 */
+@media (min-width: 375px) {
+}
+
+/* 태블릿 사이즈 */
+@media (min-width: 744px) {
+  .sort-toggle {
+    width: 13rem;
+    height: 4.2rem;
+    padding: 1.2rem 2rem;
+    justify-content: space-between;
+  }
+
+  .mobile-sort {
+    display: none;
+  }
+
+  .desktop-sort {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: inherit;
+  }
+}
+
+/* 컴퓨터 사이즈 */
+@media (min-width: 1200px) {
+}
