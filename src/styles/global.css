@@ -1,0 +1,36 @@
+:root {
+
+  /* Gray scale */
+  --Cool-Gray-100: #f9fafb;
+  --Cool-Gray-100: #f3f4f6;
+  --Cool-Gray-200: #e5e7eb;
+  --Cool-Gray-600: #4b5563;
+  --Secondary-400: #9ca3af;
+  --Secondary-600: #4B5563;
+  --Secondary-800: #1f2937;
+  /* Primary color */ 
+  --brand-blue: #3692ff;
+  --Primary-100: #3692ff;
+  /* Layout dimensions */
+  --header-height: 7rem;
+}
+
+body {
+  color: #374151;
+  word-break: keep-all;
+  font-family: "Pretendard", sans-serif;
+}
+
+#socialLogin {
+  display: flex;
+  gap: 1.6rem;
+}
+
+
+
+/* h2 {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 5.6rem;
+  letter-spacing: 0.02em;
+} */

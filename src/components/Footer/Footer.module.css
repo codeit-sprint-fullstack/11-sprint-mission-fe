@@ -1,0 +1,22 @@
+.footer {
+  background-color: #111827;
+  color: var(--Secondary-400);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3.2rem 20rem 10.8rem 20rem;
+  font-size: 1.6rem;
+}
+
+
+
+.footerMenu {
+  display: flex;
+  gap: 3rem;
+  color: #e5e7eb;
+}
+
+.socialMedia {
+  display: flex;
+  gap: 1.2rem;
+}
