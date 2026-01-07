@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Pretendard', sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  margin: 26px 360px 0px;
+}
+
+section {
+  width: 100%;
+}
+
+.saleProducts {
+  color: #111827;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.saleListNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.saleBarMenus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  white-space: nowrap;
+}
+
+.saleBarMenus > a {
+  display: flex;
+  height: 42px;
+  padding: 12px 23px;
+  text-decoration: none;
+  border-radius: 8px;
+  background: #3692ff;
+  color: #f3f4f6;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+/* Tablet */
+@media (max-width: 1199px) {
+  main {
+    margin: 26px 24px 0px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  main {
+    margin: 17px 15.5px 0px;
+    gap: 24px;
+  }
+
+  .saleListNav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 0;
+    margin-bottom: 16px;
+  }
+
+  .saleProducts {
+    order: 1;
+    margin: 0;
+  }
+
+  .saleBarMenus {
+    display: contents;
+  }
+
+  .saleBarMenus > a {
+    order: 2;
+    margin-right: 45px;
+  }
+
+  .saleBarMenus > :first-child {
+    order: 3;
+  }
+
+  .saleBarMenus > :last-child {
+    order: 4;
+  }
+}

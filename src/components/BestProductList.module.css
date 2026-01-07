@@ -1,0 +1,44 @@
+.BestProducts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  width: 100%;
+}
+
+.BestProduct {
+  color: #111827;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+/* Desktop */
+.card {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* Tablet */
+@media (max-width: 1199px) {
+  .card {
+    grid-template-columns: repeat(2, 1fr);
+    
+  }
+
+  .card > *:nth-child(n+3) {
+    display: none;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .card {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .card > *:nth-child(n+2) {
+    display: none;
+  }
+}

@@ -1,0 +1,35 @@
+.barContainer {
+  display: flex;
+  width: 325px;
+  height: 42px;
+  padding: 9px 20px 9px 16px;
+  align-items: center;
+  gap: 4px;
+  border-radius: 12px;
+  background: #f3f4f6;
+}
+
+.input {
+  width: 194px;
+  height: 24px;
+  background: #f3f4f6;
+  color: #9ca3af;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  border: none;
+}
+
+/* Tablet */
+@media (max-width: 1199px) {
+  .barContainer {
+    width: 242px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .barContainer {
+    width: 288px;
+  }
+}
