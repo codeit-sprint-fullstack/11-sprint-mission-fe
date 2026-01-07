@@ -1,0 +1,19 @@
+/* .bestItemsContainer {
+  margin-left: 360px;
+  margin-right: 360px;
+} */
+
+.bestItem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.bestItemsBox {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}

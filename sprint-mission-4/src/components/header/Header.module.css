@@ -1,0 +1,22 @@
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 0 200px;
+}
+
+.loginBtn {
+  background-color: #3692ff;
+  color: white;
+  width: 128px;
+  height: 48px;
+  border-radius: 8px;
+  padding: 12px 23px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.headerLogo {
+  margin-right: 16px;
+}

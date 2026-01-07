@@ -1,0 +1,4 @@
+.productSection {
+  display: flex;
+  justify-content: space-between;
+}
