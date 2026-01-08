@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { fetchProductList } from '@/api/productList';
+import { fetchProductList } from '@/api/itemApi';
 import styles from './BestProductList.module.css';
 import { ProductListItem } from '@/components/ProductListItem';
 

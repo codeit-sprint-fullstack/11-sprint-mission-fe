@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
-import { fetchProductList } from '@/api/productList';
+
 import { ProductContext } from '@/contexts/ProductContext';
 import { usePagination } from '@/hooks/usePagination';
+import { fetchProductList } from '@/api/itemApi';
 
 const PAGE_SIZE = 10;
 const INITIAL_PAGE = 1;
