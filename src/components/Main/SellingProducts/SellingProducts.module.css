@@ -1,0 +1,42 @@
+.section {
+    width: 100%;
+}
+
+.productsBar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.productsTitle {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 32px;
+    color: var(--secondary-color-gray900);
+}
+
+.sellingProductList {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px 24px;
+}
+
+.sellingProduct {
+    width: 221px;
+    height: 317px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.pagination {
+    margin : 43px auto 140px auto;
+}
+
+/* @media (max-width: 768px) {
+    
+}
+
+@media (max-width: 375px) {
+    
+} */

@@ -1,0 +1,31 @@
+.section {
+    width: 100%;
+}
+
+.productsTitle {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 32px;
+    color: var(--secondary-color-gray900);
+    margin-bottom: 16px;
+}
+.bestProductList {
+    display: flex;
+    gap: 24px;
+}
+
+.bestProduct {
+    width: 282px;
+    height: 378px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* @media (max-width: 768px) {
+    
+}
+
+@media (max-width: 375px) {
+    
+} */

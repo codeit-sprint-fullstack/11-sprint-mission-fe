@@ -1,0 +1,6 @@
+.logoContainer {
+    display: flex;
+    gap: 12px;
+    width: 116px;
+    text-decoration: none;
+}
