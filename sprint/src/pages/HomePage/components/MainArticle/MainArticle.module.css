@@ -1,0 +1,32 @@
+.articleContainer{
+  background-color: var(--bg-blue);
+  height: 33.75rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 140%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.btnContiner{
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  gap: 2rem;
+  margin-bottom: 6.3rem;
+}
+
+.showBtn{
+  color: var(--Secondary-100);
+  background-color: #3692ff;
+  border: none;
+  border-radius: 2.5rem;
+  padding: 1rem 7.75rem;
+  height: 3.5rem;
+}
+
+.pandaImg{
+  width: 46.625rem;
+  height: 21.25rem;
+}

@@ -44,3 +44,13 @@ html, body{
   overflow-x: hidden;
   
 }
+
+/* Desktop styles */
+@media (min-width: 1280px) {}
+
+/* tablet media */
+@media (max-width: 1199px) and (min-width: 744px){
+}
+
+/* mobile media */
+@media (max-width: 743px) and (min-width: 375px) {}

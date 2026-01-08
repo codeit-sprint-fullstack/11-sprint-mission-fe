@@ -1,25 +1,15 @@
-import Footer from "./components/Footer/Footer"
-import Header from "./components/Header/Header"
-import BestItemList from "./components/BestItemList/BestItemList"
-import ProductListSection from "./components/ProductListSection/ProductListSection"
-
-import styles from "./App.module.css"
+import { Route, Routes } from "react-router"
+import HomePage from "./pages/HomePage/HomePage"
+import LoginPage from "./pages/LoginPage/LoginPage"
+import MarketPage from "./pages/MarketPage/MarketPage"
 
 function App() {
   return(
-    <>
-      <div className={styles.appContainer}>
-        <Header />
-
-        <main>
-          <BestItemList/>
-          <ProductListSection/>
-        </main>
-        
-        <Footer />
-      </div>
-    </>
+    <Routes>
+      <Route path="/" element={<HomePage />}/>
+      <Route path="/login" element={<LoginPage />} />
+      <Route Path="/Market" element={<MarketPage />}/>
+    </Routes>
   )
 }
-
 export default App
