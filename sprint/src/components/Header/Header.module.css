@@ -1,0 +1,93 @@
+.HeaderContainer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #dfdfdf ;
+  width: 120rem;
+  margin: 0 auto;
+}
+
+.logo{
+  margin-left: 12.5rem;
+  width: 9.6rem;
+}
+
+.logoWord{
+  display: none;
+}
+
+.headerSideMenu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+
+    a{
+      margin: 0 0.94rem ;
+    }
+}
+
+.loginBtn{
+  margin-right: 12.5rem;
+  background-color: var(--primary-100);
+  color: var(--Cool-Gray-100);
+  padding: 0.75rem 1.4rem;
+  border-radius: 0.5rem;
+  border-style: none;
+}
+
+
+/* tablet media */
+/* @media (max-width: 1199px) and (min-width: 744px){
+
+  .HeaderContainer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  }
+
+  .logo{
+    margin-left: 1.5rem;
+    display: block;
+  }
+
+  .logoWord{
+    display: none;
+  }
+
+  .loginBtn{
+    margin-right: 1.5rem;
+  }
+} */
+
+/* mobile media */
+/* @media (max-width: 743px) and (min-width: 375px) {
+
+  .logo{
+    display: none;
+  }
+
+  .logoWord{
+    display: block;
+    width: 5.0625rem;
+    height: 2.5rem;
+    margin-left: 1rem;
+  }
+
+  .loginBtn{
+    margin-right: 1rem;
+  }
+} */
