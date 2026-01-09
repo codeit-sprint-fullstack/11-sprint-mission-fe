@@ -1,0 +1,193 @@
+/* 기존 style.css 수정(겹치는 헤더, 푸터 등 삭제) */
+
+/* 1. 폰트 불러오기 */
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css');
+
+/* 2. 공통 레이아웃 */
+.heroContainer,
+.bottomContainer,
+.featureItem {
+  width: 100%;
+  max-width: 152rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+
+/* h1 태그 숨기기 */
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* --- 위아래 배너 컨테이너 공통사항 --- */
+.heroContainer,
+.bottomContainer {
+  width: 100%;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+
+/* ---------- Main ------------ */
+main {
+  margin-top: 7rem; /* 헤더 높이만큼 띄우기 */
+}
+
+/* -------- Hero 섹션 --------- */
+#hero {
+  width: 100%;
+  height: 54rem;
+  background-color: var(--bg-blue);
+
+  /* 이미지 경로 수정 (/img) */
+  background-image: url(/img/Img_home_top.png);
+  background-repeat: no-repeat;
+  background-size: auto 70%;
+  background-position: calc(50% + 25rem) bottom;
+}
+
+.heroContainer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#hero h2 {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+}
+
+.itemBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35.7rem;
+  height: 5.6rem;
+
+  background-color: var(--primary-100);
+  color: var(--bg-white);
+  font-size: 2rem;
+  font-weight: 700;
+
+  padding: 1.6rem 4rem;
+  border-radius: 4rem;
+  margin-top: 3.2rem;
+
+  cursor: pointer;
+}
+
+/* ------------- Feature 섹션 --------------- */
+#feature {
+  background-color: var(--bg-white);
+}
+
+.featureItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+  margin-bottom: 27.6rem;
+}
+
+.featureItem:first-child {
+  margin-top: 13.8rem;
+}
+
+/* Search만 순서 뒤집기 */
+.featureItem:nth-child(2) {
+  flex-direction: row-reverse;
+}
+
+/* Search 텍스트 박스만 오른쪽 정렬 */
+.featureItem:nth-child(2) .text_box {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.imgBox,
+.textBox {
+  flex: 1;
+}
+
+.imgBox {
+  display: flex;
+  justify-content: center;
+}
+
+.imgBox img {
+  width: 100%;
+  max-width: 58rem;
+  height: auto;
+  vertical-align: bottom;
+}
+
+.textBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* ------- 파란색 작은 제목 ------- */
+.subTitle {
+  color: var(--primary-100);
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
+  display: block;
+}
+
+/* -------- 검은색 큰 제목 ------- */
+.textBox h2 {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 1.6rem;
+  color: #374151;
+}
+
+/* ------- 설명글 ------- */
+.textBox h3 {
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--gray-700);
+}
+
+/* ----------Bottom ---------- */
+#bottom {
+  background-color: var(--bg-blue);
+  width: 100%;
+  height: 54rem;
+
+  /* 이미지 경로 수정 (/img) */
+  background-image: url(/img/Img_home_bottom.png);
+  background-repeat: no-repeat;
+  background-size: auto 90%;
+  background-position: calc(50% + 25rem) bottom;
+}
+
+.bottomContainer {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.bottomContainer h2 {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.4;
+}

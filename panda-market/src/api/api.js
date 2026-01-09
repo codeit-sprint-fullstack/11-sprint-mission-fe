@@ -5,7 +5,7 @@ const BASE_URL = 'https://panda-market-api.vercel.app/products';
  * @param {Object} params - page, pageSize, orderBy, keyword
  * @returns {Promise} 상품 리스트 및 전체 개수 반환
  */
-export default async function getProducts({
+export async function getProducts({
   page = 1,
   pageSize = 10,
   orderBy = 'recent',
