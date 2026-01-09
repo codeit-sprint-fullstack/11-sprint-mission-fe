@@ -1,11 +1,19 @@
-import { ProductListPage } from './features/ProductListPage';
-import { ProductProvider } from './providers/ProductProvider';
+
+
+import Footer from "./components/Layout/Footer/Footer";
+import Header from "./components/Layout/Header/Header";
+
+import MarketPage from "./pages/MarketPage/components/MarketPage";
 
 function App() {
   return (
-    <ProductProvider>
-      <ProductListPage />
-    </ProductProvider>
+    <>
+      <Header />
+      <div className="withHeader">
+        <MarketPage />
+      </div>
+      <Footer />
+    </>
   );
 }
 export default App;

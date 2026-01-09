@@ -36,12 +36,11 @@ button {
   cursor: pointer;
 }
 
-img {
+img,
+svg {
   vertical-align: bottom;
 }
 
 ul {
   list-style: none;
-  padding: 0;
-  margin: 0;
 }

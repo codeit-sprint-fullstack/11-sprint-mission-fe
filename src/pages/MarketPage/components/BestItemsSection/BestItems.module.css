@@ -1,0 +1,23 @@
+.bestItemsContainer {
+  padding-top: 17px;
+  padding-bottom: 24px;
+}
+
+@media (min-width:744px) {
+  .bestItemsContainer {
+    margin-bottom: 40px;
+  }
+
+  .bestItemsCardSection {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+}
+
+@media (min-width: 1280px) {
+  .bestItemsCardSection {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
