@@ -1,12 +1,16 @@
+import ItmesHeader from "./components/ItmesHeader/MarketHeader";
+import ProductListSection from "./components/ProductListSection/ProductListSection";
 
-import MarketHeader from './components/MarketHeader/MarketHeader';
+
+
 
 // import styles from './MarketPage.module.css'
 
 function MarketPage (){
   return(
     <>
-      <MarketHeader />
+      <ItmesHeader />
+      <ProductListSection />
 
     </>
   )

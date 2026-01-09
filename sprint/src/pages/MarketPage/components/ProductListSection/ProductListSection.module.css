@@ -1,124 +1,104 @@
-
-.searchContainer{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 2.625rem;
+/* 전체 틀 */
+.ProductListContainer{
+  padding: 5.88rem 22.75rem 13.94rem ;
   width: 100%;
-  margin-bottom: 1.5rem;
 }
 
-/* 검색 창 */
-.searchSection{
+/* nav title, input,btn, drop down flex */
+.ListNav{
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+/* 판매중인상품 */
+.navTitle{
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 160%;
+}
+
+
+/* input,btn,dropDown 부분 */
+.searchContent{
+  display: flex;
   gap: 0.75rem;
 }
 
+/* input 창 */
 .searchIcon{
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--Secondary-400);
   position: relative;
-  left: 2.2rem;
-  bottom: -0.2rem;
-  color: var(--Secondary-400);
+  bottom: -0.6rem;
+  left: 2rem;
 }
 
-input{
+.searchInput{
   width: 20.3125rem;
-  height: 2.625rem; 
-  padding: 0.5625rem 1.25rem 0.5625rem 2.5rem;
+  height: 2.625rem;
+  padding: 0.56rem 1.25rem 0.56rem 2.5rem;
   border-radius: 0.75rem;
+  border: none;
   background-color: var(--Secondary-100);
-  border: none;
-  color: var(--Secondary-400);
-  cursor: pointer;
 }
 
-/* 상품등록버튼 */
-.addItemBtn{
-  height: 2.625rem;
-  padding: 0.75rem 1.4375rem;
-  border-radius: 0.5rem;
-  border: none;
-  color: var(--Cool-Gray-100);
-  background-color:var(--primary-100);
-  font-size: 1rem;
-  font-weight: 600;
-  line-height: 162.5%;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-
-/* 최신순, 좋아요순 버튼 */
-.dropDownMenu{
-  position: relative;;
-  display: inline-block;
-}
-
-.toggleBtn{
-  width: 8.125rem;
-  height: 2.625rem;
-  padding: 0.75rem 1.25rem;
-  display: flex;
-  justify-content: space-between;
-  border-radius: 0.75rem;
-  border: 1px solid var(--Cool-Gray-200);
-  background-color: #fff;
-  font-size: 1rem;
-  font-weight: 400;
-  cursor: pointer;
-}
-
-.dropDownList{
-  position:absolute;
-  margin-top: 0.5rem;
-}
-
-.dropDownNew, .dropDownLike{
-  width: 8.125rem;
-  height: 2.625rem;
-  padding: 0.75rem 1.25rem;
-  border-radius: 0.75rem 0.75rem 0 0;
+/* 상품 등록 버튼 */
+.addBtn{
+  height: 2.6rem;
+  padding: 0.75rem 1.44rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid var(--Cool-Gray-200);
-  background-color: #fff;
-  cursor: pointer;
+  background-color: var(--primary-100);
+  border-radius: 0.5rem;
+  border: none;
+  color: var(--Cool-Gray-100);
 }
 
-.dropDownLike{
-  border-radius: 0 0 0.75rem 0.75rem;
-} 
+/* drop down 버튼*/
+.dropDownContainer{
+  display: flex;
+  flex-direction: column;
+}
 
+.dropDown{
+  display: flex;
+}
 
-
-
-/* tablet media */
-/* @media (max-width: 1199px) and (min-width: 744px){
-  .searchContainer{
+.dropDownBtn{
+  width: 8.125rem;
+  height: 2.625rem;
+  padding: 0.75rem 1.25rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
-  margin: 1.5rem 0;
-  width: 75rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--Cool-Gray-200) ;
+  background-color: #fff;
+}
+
+/* drop down lists */
+.dropDownList{
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: 400;
+  z-index: 50;
+}
+
+.dropDownNew{
+  width: 8.125rem;
   height: 2.625rem;
-  }   
-} */
+  background-color: #fff;
+  border: 1px solid var(--Cool-Gray-100);
+  border-radius: 0.75rem 0.75rem 0 0;
+}
 
-/* mobile media */
-/* @media (max-width: 743px) and (min-width: 375px) {
-  .searchContainer{
-    width: 100%;
-    display: flex;
-  }
-
-  .btn{
-    display: none;
-  }
-
-  .mobileBtn{
-    display: block;
-  }
-} */
+.dropDownLike{
+  width: 8.125rem;
+  height: 2.625rem;  
+  background-color: #fff;
+  border: 1px solid var(--Cool-Gray-100);
+  border-radius: 0 0 0.75rem 0.75rem;
+}

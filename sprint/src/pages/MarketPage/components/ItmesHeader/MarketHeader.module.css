@@ -1,0 +1,55 @@
+.itemsHeaderContainer{
+  height: 4.3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.56rem 12.5rem ;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10000;
+  background-color: #fff;
+  border-bottom: 1px solid #dfdfdf;
+
+}
+
+.pandaLogo{
+  width: 9.5625rem;
+  height: 3.1875rem;
+  margin-right: 1.5rem;
+}
+
+.pandaLogoWord{
+  display: none;
+}
+
+.nevBtn{
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 144.444%;
+  padding: 0 0.94rem;
+  color: var(--Secondary-600);
+  display: flex;
+  align-items: center;
+}
+
+.nevRight{
+  display: flex;
+  align-items: center;
+}
+
+.loginBtn{
+  background-color: var(--primary-100);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.4375rem;
+  border: none;
+  color: var(--Cool-Gray-100);
+}
+
+/* tablet media */
+@media (max-width: 1199px) and (min-width: 744px){
+}
+
+/* mobile media */
+@media (max-width: 743px) and (min-width: 375px) {}

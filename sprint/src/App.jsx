@@ -6,8 +6,8 @@ import MarketPage from "./pages/MarketPage/MarketPage"
 
 function App() {
   return(
-      <Routes>
-        <Route path='/' element={<HomePage />} />
+      <Routes path='/'>
+        <Route index element={<HomePage />} />
         <Route path='/MarketPage' element={<MarketPage />} />
       </Routes>
   )
