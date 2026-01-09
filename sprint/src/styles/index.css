@@ -26,6 +26,7 @@
 --Secondary-200: #E5E7EB;
 --Secondary-400: #9CA3AF;
 --Secondary-600: #4B5563;
+--Secondary-700: #374151;
 --Secondary-800: #1F2937;
 --Secondary-900: #111827;
 
@@ -40,17 +41,20 @@
 
 html, body{
   height: 100%;
-  width: 100%;
   overflow-x: hidden;
-  
 }
 
-/* Desktop styles */
-@media (min-width: 1280px) {}
 
 /* tablet media */
 @media (max-width: 1199px) and (min-width: 744px){
+  body{
+  margin: 0 auto;
+  }
 }
 
 /* mobile media */
-@media (max-width: 743px) and (min-width: 375px) {}
+@media (max-width: 743px) and (min-width: 375px) {
+  body{
+  margin: 0 auto;
+  }
+}

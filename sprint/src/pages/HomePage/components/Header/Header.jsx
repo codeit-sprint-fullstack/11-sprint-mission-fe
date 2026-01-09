@@ -1,5 +1,6 @@
 import PandaLogo from '@/assets/panda-Logo.svg';
 import styles from './Header.module.css';
+import LogoWord from  '@/assets/panda-Logo-word .svg'
 
 function Header (){
   return(
@@ -7,6 +8,7 @@ function Header (){
       <div className={styles.headerContainer}>
         <a href='/'>
           <img className={styles.logoImg}src={PandaLogo} alt="판다마켓 로고"/>
+          <img className={styles.logoWord} src={LogoWord} alt="판다마켓 로고"/>
         </a>
         <button className={styles.loginBtn} >로그인</button>
       </div>
