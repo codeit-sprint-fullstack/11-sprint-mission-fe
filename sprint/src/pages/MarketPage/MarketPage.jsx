@@ -1,6 +1,15 @@
 
+import MarketHeader from './components/MarketHeader/MarketHeader';
+
+// import styles from './MarketPage.module.css'
+
 function MarketPage (){
-  return
+  return(
+    <>
+      <MarketHeader />
+
+    </>
+  )
 }
 
 export default MarketPage;

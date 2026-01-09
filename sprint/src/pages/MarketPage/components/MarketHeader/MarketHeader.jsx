@@ -1,9 +1,9 @@
 import pandaLogo from '@/assets/panda-Logo.svg'
 import pandaLogoWord from '@/assets/panda-Logo-word .svg'
 
-import styles from "./Header.module.css"
+import styles from "./MarketHeader.module.css"
 
-function Header (){
+function MarketHeader (){
   return(
     <>
       <div className={styles.HeaderContainer}>
@@ -23,4 +23,4 @@ function Header (){
   )
 }
 
-export default Header;
+export default MarketHeader;
