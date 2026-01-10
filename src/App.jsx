@@ -1,9 +1,7 @@
+import { Footer } from './components/Layout/Footer';
+import { Header } from './components/Layout/Header';
 
-
-import Footer from "./components/Layout/Footer/Footer";
-import Header from "./components/Layout/Header/Header";
-
-import MarketPage from "./pages/MarketPage/components/MarketPage";
+import MarketPage from './pages/MarketPage/components/MarketPage';
 
 function App() {
   return (

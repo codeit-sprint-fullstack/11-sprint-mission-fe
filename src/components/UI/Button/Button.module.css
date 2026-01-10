@@ -3,23 +3,24 @@
 }
 
 .primary {
-  background-color: var(--brand-blue);
+  background-color: var(--Primary-100);
   color: #ffffff;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 16px;
+  border-radius: 0.8rem;
+  padding: 1.15rem 2.3rem;
+  font-size: 1.6rem;
   font-weight: 600;
-  border-radius: 8px;
-  padding: 11.5px 23px;
+  line-height: normal;
 }
 
 .button:hover {
-  background-color: #1967d6;
+  background-color: var(--Primary-200);
 }
 
 .button:focus {
-  background-color: #1251aa;
+  background-color: var(--Primary-300);
 }
 
 .button:disabled {
@@ -37,4 +38,12 @@
 
 .full-width {
   width: 100%;
+}
+
+@media (min-width: 744px) {
+  .pill-button {
+    font-size: 20px;
+    font-weight: 700;
+    padding: 16px 126px;
+  }
 }

@@ -1,6 +1,5 @@
 import { AllItemsSection } from "./AllItemsSection";
 import { BestItemsSection } from "./BestItemsSection";
-import './MarketPage.css'
 
 
 function MarketPage() {

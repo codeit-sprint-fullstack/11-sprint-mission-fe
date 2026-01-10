@@ -1,9 +1,17 @@
+.sectionTitle {
+  color: #111827;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: normal;
+  margin-bottom: 16px;
+}
+
 .bestItemsContainer {
   padding-top: 17px;
   padding-bottom: 24px;
 }
 
-@media (min-width:744px) {
+@media (min-width: 744px) {
   .bestItemsContainer {
     margin-bottom: 40px;
   }
@@ -13,7 +21,6 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
   }
-
 }
 
 @media (min-width: 1280px) {

@@ -30,19 +30,31 @@ body {
 }
 
 .wrapper {
-  max-width: 120rem;
-  margin: 0 auto;
   width: 100%;
+  padding: 0 1.6rem;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 5.6rem;
+  letter-spacing: 0.02em;
+}
+
+@media (min-width: 744px) {
+  .wrapper {
+    padding: 0 2.4rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .wrapper {
+    max-width: 120rem;
+    margin: 0 auto;
+  }
 }
 
 /* #socialLogin {
   display: flex;
   gap: 1.6rem;
-} */
-
-/* h2 {
-  font-size: 4rem;
-  font-weight: 700;
-  line-height: 5.6rem;
-  letter-spacing: 0.02em;
 } */

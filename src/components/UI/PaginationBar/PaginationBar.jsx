@@ -1,5 +1,7 @@
 import leftArrow from '@/assets/icons/arrow_left.svg';
 import rightArrow from '@/assets/icons/arrow_right.svg';
+import styles from './PaginationBar.module.css';
+
 
 export function PaginationBar({ activePageNum, totalPageNum, onPageChange }) {
   const maxVisiblePages = 5;
@@ -18,9 +20,9 @@ export function PaginationBar({ activePageNum, totalPageNum, onPageChange }) {
   );
 
   return (
-    <div className="paginationBar">
+    <div className={styles.paginationBar}>
       <button
-        className="paginationButton"
+        className={styles.paginationButton}
         disabled={activePageNum === 1}
         onClick={() => onPageChange(activePageNum - 1)}
       >
@@ -29,8 +31,8 @@ export function PaginationBar({ activePageNum, totalPageNum, onPageChange }) {
       {pages.map((page) => (
         <button
           key={page}
-          className={`paginationButton ${
-            activePageNum === page ? 'active' : ''
+          className={`${styles.paginationButton} ${
+            activePageNum === page ? styles.active : ''
           }`}
           onClick={() => onPageChange(page)}
         >
@@ -38,7 +40,7 @@ export function PaginationBar({ activePageNum, totalPageNum, onPageChange }) {
         </button>
       ))}
       <button
-        className="paginationButton"
+        className={styles.paginationButton}
         disabled={activePageNum === totalPageNum}
         onClick={() => onPageChange(activePageNum + 1)}
       >

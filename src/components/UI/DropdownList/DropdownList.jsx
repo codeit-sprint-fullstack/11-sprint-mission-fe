@@ -2,9 +2,9 @@ import styles from './DropdownList.module.css';
 
 export function DropdownList({ onSelect }) {
   return (
-    <ul className="dropdownList">
+    <ul className={styles.dropdownList}>
       <li
-        className="dropdownItem"
+        className={styles.dropdownItem}
         onClick={() => {
           onSelect('recent');
         }}
@@ -12,7 +12,7 @@ export function DropdownList({ onSelect }) {
         최신순
       </li>
       <li
-        className="dropdownItem"
+        className={styles.dropdownItem}
         onClick={() => {
           onSelect('favorite');
         }}
