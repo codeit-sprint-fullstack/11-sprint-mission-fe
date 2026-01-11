@@ -1,4 +1,4 @@
-import { FeatureSection } from './FeatureSection';
+import { FeatureSection } from './components/FeatureSection';
 import styles from './HomePage.module.css';
 import { Button } from '@/components/UI/Button';
 

@@ -68,11 +68,4 @@ export const useProductsStore = create((set) => ({
       }));
     }
   },
-  // reset: () => {
-  //   set({
-  //     items: [],
-  //     page: 1,
-  //     totalCount: 0,
-  //   });
-  // },
 }));

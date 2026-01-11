@@ -41,11 +41,14 @@
   color: var(--Secondary-600);
 }
 
-.headerLeft nav ul li a:hover {
+
+.headerLeft nav ul li a.active {
   color: var(--Primary-100);
 }
 
-
+.headerLeft nav ul li a:hover {
+  color: var(--Primary-100);
+}
 
 /* Tablet styles */
 @media (min-width: 744px) {

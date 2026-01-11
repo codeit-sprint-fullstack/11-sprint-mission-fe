@@ -10,6 +10,7 @@ import { DropdownList } from '@/components/UI/DropdownList';
 import { PaginationBar } from '@/components/UI/PaginationBar';
 import { useDebounce } from '@/hooks/useDebounce';
 import { Button } from '@/components/UI/Button';
+import { Link } from 'react-router';
 
 const INITIAL_PAGE = 1;
 const DEBOUNCE_DELAY_MS = 300;
@@ -41,7 +42,6 @@ export function AllItemsSection() {
   // 검색 디바운스
   const debouncedKeyword = useDebounce(inputValue, DEBOUNCE_DELAY_MS);
 
-
   // 데이터 요청
   useEffect(() => {
     fetchAllProducts({
@@ -55,7 +55,7 @@ export function AllItemsSection() {
   // 정렬 변경
   const handleSortSelect = (value) => {
     setorderBy(value);
-    setPage(INITIAL_PAGE)
+    setPage(INITIAL_PAGE);
     setIsOpen(false);
   };
   // 드롭다운 밖 클릭 시 닫기
@@ -90,7 +90,9 @@ export function AllItemsSection() {
             }}
           />
         </div>
-        <Button  >상품 등록하기</Button>
+        <Button>
+          <Link to="/registration">상품 등록하기</Link>
+        </Button>
         {/* 정렬 드롭다운 */}
         <div className={styles.sortButtonWrapper} ref={dropdownRef}>
           <button

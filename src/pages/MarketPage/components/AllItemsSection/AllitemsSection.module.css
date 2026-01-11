@@ -50,7 +50,7 @@
 }
 
 .searchBarInput::placeholder {
-  color: #9ca3af;
+  color: var(--Secondary-400);
   font-size: 1.6rem;
 }
 
