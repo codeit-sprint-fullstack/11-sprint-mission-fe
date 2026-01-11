@@ -183,10 +183,6 @@
     order: 1;
   }
 
-  .createItemButton {
-    flex: 0 0 auto;
-    order: 2;
-  }
 
   .searchBarWrapper {
     flex: 1 1 auto;

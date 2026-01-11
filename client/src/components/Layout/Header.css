@@ -37,6 +37,9 @@ body {
   color: var(--blue);
 }
 
+.globalHeader nav ul li a.active {
+  color: #3692FF; /* 미션 요구 색상 */
+}
 .loginLink {
   font-size: 16px;
   font-weight: 600;

@@ -6,6 +6,7 @@ import SortIconArrowDown from '../../../assets/images/icons/ic_arrow_down.svg';
 import SearchIcon from '../../../assets/images/icons/ic_search.svg';
 import DropdownList from '../../../components/UI/DropdownList';
 import PaginationBar from '../../../components/UI/PaginationBar';
+import { useNavigate } from 'react-router-dom';
 
 const getPageSize = () => {
   const width = window.innerWidth;
@@ -15,6 +16,7 @@ const getPageSize = () => {
 };
 
 function AllItemsSection() {
+  const navigate = useNavigate();
   const [orderBy, setOrderBy] = useState('recent');
   const [page, setPage] = useState(1);
   const [pageSize, setPageSize] = useState(getPageSize());
@@ -41,7 +43,7 @@ function AllItemsSection() {
 
     fetchSortedData({ orderBy, page, pageSize, keyword });
     return () => window.removeEventListener('resize', handleResize);
-  }, [orderBy, page, pageSize, keyword,totalPageNum]);
+  }, [orderBy, page, pageSize, keyword, totalPageNum]);
 
   const handleSortSelection = (sortOption) => {
     setOrderBy(sortOption);
@@ -63,10 +65,16 @@ function AllItemsSection() {
 
   const convertToKorean = (orderBy) => {
     switch (orderBy) {
-      case 'recent': return '최신순';
-      case 'favorite': return '인기순';
-      default: return '최신순';
+      case 'recent':
+        return '최신순';
+      case 'favorite':
+        return '인기순';
+      default:
+        return '최신순';
     }
+  };
+  const handleGoToRegisteration = () => {
+    navigate('/Registeration');
   };
 
   return (
@@ -86,18 +94,32 @@ function AllItemsSection() {
           />
         </div>
 
-        <div className="createItemButton button">상품 등록하기</div>
+        <div
+          className="createItemButton button"
+          onClick={handleGoToRegisteration}
+        >
+          상품 등록하기
+        </div>
 
         <div className="sortButtonWrapper">
-          <button className="sortDropdownTriggerButton" onClick={toggleDropdown}>
+          <button
+            className="sortDropdownTriggerButton"
+            onClick={toggleDropdown}
+          >
             <div className="sortBtn">
               <span>{convertToKorean(orderBy)}</span>
               <img src={SortIconArrowDown} alt="sortIconArrowDown" />
             </div>
-            <img src={SortIconMobile} className="mobileSortBtn" alt="sortMobile" />
+            <img
+              src={SortIconMobile}
+              className="mobileSortBtn"
+              alt="sortMobile"
+            />
           </button>
 
-          {isDropdownVisible && <DropdownList onSortSelection={handleSortSelection} />}
+          {isDropdownVisible && (
+            <DropdownList onSortSelection={handleSortSelection} />
+          )}
         </div>
       </div>
 
@@ -111,7 +133,7 @@ function AllItemsSection() {
           <p>상품이 없습니다.</p>
         )}
       </div>
-      
+
       {/* Pagination */}
       <div className="paginationBarWrapper">
         {totalPageNum > 1 && (

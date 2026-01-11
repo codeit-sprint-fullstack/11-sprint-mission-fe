@@ -1,0 +1,47 @@
+.RegisterationWrapper {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.RegisterationForm {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.RegisterationForm label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+}
+
+.RegisterationForm input,
+.RegisterationForm textarea {
+  margin-top: 6px;
+  padding: 12px;
+  font-size: 16px;
+}
+
+.submitButton {
+  margin-top: 24px;
+  padding: 14px;
+  background-color: var(--blue);
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+/* Tablet */
+@media (max-width: 1280px) {
+  .RegisterationWrapper {
+    max-width: 600px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .RegisterationWrapper {
+    padding: 16px;
+  }
+}
