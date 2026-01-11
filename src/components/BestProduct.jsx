@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import styles from '../style/BestProduct.module.css';
+
 import { ProductCard } from './ProductCard';
 import { getProductList } from '../API/ProductServce';
+import { ProductCardList } from './ProductCardList';
 
 const BEST_PRODUCT_LIMIT = 4;
 
 export const BestProduct = () => {
-  const [Items, setItems] = useState([]);
+  const [items, setItems] = useState([]);
 
   useEffect(() => {
     const getProducts = async () => {
@@ -27,8 +29,7 @@ export const BestProduct = () => {
     <section className={styles.content}>
       <div className={styles.title}>베스트 상품</div>
       <div className={styles.cardContent}>
-        {Items &&
-          Items.map((item) => <ProductCard key={item.id} product={item} />)}
+        {items && <ProductCardList items={items} />}
       </div>
     </section>
   );

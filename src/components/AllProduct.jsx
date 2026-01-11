@@ -3,12 +3,12 @@ import styles from '../style/AllProduct.module.css';
 import { ProductCard } from './ProductCard';
 import { AllProductSearch } from './AllProductSearch';
 import { getProductList } from '../API/ProductServce';
+import { ProductCardList } from './ProductCardList';
 
 const ALL_PRODUCT_LIMIT = 5;
 export const AllProduct = () => {
   const [items, setItems] = useState([]);
   const [page, setPage] = useState(1);
-
   const getProductsMore = async () => {
     try {
       const { list } = await getProductList({
@@ -27,7 +27,7 @@ export const AllProduct = () => {
         const { list } = await getProductList({
           pageSize: ALL_PRODUCT_LIMIT,
         });
-        setItems(list);
+        setItems(list); // 첫렌더링이라서 아규먼트로 콜백함수를 사용할 필요없음.
       } catch (e) {
         console.log(`BestProduct useEffect! - ${e}`);
       }
@@ -41,8 +41,7 @@ export const AllProduct = () => {
         <AllProductSearch />
       </div>
       <div className={styles.cardContent}>
-        {items &&
-          items.map((item) => <ProductCard key={item.id} product={item} />)}
+        {items && <ProductCardList items={items} />}
       </div>
       <button onClick={getProductsMore}>더 불러 오기</button>
     </section>

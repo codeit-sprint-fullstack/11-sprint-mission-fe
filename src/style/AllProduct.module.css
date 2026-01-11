@@ -11,9 +11,3 @@
   font-size: 20px;
 }
 
-.cardContent {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 40px;
-}
