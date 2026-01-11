@@ -1,15 +1,34 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from '../style/BestProduct.module.css';
 import { ProductCard } from './ProductCard';
-export const BestProduct = ({ products }) => {
+import { getProductList } from '../API/ProductServce';
+
+const BEST_PRODUCT_LIMIT = 4;
+
+export const BestProduct = () => {
+  const [Items, setItems] = useState([]);
+
+  useEffect(() => {
+    const getProducts = async () => {
+      try {
+        const { list } = await getProductList({
+          pageSize: BEST_PRODUCT_LIMIT,
+          orderBy: 'favorite',
+        });
+        console.log(list);
+        setItems(list);
+      } catch (e) {
+        console.log(`BestProduct useEffect! - ${e}`);
+      }
+    };
+    getProducts();
+  }, []);
   return (
     <section className={styles.content}>
-      <div className={styles.title}>판매중인 상품</div>
+      <div className={styles.title}>베스트 상품</div>
       <div className={styles.cardContent}>
-        {products &&
-          products.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
+        {Items &&
+          Items.map((item) => <ProductCard key={item.id} product={item} />)}
       </div>
     </section>
   );

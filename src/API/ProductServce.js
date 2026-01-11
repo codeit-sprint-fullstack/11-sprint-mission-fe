@@ -1,8 +1,9 @@
-const axios = axios.create({
-  baseURL: 'https://panda-market-api.vercel.app/docs/',
+import Axios from 'axios';
+export const axios = Axios.create({
+  baseURL: 'https://panda-market-api.vercel.app',
 });
 
-const getProductList = async ({
+export const getProductList = async ({
   page = 1,
   pageSize = 10,
   orderBy = 'recent',
@@ -26,7 +27,7 @@ const getProductList = async ({
   }
 };
 
-const getProduct = async ({ productId }) => {
+export const getProduct = async ({ productId }) => {
   try {
     const response = await axios.get(`/products/${productId}`);
 
@@ -38,7 +39,13 @@ const getProduct = async ({ productId }) => {
     throw error;
   }
 };
-const createProduct = async ({ name, description, price, tags, images }) => {
+export const createProduct = async ({
+  name,
+  description,
+  price,
+  tags,
+  images,
+}) => {
   try {
     const response = await axios.post('/products', {
       name,
@@ -57,7 +64,7 @@ const createProduct = async ({ name, description, price, tags, images }) => {
   }
 };
 
-const patchProduct = async (productId, patchData) => {
+export const patchProduct = async (productId, patchData) => {
   try {
     const response = await axios.patch(`/products/${productId}`, patchData);
 
@@ -70,7 +77,7 @@ const patchProduct = async (productId, patchData) => {
   }
 };
 
-const deleteProduct = async ({ productId }) => {
+export const deleteProduct = async ({ productId }) => {
   try {
     const response = await axios.delete(`/products/${productId}`);
 
@@ -82,7 +89,7 @@ const deleteProduct = async ({ productId }) => {
 };
 
 //favorite
-const createProductFavorite = async ({
+export const createProductFavorite = async ({
   productId,
   name,
   description,
@@ -103,28 +110,18 @@ const createProductFavorite = async ({
     console.log(data);
     return data;
   } catch (error) {
-    console.log(`[product create] - 에러발생 ${error.message}`);
+    console.log(`[product create favorite] - 에러발생 ${error.message}`);
     throw error;
   }
 };
 
-const deleteProductFavorite = async ({ productId }) => {
+export const deleteProductFavorite = async ({ productId }) => {
   try {
     const response = await axios.delete(`/products/${productId}/favorite`);
 
     return response.status;
   } catch (error) {
-    console.log(`[product delete] - 에러발생${error.message}`);
+    console.log(`[product delete favorite] - 에러발생${error.message}`);
     throw error;
   }
-};
-
-const ProductServece = {
-  getProduct,
-  getProductList,
-  createProduct,
-  patchProduct,
-  deleteProduct,
-  createProductFavorite,
-  deleteProductFavorite,
 };

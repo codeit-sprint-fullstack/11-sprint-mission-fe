@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import './App.css';
 import { AllProduct } from './components/AllProduct';
 import { BestProduct } from './components/BestProduct';
@@ -43,6 +44,7 @@ function App() {
       likes: 2,
     },
   ];
+  useEffect(() => {}, []);
   return (
     <>
       <Header />
