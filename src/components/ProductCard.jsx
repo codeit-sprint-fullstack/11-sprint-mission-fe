@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../style/ProductCard.module.css';
 import heartImg from '../assets/ic_heart.png';
-export const ProductCard = ({ product }) => {
+export const ProductCard = ({ product, type }) => {
   const { images, price, name, likes } = product;
   return (
     <>

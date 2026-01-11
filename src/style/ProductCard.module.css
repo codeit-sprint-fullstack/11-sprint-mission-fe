@@ -14,7 +14,7 @@
 }
 .name {
   margin-top: 16px;
-  font-size: 0.875rem;
+  font-size: 14px;
 }
 .price {
   margin-top: 6px;
@@ -33,4 +33,11 @@
 }
 .likesContent p {
   margin-left: 4px;
+}
+.Best {
+}
+
+.All {
+  width: 200px;
+  height: 200px;
 }

@@ -29,7 +29,7 @@ export const BestProduct = () => {
     <section className={styles.content}>
       <div className={styles.title}>베스트 상품</div>
       <div className={styles.cardContent}>
-        {items && <ProductCardList items={items} />}
+        {items && <ProductCardList items={items} type="Best" />}
       </div>
     </section>
   );

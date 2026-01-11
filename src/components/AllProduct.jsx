@@ -41,7 +41,7 @@ export const AllProduct = () => {
         <AllProductSearch />
       </div>
       <div className={styles.cardContent}>
-        {items && <ProductCardList items={items} />}
+        {items && <ProductCardList items={items} type="All" />}
       </div>
       <button onClick={getProductsMore}>더 불러 오기</button>
     </section>
