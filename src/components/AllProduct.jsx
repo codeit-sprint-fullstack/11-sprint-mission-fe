@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styles from '../style/AllProduct.module.css';
-import { ProductCard } from './ProductCard';
+
 import { AllProductSearch } from './AllProductSearch';
 import { getProductList } from '../API/ProductServce';
 import { ProductCardList } from './ProductCardList';
@@ -9,6 +9,7 @@ const ALL_PRODUCT_LIMIT = 5;
 export const AllProduct = () => {
   const [items, setItems] = useState([]);
   const [page, setPage] = useState(1);
+  const [orderBy, setOrderBy] = useState('recent');
   const getProductsMore = async () => {
     try {
       const { list } = await getProductList({
@@ -26,6 +27,7 @@ export const AllProduct = () => {
       try {
         const { list } = await getProductList({
           pageSize: ALL_PRODUCT_LIMIT,
+          orderBy,
         });
         setItems(list); // 첫렌더링이라서 아규먼트로 콜백함수를 사용할 필요없음.
       } catch (e) {
@@ -33,12 +35,12 @@ export const AllProduct = () => {
       }
     };
     getProducts();
-  }, []);
+  }, [orderBy]);
   return (
     <section className={styles.content}>
       <div className={styles.titleWrap}>
         <p className={styles.title}>판매중인 상품</p>
-        <AllProductSearch />
+        <AllProductSearch orderBy={orderBy} onChangeOrderBy={setOrderBy} />
       </div>
       <div className={styles.cardContent}>
         {items && <ProductCardList items={items} type="All" />}

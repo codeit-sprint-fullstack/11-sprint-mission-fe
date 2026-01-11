@@ -2,7 +2,6 @@ import React from 'react';
 import { ProductCard } from './ProductCard';
 import styles from '../style/ProductCardList.module.css';
 export const ProductCardList = ({ items, type }) => {
-  console.log(items);
   return (
     <>
       <div className={`${styles.cardContent} ${styles[type]}`}>

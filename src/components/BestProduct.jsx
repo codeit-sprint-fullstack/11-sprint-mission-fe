@@ -17,7 +17,7 @@ export const BestProduct = () => {
           pageSize: BEST_PRODUCT_LIMIT,
           orderBy: 'favorite',
         });
-        console.log(list);
+
         setItems(list);
       } catch (e) {
         console.log(`BestProduct useEffect! - ${e}`);
