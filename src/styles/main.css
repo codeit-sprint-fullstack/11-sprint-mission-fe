@@ -43,10 +43,6 @@ a {
   cursor: pointer;
 }
 
-main {
-  margin-top: 7rem;
-}
-
 .button {
   display: inline-flex;
   align-items: center;

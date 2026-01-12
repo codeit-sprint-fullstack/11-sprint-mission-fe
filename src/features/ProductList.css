@@ -4,7 +4,7 @@
 
 .section-header {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr auto auto;
   grid-template-areas:
     'title registration registration'
     'search search sort';
@@ -52,13 +52,20 @@
   font-weight: 400;
   line-height: 2.6rem;
   color: var(--gray-06);
-  padding: 0 0.4rem 0 4.4rem ;
+  padding: 0 0.4rem 0 4.4rem;
+}
+
+.registration-link {
+  grid-area: registration;
 }
 
 .registration-button {
-  grid-area: registration;
   width: 13.3rem;
   height: 4.2rem;
+}
+
+.sort-dropdown {
+  grid-area: sort;
 }
 
 .product-container {
@@ -92,7 +99,6 @@
     width: 24.2rem;
     height: 4.2rem;
   }
-
 
   .registration-button {
     width: 13.3rem;

@@ -2,13 +2,16 @@ main {
   flex-grow: 1;
   width: 100%;
   background-color: var(--gray-10);
+  margin-top: 7rem;
 }
 
-.main-container {
+.container {
   max-width: 120rem;
   width: 100%;
   margin: 0 auto;
+}
 
+.market-layout {
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
@@ -22,7 +25,7 @@ main {
 
 /* 태블릿 사이즈 */
 @media (min-width: 744px) {
-  .main-container {
+  .market-layout {
     gap: 4rem;
     padding: 2.6rem 2.4rem 13.5rem;
   }
@@ -30,7 +33,7 @@ main {
 
 /* 컴퓨터 사이즈 */
 @media (min-width: 1200px) {
-  .main-container {
+  .market-layout {
     padding: 2.6rem 0 14rem;
   }
 }
