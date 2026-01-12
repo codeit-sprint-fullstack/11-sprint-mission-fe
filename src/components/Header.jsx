@@ -9,7 +9,7 @@ function Header() {
       <div className="header-container">
         <div className="header-nav">
           <div className="logo-link">
-            <Link to="/home">
+            <Link to="/">
               {/* 모바일 / 태블릿, 컴퓨터 로고 이미지 변경 */}
               <picture>
                 <source media="(min-width: 744px)" srcSet={logoDesktop} />
@@ -26,7 +26,7 @@ function Header() {
               <Link to='/board'>자유게시판</Link>
             </li>
             <li>
-              <Link to="/">중고마켓</Link>
+              <Link to="/items">중고마켓</Link>
             </li>
           </ul>
         </div>

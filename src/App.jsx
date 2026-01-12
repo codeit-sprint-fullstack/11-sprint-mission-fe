@@ -21,8 +21,8 @@ function App() {
       <main>
         <div className="main-container">
           <Routes>
-            <Route path="/" element={<MarketPage />} />
-            <Route path="/home" element={<HomePage />} />
+            <Route path="/items" element={<MarketPage />} />
+            <Route path="/" element={<HomePage />} />
             <Route path="/board" element={<BoardPage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/registration" element={<ProductRegistrationPage />} />
