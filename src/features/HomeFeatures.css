@@ -1,0 +1,13 @@
+.feature-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feature:nth-child(2) .feature-content {
+  flex-direction: row-reverse;
+}
+
+.feature:nth-child(2) .feature-text {
+  text-align: right;
+}
