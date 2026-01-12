@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import { getProductList } from '@/api/productApi';
 import { useDeviceType } from '@/hooks/useDeviceType';
 import { usePagination } from '@/hooks/usePagination';
