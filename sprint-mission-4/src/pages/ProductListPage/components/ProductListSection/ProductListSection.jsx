@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
-import ProductList from './ProductList';
+import ProductList from '../ProductList/ProductList';
 import styles from './ProductListSection.module.css';
-import { Pagination } from '../Pagination/Pagination';
+import { Pagination } from '../../../../components/Pagination/Pagination';
+import { Link } from 'react-router-dom';
 // import { useDebouncedCallback } from 'use-debounce';
 
 export default function ProductListSection() {
@@ -81,7 +82,9 @@ export default function ProductListSection() {
             placeholder="검색할 상품을 입력하세요."
             onChange={handleSearch}
           />
-          <a className={styles.addProductButton}>상품 등록하기</a>
+          <Link to="/registration" className={styles.addProductButton}>
+            상품 등록하기
+          </Link>
           <div className={styles.buttonContainer}>
             <button
               className={`${styles.sortBtn} ${isOpen ? styles.open : ''}`}

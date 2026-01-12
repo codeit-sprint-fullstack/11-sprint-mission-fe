@@ -1,6 +1,6 @@
-import likeIcon from '../../assets/ic_heart.svg';
+import likeIcon from '@/assets/ic_heart.svg';
 import { useEffect, useState } from 'react';
-import { priceFormat } from '../../utils/format';
+import { priceFormat } from '../../../../utils/format';
 import styles from './BestProductList.module.css';
 
 export default function BestProductList() {

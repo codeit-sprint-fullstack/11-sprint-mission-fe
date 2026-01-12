@@ -1,5 +1,5 @@
-import likeIcon from '../../assets/ic_heart.svg';
-import { priceFormat } from '../../utils/format';
+import likeIcon from '@/assets/ic_heart.svg';
+import { priceFormat } from '../../../../utils/format';
 import styles from './ProductList.module.css';
 
 export default function ProductList({ products }) {
