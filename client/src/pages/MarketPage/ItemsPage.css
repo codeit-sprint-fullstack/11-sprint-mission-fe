@@ -1,3 +1,10 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* 가로 스크롤 방지 */
+  height: 100%;
+}
+
 .sectionTitle {
   color: #111827;
   font-weight: bold;
@@ -18,14 +25,14 @@
   object-fit: cover;
   border-radius: 16px;
   overflow: hidden;
-  aspect-ratio: 1; /* 정사각형으로 만들어 줌 */
-  margin-bottom: 16px;
+  aspect-ratio: 1; /* 정사각형*/
+  gap:6px;
 }
 
 .itemSummary {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 6px;
   flex-grow: 1;
 }
 
@@ -60,16 +67,20 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 32px 8px;
+  padding-left: 360px;
+  padding-right:364px;
 }
 
 .allItemsSectionHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-left: 360px;
 }
 
 .sortButtonWrapper {
   position: relative;
+  padding-right:360px;
 }
 
 .sortDropdownTriggerButton {
@@ -109,6 +120,8 @@
   font-weight: 600;
   border-radius: 8px;
   padding: 11.5px 23px;
+  background-color: var(--Primary-100, #3692FF);
+  color: #fff;
 }
 
 .paginationBarWrapper {
@@ -118,16 +131,14 @@
 
 .sortBtn {
   width: 130px;
-  padding: 12px 20px;
+  /* height : 42px; */
   display: inline-flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   flex-shrink: 0;
-
   font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
+
 }
 .mobileSortBtn {
   display: none;

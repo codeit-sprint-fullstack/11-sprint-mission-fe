@@ -1,21 +1,25 @@
 body {
+  margin: 0;
   display:flex;
   flex-direction:column;
 }
+
 .globalHeader {
   display: flex;
   align-items: center;
-  justify-content: space-between; 
-  padding: 16px 24px;
-  width: 100%;
+  justify-content: space-between;
   position: sticky;
   top: 0;
-  background-color: #ffffff; 
-  z-index: 1000;             
+  width: 100vw; /* viewport 전체 너비 사용 */
+  background-color: #ffffff;
+  z-index: 1000;
   border-bottom: 1px solid #e5e7eb;
+  padding: 0px  24px;
+  margin-right : 200px;
 }
 
 .headerLeft {
+  margin-left:200px;
   display: flex;
   align-items: center;
 }
@@ -33,19 +37,27 @@ body {
   color: #4b5563;
 }
 
+
 .globalHeader nav ul li a:hover {
-  color: var(--blue);
+  color:#3692FF;
 }
 
 .globalHeader nav ul li a.active {
-  color: #3692FF; /* 미션 요구 색상 */
+  color: #3692FF; 
 }
+
+.globalHeader nav ul li a {
+  color: #3692FF; 
+}
+
+
 .loginLink {
+  margin-right:200p;
   font-size: 16px;
   font-weight: 600;
   border-radius: 8px;
   padding: 11.5px 23px;
-  background-color: var(--blue);
+  background-color: #3692FF; 
   color: #fff;
 }
 

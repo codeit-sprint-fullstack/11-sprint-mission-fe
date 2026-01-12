@@ -1,35 +1,104 @@
+
 .RegisterationWrapper {
   max-width: 720px;
   margin: 0 auto;
   padding: 24px;
 }
 
+.RegisterHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+ 
+   h1{
+    font-family: Pretendard;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+  }
+}
+
 .RegisterationForm {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 24px;
+  color: var(--Secondary-400, #9CA3AF);
+  /* pretendard/lg-16px-regular */
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 162.5% */
+  label {
+  font-weight: 700;
+  color: var(--Secondary-800, #1F2937);
+  }
 }
 
 .RegisterationForm label {
   display: flex;
   flex-direction: column;
-  font-weight: 600;
+
 }
 
-.RegisterationForm input,
+.RegisterationForm input{
+  display: flex;
+  /* width: 1200px; */
+  height: 56px;
+  padding: 16px 24px;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 12px;
+  background: var(--Cool-Gray-100, #F3F4F6);
+}
+
 .RegisterationForm textarea {
-  margin-top: 6px;
-  padding: 12px;
-  font-size: 16px;
+  display: flex;
+  /* width: 1200px; */
+  height: 282px;
+  padding: 16px 24px;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 12px;
+  background: var(--Cool-Gray-100, #F3F4F6);
 }
 
 .submitButton {
-  margin-top: 24px;
-  padding: 14px;
-  background-color: var(--blue);
-  color: white;
-  font-size: 16px;
-  border-radius: 8px;
+  display: flex;
+  height: 42px;
+  padding: 12px 23px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: var(--Cool-Gray-400, #9CA3AF);
+}
+
+.tagList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.tagItem {
+  display: flex;
+  align-items: center;
+  background-color: #E5E7EB; /* 연한 회색 */
+  border-radius: 12px;
+  padding: 4px 8px;
+  font-size: 14px;
+}
+
+.removeTag {
+  background: none;
+  border: none;
+  margin-left: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  color:#9CA3AF; 
 }
 
 /* Tablet */
@@ -44,4 +113,14 @@
   .RegisterationWrapper {
     padding: 16px;
   }
+}
+
+.error {
+  border: 1px solid red;
+}
+
+.errorText {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
 }

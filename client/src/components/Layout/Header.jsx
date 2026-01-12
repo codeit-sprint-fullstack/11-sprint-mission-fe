@@ -9,12 +9,12 @@ function Header() {
   return (
     <header className="globalHeader">
       <div className="headerLeft">
-        <img src={Logo} alt="판다마켓 로고" width="153" className="headerLogo" />
+        <img src={Logo} alt="판다마켓 로고" className="headerLogo" />
 
         <nav>
           <ul>
             <li className={location.pathname === "/items" ? "active" : ""}>
-              <Link to="/items">중고마켓</Link>
+              <Link to="/items">중고마켓</Link>  
             </li>
             <li className={location.pathname === "/board" ? "active" : ""}>
               <Link to="/board">자유게시판</Link>
