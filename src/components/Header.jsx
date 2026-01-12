@@ -1,5 +1,5 @@
-import logoMobile from '@/assets/images/logo-text.svg';
-import logoDesktop from '@/assets/images/logo-full.svg';
+import logoMobile from '@/assets/images/header/logo-text.svg';
+import logoDesktop from '@/assets/images/header/logo-full.svg';
 import { Link } from 'react-router';
 import './Header.css';
 
