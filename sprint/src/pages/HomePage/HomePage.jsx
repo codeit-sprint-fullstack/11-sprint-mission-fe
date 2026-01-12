@@ -2,8 +2,8 @@ import Header from "./components/Header/Header";
 import MainArticle from "./components/MainArticle/MainArticle";
 import MainSection from "./components/MainSection/MainSection";
 import FooterArticle from "./components/FooterArticle/FooterArticle";
-import Footer from "./components/Footer/Footer";
 import styles from "./HomePage.module.css"
+import Footer from "@/components/Footer/Footer";
 
 function HomePage(){
   
@@ -14,7 +14,7 @@ function HomePage(){
         <MainArticle />
         <MainSection />
         <FooterArticle />
-        <Footer />
+        <Footer / >
       </div>
     </>
 

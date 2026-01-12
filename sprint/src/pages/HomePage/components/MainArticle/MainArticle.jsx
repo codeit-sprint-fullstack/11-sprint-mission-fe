@@ -8,7 +8,7 @@ function MainArticle (){
     <div className={styles.articleContainer}>
       <div className={styles.btnContiner}>
         <div>일상의 모든 물건을 <br/>거래해보세요</div>
-        <Link to='/MarketPage' className={styles.showBtn}>구경하러 가기</Link>
+        <Link to='/items' className={styles.showBtn}>구경하러 가기</Link>
       </div>
       <img className={styles.pandaImg}src={PandaImg}/>
     </div>
