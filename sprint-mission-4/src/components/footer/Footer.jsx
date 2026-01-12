@@ -2,6 +2,7 @@ import facebook from '../../assets/ic_facebook.svg';
 import instagram from '../../assets/ic_instagram.svg';
 import twitter from '../../assets/ic_twitter.svg';
 import youtube from '../../assets/ic_youtube.svg';
+import ExternalLink from '../common/ExternalLink';
 import styles from './Footer.module.css';
 
 export default function Footer() {
@@ -19,21 +20,21 @@ export default function Footer() {
             </a>
           </div>
           <div className={styles.footerBoxEnd}>
-            <a
-              href="https://www.facebook.com/login.php/?lang=ko"
-              target="_blank"
-            >
+            <ExternalLink href="https://www.facebook.com/login.php/?lang=ko">
               <img className={styles.icon} src={facebook} alt="facebook" />
-            </a>
-            <a href="https://x.com/" target="_blank">
+            </ExternalLink>
+
+            <ExternalLink href="https://x.com/">
               <img className={styles.icon} src={twitter} alt="twitter" />
-            </a>
-            <a href="https://www.youtube.com/" target="_blank">
+            </ExternalLink>
+
+            <ExternalLink href="https://www.youtube.com/">
               <img className={styles.icon} src={youtube} alt="youtube" />
-            </a>
-            <a href="https://www.instagram.com/?hl=ko" target="_blank">
+            </ExternalLink>
+
+            <ExternalLink href="https://www.instagram.com/?hl=ko">
               <img className={styles.icon} src={instagram} alt="instagram" />
-            </a>
+            </ExternalLink>
           </div>
         </div>
       </footer>

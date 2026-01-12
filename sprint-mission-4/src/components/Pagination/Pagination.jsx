@@ -8,7 +8,14 @@ export function Pagination({
   currentPage,
   handlePageChange,
 }) {
-  const totalPages = Math.ceil(totalCount / pageSize);
+  const safeTotalCount = Number.isFinite(Number(totalCount))
+    ? Number(totalCount)
+    : 0;
+  const safePageSize =
+    Number.isFinite(Number(pageSize)) && Number(pageSize) > 0
+      ? Number(pageSize)
+      : 1;
+  const totalPages = Math.ceil(safeTotalCount / safePageSize);
 
   let startPage = currentPage - Math.floor(PAGE_BUTTONS / 2);
   startPage = Math.max(1, startPage); // 스타트 페이지가 최소 1이 되는 로직
