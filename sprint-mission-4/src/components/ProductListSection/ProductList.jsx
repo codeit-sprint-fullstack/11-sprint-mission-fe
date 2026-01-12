@@ -7,20 +7,25 @@ export default function ProductList({ products }) {
 
   return (
     <>
-      <ul className={styles.productListContainer}>
+      <ul className={styles.productListSection}>
         {productList.map((product) => (
           <li key={product.id}>
             <img
+              className={styles.productImg}
               width={221}
               height={221}
               src={product.images[0]}
               alt="thumbnail"
             />
-            <div>
-              <h3>{product.name}</h3>
-              <span>{priceFormat(product.price)}원</span>
-              <img src={likeIcon} alt="likeIcon" />
-              {product.favoriteCount}
+            <div className={styles.productContent}>
+              <h3 className={styles.productName}>{product.name}</h3>
+              <span className={styles.productPrice}>
+                {priceFormat(product.price)}원
+              </span>
+              <div>
+                <img src={likeIcon} alt="likeIcon" />
+                {product.favoriteCount}
+              </div>
             </div>
           </li>
         ))}

@@ -70,44 +70,53 @@ export default function ProductListSection() {
   return (
     <section>
       <div className={styles.productSection}>
-        <h2>판매 중인 상품</h2>
-        <div>
+        <h2 className={styles.productItem}>판매 중인 상품</h2>
+        <div className={styles.activeSection}>
           <img />
           <input
+            className={styles.productInput}
             name="search"
             value={keyword}
             type="text"
             placeholder="검색할 상품을 입력하세요."
             onChange={handleSearch}
           />
-          <a>상품 등록하기</a>
-          <button type="button" onClick={handleIsOpen}>
-            {orderBy === 'recent' ? '최신순' : '좋아요순'}
-          </button>
-        </div>
+          <a className={styles.addProductButton}>상품 등록하기</a>
+          <div className={styles.buttonContainer}>
+            <button
+              className={`${styles.sortBtn} ${isOpen ? styles.open : ''}`}
+              type="button"
+              onClick={handleIsOpen}
+            >
+              {orderBy === 'recent' ? '최신순' : '좋아요순'}
+            </button>
 
-        {isOpen ? (
-          <ul>
-            <li>
-              <button
-                onClick={() => {
-                  handleOrderBy('recent');
-                }}
-              >
-                최신순
-              </button>
-            </li>
-            <li>
-              <button
-                onClick={() => {
-                  handleOrderBy('favorite');
-                }}
-              >
-                좋아요순
-              </button>
-            </li>
-          </ul>
-        ) : null}
+            {isOpen ? (
+              <ul className={styles.sortList}>
+                <li>
+                  <button
+                    className={styles.sortChangeBtn}
+                    onClick={() => {
+                      handleOrderBy('recent');
+                    }}
+                  >
+                    최신순
+                  </button>
+                </li>
+                <li>
+                  <button
+                    className={styles.sortChangeBtn}
+                    onClick={() => {
+                      handleOrderBy('favorite');
+                    }}
+                  >
+                    좋아요순
+                  </button>
+                </li>
+              </ul>
+            ) : null}
+          </div>
+        </div>
       </div>
       <ProductList products={products.list} />
       <Pagination

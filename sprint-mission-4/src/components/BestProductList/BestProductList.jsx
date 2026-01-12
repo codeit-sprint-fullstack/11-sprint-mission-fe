@@ -48,6 +48,7 @@ export default function BestProductList() {
         {products.map((product) => (
           <li className={styles.bestItemsBox} key={product.id}>
             <img
+              className={styles.bestImage}
               width={282}
               height={282}
               src={product.images[0]}

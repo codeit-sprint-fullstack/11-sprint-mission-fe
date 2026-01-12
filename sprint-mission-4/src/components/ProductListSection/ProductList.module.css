@@ -1,5 +1,31 @@
-.productListContainer {
+.productListSection {
   display: grid;
   grid-template-columns: repeat(5, 1fr); /* 한 줄에 5개 */
   gap: 24px;
+  margin: 24px 360px 43px;
+}
+
+.productImg {
+  height: 220px;
+  width: 220px;
+}
+
+.productContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 16px;
+  gap: 6px;
+}
+.productName {
+  color: var(--Secondary-800, #1f2937);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+}
+.productPrice {
+  color: var(--Secondary-800, #1f2937);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 26px;
 }
