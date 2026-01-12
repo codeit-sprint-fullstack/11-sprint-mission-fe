@@ -12,12 +12,12 @@ const Header = () => (
           <a href="/" className={styles.navItem}>
             자유게시판
           </a>
-          <a href="/" className={styles.navItem}>
+          <a href="/items" className={styles.navItem}>
             중고마켓
           </a>
         </nav>
       </div>
-      <a href="/" className={styles.loginBtn}>
+      <a href="/login" className={styles.loginBtn}>
         로그인
       </a>
     </div>
