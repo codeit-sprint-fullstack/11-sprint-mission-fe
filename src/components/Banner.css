@@ -1,0 +1,33 @@
+.banner {
+  background-color: var(--blue-02);
+  height: 54rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: hidden;
+}
+
+.banner-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  text-align: center;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.btn-round {
+  border-radius: 999px;
+  width: 36rem;
+  padding: 1.6rem 0;
+  display: inline-block;
+  margin-top: 3.2rem;
+  text-align: center;
+}
