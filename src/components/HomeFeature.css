@@ -1,0 +1,30 @@
+.feature {
+    padding: 13.8rem 0;
+  }
+
+  .feature-content {
+    background-color: var(--gray-06);
+    width: 98.8rem;
+    height: 44.4rem;
+
+    flex-direction: row;
+    align-items: center;
+    gap: 6rem;
+  }
+
+  .feature-content img {
+    height: 100%;
+    width: auto;
+  }
+
+  .feature:nth-child(2) .feature-content {
+    flex-direction: row-reverse;
+  }
+
+  .feature-text {
+    padding: 0;
+  }
+
+  .feature:nth-child(2) .feature-text {
+    text-align: right;
+  }
