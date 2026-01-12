@@ -42,22 +42,30 @@ export default function BestProductList() {
     return <p>표시할 상품이 없습니다.</p>;
   }
   return (
-    <div className={styles.bestItemsContainer}>
+    <div className={styles.bestItemsSection}>
       <h2 className={styles.bestItem}>베스트 상품</h2>
-      <ul className={styles.bestItemsBox}>
+      <ul className={styles.bestItemsContainer}>
         {products.map((product) => (
-          <li key={product.id}>
+          <li className={styles.bestItemsBox} key={product.id}>
             <img
               width={282}
               height={282}
               src={product.images[0]}
               alt="thumbnail"
             />
-            <div>
-              <h3>{product.name}</h3>
-              <span>{priceFormat(product.price)}원</span>
-              <img src={likeIcon} alt="likeIcon" />
-              {product.favoriteCount}
+            <div className={styles.bestItemContent}>
+              <h3 className={styles.productName}>{product.name}</h3>
+              <span className={styles.productPrice}>
+                {priceFormat(product.price)}원
+              </span>
+              <div className={styles.favoriteSection}>
+                <img
+                  className={styles.likeIcon}
+                  src={likeIcon}
+                  alt="likeIcon"
+                />
+                {product.favoriteCount}
+              </div>
             </div>
           </li>
         ))}

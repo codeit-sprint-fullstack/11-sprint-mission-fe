@@ -4,9 +4,9 @@ import styles from './Header.module.css';
 export default function Header() {
   return (
     <>
-      <header className="globalHeader">
+      <header className={styles.globalHeader}>
         <nav>
-          <div>
+          <div className={styles.logoGroup}>
             <a>
               <img
                 src={logo}
