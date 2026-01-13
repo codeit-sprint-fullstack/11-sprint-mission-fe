@@ -1,1 +1,0 @@
-// (구 items.html) 상품 목록 화면 ('/items')

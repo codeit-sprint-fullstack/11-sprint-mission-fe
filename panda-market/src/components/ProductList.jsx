@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { getProducts } from '../api';
+import { getProducts } from '../api/api';
 import { usePageSize } from '../hooks/usePageSize';
 import ProductCard from './ProductCard';
 import styles from '../App.module.css';

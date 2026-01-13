@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import ProductCard from './ProductCard';
-import { getProducts } from '../api';
+import { getProducts } from '../api/api';
 import styles from '../App.module.css';
 
 const BestProductList = () => {

@@ -71,7 +71,7 @@ const SignupPage = () => {
 
           <div className="socialBox">
             <span className="socialText">간편 회원가입</span>
-            <div className="socailIcon">
+            <div className="socialIcon">
               <a
                 href="https://www.google.com/"
                 target="_blank"
