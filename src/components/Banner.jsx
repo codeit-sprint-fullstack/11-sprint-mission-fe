@@ -8,7 +8,7 @@ function Banner({ title, buttonText, buttonLink, imageSrc }) {
         <h2>{title}</h2>
         {/* 상단 베너에만 버튼이 있음 -> buttonText 있을 때만 활성화 */}
         {buttonText && (
-          <Link to={buttonLink} className="button button-round">
+          <Link to={buttonLink} className="button-round market-button">
             {buttonText}
           </Link>
         )}

@@ -11,3 +11,18 @@
 .feature:nth-child(2) .feature-text {
   text-align: right;
 }
+
+/* 반응형 디자인 */
+/* 핸드폰 사이즈 */
+@media (min-width: 375px) {
+}
+
+/* 태블릿 사이즈 */
+@media (min-width: 744px) {
+  
+}
+
+/* 컴퓨터 사이즈 */
+@media (min-width: 1200px) {
+  
+}

@@ -27,7 +27,7 @@ html {
 }
 
 body {
-  font-family: "Pretendard", sans-serif;
+  font-family: 'Pretendard', sans-serif;
   color: var(--gray-03);
   word-break: keep-all;
 }
@@ -43,12 +43,45 @@ a {
   cursor: pointer;
 }
 
+h2 {
+  font-size: 4rem;
+  line-height: 140%;
+}
+
+span {
+  color: var(--main);
+  font-size: 1.8rem;
+  line-height: 2.6rem;
+}
+
+p {
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 3.2rem;
+}
+
 .button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   border: none;
   border-radius: 0.8rem;
+  background-color: var(--main);
+
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--gray-09);
+  text-decoration: none;
+
+  cursor: pointer;
+}
+
+.button-round {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 999px;
   background-color: var(--main);
 
   font-size: 1.6rem;

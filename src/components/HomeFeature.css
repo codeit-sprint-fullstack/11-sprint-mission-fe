@@ -3,7 +3,7 @@
 }
 
 .feature-content {
-  background-color: var(--gray-06);
+  background-color: var(--gray-10);
   width: 98.8rem;
   height: 44.4rem;
 
@@ -19,4 +19,19 @@
 
 .feature-text {
   padding: 0;
+}
+
+/* 반응형 디자인 */
+/* 핸드폰 사이즈 */
+@media (min-width: 375px) {
+}
+
+/* 태블릿 사이즈 */
+@media (min-width: 744px) {
+  
+}
+
+/* 컴퓨터 사이즈 */
+@media (min-width: 1200px) {
+  
 }
