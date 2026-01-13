@@ -1,24 +1,33 @@
 .feature {
-  padding: 13.8rem 0;
+  display: flex;
+  justify-content: center;
+  padding: 5rem 1.6rem 0;
 }
 
 .feature-content {
   background-color: var(--gray-10);
-  width: 98.8rem;
-  height: 44.4rem;
-
-  flex-direction: row;
-  align-items: center;
-  gap: 6rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 1.2rem;
 }
 
 .feature-content img {
-  height: 100%;
-  width: auto;
+  width: 100%;
+  height: auto;
 }
 
 .feature-text {
-  padding: 0;
+  padding: 2.4rem 1.2rem;
+}
+
+.feature-text h2 {
+  margin: 1.2rem 0 2.4rem;
+}
+
+.pc-only {
+  display: none;
 }
 
 /* 반응형 디자인 */
@@ -28,10 +37,45 @@
 
 /* 태블릿 사이즈 */
 @media (min-width: 744px) {
-  
+  .feature {
+    padding: 5rem 2.4rem 0;
+  }
+
+  .feature-content {
+    max-width: 65rem;
+    display: block;
+  }
 }
 
 /* 컴퓨터 사이즈 */
 @media (min-width: 1200px) {
-  
+  .pc-only {
+    display: inline;
+  }
+
+  .feature {
+    padding: 13.8rem 0;
+    width: 100%;
+  }
+
+  .feature-content {
+    max-width: none;
+    width: 98.8rem;
+    height: 44.4rem;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6rem;
+  }
+
+  .feature-content img {
+    height: 100%;
+    width: auto;
+  }
+
+  .feature-text {
+    padding: 0;
+  }
 }

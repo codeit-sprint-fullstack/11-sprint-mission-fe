@@ -12,9 +12,9 @@ const FEATURE_DATA = [
     badge: 'Hot item',
     title: (
       <>
-        인기 상품을
+        {"인기 상품을 "}
         <br className="pc-only" />
-        확인해 보세요
+        {"확인해 보세요"}
       </>
     ),
     description: (
@@ -32,9 +32,9 @@ const FEATURE_DATA = [
     badge: 'Search',
     title: (
       <>
-        구매를 원하는
+        {"구매를 원하는 "} 
         <br className="pc-only" />
-        상품을 검색하세요
+        {"상품을 검색하세요"}
       </>
     ),
     description: (
@@ -52,9 +52,9 @@ const FEATURE_DATA = [
     badge: 'Register',
     title: (
       <>
-        판매를 원하는
+        {"판매를 원하는 "}
         <br className="pc-only" />
-        상품을 등록하세요
+        {"상품을 등록하세요"}
       </>
     ),
     description: (
