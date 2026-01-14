@@ -1,0 +1,171 @@
+/* =========================
+   Layout
+========================= */
+.container {
+  max-width: 1780px;
+  margin: 0 auto;
+  padding: 24px 300px 80px 300px; 
+}
+
+/* =========================
+   Section Title
+========================= */
+.sectionTitle {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+/* =========================
+   Grid Base
+========================= */
+.bestGrid,
+.productGrid {
+  display: grid;
+  gap: 24px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* =========================
+   Desktop (default)
+========================= */
+.bestGrid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.productGrid {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+/* =========================
+   Product Header
+========================= */
+.productHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px 0 16px;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* =========================
+   Controls
+========================= */
+.searchInput {
+  width: 240px;
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.select {
+  height: 40px;
+  padding: 0 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: #fff;
+}
+
+.registerButton {
+  height: 40px;
+  padding: 0 16px;
+  background-color: #1f5bd8;;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.registerButton:hover {
+  background-color: #7b00e6;
+}
+
+/* =========================
+   Tablet (≤ 1199px)
+========================= */
+@media (max-width: 1199px) {
+  .bestGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .productGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* =========================
+   Mobile (≤ 767px)
+========================= */
+@media (max-width: 767px) {
+  .bestGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .productGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .productHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .controls {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .searchInput {
+    width: 100%;
+  }
+}
+
+/* =========================
+   Pagination
+========================= */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 16px 0 100px; /* 아래쪽 여백 충분히 확보 */
+}
+
+.pageButton {
+  min-width: 36px;
+  height: 36px;
+  padding: 0 10px;
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 50%;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.pageButton:hover {
+  background-color:  #fff;
+}
+
+.pageButton:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.active {
+  background-color: #2b6ff2;;
+  color: #fff;
+  border-radius: 50%;
+  border-color: #2b6ff2;;
+}

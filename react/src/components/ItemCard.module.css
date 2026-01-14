@@ -1,0 +1,41 @@
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.noImage .name {
+  margin-top: auto;
+}
+
+.name {
+  font-family: Pretendard;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.price {
+  font-family: Pretendard;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.favorite{
+  font-family: Pretendard;
+  font-size: 12px;
+  font-weight: 500;
+  color: #000000;
+}
+
+
+
