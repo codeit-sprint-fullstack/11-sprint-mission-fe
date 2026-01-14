@@ -1,0 +1,110 @@
+.RegisterationWrapper, main {
+  padding-bottom: 160px; /* footer 높이만큼 여백 추가 */
+}
+.RegisterationWrapper {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px;
+  /* padding-bottom: 160px; */
+}
+
+.RegisterHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.RegisterHead h1 {
+  font-family: Pretendard;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.RegisterationForm {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  color: var(--Secondary-400, #9CA3AF);
+  font-family: Pretendard;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+.RegisterationForm label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+  color: var(--Secondary-800, #1F2937);
+}
+
+.RegisterationForm input {
+  height: 56px;
+  padding: 16px 24px;
+  border-radius: 12px;
+  background: var(--Cool-Gray-100, #F3F4F6);
+}
+
+.RegisterationForm input[name="description"] {
+  height: 282px; /* textarea 높이와 동일 */
+  padding: 16px 24px;
+  border-radius: 12px;
+  background: var(--Cool-Gray-100, #F3F4F6);
+}
+
+.submitButton {
+  display: flex;
+  height: 42px;
+  padding: 12px 23px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: var(--Cool-Gray-400, #9CA3AF);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.tagList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.tagItem {
+  display: flex;
+  align-items: center;
+  background-color: #E5E7EB;
+  border-radius: 12px;
+  padding: 4px 8px;
+  font-size: 14px;
+}
+
+.removeTag {
+  background: none;
+  border: none;
+  margin-left: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #9CA3AF; 
+}
+
+.error {
+  border: 1px solid red;
+}
+
+.errorText {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+@media (max-width: 1280px) {
+  .RegisterationWrapper { max-width: 600px; }
+}
+
+@media (max-width: 768px) {
+  .RegisterationWrapper { padding: 16px; }
+}

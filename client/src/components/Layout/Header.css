@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  display:flex;
+  flex-direction:column;
+}
+
+.globalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  width: 100vw; /* viewport 전체 너비 사용 */
+  background-color: #ffffff;
+  z-index: 1000;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 0px  24px;
+  margin-right : 200px;
+}
+
+.headerLeft {
+  margin-left:200px;
+  display: flex;
+  align-items: center;
+}
+
+.headerLogo {
+  margin-right: 16px;
+}
+
+.globalHeader nav ul {
+  display: flex;
+  list-style: none;
+  gap: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  color: #4b5563;
+}
+
+
+.globalHeader nav ul li a:hover {
+  color:#3692FF;
+}
+
+.globalHeader nav ul li a.active {
+  color: #3692FF; 
+}
+
+.globalHeader nav ul li a {
+  color: #3692FF; 
+}
+
+
+.loginLink {
+  margin-right:200p;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 11.5px 23px;
+  background-color: #3692FF; 
+  color: #fff;
+}
+
+@media (min-width: 744px) {
+  .globalHeader nav ul {
+    gap: 36px;
+    font-size: 18px;
+  }
+
+  .headerLogo {
+    margin-right: 35px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .headerLogo {
+    margin-right: 47px;
+  }
+}
