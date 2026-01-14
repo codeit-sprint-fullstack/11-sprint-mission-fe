@@ -1,0 +1,49 @@
+.inputContainer{
+  width: 0 auto;
+  margin-top: 5.87rem;
+  padding: 0 22.5rem;
+  margin-bottom: 10.13rem;
+}
+
+
+/* 상품등록하기 */
+.AddNev{
+  margin-bottom: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 160%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.addBtn{
+  background-color: var(--Secondary-400);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.44rem;
+  color: var(--Cool-Gray-100);
+}
+
+.inputBox{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 144.444%;
+}
+
+/* input boxs */
+.itemName, .itemContent, .price, .tags{
+  background-color: var(--Cool-Gray-100);
+  border: none;
+  border-radius: 0.75rem;
+  padding: 1rem 1.5rem;
+  height: 3.5rem;
+
+}
+
+.itemContent{
+  height: 17.625rem;
+}

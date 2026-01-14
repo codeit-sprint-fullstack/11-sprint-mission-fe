@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router"
 import HomePage from "./pages/HomePage/HomePage"
 import MarketPage from "./pages/MarketPage/MarketPage"
+import AddItemPage from "./pages/AddItemPage/AddItem"
 
 
 
@@ -9,6 +10,7 @@ function App() {
       <Routes path='/'>
         <Route index element={<HomePage />} />
         <Route path='/items' element={<MarketPage />} />
+        <Route path='/AddItem' element={<AddItemPage /> }/>
       </Routes>
   )
 }

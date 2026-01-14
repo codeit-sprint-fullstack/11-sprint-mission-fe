@@ -32,7 +32,7 @@
   color: var(--Secondary-400);
   position: relative;
   bottom: -0.6rem;
-  left: 2rem;
+  left: 2rem;  
 }
 
 .searchInput{
@@ -101,4 +101,46 @@
   background-color: #fff;
   border: 1px solid var(--Cool-Gray-100);
   border-radius: 0 0 0.75rem 0.75rem;
+}
+
+
+/* tablet media */
+@media (max-width: 1199px) and (min-width: 744px){
+  *{
+    font-size: 1rem;
+  }
+  .ProductListContainer{
+    padding: 1.62rem;
+    margin-top: 4.25rem;
+  }
+
+  .navTitle{
+    font-size: 1.25rem;
+  }
+
+  .searchIcon{
+    left: 2.5rem;
+  }
+
+  .searchInput{
+    width: 15.125rem;
+    height: 2.625rem;
+    font-size: 1rem;
+    display: flex;
+  }
+
+  .addBtn{
+    font-size: 1rem;
+    padding: 0.75rem 1.4rem;
+  }
+
+  .dropDownContainer{
+    width: 8.12rem;
+    height: 2.6rem;
+  }
+}
+
+/* mobile media */
+@media (max-width: 743px) and (min-width: 375px) {
+
 }

@@ -2,6 +2,7 @@ import styles from './ProductListSection.module.css';
 import { IoSearch } from "react-icons/io5";
 import { BsCaretDownFill } from "react-icons/bs";
 import { BsCaretUpFill } from "react-icons/bs";
+import { Link } from 'react-router';
 
 
 function ProductListSection (){
@@ -17,8 +18,8 @@ function ProductListSection (){
             type="text" 
             placeholder="검색할 상품을 입력해주세요"/>
 
-          <button className={styles.addBtn}>상품 등록하기</button>
-          
+          <Link to='/AddItem' className={styles.addBtn}>상품 등록하기</Link>
+            
           <div className={styles.dropDownContainer}>
             <div className={styles.dropDown}>
               <button className={styles.dropDownBtn}>
