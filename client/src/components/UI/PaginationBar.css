@@ -23,7 +23,7 @@
   opacity: 0.5;
 }
 
-.paginationButton.active {
-  background-color: var(--blue);
-  color: #fff;
+button.paginationButton.active {
+  background-color: #3692FF;
+  color:  #fff
 }
