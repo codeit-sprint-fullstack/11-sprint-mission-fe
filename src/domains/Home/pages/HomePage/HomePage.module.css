@@ -1,0 +1,44 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 540px;
+  background-color: #cfe5ff;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.itemButton {
+  width: 357px;
+  height: 56px;
+  border-radius: 40px;
+  color: var(--secondary-color-gray50);
+  margin-top: 32px;
+}
+
+.bottom {
+  margin-top: 138px;
+  background-color: #cfe5ff;
+  width: 100%;
+  height: 540px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.wrap {
+  width: 1110px;
+  height: 397px;
+  display: flex;
+  justify-content: space-between;
+
+  div {
+    margin-top: 112.5008px;
+  }
+
+  img {
+    width: 746px;
+    height: 397px;
+  }
+}

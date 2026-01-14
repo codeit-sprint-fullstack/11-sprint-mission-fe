@@ -1,0 +1,12 @@
+.loginButton {
+  border-radius: 8px;
+  background-color: var(--primary-color-blue100);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 26px;
+  font-weight: 600;
+  color: var(--secondary-color-gray100);
+  padding: 12px 23px;
+}

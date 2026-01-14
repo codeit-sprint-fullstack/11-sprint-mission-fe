@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.error {
+  input, textarea {
+    border: 1px solid var(--error-red);
+  }
+}
+
+.errorMessage {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--error-red);
+    margin-top: 8px;
+    margin-left: 16px;
+}

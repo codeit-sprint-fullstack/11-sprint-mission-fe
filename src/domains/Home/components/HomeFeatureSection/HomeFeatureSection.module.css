@@ -1,0 +1,21 @@
+.badge {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: var(--primary-color-blue100);
+  margin-bottom: 12px;
+}
+
+.explanation {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.rightAlign {
+  text-align: right;
+}
+
+.flexRowReverse {
+  flex-direction: row-reverse;
+}

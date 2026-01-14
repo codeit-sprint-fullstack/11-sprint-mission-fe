@@ -1,0 +1,22 @@
+.productTag {
+    height: 36px;
+    border-radius: 26px;
+    background-color: var(--secondary-color-gray100);
+    padding: 6px 42px 6px 16px;
+    font-weight: 400;
+    line-height: 26px;
+    align-items: center;
+    color: var(--secondary-color-gray800);
+
+    
+    position: relative;
+
+    img {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 13px;
+    }
+}
