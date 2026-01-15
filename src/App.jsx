@@ -5,8 +5,8 @@ import styles from './App.module.css';
 
 function App() {
   // return <HomePage />;
-  // return <ItemPage />
-  return <RegistrationPage />
+  return <ItemPage />
+  // return <RegistrationPage />
 }
 
 export default App;

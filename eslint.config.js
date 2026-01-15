@@ -9,10 +9,11 @@ export default [
       globals: {
         console: 'readonly',
         process: 'readonly',
+        fetch: 'readonly',
       },
     },
     rules: {
-      'no-unused-vars': ['warn', {argsIgnorePattern: '^_'}],
+      'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
       'no-console': 'off',
       'prefer-const': 'error',
       'no-var': 'error',

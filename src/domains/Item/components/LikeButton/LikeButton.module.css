@@ -1,0 +1,15 @@
+.likeButton {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: var(--secondary-color-gray600);
+    background-color: #FCFCFC;
+    border: 0;
+    display: flex;
+    gap: 4px;
+}
+
+.heartImg {
+  width: 16px;
+  height: 16px;
+}
