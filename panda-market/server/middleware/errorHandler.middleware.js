@@ -1,13 +1,14 @@
-export default function errorHanlder(error, req, res, next) {
-  console.error(err);
+import { HttpException } from '../errors/httpException';
 
-  let status = err.status || 500;
-  let message = err.message || 'server error';
-
-  if (err.name === 'CastError') {
-    status = 404;
-    message = 'ID가 이상합니다.';
+export const errorHandler = (error, req, res, _next) => {
+  if (error instanceof HttpException) {
+    return res.status(error.statusCode).json({
+      message: error.message,
+    });
   }
 
-  res.status(status).send({ message });
-}
+  console.error('알 수 없는 에러:', error);
+  res.status(500).json({
+    message: '서버 내부 오류가 발생했습니다.',
+  });
+};

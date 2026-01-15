@@ -1,23 +1,31 @@
-import { AppError, BadRequestException } from '../utils/AppError';
+// 유효성 검사
 
-export function validatorCreateProduct(req, res, next) {
-  const { name, description, price } = req.body;
+import { BadRequestException } from '../errors/httpException';
 
-  try {
+export const validateProduct = (req, res, next) => {
+  const { name, description, price, tags } = req.body;
+
+  // 1. 이름 검사
+  if (req.method === 'POST' || name) {
     if (!name || name.trim() === '') {
-      throw new BadRequestException('상품 이름은 필수입니다.');
+      return next(new BadRequestException('이름은 필수입니다.'));
     }
-
-    if (!description || description.trim().length <= 10) {
-      throw new BadRequestException('상품 설명은 10글자 이상이어야 합니다.');
-    }
-
-    if (!price || price <= 1) {
-      throw new BadRequestException('가격은 1원보다 커야 합니다.');
-    }
-
-    next();
-  } catch (error) {
-    next(error);
   }
-}
+
+  // 2. 설명 검사
+  if (req.method === 'POST' || description) {
+    if (!description || description.trim() === '') {
+      return next(new BadRequestException('설명은 필수입니다.'));
+    }
+  }
+
+  // 3. 가격 검사
+  if (req.method === 'POST' || price) {
+    if (!price || price <= 0) {
+      return next(new BadRequestException('가격은 0보다 커야 합니다.'));
+    }
+  }
+
+  // 통과
+  next();
+};
