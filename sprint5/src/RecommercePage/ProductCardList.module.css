@@ -1,0 +1,14 @@
+.cardContent {
+  display: grid;
+
+  /* display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  /* grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;*/
+}
+.Best {
+  grid-template-columns: repeat(4, 1fr);
+}
+.All {
+  grid-template-columns: repeat(5, 1fr);
+}

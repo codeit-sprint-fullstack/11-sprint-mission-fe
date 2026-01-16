@@ -1,0 +1,43 @@
+.contentwrap {
+  width: 290px;
+  height: 380px;
+  margin: 10px;
+}
+.imgesContent {
+  width: 290px;
+  height: 290px;
+}
+.imges {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+}
+.name {
+  margin-top: 16px;
+  font-size: 14px;
+}
+.price {
+  margin-top: 6px;
+  margin-bottom: 6px;
+  font-size: 16px;
+  font-weight: var(--font_highlight_weight);
+}
+.likesContent {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
+.likesContent img {
+  width: 16px;
+  height: 16px;
+}
+.likesContent p {
+  margin-left: 4px;
+}
+.Best {
+}
+
+.All {
+  width: 200px;
+  height: 200px;
+}

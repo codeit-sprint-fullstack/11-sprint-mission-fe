@@ -1,0 +1,44 @@
+.globalNavigationBar {
+  position: sticky;
+  top: 0;
+}
+.innerNav {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 9px 200px 9px 200px;
+  background-color: var(--color_white);
+}
+
+.loginButton {
+  text-decoration: none;
+  color: var(--color_white);
+  background-color: var(--color_highlight);
+  padding: 12px 32px;
+  border-radius: 8px;
+  font-size: var(--font_blue_size);
+}
+.logoImg {
+  margin-left: 20px;
+  width: 153px;
+}
+a{
+  text-decoration: none;
+}
+ .menuContent {
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menuStyle{
+  width: 150px;
+  display: flex;
+  margin-left: 20px;
+  justify-content: space-between;
+}
+
+
+.menu {
+  font-weight: var(--font_content_weight);
+  color: var(--font_color_title);
+}
