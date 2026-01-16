@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './Footer.module.css';
-import facebook from '../asset/facebook.png';
-import twitter from '../asset/twitter.png';
-import youtube from '../asset/youtube.png';
-import insta from '../asset/insta.png';
+import facebook from '../../asset/facebook.png';
+import twitter from '../../asset/twitter.png';
+import youtube from '../../asset/youtube.png';
+import insta from '../../asset/insta.png';
 
 export const Footer = () => {
   return (

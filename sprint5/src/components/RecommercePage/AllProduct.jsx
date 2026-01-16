@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from './AllProduct.module.css';
 import { AllProductSearch } from './AllProductSearch';
-import { getProductList } from '../api/productService';
+import { getProductList } from '../../api/productService';
 import { ProductCardList } from './ProductCardList';
 
 const ALL_PRODUCT_LIMIT = 5;
