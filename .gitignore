@@ -1,1 +1,6 @@
-.Ds_Store
+node_modules
+env/*
+!env/.env.example
+generated/
+.DS_Store
+del/

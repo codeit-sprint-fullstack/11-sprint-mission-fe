@@ -1,0 +1,265 @@
+.container {
+  width: 100%;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+  font-family: 'Pretendard Variable', sans-serif;
+}
+
+/* 헤더 스타일 (고정 위치) */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 7rem;
+  background-color: #ffffff;
+  border-bottom: 1px solid #dfdfdf;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+}
+
+.headerContainer {
+  width: 100%;
+  max-width: 120rem;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3.2rem;
+}
+
+/* 헤더 왼쪽: 로고 + 메뉴 */
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.headerLogo img {
+  width: 15.3rem;
+  display: block;
+  cursor: pointer;
+}
+
+.navMenu {
+  display: flex;
+  gap: 1rem;
+}
+
+.navItem {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--gray-600);
+  padding: 2.1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.loginBtn {
+  background-color: var(--primary-100);
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 12.8rem;
+  height: 4.8rem;
+  border-radius: 0.8rem;
+  cursor: pointer;
+}
+
+/* 메인 콘텐츠 (헤더 높이만큼 여백) */
+.main {
+  margin-top: 7rem;
+  padding-top: 3.2rem;
+  min-height: calc(100vh - 7rem - 16rem);
+}
+
+/* 반응형 그리드 */
+.grid {
+  display: grid;
+  gap: 2.4rem;
+  margin-bottom: 4rem;
+}
+.bestGrid {
+  grid-template-columns: repeat(4, 1fr);
+}
+.allGrid {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.listSection {
+  margin-top: 4rem;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.listHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.4rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.controls {
+  display: flex;
+  gap: 1rem;
+}
+
+.searchInput {
+  padding: 0.9rem 2rem 0.9rem 1.6rem;
+  border: 1px solid var(--gray-200);
+  border-radius: 1.2rem;
+  background: var(--gray-100);
+}
+
+.btnRegister {
+  background: var(--primary-100);
+  color: #ffffff;
+  border: none;
+  padding: 1.2rem 2.3rem;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+.sortSelect {
+  padding: 0.8rem;
+  border: 1px solid var(--gray-200);
+  border-radius: 0.4rem;
+}
+
+/* 페이지네이션 (원형 버튼) */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 8rem;
+}
+
+.pagination button {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--gray-200);
+  background: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--gray-600);
+  transition: all 0.2s;
+}
+
+.active {
+  background: #2f80ed !important;
+  color: #ffffff !important;
+  border: none !important;
+}
+
+.arrowBtn {
+  font-weight: bold;
+}
+.arrowBtn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.footer {
+  width: 100%;
+  background-color: var(--gray-900);
+  color: var(--gray-400);
+  padding: 3.2rem 0 10rem 0;
+  margin-top: 6rem;
+}
+
+.footerContainer {
+  width: 100%;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footerLeft a {
+  font-size: 1.6rem;
+}
+.footerCenter {
+  display: flex;
+  gap: 3rem;
+}
+.footerCenter a {
+  color: #cfcfcf;
+}
+.snsIcon {
+  display: flex;
+  gap: 1.2rem;
+}
+.snsIcon img {
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+}
+
+/*  미디어 쿼리 (반응형) */
+@media (max-width: 128rem) {
+  .header,
+  .footerContainer {
+    padding: 0 3.2rem;
+  }
+}
+
+@media (max-width: 1199px) {
+  .bestGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .allGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 743px) {
+  .bestGrid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .allGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .header {
+    padding: 0 2rem;
+  }
+
+  .footerContainer {
+    padding: 0 2rem;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .headerLeft {
+    gap: 1.5rem;
+  }
+  .navItem {
+    padding: 1.5rem 1rem;
+    font-size: 1.5rem;
+  }
+}

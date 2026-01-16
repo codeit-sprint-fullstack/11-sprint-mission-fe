@@ -1,14 +1,4 @@
-html {
-  font-size: 62.5%; /* 1rem = 10px */
-}
-
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 :root {
   --primary-100: #3692ff;
@@ -31,9 +21,7 @@ html {
   --gray-900: #111827;
 }
 
-/* 변수 사용은 color: var(--gray-700);와 같이 사용합니다. */
-
-body {
+.loginPageBody {
   font-family: 'Pretendard Variable', sans-serif;
   font-size: 1.6rem;
   color: var(--gray-700);
@@ -50,7 +38,7 @@ a {
   cursor: pointer;
 }
 
-/* -------- h1 태그 숨기기 -------- */
+/* h1 태그 숨기기 */
 .srOnly {
   position: absolute;
   width: 1px;
@@ -67,14 +55,12 @@ a {
 .loginContainer,
 .signupContainer {
   width: 100%;
-  width: 64rem;
-  max-width: 40rem;
+  max-width: 40rem; /* 64rem에서 수정(로그인 창보다 작게) */
   min-height: 61.8rem;
-
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 2rem; /* 모바일 대응 여백 */
+  padding: 0 2rem;
 }
 
 /* ----------- 로고 영역 ----------- */
@@ -85,7 +71,6 @@ header {
   margin-bottom: 3.2rem;
 }
 
-/* --------- 로고 이미지 -------- */
 .loginLogo img,
 .signupLogo img {
   width: 30rem;
@@ -119,11 +104,9 @@ main {
   width: 100%;
   height: 4.8rem;
   padding: 1.6rem 2.4rem;
-
   border: 1px solid var(--bg-white);
   background-color: var(--gray-100);
   border-radius: 0.8rem;
-
   font-size: 1.6rem;
   color: var(--gray-400);
   outline: none;
@@ -135,7 +118,7 @@ main {
   color: var(--gray-800);
 }
 
-/* ------- 비밀번호 눈 아이콘 (로그인/회원가입) ------- */
+/* ------- 비밀번호 눈 아이콘 ------- */
 .loginEyes,
 .inputEyes {
   position: absolute;
@@ -143,7 +126,8 @@ main {
   right: 1.6rem;
   width: 2rem;
   height: 2rem;
-  background-image: url('./img/login_eyes.png');
+  /* 이미지 경로 수정 (/img) */
+  background-image: url(/img/login_eyes.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -155,10 +139,8 @@ main {
 .signupBtn {
   width: 100%;
   height: 4.8rem;
-
-  background-color: var(--gray-400);
+  background-color: var(--primary-100);
   color: var(--bg-white);
-
   font-size: 1.6rem;
   font-weight: 600;
   border: none;
@@ -170,7 +152,7 @@ main {
 
 .loginBtn:hover,
 .signupBtn:hover {
-  background-color: var(--primary-100);
+  background-color: var(--primary-200);
 }
 
 /* ------ 소셜 박스 -------- */
@@ -178,10 +160,8 @@ main {
   width: 100%;
   margin-top: 2.4rem;
   padding: 1.6rem 2rem;
-
   background-color: #e6f2ff;
   border-radius: 0.8rem;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -199,6 +179,7 @@ main {
   align-items: center;
 }
 
+.socialIconLink img,
 .socialIcon img {
   width: 4.2rem;
   height: 4.2rem;

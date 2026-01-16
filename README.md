@@ -1,14 +1,18 @@
-# 판다마켓 (Panda Market) - Sprint Mission
+# React + Vite
 
-## 1. 프로젝트 소개
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-판다마켓은 중고 물품을 사고팔 수 있는 온라인 거래 플랫폼의 랜딩 페이지, 로그인, 회원가입 페이지를 구현한 프로젝트입니다.
-반응형 웹 디자인을 적용하여 다양한 디바이스에서 최적화된 화면을 제공하며, 공통된 디자인 시스템을 통해 일관성 있는 UI를 구축했습니다.
+Currently, two official plugins are available:
 
-## 2. 구현 기능 및 페이지
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-### 2-1. 랜딩 페이지
+## React Compiler
 
-### 2-2. 로그인 페이지
+The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
 
-### 2-3. 회원가입 페이지
+Note: This will impact Vite dev & build performances.
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
