@@ -2,9 +2,10 @@ import React from 'react';
 import styles from './Header.module.css';
 import logo from '../../asset/logo.png';
 import { useNavigate } from 'react-router';
+import { Button } from '../Button/Button';
 
 export const Header = () => {
-  //랜딩페이지 header와 자유,중고header 구현
+  //랜딩페이지 header와 그외 페이지 header 구현
   const navHome = useNavigate();
   const onNavHome = () => {
     navHome('/');
@@ -24,7 +25,7 @@ export const Header = () => {
             </div>
           </section>
 
-          <div className={styles.loginButton}>로그인</div>
+          <Button content="로그인" />
         </nav>
       </header>
     </>

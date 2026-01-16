@@ -11,10 +11,14 @@ import twitter from '../../asset/twitter.png';
 import insta from '../../asset/insta.png';
 import styles from './Home.module.css';
 import { useNavigate } from 'react-router';
+import { Footer } from '../RecommercePage/Footer';
 
-export const Home = () => {// header footer 컴포넌트 분리 필요
+export const Home = () => {
+  // header footer 컴포넌트 분리 필요
   const nav = useNavigate();
-  const onNav = () => {nav('/items')};
+  const onNav = () => {
+    nav('/items');
+  };
   return (
     <>
       <header className={styles.global_navigation_bar}>
@@ -23,9 +27,7 @@ export const Home = () => {// header footer 컴포넌트 분리 필요
             <img className={styles.logo_img} src={logo} />
           </div>
 
-          <div className={styles.login_button}>
-            로그인
-          </div>
+          <div className={styles.login_button}>로그인</div>
         </nav>
       </header>
       <main>
@@ -112,30 +114,7 @@ export const Home = () => {// header footer 컴포넌트 분리 필요
           <img className={styles.main_header_img} src={footerImg} />
         </section>
       </main>
-      {/* <!_ 전체화면에서의 footer _> */}
-      <footer className={styles.footer}>
-        <div className={styles.footer_content}>
-          <div className={styles.copyright}>@codeit _ 2024</div>
-          <div className={styles.footer_link}>
-            <a href="/pages/privacy.html">PrivacyPolicy</a>
-            <a href="/pages/faq.html">FAQ</a>
-          </div>
-          <div className={styles.social}>
-            <div target="_blank" href="https://facebook.com">
-              <img src={facebook} />
-            </div>
-            <div target="_blank" href="https://x.com">
-              <img src={twitter} />
-            </div>
-            <div target="_blank" href="https://youtube.com">
-              <img src={youtube} />
-            </div>
-            <div target="_blank" href="https://instagram.com">
-              <img src={insta} />
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 };
