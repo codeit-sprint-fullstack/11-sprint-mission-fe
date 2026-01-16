@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './ProductCard.module.css';
-import heartImg from '../asset/ic_heart.png';
+import heartImg from '../../asset/ic_heart.png';
 export const ProductCard = ({ product }) => {
   const { images, price, name, likes } = product;
   return (

@@ -4,13 +4,13 @@ import { useNavigate } from 'react-router';
 export const AllProductSearch = ({ orderBy, onChangeOrderBy }) => {
   const nav = useNavigate();
   const handleNav = () => {
-    nav('/form');
+    nav('/registration');
   };
   return (
     <div>
+      <input />
+      <button onClick={handleNav}>상품등록하기</button>
       <form className={styles.search}>
-        <input />
-        <button onClick={handleNav}>상품등록하기</button>
         <select
           value={orderBy}
           onChange={(e) => onChangeOrderBy(e.target.value)}

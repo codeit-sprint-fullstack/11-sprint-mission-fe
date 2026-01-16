@@ -10,8 +10,11 @@ import youtube from '../../asset/youtube.png';
 import twitter from '../../asset/twitter.png';
 import insta from '../../asset/insta.png';
 import styles from './Home.module.css';
+import { useNavigate } from 'react-router';
 
-export const Home = () => {
+export const Home = () => {// header footer 컴포넌트 분리 필요
+  const nav = useNavigate();
+  const onNav = () => {nav('/items')};
   return (
     <>
       <header className={styles.global_navigation_bar}>
@@ -20,7 +23,7 @@ export const Home = () => {
             <img className={styles.logo_img} src={logo} />
           </div>
 
-          <div className={styles.login_button} href="/pages/login.html">
+          <div className={styles.login_button}>
             로그인
           </div>
         </nav>
@@ -34,7 +37,7 @@ export const Home = () => {
               <br />
               거래해 보세요
             </div>
-            <div className={styles.main_header_button} href="/pages/items.html">
+            <div className={styles.main_header_button} onClick={onNav}>
               구경하러 가기
             </div>
           </div>

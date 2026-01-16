@@ -1,7 +1,7 @@
 import { AllProduct } from './AllProduct';
 import { BestProduct } from './BestProduct';
 import { Footer } from './Footer';
-import { Header } from './Header';
+import { Header } from '../Header/Header';
 
 function RecommercePage() {
   return (

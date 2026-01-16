@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styles from './BestProduct.module.css';
-import { getProductList } from '../../../api/productService';
+import { getProductList } from '../../api/productService';
 import { ProductCardList } from './ProductCardList';
 
 const BEST_PRODUCT_LIMIT = 4;

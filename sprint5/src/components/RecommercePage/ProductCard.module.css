@@ -7,6 +7,9 @@
   width: 290px;
   height: 290px;
 }
+.imgesContent:hover {
+  cursor: pointer;
+}
 .imges {
   width: 100%;
   height: 100%;
@@ -15,6 +18,9 @@
 .name {
   margin-top: 16px;
   font-size: 14px;
+}
+.name :hover {
+  cursor: pointer;
 }
 .price {
   margin-top: 6px;
