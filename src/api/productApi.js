@@ -10,5 +10,5 @@ export const getProductList = async ({
   keyword = '',
 } = {}) => {
   const params = new URLSearchParams({ page, pageSize, sort, keyword });
-  return request(`/products?${params.toString()}`);
+  return request(`/items?${params.toString()}`);
 };

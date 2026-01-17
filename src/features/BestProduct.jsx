@@ -15,7 +15,7 @@ function BestProduct() {
       try {
         const items = await getProductList({
           pageSize: pageSize,
-          orderBy: 'favorite',
+          sort: 'favorite',
         });
         setProducts(items.list);
       } catch (error) {
