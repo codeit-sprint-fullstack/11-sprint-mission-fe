@@ -35,7 +35,7 @@ const LandingPage = () => {
           </div>
         </div>
 
-        <div className="featureItem" style={{ flexDirection: 'row-reverse' }}>
+        <div className="featureItem">
           <div className="imgBox">
             <img src="/img/search.png" alt="검색 예시 이미지" />
           </div>

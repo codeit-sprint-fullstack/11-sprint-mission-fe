@@ -6,21 +6,20 @@ import LandingPage from './pages/LandingPage';
 import ItemsPage from './pages/ItemsPage';
 import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
+import RegistrationPage from './pages/RegistrationPage';
+import ProductDetailPage from './pages/ProductDetailPage.jsx';
 
+
+// 레이아웃 컴포넌트: 로그인/회원가입 페이지에서만 헤더/푸터 숨김
 function Layout({ children }) {
-  const location = useLocation(); // 지금 주소 위치 확인
-
+  const location = useLocation();
   const isAuthPage =
     location.pathname === '/login' || location.pathname === '/signup';
+
   return (
     <>
-      {/* 로그인 페이지가 아닐 떄만 헤더가 보이게 */}
       {!isAuthPage && <Header />}
-
-      {/* 실제 페이지 내용 */}
       {children}
-
-      {/* 로그인 페이지가 아닐 때만 푸터가 보이게 */}
       {!isAuthPage && <Footer />}
     </>
   );
@@ -36,6 +35,8 @@ const App = () => {
           <Route path="/items" element={<ItemsPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignupPage />} />
+          <Route path="/registration" element={<RegistrationPage />} />
+          <Route path="/items/:itemId" element={<ProductDetailPage />} />
         </Routes>
       </Layout>
     </BrowserRouter>

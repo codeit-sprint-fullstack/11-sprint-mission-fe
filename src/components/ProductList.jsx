@@ -3,6 +3,7 @@ import { getProducts } from '../api/api';
 import { usePageSize } from '../hooks/usePageSize';
 import ProductCard from './ProductCard';
 import styles from '../App.module.css';
+import { Link } from 'react-router-dom';
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
@@ -63,17 +64,29 @@ const ProductList = () => {
             placeholder="검색할 상품을 입력해주세요"
             onChange={handleSearch}
           />
-          <button className={styles.btnRegister}>상품 등록하기</button>
+          {/* 버튼 -> 링크로 수정 */}
+          <Link to="/registration" className={styles.btnRegister}>
+            상품 등록하기
+          </Link>
           <select className={styles.sortSelect} onChange={handleSort}>
             <option value="recent">최신순</option>
-            <option value="favorite">좋아요순</option>
+            {/* 좋아요순 삭제 */}
           </select>
         </div>
       </div>
       <div className={`${styles.grid} ${styles.allGrid}`}>
-        {products?.map((product) => (
-          <ProductCard key={product.id} product={product} />
-        ))}
+        {products?.map((product) => {
+          // 이미지가 있는지 검사.. 이미지 없으면 디폴트 이미지
+          const displayProduct = {
+            ...product,
+            images:
+              product.images && product.images.length > 0
+                ? product.images
+                : ['/img/img_default.png'],
+          };
+          // 수정된 displayProduct 리턴
+          return <ProductCard key={product.id} product={displayProduct} />;
+        })}
       </div>
 
       <div className={styles.pagination}>

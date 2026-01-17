@@ -1,14 +1,14 @@
 import React from 'react';
-import { CiHeart } from 'react-icons/ci'; // 얇은 하트 아이콘
-import styles from './ProductCard.module.css';
+import { CiHeart } from 'react-icons/ci';
+import styles from '../styles/ProductCard.module.css';
 
 const ProductCard = ({ product }) => (
   <div className={styles.productCard}>
     <div className={styles.imgBox}>
-      {/* 이미지가 없을 경우 placeholder 이미지 사용 */}
+      {/* 이미지가 없을 경우 default 이미지 사용 */}
       <img
-        src={product.images[0] || 'https://via.placeholder.com/150'}
-        alt={product.name}
+        src={product.images[0] || '/img/default_product.png'}
+        alt="상품 이미지"
       />
     </div>
     <div className={styles.infoBox}>

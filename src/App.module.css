@@ -22,12 +22,13 @@
 
 .headerContainer {
   width: 100%;
-  max-width: 120rem;
+  max-width: 1920px;
   height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 3.2rem;
+  padding: 0 20rem; /* Desktop 기본 여백 */
+  transition: padding 0.3s ease;
 }
 
 /* 헤더 왼쪽: 로고 + 메뉴 */
@@ -71,6 +72,10 @@
   height: 4.8rem;
   border-radius: 0.8rem;
   cursor: pointer;
+
+  /* 공간이 좁아져도 버튼이 찌그러지거나 사라지지 않게 고정 */
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 /* 메인 콘텐츠 (헤더 높이만큼 여백) */
@@ -101,7 +106,7 @@
   font-size: 2rem;
   font-weight: 700;
   color: var(--gray-900);
-  justify-content: center;
+  display: flex;
   align-items: center;
   margin-bottom: 2rem;
 }
@@ -111,6 +116,7 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 2.4rem;
+  /* 모바일에서 줄바꿈을 위해 wrap 허용 */
   flex-wrap: wrap;
   gap: 1rem;
 }
@@ -135,6 +141,8 @@
   cursor: pointer;
   font-weight: 600;
   font-size: 1.6rem;
+  /* 버튼 텍스트 줄바꿈 방지 */
+  white-space: nowrap;
 }
 
 .sortSelect {
@@ -221,7 +229,9 @@
   cursor: pointer;
 }
 
-/*  미디어 쿼리 (반응형) */
+/* 미디어 쿼리 (반응형) */
+
+/* 1. Large Desktop ~ Tablet */
 @media (max-width: 128rem) {
   .header,
   .footerContainer {
@@ -229,37 +239,69 @@
   }
 }
 
+/* 2. Tablet (1199px 이하) */
 @media (max-width: 1199px) {
-  .bestGrid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  /* Tablet 그리드는 3열로 설정 */
+  .bestGrid,
   .allGrid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
+/* 3. Mobile (743px 이하) */
 @media (max-width: 743px) {
-  .bestGrid {
-    grid-template-columns: repeat(1, 1fr);
-  }
+  /* Mobile 그리드는 2열로 설정 */
+  .bestGrid,
   .allGrid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  /* 헤더 스타일 변경 */
   .header {
-    padding: 0 2rem;
+    height: 6rem; /* 헤더 높이 줄임 */
+    padding: 0; /* padding은 container에서 제어 */
   }
 
+  .headerContainer {
+    padding: 0 1.6rem; /* 여백 더 축소 */
+  }
+
+  .headerLogo img {
+    width: 8rem; /* 로고 크기 축소 */
+  }
+
+  .headerLeft {
+    gap: 1rem;
+  }
+
+  .navItem {
+    padding: 1rem 0.5rem;
+    font-size: 1.4rem;
+  }
+
+  /* 로그인 버튼 크기 조정 (사라지지 않음) */
+  .loginBtn {
+    width: auto;
+    padding: 0.8rem 1.2rem;
+    height: 3.6rem;
+    font-size: 1.4rem;
+  }
+
+  /* 푸터 */
   .footerContainer {
     padding: 0 2rem;
     flex-direction: column;
     gap: 2rem;
   }
 
-  .headerLeft {
-    gap: 1.5rem;
+  /* 검색창 레이아웃 변경 (줄바꿈) */
+  .listHeader {
+    gap: 1.2rem;
   }
-  .navItem {
-    padding: 1.5rem 1rem;
-    font-size: 1.5rem;
+
+  /* 검색창을 꽉 채워서 아랫줄로 보냄 */
+  .searchInput {
+    width: 100%;
+    order: 3; /* 순서 강제 조정 (맨 아래) */
   }
 }
