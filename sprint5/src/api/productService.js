@@ -47,13 +47,21 @@ export const createProduct = async ({
   images,
 }) => {
   try {
-    const response = await axios.post('/products', {
-      name,
-      description,
-      price,
-      tags,
-      images,
-    });
+    const response = await axios.post(
+      '/products',
+      {
+        name,
+        description,
+        price,
+        tags,
+        images,
+      },
+      {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      },
+    );
 
     const data = response.data;
     console.log(data);

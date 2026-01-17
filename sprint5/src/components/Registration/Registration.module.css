@@ -1,9 +1,67 @@
-.content_wrap{
-background-color: #b14b4b;
+.content_wrap {
+  padding: 10px 100px 30px 100px;
 }
-.head{
-    background-color: #b8ed84;
+.head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
-.form_wrap{
-    background-color: #aed0da;
+.title {
+  font-size: var(--font_content_size);
+  font-weight: var(--font_title_weight);
+}
+
+.form_wrap {
+  font-size: var(--font_highlight_size);
+  font-weight: var(--font_content_weight);
+}
+
+input,
+textarea {
+  width: 100%;
+  border-radius: 12px;
+  border: none;
+  background-color: var(--color-login-grey);
+  height: 60px;
+  padding: 15px;
+}
+
+textarea {
+  height: 200px;
+}
+
+input,
+textarea::placeholder {
+  font-size: var(--font_highlight_size);
+}
+
+@media (width<1200px) {
+  .content_wrap {
+    padding: 10px 20px 20px 20px;
+  }
+  input,
+  textarea {
+    width: 100%;
+    border-radius: 8px;
+    border: none;
+    height: 40px;
+    padding: 10px;
+  }
+  textarea {
+    height: 170px;
+  }
+}
+
+@media (width<600px) {
+  input,
+  textarea {
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    height: 30px;
+    padding: 10px;
+  }
+  textarea {
+    height: 140px;
+  }
 }

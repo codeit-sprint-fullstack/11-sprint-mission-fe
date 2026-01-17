@@ -27,6 +27,7 @@ a {
   width: 160px;
   display: flex;
   margin-left: 20px;
+  margin-right: 20px;
   justify-content: space-between;
 }
 
@@ -58,11 +59,11 @@ a {
 
   .logoImg {
     margin-left: 15px;
-    width: 110px;
+    width: 140px;
   }
 
   .menuStyle {
-    width: 100px;
+    width: 120px;
     display: flex;
     margin-left: 15px;
     justify-content: space-between;
@@ -79,7 +80,7 @@ a {
 
   .logoImg {
     margin-left: 10px;
-    width: 160px;
+    width: 110px;
   }
 
   .menuStyle {

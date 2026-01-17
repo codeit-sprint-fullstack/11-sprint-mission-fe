@@ -10,7 +10,7 @@
   background-color: var(--color-darkgrey);
 }
 .content {
-  width: px;
+  width: 100px;
 }
 @media (width<1200px) {
   .button {
