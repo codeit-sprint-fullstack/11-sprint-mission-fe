@@ -1,8 +1,14 @@
-.inputContainer{
+.addItemContainer{
   width: 0 auto;
   margin-top: 5.87rem;
   padding: 0 22.5rem;
   margin-bottom: 10.13rem;
+}
+
+.inputContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 
@@ -27,7 +33,7 @@
 .inputBox{
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
 
   font-size: 1.125rem;
   font-weight: 700;
@@ -35,15 +41,73 @@
 }
 
 /* input boxs */
-.itemName, .itemContent, .price, .tags{
+.itemName, .itemContent, .price, .tagInput{
   background-color: var(--Cool-Gray-100);
   border: none;
   border-radius: 0.75rem;
   padding: 1rem 1.5rem;
   height: 3.5rem;
-
 }
 
 .itemContent{
   height: 17.625rem;
+}
+
+::placeholder{
+  text-align: start;
+  color: var(--Secondary-400);
+  position: absolute;
+  top: 1rem;
+
+}
+
+.tags{
+  padding: 0.375rem 0.75rem 0.375rem 1rem;
+  background-color: var(--Cool-Gray-100);
+  border: none;
+  border-radius: 1.625rem;
+  text-align: center;
+  font-size: 1rem;
+
+  margin-top: 0.88rem;
+
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 auto;
+
+  cursor: pointer;
+}
+
+.closeBtn{
+  color:var(--gray-400);
+}
+
+/* tablet media */
+@media (max-width: 1199px) and (min-width: 744px){
+  .addItemContainer{
+    margin-top: 5.88rem;
+    margin-bottom: 12.13rem;
+    padding: 0 1rem;
+  }
+
+  .inputContainer{
+    gap: 1.5rem;
+  } 
+}
+
+
+/* mobile media */
+@media (max-width: 743px) and (min-width: 375px) {
+  .addItemContainer{
+    margin-top: 5.37rem;
+    margin-bottom: 11.62rem;
+    padding: 0 1.5rem;
+  }
+
+  .inputContainer{
+    gap: 1.5rem;
+  }
+
 }

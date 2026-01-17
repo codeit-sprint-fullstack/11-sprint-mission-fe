@@ -1,0 +1,124 @@
+
+.searchContainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 2.625rem;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+/* 검색 창 */
+.searchSection{
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.searchIcon{
+  position: relative;
+  left: 2.2rem;
+  bottom: -0.2rem;
+  color: var(--Secondary-400);
+}
+
+input{
+  width: 20.3125rem;
+  height: 2.625rem; 
+  padding: 0.5625rem 1.25rem 0.5625rem 2.5rem;
+  border-radius: 0.75rem;
+  background-color: var(--Secondary-100);
+  border: none;
+  color: var(--Secondary-400);
+  cursor: pointer;
+}
+
+/* 상품등록버튼 */
+.addItemBtn{
+  height: 2.625rem;
+  padding: 0.75rem 1.4375rem;
+  border-radius: 0.5rem;
+  border: none;
+  color: var(--Cool-Gray-100);
+  background-color:var(--primary-100);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 162.5%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* 최신순, 좋아요순 버튼 */
+.dropDownMenu{
+  position: relative;;
+  display: inline-block;
+}
+
+.toggleBtn{
+  width: 8.125rem;
+  height: 2.625rem;
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 0.75rem;
+  border: 1px solid var(--Cool-Gray-200);
+  background-color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.dropDownList{
+  position:absolute;
+  margin-top: 0.5rem;
+}
+
+.dropDownNew, .dropDownLike{
+  width: 8.125rem;
+  height: 2.625rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.75rem 0.75rem 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--Cool-Gray-200);
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.dropDownLike{
+  border-radius: 0 0 0.75rem 0.75rem;
+} 
+
+
+
+
+/* tablet media */
+/* @media (max-width: 1199px) and (min-width: 744px){
+  .searchContainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  margin: 1.5rem 0;
+  width: 75rem;
+  height: 2.625rem;
+  }   
+} */
+
+/* mobile media */
+/* @media (max-width: 743px) and (min-width: 375px) {
+  .searchContainer{
+    width: 100%;
+    display: flex;
+  }
+
+  .btn{
+    display: none;
+  }
+
+  .mobileBtn{
+    display: block;
+  }
+} */

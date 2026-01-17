@@ -1,6 +1,7 @@
 import Footer from "@/components/Footer/Footer";
 import ItmesHeader from "../../components/ItmesHeader/MarketHeader";
 import ProductListSection from "./components/ProductListSection/ProductListSection";
+import ProductList from "./components/ProductList/ProductList";
 
 
 
@@ -12,6 +13,7 @@ function MarketPage (){
     <>
       <ItmesHeader />
       <ProductListSection />
+      {/* <ProductList/> */}
       <Footer/>
     </>
   )
