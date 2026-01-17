@@ -11,7 +11,7 @@ import './ProductList.css';
 
 function ProductList() {
   const [products, setProducts] = useState([]);
-  const [orderBy, setOrderBy] = useState('recent');
+  const [sort, setSort] = useState('recent');
   const [keyword, setKeyword] = useState('');
 
   const device = useDeviceType();
@@ -28,7 +28,7 @@ function ProductList() {
 
   useEffect(() => {
     setCurrentPage(1);
-  }, [orderBy, keyword, pageSize, setCurrentPage]);
+  }, [sort, keyword, pageSize, setCurrentPage]);
 
   useEffect(() => {
     const getProducts = async () => {
@@ -36,7 +36,7 @@ function ProductList() {
         const items = await getProductList({
           page: currentPage,
           pageSize: pageSize,
-          orderBy: orderBy,
+          sort: sort,
           keyword: keyword,
         });
         setProducts(items.list);
@@ -47,7 +47,7 @@ function ProductList() {
     };
 
     getProducts();
-  }, [pageSize, orderBy, keyword, currentPage, setTotalItems]);
+  }, [pageSize, sort, keyword, currentPage, setTotalItems]);
 
   return (
     <section className="list-section">
@@ -72,8 +72,8 @@ function ProductList() {
           
           <SortDropdown
             options={sortOptions}
-            defaultValue={orderBy}
-            onSelect={(value) => setOrderBy(value)}
+            defaultValue={sort}
+            onSelect={(value) => setSort(value)}
           />
         </div>
       </div>
