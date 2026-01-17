@@ -5,9 +5,25 @@ import styles from './Registration.module.css';
 import { Button } from '../Button/Button';
 import { axios, createProduct } from '../../api/productService';
 import { useNavigate } from 'react-router';
+import { useInputValid } from '../../hooks/useInputValid';
+import { valid } from '../../util/valid';
 
 export const Registration = () => {
   const nav = useNavigate();
+  const nameInput = useInputValid(valid.name);
+  const descriptionInput = useInputValid(valid.description);
+  const priceInput = useInputValid(valid.price);
+  const tagsInput = useInputValid(valid.tags);
+
+  const handleValid = (e) => {
+    e.preventDefault();
+    if (nameInput.error || descriptionInput.error || priceInput || tagsInput) {
+      console.log('input valid : failed');
+      return;
+    }
+    console.log('input valid : succeed');
+  };
+
   const handlePostingProduct = async (e) => {
     e.preventDefault(); // ← 이게 없으면 무조건 URL에 쿼리 붙는다
 
@@ -29,16 +45,6 @@ export const Registration = () => {
     nav(`/products/${product.id}`);
   };
 
-  useEffect(() => {
-    const interceptorId = axios.interceptors.request.use((config) => {
-      console.log(config.headers);
-      return config;
-    });
-    console.log(interceptorId.headers);
-    return () => {
-      axios.interceptors.request.eject(interceptorId);
-    };
-  }, []);
   return (
     <>
       <Header />
@@ -50,21 +56,51 @@ export const Registration = () => {
           </div>
           <div className={styles.form_wrap}>
             <p>상품명</p>
-            <input name="name" placeholder="상품명을 입력해주세요" required />
+            <input
+              value={nameInput.value}
+              onBlur={nameInput.onTouched}
+              onChange={nameInput.onChange}
+              name="name"
+              placeholder="상품명을 입력해주세요"
+              required
+            />
+            {nameInput.error && <div className={valid}>{nameInput.error}</div>}
             <p>상품 소개</p>
             <textarea
+              value={descriptionInput.value}
+              onBlur={descriptionInput.onTouched}
+              onChange={descriptionInput.onChange}
               name="description"
               placeholder="상품 소개를 입력해주세요"
               required
             />
+            {descriptionInput.error && (
+              <div className={valid}>{descriptionInput.error}</div>
+            )}
+
             <p>판매가격</p>
             <input
+              value={priceInput.value}
+              onBlur={priceInput.onTouched}
+              onChange={priceInput.onChange}
               name="price"
               placeholder="판매 가격을 입력해주세요"
               required
             />
+            {priceInput.error && (
+              <div className={valid}>{priceInput.error}</div>
+            )}
+
             <p>태그</p>
-            <input name="tags" placeholder="태그를 입력해주세요" required />
+            <input
+              value={tagsInput.value}
+              onBlur={tagsInput.onTouched}
+              onChange={tagsInput.onChange}
+              name="tags"
+              placeholder="태그를 입력해주세요"
+              required
+            />
+            {tagsInput.error && <div className={valid}>{tagsInput.error}</div>}
           </div>
         </form>
       </div>
