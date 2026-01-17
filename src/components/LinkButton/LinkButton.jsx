@@ -1,10 +1,25 @@
 import clsx from 'clsx';
 import styles from './LinkButton.module.css';
+import { Link } from 'react-router';
 
-export function LinkButton({ to, children, className }) {
-  return (
-    <a className={clsx(className, styles.loginButton)} href={to}>
+export function LinkButton({ to, children, className, onClick, disabled }) {
+  return to ? (
+    <Link
+      className={clsx(className, styles.loginButton)}
+      to={to}
+      onClick={onClick}
+      disabled={disabled}
+    >
       {children}
-    </a>
+    </Link>
+  ) : (
+    <button
+      className={clsx(className, styles.loginButton)}
+      to={to}
+      onClick={onClick}
+      disabled={disabled}
+    >
+      {children}
+    </button>
   );
 }

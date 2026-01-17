@@ -10,7 +10,7 @@ import styles from './HomePage.module.css';
 export function HomePage() {
   return (
     <>
-      <Header title='판다마켓 메인 페이지' />
+      <Header title="판다마켓 메인 페이지" />
 
       <PandaContainer
         className={styles.hero}
@@ -22,7 +22,9 @@ export function HomePage() {
           <br />
           거래해 보세요
         </h2>
-        <LinkButton className={styles.itemButton}>구경하러 가기</LinkButton>
+        <LinkButton to="/items" className={styles.itemButton}>
+          구경하러 가기
+        </LinkButton>
       </PandaContainer>
 
       <HomeFeatureSection />

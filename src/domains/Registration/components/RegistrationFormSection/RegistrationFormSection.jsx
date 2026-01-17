@@ -5,6 +5,8 @@ import { LinkButton } from '@/components/LinkButton';
 import { RegistrationFormField } from '../RegistrationFormField';
 import { ProductTag } from '../ProductTag';
 import styles from './RegistrationFormSection.module.css';
+import { useNavigate } from 'react-router';
+import { createProduct } from '@/apis';
 
 export function RegistrationFormSection() {
   const [form, setForm] = useState({
@@ -15,7 +17,10 @@ export function RegistrationFormSection() {
   });
   const [tags, setTags] = useState([]);
 
-  const isCompleted = false;
+  const isCompleted =
+    form.productName.trim() !== '' &&
+    form.productDescription.trim() !== '' &&
+    form.productPrice.trim() !== '';
 
   const handleFormChange = (e) => {
     const { name, value } = e.target;
@@ -44,6 +49,29 @@ export function RegistrationFormSection() {
     setTags((prev) => prev.filter((tag) => tag !== targetTag));
   };
 
+  const navigate = useNavigate();
+
+  const handleSubmit = async () => {
+    try {
+      // const newProduct = {
+      //   name: form.productName,
+      //   description: form.productDescription,
+      //   price: form.productPrice,
+      //   tags: tags,
+      //   images: [],
+      // };
+
+      // const createdProduct = await createProduct(newProduct);
+
+      const fakeProductId = 1234;
+      navigate(`/items/${fakeProductId}`);
+      // navigate(`/items/${createdProduct.id}`);
+    } catch (error) {
+      console.error('상품 등록 실패:', error);
+      alert('로그인 후 상품 등록이 가능합니다.');
+    }
+  };
+
   return (
     <section className={styles.section}>
       <div className={styles.bar}>
@@ -53,6 +81,8 @@ export function RegistrationFormSection() {
             styles.registrationButton,
             isCompleted && styles.completed,
           )}
+          onClick={handleSubmit}
+          disabled={!isCompleted}
         >
           등록
         </LinkButton>

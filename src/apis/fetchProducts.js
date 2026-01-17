@@ -11,7 +11,40 @@ export async function getProductList({
   );
 
   if (!response.ok) {
-    throw new Error(`HTTP Error! Status: ${response.status}`);
+    const errText = await response.text();
+    throw new Error(`HTTP Error! Status: ${response.status} ${errText}`);
+  }
+
+  const data = await response.json();
+  return data;
+}
+
+export async function createProduct({
+  name,
+  description,
+  price = 0,
+  tags = [],
+  images = [],
+}) {
+  const newProduct = {
+    name,
+    description,
+    price,
+    tags,
+    images,
+  };
+
+  const response = await fetch(`${BASE_URL}/products`, {
+    method: 'POST',
+    body: JSON.stringify(newProduct),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+
+  if (!response.ok) {
+    const errText = await response.text();
+    throw new Error(`HTTP Error! Status: ${response.status} ${errText}`);
   }
 
   const data = await response.json();

@@ -37,7 +37,7 @@ export function SearchProducts({ keyword, setKeyword, goToPage }) {
           <img src={searchImg} alt="돋보기 아이콘" className={styles.search} />
         </div>
       </form>
-      <LinkButton className={styles.regitstrationButton}>
+      <LinkButton to='/registration' className={styles.regitstrationButton}>
         상품 등록하기
       </LinkButton>
       <OrderByButtton />

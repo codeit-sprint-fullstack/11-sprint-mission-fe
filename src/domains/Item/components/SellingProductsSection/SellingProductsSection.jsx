@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useDebounce } from 'use-debounce';
-import { getProductList } from '@/apis/fetchProducts';
+import { getProductList } from '@/apis';
 import { usePagination } from '../../hooks/usePagination';
 import { SearchProducts } from '../SearchProducts';
 import { Product } from '../Products';
@@ -40,9 +40,9 @@ export function SellingProductsSection() {
         <div className={styles.bar}>
           <h2 className={styles.productsTitle}>판매 중인 상품</h2>
           <SearchProducts
-          keyword={keyword}
-          setKeyword={setKeyword}
-          goToPage={goToPage}
+            keyword={keyword}
+            setKeyword={setKeyword}
+            goToPage={goToPage}
           />
         </div>
 

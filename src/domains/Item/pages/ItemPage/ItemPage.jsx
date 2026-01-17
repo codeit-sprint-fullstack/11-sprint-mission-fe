@@ -7,9 +7,9 @@ import styles from './ItemPage.module.css';
 export function ItemPage() {
   return (
     <>
-      <Header title="판다마켓 중고마켓 페이지">
+      <Header title="판다마켓 중고마켓 페이지" className={styles.header}>
         <Menu>자유게시판</Menu>
-        <Menu>중고마켓</Menu>
+        <Menu className={styles.color}>중고마켓</Menu>
       </Header>
 
       <SellingProductsSection />

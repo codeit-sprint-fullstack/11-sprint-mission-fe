@@ -1,12 +1,16 @@
+import { Route, Routes } from 'react-router';
 import { HomePage } from './domains/Home/pages/HomePage';
 import { ItemPage } from './domains/Item/pages/ItemPage';
 import { RegistrationPage } from './domains/Registration/pages/RegistrationPage';
-import styles from './App.module.css';
 
 function App() {
-  // return <HomePage />;
-  return <ItemPage />
-  // return <RegistrationPage />
+  return (
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/items" element={<ItemPage />} />
+      <Route path="/registration" element={<RegistrationPage />} />
+    </Routes>
+  );
 }
 
 export default App;
