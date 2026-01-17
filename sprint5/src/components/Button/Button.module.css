@@ -9,3 +9,16 @@
 .button.false {
   background-color: var(--color-darkgrey);
 }
+.content {
+  width: px;
+}
+@media (width<1200px) {
+  .button {
+    padding: 8px 26px;
+  }
+}
+@media (width<600px) {
+  .button {
+    padding: 2px 20px;
+  }
+}

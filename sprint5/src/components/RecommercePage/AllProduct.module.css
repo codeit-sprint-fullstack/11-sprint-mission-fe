@@ -1,3 +1,7 @@
+.content {
+  display: flex;
+  flex-direction: column;
+}
 .titleWrap {
   height: 42px;
   display: flex;
@@ -9,4 +13,5 @@
   margin-left: 10px;
   font-weight: var(--font_highlight_weight);
   font-size: 20px;
+  display: flex;
 }

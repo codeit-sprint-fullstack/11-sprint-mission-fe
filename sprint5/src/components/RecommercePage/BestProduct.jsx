@@ -24,7 +24,7 @@ export const BestProduct = () => {
     getProducts();
   }, []);
   return (
-    <section className={styles.content}>
+    <section>
       <div className={styles.title}>베스트 상품</div>
       <div className={styles.cardContent}>
         {items && <ProductCardList items={items} type="Best" />}

@@ -7,7 +7,7 @@ import thirdImg from '../../asset/image_third.png';
 import footerImg from '../../asset/image_footer.png';
 import styles from './Home.module.css';
 import { useNavigate } from 'react-router';
-import { Footer } from '../RecommercePage/Footer';
+import { Footer } from '../Footer/Footer';
 
 export const Home = () => {
   // header footer 컴포넌트 분리 필요

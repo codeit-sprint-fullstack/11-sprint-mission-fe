@@ -1,18 +1,17 @@
+import React from 'react';
 import { AllProduct } from './AllProduct';
-import { BestProduct } from './BestProduct';
-import { Footer } from './Footer';
 import { Header } from '../Header/Header';
+import { Footer } from '../Footer/Footer';
 
 function RecommercePage() {
   return (
-    <>
+    <div>
       <Header />
-      <div className="content">
-        <BestProduct />
+      <div>
         <AllProduct />
       </div>
       <Footer />
-    </>
+    </div>
   );
 }
 

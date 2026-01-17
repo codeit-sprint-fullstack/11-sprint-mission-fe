@@ -1,0 +1,17 @@
+.pagination {
+  display: flex;
+}
+button {
+  border-color: #00000036;
+  border-width: 1px;
+  background-color: #ffffff00;
+  border-radius: 20px;
+  margin: 2px;
+}
+p {
+  margin: 2px;
+}
+.active {
+  background-color: var(--color_highlight);
+  color: var(--color_white);
+}

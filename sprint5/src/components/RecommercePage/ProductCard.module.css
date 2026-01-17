@@ -40,10 +40,67 @@
 .likesContent p {
   margin-left: 4px;
 }
-.Best {
-}
 
-.All {
-  width: 200px;
-  height: 200px;
+@media (width<1200px) {
+  .contentwrap {
+    width: 240px;
+    height: 320px;
+    margin: 8px;
+  }
+  .imgesContent {
+    width: 240px;
+    height: 240px;
+  }
+  .name {
+    margin-top: 12px;
+    font-size: 10px;
+  }
+  .price {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    font-size: 14px;
+    font-weight: var(--font_highlight_weight);
+  }
+  .likesContent {
+    font-size: 8px;
+  }
+  .likesContent img {
+    width: 12px;
+    height: 12px;
+  }
+  .likesContent p {
+    margin-left: 2px;
+  }
+}
+@media (width<600px) {
+  .contentwrap {
+    width: 200px;
+    height: 280px;
+    margin: 6px;
+  }
+  .imgesContent {
+    width: 200px;
+    height: 200px;
+  }
+
+  .name {
+    margin-top: 10px;
+    font-size: 8px;
+  }
+  .price {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    font-size: 10px;
+    font-weight: var(--font_highlight_weight);
+  }
+  .likesContent {
+    font-size: 6px;
+  }
+  .likesContent img {
+    width: 10px;
+    height: 10px;
+  }
+  .likesContent p {
+    margin-left: 2px;
+  }
 }

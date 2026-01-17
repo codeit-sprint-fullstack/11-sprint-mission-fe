@@ -7,7 +7,7 @@ export const AllProductSearch = ({ orderBy, onChangeOrderBy }) => {
     nav('/registration');
   };
   return (
-    <div>
+    <div className={styles.search_warp}>
       <input />
       <button onClick={handleNav}>상품등록하기</button>
       <form className={styles.search}>

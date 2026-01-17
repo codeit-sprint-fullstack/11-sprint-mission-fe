@@ -1,6 +1,10 @@
+.search_warp {
+  display: flex;
+  height: 25px;
+  gap: 12px;
+}
 .search {
   display: flex;
-  gap: 12px;
 }
 .serach input {
   width: 290px;

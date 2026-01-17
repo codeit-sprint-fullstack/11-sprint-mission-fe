@@ -3,38 +3,33 @@ import styles from './AllProduct.module.css';
 import { AllProductSearch } from './AllProductSearch';
 import { getProductList } from '../../api/productService';
 import { ProductCardList } from './ProductCardList';
+import { useResize } from '../../hooks/useResize';
+import { Pagination } from '../../features/Pagination';
 
-const ALL_PRODUCT_LIMIT = 5;
 export const AllProduct = () => {
   const [items, setItems] = useState([]);
-  const [page, setPage] = useState(1);
   const [orderBy, setOrderBy] = useState('recent');
-  const getProductsMore = async () => {
-    try {
-      const { list } = await getProductList({
-        page,
-        pageSize: ALL_PRODUCT_LIMIT,
-      });
-      setItems((prevItems) => [...prevItems, ...list]);
-      setPage(page + ALL_PRODUCT_LIMIT);
-    } catch (e) {
-      console.log(`BestProduct useEffect! - ${e}`);
-    }
-  };
+  const [currentPage, setCurrentPage] = useState(1);
+  const pageSize = useResize();
+  const [totalCount, setTotalCount] = useState(0);
+
   useEffect(() => {
     const getProducts = async () => {
       try {
-        const { list } = await getProductList({
-          pageSize: ALL_PRODUCT_LIMIT,
+        const { list, totalCount } = await getProductList({
+          page: currentPage,
+          pageSize: pageSize,
           orderBy,
         });
         setItems(list); // 첫렌더링이라서 아규먼트로 콜백함수를 사용할 필요없음.
+        setTotalCount(totalCount);
       } catch (e) {
         console.log(`BestProduct useEffect! - ${e}`);
       }
     };
     getProducts();
-  }, [orderBy]);
+  }, [currentPage, orderBy, pageSize]);
+
   return (
     <section className={styles.content}>
       <div className={styles.titleWrap}>
@@ -44,7 +39,12 @@ export const AllProduct = () => {
       <div className={styles.cardContent}>
         {items && <ProductCardList items={items} type="All" />}
       </div>
-      <button onClick={getProductsMore}>더 불러 오기</button>
+      <Pagination
+        totalCount={totalCount}
+        pageSize={pageSize}
+        currentPage={currentPage}
+        onPageChange={setCurrentPage}
+      />
     </section>
   );
 };

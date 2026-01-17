@@ -1,5 +1,5 @@
 import React from 'react';
-import { Footer } from '../RecommercePage/Footer';
+import { Footer } from '../Footer/Footer';
 import { Header } from '../Header/Header';
 import styles from './Registration.module.css';
 import { Button } from '../Button/Button';
