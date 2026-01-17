@@ -64,7 +64,6 @@ const ProductList = () => {
             placeholder="검색할 상품을 입력해주세요"
             onChange={handleSearch}
           />
-          {/* 버튼 -> 링크로 수정 */}
           <Link to="/registration" className={styles.btnRegister}>
             상품 등록하기
           </Link>

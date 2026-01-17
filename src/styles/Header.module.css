@@ -37,7 +37,9 @@
 
 .navMenu {
   display: flex;
-  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
 /* 메뉴 아이템 기본 스타일 */

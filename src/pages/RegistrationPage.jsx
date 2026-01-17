@@ -19,14 +19,14 @@ const RegistrationPage = () => {
   const validateDesc = (val) => {
     if (!val) return '상품 소개를 입력해주세요.';
     if (val.length < 10 || val.length > 100)
-      return '10자 이상 100자 이내로 입력해주세요.';
+      return '10자 이상 입력해주세요.';
     return '';
   };
 
   // - 가격: 숫자만
   const validatePrice = (val) => {
     if (!val) return '가격을 입력해주세요.';
-    if (isNaN(val)) return '숫자만 입력해주세요.';
+    if (isNaN(val)) return '숫자로 입력해주세요.';
     return '';
   };
 
@@ -137,7 +137,7 @@ const RegistrationPage = () => {
               className={`${styles.textarea} ${
                 descInput.error ? styles.inputError : ''
               }`}
-              placeholder="상품 소개를 적어주세요 (10자 이상)"
+              placeholder="상품 소개를 적어주세요"
               value={descInput.value}
               onChange={descInput.handleChange}
               onBlur={descInput.handleBlur}
