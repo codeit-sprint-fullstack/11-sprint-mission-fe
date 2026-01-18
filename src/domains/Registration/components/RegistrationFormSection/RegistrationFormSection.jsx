@@ -7,6 +7,7 @@ import { ProductTag } from '../ProductTag';
 import styles from './RegistrationFormSection.module.css';
 import { useNavigate } from 'react-router';
 import { createProduct } from '@/apis';
+import { useFormValidation } from '../../hooks/useFormValidation';
 
 export function RegistrationFormSection() {
   const [form, setForm] = useState({
@@ -72,6 +73,8 @@ export function RegistrationFormSection() {
     }
   };
 
+  const { errors, isNotError } = useFormValidation(form, tags);
+
   return (
     <section className={styles.section}>
       <div className={styles.bar}>
@@ -95,7 +98,8 @@ export function RegistrationFormSection() {
           placeholder="상품명을 입력해주세요"
           value={form.productName}
           onChange={handleFormChange}
-          errorMessage="10자 이내로 입력해주세요"
+          error={errors.productName}
+          errorMessage={errors.productName}
         />
 
         <RegistrationFormField
@@ -105,7 +109,8 @@ export function RegistrationFormSection() {
           type="textarea"
           value={form.productDescription}
           onChange={handleFormChange}
-          errorMessage="10자 이상 입력해주세요"
+          error={errors.productDescription}
+          errorMessage={errors.productDescription}
         />
 
         <RegistrationFormField
@@ -114,7 +119,8 @@ export function RegistrationFormSection() {
           placeholder="판매 가격을 입력해주세요"
           value={form.productPrice}
           onChange={handleFormChange}
-          errorMessage="숫자로 입력해주세요"
+          error={errors.productPrice}
+          errorMessage={errors.productPrice}
         />
 
         <div>
@@ -125,7 +131,8 @@ export function RegistrationFormSection() {
             value={form.productTag}
             onChange={handleFormChange}
             onKeyDown={addTag}
-            errorMessage="5글자 이내로 입력해주세요"
+            error={errors.productTag}
+          errorMessage={errors.productTag}
           />
           <ul className={styles.productTags}>
             {tags.map((tag, index) => {

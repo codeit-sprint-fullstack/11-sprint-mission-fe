@@ -9,7 +9,7 @@ export function RegistrationFormField({
   value = '',
   onChange,
   onKeyDown,
-  error = false,
+  error = '',
   errorMessage = '',
 }) {
   const isTextarea = type === 'textarea';
