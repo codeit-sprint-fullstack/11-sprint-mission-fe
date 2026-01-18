@@ -1,0 +1,17 @@
+.content {
+  display: flex;
+  flex-direction: column;
+}
+.titleWrap {
+  height: 42px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 10px;
+}
+.title {
+  margin-left: 10px;
+  font-weight: var(--font_highlight_weight);
+  font-size: 20px;
+  display: flex;
+}

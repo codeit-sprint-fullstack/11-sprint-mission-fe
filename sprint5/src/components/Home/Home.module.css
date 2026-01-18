@@ -1,0 +1,237 @@
+.global_navigation_bar {
+  position: sticky;
+  top: 0;
+}
+nav {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 9px 200px 9px 200px;
+  background-color: var(--color_white);
+}
+
+.login_button {
+  text-decoration: none;
+  color: var(--color_white);
+  background-color: var(--color_highlight);
+  padding: 12px 32px;
+  border-radius: 8px;
+  font-size: var(--font_blue_size);
+}
+.logo_img {
+  margin: left 200px;
+  width: 153px;
+}
+
+.main_header {
+  background-color: var(--color_lightblue);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 200px;
+}
+section {
+  display: flex;
+  flex-direction: row;
+}
+.main_header_img {
+  width: 746px;
+}
+.title_wrap {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+}
+.title {
+  line-height: 140%;
+  color: var(--font_color_title);
+  font-size: var(--font_title_size);
+  font-weight: var(--font_title_weight);
+}
+.main_header_button {
+  background-color: var(--color_highlight);
+  border-radius: 40px;
+  padding: 16px 124px;
+  color: var(--color_white);
+  font-size: var(--font_blue_size);
+  font-weight: var(--font_blue_weight);
+  margin-top: 32px;
+  text-align: center;
+  text-decoration: none;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content_wrap {
+  padding: 138px 344px;
+  flex-shrink: 0;
+}
+.background {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 64px;
+  border-radius: 12px;
+  background-color: var(--color_main_content_background);
+}
+.content_text {
+  margin-right: 20px;
+}
+.content_text_left {
+  text-align: right;
+  margin-left: 20px;
+}
+
+.highlight {
+  color: var(--color_highlight);
+  font-size: var(--font_highlight_size);
+  font-weight: var(--font_highlight_weight);
+}
+.content_img {
+  width: 588px;
+}
+.content_wrap .title {
+  margin: 12px 0 24px 0;
+}
+.description {
+  font-size: var(--font_content_size);
+  line-height: var(--font-height);
+  font-weight: var(--font_content_weight);
+}
+
+
+@media (width < 1920px) {
+  :root {
+    --font_title_size: 40px;
+    --font_highlight_size: 18px;
+    --font_content_size: 24px;
+    --font_footer_size: 16px;
+    --font_blue_size: 16px;
+    --font-height: 32px;
+  }
+
+  .logo_img {
+    width: 152px;
+  }
+
+  .main_header {
+    padding-top: 198px;
+  }
+
+  .title_wrap {
+    width: 356px;
+  }
+
+  .main_header_img {
+    width: 738px;
+  }
+
+  .login_button {
+    padding: 12px 32px;
+  }
+
+  .main_header_button {
+    padding: 16px 123px;
+  }
+
+  .content_wrap {
+    padding: 136px 341px;
+  }
+
+  .content_img {
+    width: 582px;
+  }
+
+  .content_text,
+  .content_text_left {
+    width: 323px;
+  }
+
+}
+@media (width < 1200px) {
+  :root {
+    --font_title_size: 16px;
+    --font_highlight_size: 12px;
+    --font_content_size: 18px;
+    --font_footer_size: 10px;
+    --font_blue_size: 10px;
+    --font-height: 26px;
+  }
+
+  .logo_img {
+    width: 100px;
+  } /* 152 × 0.4 */
+  .main_header {
+    padding-top: 130px;
+  } /* 198 × 0.4 */
+  .title_wrap {
+    width: 280px;
+  }
+  .main_header_img {
+    width: 620px;
+  }
+  .login_button {
+    padding: 8px 24px;
+  }
+  .main_header_button {
+    padding: 10px 96px;
+  }
+  .content_wrap {
+    padding: 90px 290px;
+  }
+  .content_img {
+    width: 370px;
+  }
+  .content_text,
+  .content_text_left {
+    width: 270px;
+  }
+
+}
+
+@media (width < 600px) {
+  :root {
+    --font_title_size: 10px;
+    --font_highlight_size: 8px;
+    --font_content_size: 12px;
+    --font_footer_size: 7px;
+    --font_blue_size: 7px;
+    --font-height: 18px;
+  }
+
+  .logo_img {
+    width: 60px;
+  } /* 152 × 0.25 */
+  .main_header {
+    padding-top: 70px;
+  }
+  .title_wrap {
+    width: 100px;
+  }
+  .main_header_img {
+    width: 210px;
+  }
+  .login_button {
+    padding: 3px 10px;
+  }
+  .main_header_button {
+    padding: 6px 30px;
+  }
+  .content_wrap {
+    padding: 34px 85px;
+  }
+  .content_img {
+    width: 200px;
+  }
+  .content_text,
+  .content_text_left {
+    width: 150px;
+  }
+
+}
