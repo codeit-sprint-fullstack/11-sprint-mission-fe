@@ -68,6 +68,7 @@ p {
   border-radius: 0.8rem;
   background-color: var(--main);
 
+  line-height: 2.6rem;
   font-size: 1.6rem;
   font-weight: 600;
   color: var(--gray-09);

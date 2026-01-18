@@ -2,6 +2,7 @@ import InputBox from '@/components/InputBox';
 import { useState } from 'react';
 import { useProductValidation } from '@/hooks/useProductValidation';
 import { IoIosCloseCircle } from 'react-icons/io';
+import './ProductRegistrationPage.css';
 
 function ProductRegistrationPage() {
   const [name, setName] = useState('');
@@ -11,6 +12,12 @@ function ProductRegistrationPage() {
   const [tags, setTags] = useState([]);
 
   const { errors, validate } = useProductValidation();
+
+  const isFormValid =
+    name.trim() !== '' &&
+    description.trim() !== '' &&
+    price.trim() !== '' &&
+    Object.values(errors).every((error) => error === '');
 
   const handleInputChange = (type, value, change) => {
     change(value);
@@ -40,14 +47,19 @@ function ProductRegistrationPage() {
     <div className="registration-container">
       <div className="registration-header">
         <h2>상품 등록하기</h2>
-        <button className="button submit-button">등록</button>
+        <button
+          className={`button submit-button ${isFormValid ? 'active' : ''}`}
+          disabled={!isFormValid}
+        >
+          등록
+        </button>
       </div>
 
       <div className="registration-form">
         <InputBox
           label="상품명"
           guideText="10자 이내로 입력해주세요"
-          errorMessage={errors.name}
+          errorMessage={name === '' ? '' : errors.name}
         >
           <input
             placeholder="상품명을 입력해주세요"
@@ -59,7 +71,7 @@ function ProductRegistrationPage() {
         <InputBox
           label="상품 소개"
           guideText="10자 이상 입력해주세요"
-          errorMessage={errors.description}
+          errorMessage={description === '' ? '' : errors.description}
         >
           <textarea
             placeholder="상품 소개를 입력해주세요"
@@ -73,7 +85,7 @@ function ProductRegistrationPage() {
         <InputBox
           label="판매 가격"
           guideText="숫자로 입력해주세요"
-          errorMessage={errors.price}
+          errorMessage={price === '' ? '' : errors.price}
         >
           <input
             placeholder="판매 가격를 입력해주세요"
@@ -87,7 +99,7 @@ function ProductRegistrationPage() {
         <InputBox
           label="태그"
           guideText="5자 이내로 입력해주세요"
-          errorMessage={errors.tag}
+          errorMessage={tag === '' ? '' : errors.tag}
         >
           <input
             placeholder="태그를 입력해주세요"
@@ -99,9 +111,9 @@ function ProductRegistrationPage() {
           <div className="tag-list">
             {tags.map((tag, i) => (
               <span key={i} className="tag-chip">
-                #{tag}
+                # {tag}
                 <IoIosCloseCircle
-                  className="tag=delete"
+                  className="tag-delete"
                   onClick={() => handleDeleteTag(i)}
                 />
               </span>
