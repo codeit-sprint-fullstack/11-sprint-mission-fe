@@ -9,8 +9,8 @@ import styles from './HomePage.module.css';
 
 export function HomePage() {
   return (
-    <>
-      <Header title="판다마켓 메인 페이지" />
+    <div className={styles.container}>
+      <Header title="판다마켓 메인 페이지" className={styles.header} />
 
       <PandaContainer
         className={styles.hero}
@@ -43,6 +43,6 @@ export function HomePage() {
       </PandaContainer>
 
       <Footer />
-    </>
+    </div>
   );
 }

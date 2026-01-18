@@ -3,11 +3,12 @@ import twitter from '@/assets/ic_twitter.svg';
 import youtube from '@/assets/ic_youtube.svg';
 import instagram from '@/assets/ic_instagram.svg';
 import styles from './LogoContainer.module.css';
+import clsx from 'clsx';
 
-export function LogoContainer() {
+export function LogoContainer({className}) {
   return (
     <>
-      <ul className={styles.logoContainer}>
+      <ul className={clsx(styles.logoContainer, className)}>
         <li>
           <a href="https://www.facebook.com/" target="_blank">
             <img src={facebook} alt="페이스북 로고" />

@@ -1,6 +1,8 @@
 .section {
-  width: 1200px;
+  max-width: 1200px;
+  width: 100%;
   margin: 26px auto;
+  padding: 0 24px;
 }
 
 .bar {
@@ -34,7 +36,6 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
-  margin-bottom: 162px;
 
   label {
     font-weight: 700;
@@ -73,4 +74,20 @@
   display: flex;
   gap: 12px;
   margin-top: 14px;
+}
+
+/* Tablet */
+@media (max-width: 744px) {
+  .section {
+    max-width: 696px;
+    padding: 0 24px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 375px) {
+  .section {
+    max-width: 344px;
+    padding: 0 16px;
+  }
 }

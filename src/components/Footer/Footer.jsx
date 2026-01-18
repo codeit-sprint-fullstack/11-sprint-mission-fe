@@ -10,7 +10,7 @@ export function Footer() {
           <a href="">Privacy Policy</a>
           <a href="">FAQ</a>
         </div>
-        <LogoContainer />
+        <LogoContainer className={styles.logoContainer}/>
       </div>
     </footer>
   );

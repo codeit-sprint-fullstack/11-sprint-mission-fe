@@ -1,3 +1,10 @@
+.header {
+  button {
+    width: 128px;
+    height: 48px;
+  }
+}
+
 .hero {
   position: relative;
   width: 100%;
