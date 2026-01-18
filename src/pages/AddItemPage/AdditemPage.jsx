@@ -9,18 +9,21 @@ import { Navigate, useNavigate } from 'react-router';
 
 function AdditemPage() {
   //form 제출
-  const { postProduct } = usePostProductStore;
-  const Navigate = useNavigate();
+  const { postProduct } = usePostProductStore();
+  const navigate = useNavigate();
 
-  const submit = (formData) => {
-    const data = Object.fromEntries(formData.fromEntries());
-
-    postProduct({
-      ...data,
-      tags,
-    });
-    Navigate("/produdct")
-    // onSubmit(payload)
+  const submit = async (formData) => {
+    const data = Object.fromEntries(formData.entries());
+    try {
+      await postProduct({
+        ...data,
+        tags,
+      });
+      navigate("/product");
+    } catch (error) {
+      console.error(error);
+      alert('상품 등록 실패');
+    }
   };
 
   // 포커싱
@@ -53,12 +56,17 @@ function AdditemPage() {
   };
 
   const handleDeleteTag = (tag) => {
-    setTags((prev) => prev.fillter((t) => t !== tag));
+    setTags((prev) => prev.filter((t) => t !== tag));
   };
 
   return (
     <div className="wrapper">
-      <form action={submit}>
+      <form
+        onSubmit={(event) => {
+          event.preventDefault(); // 새로고침 방지
+          submit(new FormData(event.target));
+        }}
+      >
         <div className={styles.title}>
           <h1 className={styles.sectionTitle}>상품 등록하기</h1>
           <Button type="submit">등록</Button>
@@ -100,13 +108,12 @@ function AdditemPage() {
             />
             <ul className={styles.tagList}>
               {tags.map((tag) => (
-                <span key={tag} className={styles.tag}>
+                <li key={tag} className={styles.tag}>
                   #{tag}
-                  <button onClick={() => handleDeleteTag(tag)}>
-                    {' '}
-                    <img src={iconDelete} />{' '}
+                  <button type="button" onClick={() => handleDeleteTag(tag)}>
+                    <img src={iconDelete} />
                   </button>
-                </span>
+                </li>
               ))}
             </ul>
           </div>

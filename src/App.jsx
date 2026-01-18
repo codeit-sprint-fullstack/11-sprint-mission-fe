@@ -6,6 +6,7 @@ import MarketPage from './pages/MarketPage/components/MarketPage';
 import AdditemPage from './pages/AddItemPage/AdditemPage';
 import ItemPage from './pages/ItemPage';
 
+
 function App() {
   return (
     <>
@@ -14,7 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="items" element={<MarketPage />} />
-          <Route path="item" element={<ItemPage />} />
+          <Route path="product" element={<ItemPage />} />
           <Route path="registration" element={<AdditemPage />} />
         </Routes>
       </div>
