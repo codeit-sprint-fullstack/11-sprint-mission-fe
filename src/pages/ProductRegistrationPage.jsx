@@ -3,8 +3,11 @@ import { useState } from 'react';
 import { useProductValidation } from '@/hooks/useProductValidation';
 import { IoIosCloseCircle } from 'react-icons/io';
 import './ProductRegistrationPage.css';
+import { useNavigate } from 'react-router';
 
 function ProductRegistrationPage() {
+  const navigate = useNavigate();
+
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
   const [price, setPrice] = useState('');
@@ -50,6 +53,7 @@ function ProductRegistrationPage() {
         <button
           className={`button submit-button ${isFormValid ? 'active' : ''}`}
           disabled={!isFormValid}
+          onClick={() => navigate('/product')}
         >
           등록
         </button>

@@ -10,6 +10,7 @@ import BoardPage from '@/pages/BoardPage';
 import LoginPage from '@/pages/LoginPage';
 import PolicyPage from '@/pages/PolicyPage';
 import FAQPage from '@/pages/FAQPage';
+import ProductDetailPage from '@/pages/ProductDetailPage'
 
 import './styles/App.css';
 
@@ -24,9 +25,10 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/board" element={<BoardPage />} />
           <Route path="/login" element={<LoginPage />} />
-          <Route path="/registration" element={<ProductRegistrationPage />} />
+          <Route path="/productregistration" element={<ProductRegistrationPage />} />
           <Route path="/policy" element={<PolicyPage />} />
           <Route path="/faq" element={<FAQPage />} />
+          <Route path='/product' element={<ProductDetailPage />} />
         </Routes>
       </main>
 

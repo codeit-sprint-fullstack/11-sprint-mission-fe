@@ -1,6 +1,6 @@
 import logoMobile from '@/assets/images/header/logo-text.svg';
 import logoDesktop from '@/assets/images/header/logo-full.svg';
-import { Link } from 'react-router';
+import { Link, NavLink } from 'react-router';
 import './Header.css';
 
 function Header() {
@@ -23,10 +23,10 @@ function Header() {
           </div>
           <ul className="nav-menu">
             <li>
-              <Link to='/board'>자유게시판</Link>
+              <NavLink to='/board' className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>자유게시판</NavLink>
             </li>
             <li>
-              <Link to="/items">중고마켓</Link>
+              <NavLink to="/items" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>중고마켓</NavLink>
             </li>
           </ul>
         </div>

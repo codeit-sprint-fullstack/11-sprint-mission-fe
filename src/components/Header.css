@@ -35,7 +35,7 @@
   height: 100%;
 }
 
-.nav-menu li a {
+.nav-menu li .nav-link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -46,6 +46,10 @@
   font-size: 1.6rem;
   font-weight: 700;
   color: var(--gray-04);
+}
+
+.nav-menu li .nav-link.active {
+  color: var(--main);
 }
 
 .login-button {

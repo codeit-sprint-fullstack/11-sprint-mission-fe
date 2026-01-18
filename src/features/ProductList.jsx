@@ -65,7 +65,7 @@ function ProductList() {
             />
           </div>
 
-          <Link to='/registration' className='registration-link'>
+          <Link to='/productregistration' className='registration-link'>
             <button className="button registration-button">상품 등록하기</button>
           </Link>
           
