@@ -1,7 +1,3 @@
-.color {
-  color: var(--primary-color-blue100);
-}
-
 .container {
   display: flex;
   flex-direction: column;
