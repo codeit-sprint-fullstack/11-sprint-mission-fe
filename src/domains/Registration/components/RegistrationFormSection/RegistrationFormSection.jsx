@@ -1,13 +1,12 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router';
 import clsx from 'clsx';
-import { formatPrice } from '@/utils/formatPrice';
+import { createProduct } from '@/apis';
+import { useFormValidation } from '../../hooks/useFormValidation';
 import { LinkButton } from '@/components/LinkButton';
 import { RegistrationFormField } from '../RegistrationFormField';
 import { ProductTag } from '../ProductTag';
 import styles from './RegistrationFormSection.module.css';
-import { useNavigate } from 'react-router';
-import { createProduct } from '@/apis';
-import { useFormValidation } from '../../hooks/useFormValidation';
 
 export function RegistrationFormSection() {
   const [form, setForm] = useState({
@@ -82,10 +81,10 @@ export function RegistrationFormSection() {
         <LinkButton
           className={clsx(
             styles.registrationButton,
-            isCompleted && styles.completed,
+            isCompleted && isNotError && styles.completed,
           )}
           onClick={handleSubmit}
-          disabled={!isCompleted}
+          disabled={!isCompleted || !isNotError}
         >
           등록
         </LinkButton>
@@ -132,7 +131,7 @@ export function RegistrationFormSection() {
             onChange={handleFormChange}
             onKeyDown={addTag}
             error={errors.productTag}
-          errorMessage={errors.productTag}
+            errorMessage={errors.productTag}
           />
           <ul className={styles.productTags}>
             {tags.map((tag, index) => {
