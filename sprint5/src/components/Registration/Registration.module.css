@@ -1,5 +1,5 @@
 .content_wrap {
-  padding: 0.625rem 6.25rem 1.875rem 6.25rem;
+  padding: 10px 100px 30px 100px; /* 0.625rem 6.25rem 1.875rem 6.25rem */
 }
 .head {
   display: flex;
@@ -7,21 +7,20 @@
   justify-content: space-between;
 }
 .errorBorder {
-  border: 1px solid var(--color_red); /* 너비, 스타일, 색상 순 */
-
+  border: 1px solid var(--color_red);
   border-width: 1px;
 }
 .error {
   color: var(--color_red);
 }
 .title {
-  font-size: var(--font_content_size);
+  font-size: var(--font_content_size); /* 여기는 변수라 px 유지 */
   font-weight: var(--font_title_weight);
   color: var(--color-login-black);
 }
 
 .form_wrap {
-  font-size: var(--font_highlight_size);
+  font-size: var(--font_highlight_size); /* 변수 유지 */
   font-weight: var(--font_content_weight);
   color: var(--color-login-black);
 }
@@ -29,48 +28,50 @@
 input,
 textarea {
   width: 100%;
-  border-radius: 0.75rem;
+  border-radius: 12px; /* 0.75rem */
   background-color: var(--color-login-grey);
-  height: 3.75rem;
-  padding: 0.9375rem;
+  height: 60px; /* 3.75rem */
+  padding: 15px; /* 0.9375rem */
 }
 
 textarea {
-  height: 12.5rem;
+  height: 200px; /* 12.5rem */
 }
 
 input,
 textarea::placeholder {
-  font-size: var(--font_highlight_size);
+  font-size: var(--font_highlight_size); /* 변수 유지 */
 }
 
-@media (width<75rem) {
+@media (max-width: 1200px) {
+  /* 75rem */
   .content_wrap {
-    padding: 0.625rem 1.25rem 1.25rem 1.25rem;
+    padding: 10px 20px 20px 20px; /* 0.625rem 1.25rem 1.25rem 1.25rem */
   }
   input,
   textarea {
     width: 100%;
-    border-radius: 0.5rem;
+    border-radius: 8px; /* 0.5rem */
     border: none;
-    height: 2.5rem;
-    padding: 0.625rem;
+    height: 40px; /* 2.5rem */
+    padding: 10px; /* 0.625rem */
   }
   textarea {
-    height: 10.625rem;
+    height: 170px; /* 10.625rem */
   }
 }
 
-@media (width<37.5rem) {
+@media (max-width: 600px) {
+  /* 37.5rem */
   input,
   textarea {
     width: 100%;
-    border-radius: 0.3125rem;
+    border-radius: 5px; /* 0.3125rem */
     border: none;
-    height: 1.875rem;
-    padding: 0.625rem;
+    height: 30px; /* 1.875rem */
+    padding: 10px; /* 0.625rem */
   }
   textarea {
-    height: 8.75rem;
+    height: 140px; /* 8.75rem */
   }
 }

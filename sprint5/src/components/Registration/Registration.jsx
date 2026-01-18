@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Footer } from '../Footer/Footer';
 import { Header } from '../Header/Header';
 import styles from './Registration.module.css';
@@ -10,22 +10,20 @@ import { valid } from '../../util/valid';
 
 export const Registration = () => {
   const nav = useNavigate();
-  const [activated, setActivated] = useState(false);
+
   const nameInput = useInputValid(valid.name);
   const descriptionInput = useInputValid(valid.description);
   const priceInput = useInputValid(valid.price);
   const tagsInput = useInputValid(valid.tags);
-
-  const handleValid = (e) => {
-    e.preventDefault();
-
-    if (nameInput.error || descriptionInput.error || priceInput || tagsInput) {
-      console.log('input valid : failed');
-      setActivated(false);
-      return;
-    }
-    console.log('input valid : succeed');
-  };
+  const activated =
+    nameInput.value &&
+    descriptionInput.value &&
+    priceInput.value &&
+    tagsInput.value &&
+    !nameInput.error &&
+    !descriptionInput.error &&
+    !priceInput.error &&
+    !tagsInput.error;
 
   const handlePostingProduct = async (e) => {
     e.preventDefault(); // ← 이게 없으면 무조건 URL에 쿼리 붙는다
@@ -47,12 +45,28 @@ export const Registration = () => {
 
     nav(`/products/${product.id}`);
   };
+  const handleValid = async (e) => {
+    e.preventDefault();
+
+    if (
+      nameInput.error ||
+      descriptionInput.error ||
+      priceInput.error ||
+      tagsInput.error
+    ) {
+      console.log('input valid : failed');
+
+      return;
+    }
+    console.log('input valid : succeed');
+    await handlePostingProduct(e);
+  };
 
   return (
     <>
       <Header />
       <div className={styles.content_wrap}>
-        <form onSubmit={handlePostingProduct}>
+        <form onSubmit={handleValid}>
           <div className={styles.head}>
             <p className={styles.title}>상품등록하기</p>
             <button disabled={!activated} type="submit">
