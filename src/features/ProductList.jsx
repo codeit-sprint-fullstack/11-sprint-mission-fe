@@ -13,6 +13,7 @@ function ProductList() {
   const [products, setProducts] = useState([]);
   const [sort, setSort] = useState('recent');
   const [keyword, setKeyword] = useState('');
+  const [searchQuery, setSearchQuery] = useState('')
 
   const device = useDeviceType();
 
@@ -27,8 +28,16 @@ function ProductList() {
   ];
 
   useEffect(() => {
+    const timer = setTimeout(() => {
+      setSearchQuery(keyword);
+    }, 500)
+
+    return () => clearTimeout(timer)
+  }, [keyword])
+
+  useEffect(() => {
     setCurrentPage(1);
-  }, [sort, keyword, pageSize, setCurrentPage]);
+  }, [sort, searchQuery, pageSize, setCurrentPage]);
 
   useEffect(() => {
     const getProducts = async () => {
@@ -37,7 +46,7 @@ function ProductList() {
           page: currentPage,
           pageSize: pageSize,
           sort: sort,
-          keyword: keyword,
+          keyword: searchQuery,
         });
         setProducts(items.list);
         setTotalItems(items.totalCount);
@@ -47,7 +56,7 @@ function ProductList() {
     };
 
     getProducts();
-  }, [pageSize, sort, keyword, currentPage, setTotalItems]);
+  }, [pageSize, sort, searchQuery, currentPage, setTotalItems]);
 
   return (
     <section className="list-section">
