@@ -1,5 +1,5 @@
 import Footer from '@/components/Footer/Footer';
-import ItmesHeader from '@/components/ItmesHeader/MarketHeader';
+import MarketHeader from '@/components/MarketHeader/MarketHeader';
 import styles from './AddItem.module.css';
 import { IoCloseCircle } from 'react-icons/io5';
 import { useState } from 'react';
@@ -14,7 +14,7 @@ function AddItem() {
 
   return (
     <>
-      <ItmesHeader />
+      <MarketHeader />
       <div className={styles.addItemContainer}>
         <div className={styles.AddNev}>
           <h2>상품 등록하기</h2>
