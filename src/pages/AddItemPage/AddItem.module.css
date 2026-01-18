@@ -57,7 +57,7 @@
   text-align: start;
   color: var(--Secondary-400);
   position: absolute;
-  top: 1rem;
+  padding: 7px 0 0 ;
 
 }
 
