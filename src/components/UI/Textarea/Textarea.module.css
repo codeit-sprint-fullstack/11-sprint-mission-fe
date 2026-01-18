@@ -1,10 +1,18 @@
 .textarea {
-  background: #F9F9F9;
-  border: 1px solid #D0D0D0;
-  border-radius: 6px;
-  padding: 15px 20px;
+  border-radius: 1.2rem;
+  background-color: var(--Secondary-100);
+  padding: 1.6rem 2.4rem;
+  font-size: 1.6rem;
+  min-height: 28.2rem;
+  resize: vertical;
 }
 
 .textarea::placeholder {
-  color: #BDBDBD;
+  color: var(--Secondary-400);
+  font-size: 1.6rem;
 }
+
+.textarea:focus {
+  outline: none;
+}
+

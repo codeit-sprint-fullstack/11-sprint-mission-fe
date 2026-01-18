@@ -1,13 +1,13 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'https://panda-market-api.vercel.app';
+const API_BASE_URL = 'http://localhost:5005';
 
 //axios로 API 연동하기
 export async function getProducts(params = {}) {
   const query = new URLSearchParams(params).toString();
 
   try {
-    const response = await axios.get(`${API_BASE_URL}/products?${query}`);
+    const response = await axios.get(`${API_BASE_URL}/items?${query}`);
     const items = response.data.list;
     const total = response.data.totalCount;
     return { items, total };
@@ -40,3 +40,22 @@ export async function getProducts(params = {}) {
 //     throw error;
 //   }
 // }
+
+export async function createProducts(name, description, price, tags) {
+  try {
+    const response = await axios.post(`${API_BASE_URL}/items`, {
+      name,
+      description,
+      price,
+      tags,
+    });
+    return response.data
+  } catch (error) {
+    if (error.response) {
+      const errorMessage = `[StatusCode ${error.response.status}] ${error.response.data.message}`;
+      console.error(errorMessage);
+      throw new Error(errorMessage);
+    }
+    throw error;
+  }
+}

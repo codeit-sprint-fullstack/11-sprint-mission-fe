@@ -1,4 +1,4 @@
-import { getProducts } from '@/api/itemsApi';
+import { createProducts, getProducts } from '@/api/itemsApi';
 import { create } from 'zustand';
 
 export const useProductsStore = create((set) => ({
@@ -21,7 +21,7 @@ export const useProductsStore = create((set) => ({
     }));
     try {
       const { items } = await getProducts({
-        orderBy: 'favorite',
+        orderBy: 'favorite',  // 'favorite'
         page: 1,
         pageSize,
       });
@@ -69,3 +69,23 @@ export const useProductsStore = create((set) => ({
     }
   },
 }));
+
+export const usePostProductStore = create((set) => ({
+  posts: [],
+  isLoading: false,
+  error: null,
+
+  postProduct : async (payload) => {
+    try {
+      set({ isLoading:true, error: null})
+      const newProduct = await createProducts(payload)
+      set((state) => ({
+        posts: [...state.posts, newProduct],
+        isLoading: false,
+      }))
+      return newProduct;
+    } catch (error) {
+      set({ error: error.message, isLoading: false });
+    }
+  } 
+}))
