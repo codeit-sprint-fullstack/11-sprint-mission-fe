@@ -14,7 +14,7 @@
   width: 100%;
 }
 
-.registration-header{
+.registration-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -38,31 +38,6 @@
 .registration-container .submit-button.active {
   background-color: var(--main);
   cursor: pointer;
-}
-
-.tag-list {
-  display: flex;
-  gap: 1.2rem;
-  margin-top: 1.4rem;
-}
-
-.tag-chip {
-  font-weight: 400;
-  font-size: 1.6rem;
-  line-height: 2.6rem;
-  color: var(--gray-02);
-  padding: 0.5rem 1.6rem;
-  background-color: var(--gray-09);
-  border-radius: 999px;
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-}
-
-.tag-delete {
-  width: 2rem;
-  height: 2rem;
-  color: var(--gray-06);
 }
 
 /* 반응형 디자인 */
