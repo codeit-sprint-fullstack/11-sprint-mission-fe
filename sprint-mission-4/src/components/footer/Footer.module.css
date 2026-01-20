@@ -1,0 +1,33 @@
+.footer {
+  background-color: #111827;
+  padding: 32px 200px;
+}
+
+.footerBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: auto;
+}
+.footerText1 {
+  color: #9ca3af;
+  font-size: 16px;
+  font-weight: 400;
+}
+.footerText2 {
+  color: #e5e7eb;
+  font-size: 16px;
+  font-weight: 400;
+}
+.footerBoxMiddle {
+  display: flex;
+  gap: 30px;
+}
+.footerBoxEnd {
+  display: flex;
+  gap: 12px;
+}
+.icon {
+  width: 18px;
+  height: 18px;
+}
