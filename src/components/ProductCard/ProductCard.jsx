@@ -1,7 +1,7 @@
 import styles from './ProductCard.module.css';
-import heartIcon from '../../assets/heart.svg';
+import heartIcon from '../../assets/icons/heart.svg';
 
-function ProductCard({ product, variant = 'bestProduct' }) {
+function ProductCard({ product, variant }) {
   return (
     <article className={`${styles.card} ${styles[variant]}`}>
       <div

@@ -1,0 +1,9 @@
+.featureWrapper {
+  padding-top: 8.625rem;
+  padding-bottom: 8.625rem;
+  background: white;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10.875rem;
+}

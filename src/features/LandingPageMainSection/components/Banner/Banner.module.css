@@ -1,0 +1,41 @@
+.container {
+  height: 33.75rem;
+  background: #cfe5ff;
+  position: relative;
+}
+
+.title {
+  color: var(--Secondary-700, #374151);
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 140%;
+  
+  position: absolute;
+  top: 15rem;
+  left: 25.3125rem;
+}
+
+.button {
+  width: 22.3125rem;
+  height: 3.5rem;
+  border-radius: 2.5rem;
+  background: var(--brand-blue, #3692ff);
+  color: var(--Secondary-50, #f9fafb);
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-decoration: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 24rem;
+  left: 25.3125rem;
+}
+
+.image {
+  height: 21.25rem;
+  position: absolute;
+  top: 12.5rem;
+  right: 25.3125rem;
+}
