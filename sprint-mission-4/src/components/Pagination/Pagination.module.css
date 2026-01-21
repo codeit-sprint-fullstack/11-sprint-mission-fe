@@ -1,0 +1,23 @@
+.paginationBtn {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  padding: 12.5px;
+  justify-content: center;
+  align-items: center;
+  gap: 12.5px;
+}
+.paginationBtn.active {
+  background-color: #333;
+  color: white;
+  border-color: #333;
+  font-weight: 600;
+  cursor: default;
+}
+
+.paginationContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 140px;
+  padding-top: 40px;
+}
