@@ -1,6 +1,6 @@
-import logoMobile from '@/assets/images/logo-text.svg';
-import logoDesktop from '@/assets/images/logo-full.svg';
-import { Link } from 'react-router-dom';
+import logoMobile from '@/assets/images/header/logo-text.svg';
+import logoDesktop from '@/assets/images/header/logo-full.svg';
+import { Link, NavLink } from 'react-router';
 import './Header.css';
 
 function Header() {
@@ -9,7 +9,7 @@ function Header() {
       <div className="header-container">
         <div className="header-nav">
           <div className="logo-link">
-            <Link to="/home">
+            <Link to="/">
               {/* 모바일 / 태블릿, 컴퓨터 로고 이미지 변경 */}
               <picture>
                 <source media="(min-width: 744px)" srcSet={logoDesktop} />
@@ -23,10 +23,10 @@ function Header() {
           </div>
           <ul className="nav-menu">
             <li>
-              <Link to='/board'>자유게시판</Link>
+              <NavLink to='/board' className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>자유게시판</NavLink>
             </li>
             <li>
-              <Link to="/">중고마켓</Link>
+              <NavLink to="/items" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>중고마켓</NavLink>
             </li>
           </ul>
         </div>

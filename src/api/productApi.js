@@ -6,9 +6,9 @@ import { request } from './request';
 export const getProductList = async ({
   page = 1,
   pageSize = 10,
-  orderBy = 'recent',
+  sort = 'recent',
   keyword = '',
 } = {}) => {
-  const params = new URLSearchParams({ page, pageSize, orderBy, keyword });
-  return request(`/products?${params.toString()}`);
+  const params = new URLSearchParams({ page, pageSize, sort, keyword });
+  return request(`/items?${params.toString()}`);
 };

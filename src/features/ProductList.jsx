@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import { getProductList } from '@/api/productApi';
 import { useDeviceType } from '@/hooks/useDeviceType';
 import { usePagination } from '@/hooks/usePagination';
@@ -11,8 +11,9 @@ import './ProductList.css';
 
 function ProductList() {
   const [products, setProducts] = useState([]);
-  const [orderBy, setOrderBy] = useState('recent');
+  const [sort, setSort] = useState('recent');
   const [keyword, setKeyword] = useState('');
+  const [searchQuery, setSearchQuery] = useState('')
 
   const device = useDeviceType();
 
@@ -27,8 +28,16 @@ function ProductList() {
   ];
 
   useEffect(() => {
+    const timer = setTimeout(() => {
+      setSearchQuery(keyword);
+    }, 500)
+
+    return () => clearTimeout(timer)
+  }, [keyword])
+
+  useEffect(() => {
     setCurrentPage(1);
-  }, [orderBy, keyword, pageSize, setCurrentPage]);
+  }, [sort, searchQuery, pageSize, setCurrentPage]);
 
   useEffect(() => {
     const getProducts = async () => {
@@ -36,8 +45,8 @@ function ProductList() {
         const items = await getProductList({
           page: currentPage,
           pageSize: pageSize,
-          orderBy: orderBy,
-          keyword: keyword,
+          sort: sort,
+          keyword: searchQuery,
         });
         setProducts(items.list);
         setTotalItems(items.totalCount);
@@ -47,7 +56,7 @@ function ProductList() {
     };
 
     getProducts();
-  }, [pageSize, orderBy, keyword, currentPage, setTotalItems]);
+  }, [pageSize, sort, searchQuery, currentPage, setTotalItems]);
 
   return (
     <section className="list-section">
@@ -65,15 +74,15 @@ function ProductList() {
             />
           </div>
 
-          <Link to='/registration'>
+          <Link to='/productregistration' className='registration-link'>
             <button className="button registration-button">상품 등록하기</button>
           </Link>
           
           
           <SortDropdown
             options={sortOptions}
-            defaultValue={orderBy}
-            onSelect={(value) => setOrderBy(value)}
+            defaultValue={sort}
+            onSelect={(value) => setSort(value)}
           />
         </div>
       </div>

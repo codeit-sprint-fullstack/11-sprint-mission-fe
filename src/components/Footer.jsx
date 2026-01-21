@@ -1,8 +1,8 @@
-import facebookIcon from '@/assets/images/ic_facebook.svg';
-import twitterIcon from '@/assets/images/ic_twitter.svg';
-import youtubeIcon from '@/assets/images/ic_youtube.svg';
-import instagramIcon from '@/assets/images/ic_instagram.svg';
-import { Link } from 'react-router-dom';
+import facebookIcon from '@/assets/images/footer/ic_facebook.svg';
+import twitterIcon from '@/assets/images/footer/ic_twitter.svg';
+import youtubeIcon from '@/assets/images/footer/ic_youtube.svg';
+import instagramIcon from '@/assets/images/footer/ic_instagram.svg';
+import { Link } from 'react-router';
 import './Footer.css';
 
 function Footer() {
