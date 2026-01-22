@@ -1,0 +1,54 @@
+.button {
+  border: none;
+}
+
+.primary {
+  background-color: var(--Primary-100);
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.8rem;
+  padding: 1.15rem 2.3rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.button:hover {
+  background-color: var(--Primary-200);
+}
+
+.button:focus {
+  background-color: var(--Primary-300);
+}
+
+.button:disabled {
+  background-color: var(--Secondary-400);
+  cursor: default;
+  pointer-events: none;
+}
+
+.pill {
+  background-color: var(--Primary-100);
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+  border-radius: 99.9rem;
+  padding: 1.6rem 12.4rem;
+}
+
+.full-width {
+  width: 100%;
+}
+
+@media (min-width: 744px) {
+  .pill-button {
+    font-size: 20px;
+    font-weight: 700;
+    padding: 16px 126px;
+  }
+}

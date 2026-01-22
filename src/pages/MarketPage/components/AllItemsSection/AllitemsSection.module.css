@@ -1,0 +1,157 @@
+.sectionTitle {
+  color: #111827;
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: normal;
+  margin-bottom: 1.6rem;
+}
+
+.allItemsCardSection {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3.2rem 0.8rem;
+}
+
+.allItemsSectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 2.4rem;
+ 
+}
+
+.sortButtonWrapper {
+  position: relative;
+}
+
+.sortDropdownToggle {
+  border: 0.1rem solid #e5e7eb;
+  border-radius: 1.2rem;
+}
+
+.searchBarWrapper {
+  display: flex;
+  border-radius: 1.2rem;
+  background-color: var(--Secondary-100);
+  padding: 0.9rem 1.6rem;
+  flex: 1;
+  align-items: center;
+  width: 32.5rem;
+  height: 4.2rem;
+}
+
+.searchBarInput {
+  height: 4.2rem;
+  border: none;
+  flex: 1;
+  background-color: inherit;
+  margin-left: 0.4rem;
+}
+
+.searchBarInput::placeholder {
+  color: var(--Secondary-400);
+  font-size: 1.6rem;
+}
+
+.searchBarInput:focus {
+  outline: none;
+}
+
+.createItemButton {
+  margin: 0 1.2rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-radius: 0.8rem;
+  padding: 1.15rem 2.3rem;
+}
+
+.paginationBarWrapper {
+  padding-top: 4rem;
+  padding-bottom: 8rem;
+}
+
+.sortBtn {
+  width: 13rem;
+  padding: 1.2rem 2rem;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+}
+.mobileSortBtn {
+  display: none;
+}
+
+@media (min-width: 744px) {
+  .allItemsSectionHeader {
+    display: grid;
+    grid-template-columns: 1fr auto auto auto;
+  }
+
+  .allItemsCardSection {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem 1.6rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .allItemsCardSection {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 4rem 2.4rem;
+  }
+}
+
+@media (max-width: 1199px) {
+  .searchBarInput {
+    width: 206px;
+  }
+}
+
+@media (max-width: 744px) {
+  .allItemsSectionHeader {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+
+  .sectionTitle {
+    flex: 1 1 auto;
+    order: 1;
+  }
+
+  .createItemButton {
+    flex: 0 0 auto;
+    order: 2;
+  }
+
+  .searchBarWrapper {
+    flex: 1 1 auto;
+    display: flex;
+    width: calc(100% - 6rem); /* 두 번째 줄에서 가능한 모든 공간을 차지 */
+    order: 3;
+  }
+
+  .sortButtonWrapper {
+    flex: 0 0 auto;
+    align-self: flex-end;
+    order: 4;
+  }
+
+  .sortDropdownToggle {
+    padding: 0.9rem;
+  }
+
+  .mobileSortBtn {
+    display: inline;
+  }
+
+  .sortBtn {
+    display: none;
+  }
+}

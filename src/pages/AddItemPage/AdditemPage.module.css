@@ -1,0 +1,53 @@
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2.6rem;
+}
+
+.sectionTitle {
+  color: #111827;
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: normal;
+  margin-bottom: 1.6rem;
+}
+
+.inputForm {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+.inputForm > div {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.inputForm >div:last-child {
+  padding-bottom: 4rem;
+}
+
+
+
+label {
+ color: var(--Secondary-800);
+ font-size: 1.8rem;
+ font-weight: 700;
+}
+
+.tagList {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.tag {
+  display: inline-flex;
+  border-radius: 26px;
+  background: var(--Secondary-200);
+  padding: 6px 12px 6px 16px;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+}

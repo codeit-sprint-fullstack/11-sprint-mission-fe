@@ -1,16 +1,20 @@
 :root {
+  /* Primary color */
+  --Primary-100: #3692ff;
+  --Primary-200: #1967d6;
+  --Primary-300: #1251aa;
 
   /* Gray scale */
-  --Cool-Gray-100: #f9fafb;
-  --Cool-Gray-100: #f3f4f6;
-  --Cool-Gray-200: #e5e7eb;
-  --Cool-Gray-600: #4b5563;
+  --Secondary-100: #f9fafb;
+  --Secondary-200: #f3f4f6;
+  --Secondary-300: #e5e7eb;
   --Secondary-400: #9ca3af;
-  --Secondary-600: #4B5563;
+  --Secondary-500: #6b7280;
+  --Secondary-600: #4b5563;
+  --Secondary-700: #374151;
   --Secondary-800: #1f2937;
-  /* Primary color */ 
-  --brand-blue: #3692ff;
-  --Primary-100: #3692ff;
+  --Secondary-800: #111827;
+
   /* Layout dimensions */
   --header-height: 7rem;
 }
@@ -18,19 +22,39 @@
 body {
   color: #374151;
   word-break: keep-all;
-  font-family: "Pretendard", sans-serif;
+  font-family: 'Pretendard', sans-serif;
 }
 
-#socialLogin {
-  display: flex;
-  gap: 1.6rem;
+.withHeader {
+  margin-top: var(--header-height);
 }
 
+.wrapper {
+  width: 100%;
+  padding: 0 1.6rem;
+}
 
-
-/* h2 {
+h1 {
   font-size: 4rem;
   font-weight: 700;
   line-height: 5.6rem;
   letter-spacing: 0.02em;
+}
+
+@media (min-width: 744px) {
+  .wrapper {
+    padding: 0 2.4rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .wrapper {
+    max-width: 120rem;
+    margin: 0 auto;
+  }
+}
+
+/* #socialLogin {
+  display: flex;
+  gap: 1.6rem;
 } */
