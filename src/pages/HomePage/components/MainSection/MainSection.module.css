@@ -1,0 +1,133 @@
+.SectionContainer{
+  padding: 8.625rem 21.5rem;
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 2rem;
+}
+
+.contentBox{
+  background-color: var(--bg-gray);
+  width: 61.8rem;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.imgs{
+  width: 36.75rem;
+  height: 27.75rem;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.pointWord{
+  color: var(--primary-100);
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.625rem;
+
+}
+
+.bigPointWord{
+  color: var(var(--Secondary-700));
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 3.5rem;
+  margin-top: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.reverseContentBox {
+  background-color: var(--bg-gray);
+  width: 61.75rem;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.reverseContent{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: right;
+}
+
+.desktopMargin{
+  height: 8.63rem;
+  background-color: var(--bg-gray);
+}
+
+
+@media (max-width: 1199px) and (min-width: 744px){
+  .SectionContainer{
+    padding: 1.5rem;
+    font-size: 1.125rem;
+    line-height: 144.444%;
+    gap: 1.5rem;
+    background-color: var(--bg-gray);
+  }
+
+  .contentBox{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .imgs{
+    width: 43.5rem;
+    height: 32.84694rem;
+  }
+
+  .bigPointWord {
+    font-size: 2rem;
+    line-height: 131.25%;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .bigPointWord br{
+    display: none;
+  }
+}
+
+/* mobile media */
+@media (max-width: 743px) and (min-width: 375px) {
+
+  .SectionContainer{
+    padding: 1rem ;
+    font-size: 1.125rem;
+    line-height: 144.444%;
+    gap: 2.5rem;
+    background-color: var(--bg-gray);
+  }
+
+  .contentBox{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .imgs{
+    width: 21.4375rem;
+    height: 16.1875rem;
+  }
+
+  .pointWord{
+    font-size: 1rem;
+  }
+
+  .bigPointWord {
+    font-size: 1.5rem;
+    line-height: 131.25%;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .bigPointWord br{
+    display: none;
+  }
+}

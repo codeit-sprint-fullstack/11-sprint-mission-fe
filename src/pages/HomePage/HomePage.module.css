@@ -1,0 +1,12 @@
+.HomeContainer{
+  width: 0 auto;
+  margin-top: 4.3rem;
+}
+
+
+/* tablet media */
+@media (max-width: 1199px) and (min-width: 744px){
+}
+
+/* mobile media */
+@media (max-width: 743px) and (min-width: 375px) {}

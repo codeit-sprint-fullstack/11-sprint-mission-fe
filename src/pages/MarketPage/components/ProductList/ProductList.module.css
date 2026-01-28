@@ -1,0 +1,9 @@
+.listContainer{
+  display: flex;
+  flex-direction: column;
+}
+
+.itemImg{
+  width: 13.75rem;
+  height: 13.75rem;
+}
