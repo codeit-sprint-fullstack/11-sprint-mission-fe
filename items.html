@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>판매마켓 - 상품 리스트</title>
+    <link rel="icon" type="image/logo/fabicon.ico" />
+
+    <link rel="stylesheet" href="/styles/reset.css">    
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/home.css"> 
+</head>
+<body>
+   <h1>📦 상품 목록</h1>
+  <!-- 🔥 main.js에서 사용하는 DOM -->
+  <div id="productLoading">상품 불러오는 중...</div>
+  <ul id="productList"></ul>
+
+  <hr />
+
+  <h1>📝 게시글 목록</h1>
+  <div id="articleLoading">게시글 불러오는 중...</div>
+  <ul id="articleList"></ul>
+
+  <!-- API 테스트 점검을 위한 버튼 생성 (TEST 목적))-->
+  <h2>🧪 API Product 테스트 : 삭제는 조회 후 삭제만 가능함(교육 공통:개인자료만 삭제기능)</h2>
+  <button id="btnGet">1️⃣ 조회</button>
+  <button id="btnCreate">2️⃣ 생성</button>
+  <button id="btnPatch">3️⃣ 수정</button>
+  <button id="btnDelete">4️⃣ 삭제</button>
+
+  <h2>📝 API Article 테스트 : 삭제는 조회 후 삭제만 가능함(교육 공통:개인자료만 삭제기능)</h2>
+  <button id="btnArticleGet">1️⃣게시글 조회</button>
+  <button id="btnArticleCreate">2️⃣ 게시글 등록</button>
+  <button id="btnArticleUpdate">3️⃣ 게시글 수정</button>
+  <button id="btnArticleDelete">4️⃣게시글 삭제</button>
+  </section>
+  
+  <!-- ⭐ main.js 실행 -->
+  <script type="module" src="main.js"></script>
+
+</body>
+</html>
