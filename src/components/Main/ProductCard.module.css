@@ -1,0 +1,39 @@
+.card {
+  overflow: hidden;
+  transition: all 0.2s ease;
+  width: 100%;
+  background: white;
+}
+
+.image {
+  border-radius: 16px;
+  width: 100% !important;
+  height: var(--card-image-height, 220px); /* 베스트와 동일 */
+  object-fit: cover;
+  background-color: #f8f9fa;
+  display: block !important;
+}
+
+.info {
+  padding: 20px;
+}
+
+.name {
+  color: var(--Secondary-800, #1f2937);
+  /* pretendard/md-14px-medium */
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.price {
+  color: var(--Secondary-800, #1f2937);
+  /* pretendard/lg-16px-bold */
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px;
+}

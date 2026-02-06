@@ -1,0 +1,213 @@
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family:
+    'Pretendard',
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+}
+
+.mainContent {
+  max-width: 100%;
+  margin: 100px auto 162px;
+}
+
+.registBtn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0;
+}
+
+.submitBtn {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  background: #3692ff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.submitBtn.disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.form {
+  background: #ffffff;
+  border-radius: 24px;
+  border: none;
+}
+
+.inputGroup {
+  margin-bottom: 32px;
+}
+
+.inputGroup label {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 12px;
+}
+
+.inputGroup input,
+.inputGroup textarea {
+  width: 100%;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 16px;
+  font-size: 16px;
+  background: var(--Cool-Gray-100, #f3f4f6);
+
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+  font-family: inherit;
+  resize: none;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+}
+
+.errorInput {
+  border-color: #ef4444;
+}
+
+.tagContainer.errorInput,
+.errorInput {
+  border: 2px solid #ef4444 !important;
+  border-radius: 16px;
+}
+
+.errorMsg {
+  color: #dc2626;
+  font-size: 14px;
+  margin-top: 8px;
+  font-weight: 500;
+}
+
+.tagInputContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.tagContainer {
+  position: relative;
+}
+
+.tagList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  border-radius: 16px;
+  min-height: 56px;
+  align-items: center;
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: #f3f4f6;
+  color: #1f2937;
+  border-radius: 26px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.tag button {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: black;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .mainContent {
+    margin: 60px auto 100px;
+    padding: 0 16px;
+  }
+
+  .form {
+    padding: 32px 24px;
+    border-radius: 20px;
+  }
+
+  .registBtn {
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+
+  .title {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .submitBtn {
+    width: 100%;
+    padding: 16px;
+  }
+
+  .inputGroup input,
+  .inputGroup textarea {
+    padding: 14px 16px;
+    font-size: 16px;
+  }
+
+  .tagList {
+    padding: 14px 16px;
+    gap: 8px;
+  }
+
+  .tag {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .form {
+    padding: 24px 20px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+}
+
+.submitBtn.disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.tagInput::placeholder {
+  color: #9ca3af;
+}
