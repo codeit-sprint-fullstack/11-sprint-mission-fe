@@ -1,7 +1,7 @@
 // (구 items.html) 상품 목록 화면 ('/items')
 
 import React from 'react';
-import ProductList from '../components/ProductList';
+import ProductList from '../../../components/ProductList';
 import styles from '../App.module.css';
 
 const ItemsPage = () => {

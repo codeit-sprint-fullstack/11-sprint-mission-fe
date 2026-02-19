@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, useEffect } from 'react';
 import { getProducts } from '../api/api';
 import { usePageSize } from '../hooks/usePageSize';
