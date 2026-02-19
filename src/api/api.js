@@ -1,8 +1,5 @@
-// 판다마켓 공식 서버
-// const BASE_URL = 'https://panda-market-api.vercel.app/products';
-
 // 구축한 백엔드 서버(sprint5)
-const BASE_URL = 'http://localhost:3000/products';
+const BASE_URL = import.meta.env.VITE_API_URL;
 
 /**
  * 상품 목록을 조회하는 API 함수 (GET)
@@ -26,7 +23,7 @@ export async function getProducts({
   const response = await fetch(`${BASE_URL}?${query}`);
 
   if (!response.ok) {
-    throw new Error('데이터 로딩 실패');
+    throw new Error(`데이터 로딩 실패: ${response.status}`);
   }
 
   return await response.json();

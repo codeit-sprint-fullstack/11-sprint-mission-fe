@@ -12,9 +12,11 @@ export function usePageSize() {
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;
-      if (width <= 743) setPageSize(4);
-      else if (width <= 1199) setPageSize(6);
-      else setPageSize(10);
+      if (width <= 743) {
+        setPageSize(4);
+      } else if (width <= 1199) {
+        setPageSize(6);
+      } else setPageSize(10);
     };
 
     // 초기 실행 및 리사이즈 이벤트 리스너 등록

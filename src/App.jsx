@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -8,7 +7,6 @@ import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
 import RegistrationPage from './pages/RegistrationPage';
 import ProductDetailPage from './pages/ProductDetailPage.jsx';
-
 
 // 레이아웃 컴포넌트: 로그인/회원가입 페이지에서만 헤더/푸터 숨김
 function Layout({ children }) {

@@ -22,12 +22,6 @@ const Header = () => {
               <Link to="/" className={styles.navItem}>
                 자유게시판
               </Link>
-              <Link
-                to="/items"
-                className={`${styles.navItem} ${
-                  location.pathname === '/items' ? styles.active : ''
-                }`}
-              ></Link>
 
               <Link
                 to="/items"

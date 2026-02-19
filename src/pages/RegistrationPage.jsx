@@ -10,23 +10,34 @@ const RegistrationPage = () => {
   // 1. 유효성 검사 규칙 (심화 요구사항 반영)
   // - 상품명: 10자 이내
   const validateName = (val) => {
-    if (!val) return '상품명을 입력해주세요.';
-    if (val.length > 10) return '10자 이내로 입력해주세요.';
+    if (!val) {
+      return '상품명을 입력해주세요.';
+    }
+    if (val.length > 10) {
+      return '10자 이내로 입력해주세요.';
+    }
     return '';
   };
 
   // - 상품 소개: 10자 이상 100자 이내
   const validateDesc = (val) => {
-    if (!val) return '상품 소개를 입력해주세요.';
-    if (val.length < 10 || val.length > 100)
+    if (!val) {
+      return '상품 소개를 입력해주세요.';
+    }
+    if (val.length < 10 || val.length > 100) {
       return '10자 이상 입력해주세요.';
+    }
     return '';
   };
 
   // - 가격: 숫자만
   const validatePrice = (val) => {
-    if (!val) return '가격을 입력해주세요.';
-    if (isNaN(val)) return '숫자로 입력해주세요.';
+    if (!val) {
+      return '가격을 입력해주세요.';
+    }
+    if (isNaN(val)) {
+      return '숫자로 입력해주세요.';
+    }
     return '';
   };
 
@@ -71,15 +82,17 @@ const RegistrationPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!isFormValid) return;
+    if (!isFormValid) {
+      return;
+    }
 
     try {
       const productData = {
         name: nameInput.value,
         description: descInput.value,
         price: Number(priceInput.value),
-        tags: tags, 
-        images: [], 
+        tags: tags,
+        images: [],
       };
 
       console.log('서버로 보낼 데이터:', productData);
@@ -96,7 +109,6 @@ const RegistrationPage = () => {
   return (
     <div className={styles.container}>
       <form onSubmit={handleSubmit}>
-
         {/* 헤더: 타이틀 + 등록 버튼 */}
         <div className={styles.header}>
           <h1 className={styles.title}>상품 등록하기</h1>

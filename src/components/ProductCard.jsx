@@ -7,7 +7,7 @@ const ProductCard = ({ product }) => (
     <div className={styles.imgBox}>
       {/* 이미지가 없을 경우 default 이미지 사용 */}
       <img
-        src={product.images[0] || '/img/default_product.png'}
+        src={product.images[0] || '@/img/img_default.png'}
         alt="상품 이미지"
       />
     </div>
