@@ -26,7 +26,7 @@ const Header = () => {
           {/* 랜딩페이지가 아닐떄만 보이게 */}
           {!isLandingPage && (
             <nav className={styles.navMenu}>
-              <Link to="/" className={styles.navItem}>
+              <Link href="/" className={styles.navItem}>
                 자유게시판
               </Link>
 

@@ -1,7 +1,7 @@
 // (구 login.html) 로그인 화면 ('/login')
 
 import Link from 'next/link';
-import '../styles/Login.css';
+import '../../../styles/Login.css';
 
 const LoginPage = () => {
   return (

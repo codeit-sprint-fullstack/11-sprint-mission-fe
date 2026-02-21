@@ -1,3 +1,4 @@
+'use client';
 import { useState } from 'react';
 
 /**
@@ -29,11 +30,11 @@ const useFormInput = (initialValue, validateFn) => {
   };
 
   return {
-    value, 
-    error,        
-    handleChange, 
-    handleBlur,   
-    setValue,     
+    value,
+    error,
+    handleChange,
+    handleBlur,
+    setValue,
   };
 };
 

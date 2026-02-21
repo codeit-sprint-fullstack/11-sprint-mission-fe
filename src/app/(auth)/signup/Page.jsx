@@ -1,7 +1,7 @@
 // (구 signup.html) 회원가입 화면 ('/signup')
 
 import Link from 'next/link';
-import '../styles/login.css';
+import '../../../styles/Login.css';
 
 const SignupPage = () => {
   return (

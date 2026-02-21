@@ -1,7 +1,7 @@
 // 메인 화면 ('/')
 
 import Link from 'next/link';
-import '../styles/LandingPage.css';
+import '../../styles/LandingPage.css';
 
 const LandingPage = () => {
   return (

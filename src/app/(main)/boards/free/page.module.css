@@ -1,0 +1,133 @@
+.mainContainer {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #1f2937;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* 베스트 게시글 스타일 */
+.bestList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 60px;
+}
+
+.bestCard {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+  background-color: white;
+}
+
+.bestCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.cardImage {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  background-color: #f3f4f6;
+}
+
+.cardContent {
+  padding: 16px;
+}
+
+.cardTitle {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cardInfo {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0;
+}
+
+.heart {
+  color: #ef4444;
+}
+
+/* 일반 게시글 스타일 */
+.normalList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.normalItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background-color: white;
+  transition: border-color 0.2s;
+}
+
+.normalItem:hover {
+  border-color: #3b82f6;
+}
+
+.normalTitle {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 0 4px 0;
+  color: #111827;
+}
+
+.normalInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.normalMeta {
+  font-size: 13px;
+  color: #9ca3af;
+  margin: 0;
+}
+
+.normalLikes {
+  font-size: 14px;
+  font-weight: 600;
+  color: #4b5563;
+  min-width: 80px;
+  text-align: right;
+}
+
+.emptyMsg {
+  text-align: center;
+  color: #6b7280;
+  padding: 40px;
+}
+
+/* 반응형 디자인 (심화 요구사항 미리 대비) */
+@media (max-width: 768px) {
+  .bestList {
+    grid-template-columns: 1fr;
+  }
+}

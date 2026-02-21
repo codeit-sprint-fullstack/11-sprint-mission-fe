@@ -1,11 +1,13 @@
+'use client';
+
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import styles from '../styles/RegistrationPage.module.css'; // 아까 드린 새 CSS 파일
+import { useRouter } from 'next/navigation';
+import styles from '../../../styles/RegistrationPage.module.css';
 import { createProduct } from '../../../api/api';
-import useFormInput from '../../../hooks/useFormInput'; // 커스텀 훅 불러오기
+import useFormInput from '../../../hooks/useFormInput';
 
 const RegistrationPage = () => {
-  const navigate = useNavigate();
+  const router = useRouter();
 
   // 1. 유효성 검사 규칙 (심화 요구사항 반영)
   // - 상품명: 10자 이내
