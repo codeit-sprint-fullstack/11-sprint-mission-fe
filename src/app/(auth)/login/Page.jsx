@@ -1,7 +1,6 @@
 // (구 login.html) 로그인 화면 ('/login')
 
-import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import '../styles/Login.css';
 
 const LoginPage = () => {
@@ -10,7 +9,7 @@ const LoginPage = () => {
       <div className="loginContainer">
         <header>
           <div className="loginLogo">
-            <Link to="/">
+            <Link href="/">
               <img src="/img/logo.svg" alt="판다마켓 로고" />
               <h1 className="srOnly">판다마켓 로그인 페이지</h1>
             </Link>
@@ -63,7 +62,7 @@ const LoginPage = () => {
 
           <div className="signup">
             <span>판다마켓이 처음이신가요?</span>
-            <Link to="/signup">회원가입</Link>
+            <Link href="/signup">회원가입</Link>
           </div>
         </main>
       </div>

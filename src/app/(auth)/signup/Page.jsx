@@ -1,6 +1,6 @@
 // (구 signup.html) 회원가입 화면 ('/signup')
-import React from 'react';
-import { Link } from 'react-router-dom';
+
+import Link from 'next/link';
 import '../styles/login.css';
 
 const SignupPage = () => {
@@ -9,7 +9,7 @@ const SignupPage = () => {
       <div className="signupContainer">
         <header>
           <div className="signupLogo">
-            <Link to="/">
+            <Link href="/">
               <img src="/img/logo.svg" alt="판다마켓 로고" />
               <h1 className="srOnly">판다마켓 회원가입 페이지</h1>
             </Link>
@@ -93,7 +93,7 @@ const SignupPage = () => {
 
           <div className="loginLinkBox">
             <span>이미 회원이신가요?</span>
-            <Link to="/login">로그인</Link>
+            <Link href="/login">로그인</Link>
           </div>
         </main>
       </div>

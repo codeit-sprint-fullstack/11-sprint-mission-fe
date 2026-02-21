@@ -5,7 +5,7 @@ import { getProducts } from '../api/api';
 import { usePageSize } from '../hooks/usePageSize';
 import ProductCard from './ProductCard';
 import styles from '../App.module.css';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
@@ -66,12 +66,11 @@ const ProductList = () => {
             placeholder="검색할 상품을 입력해주세요"
             onChange={handleSearch}
           />
-          <Link to="/registration" className={styles.btnRegister}>
+          <Link href="/registration" className={styles.btnRegister}>
             상품 등록하기
           </Link>
           <select className={styles.sortSelect} onChange={handleSort}>
             <option value="recent">최신순</option>
-            {/* 좋아요순 삭제 */}
           </select>
         </div>
       </div>

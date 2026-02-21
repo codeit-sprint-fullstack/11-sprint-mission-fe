@@ -1,7 +1,6 @@
 // 메인 화면 ('/')
 
-import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import '../styles/LandingPage.css';
 
 const LandingPage = () => {
@@ -14,7 +13,7 @@ const LandingPage = () => {
             <br />
             거래해 보세요
           </h2>
-          <Link to="/items" className="itemBtn">
+          <Link href="/items" className="itemBtn">
             구경하러 가기
           </Link>
         </div>
