@@ -1,52 +1,48 @@
 .searchContainer {
   display: flex;
-  gap: 10px;
-  margin-bottom: 30px;
+  justify-content: space-between;
   align-items: center;
+  margin-bottom: 30px;
+  gap: 20px;
 }
 
-.select {
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  font-size: 14px;
-  cursor: pointer;
+.inputWrapper {
+  position: relative;
+  flex: 1;
+  max-width: 400px;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #9ca3af;
 }
 
 .input {
-  flex: 1;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
+  width: 100%;
+  padding: 12px 16px 12px 44px;
+  border: none;
+  background-color: #f3f4f6;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  transition: background-color 0.2s;
+}
+
+.input:focus {
+  background-color: #e5e7eb;
+}
+
+.select {
+  padding: 10px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
   font-size: 14px;
-}
-
-.searchButton {
-  padding: 10px 20px;
-  background-color: #3b82f6;
-  color: white;
-  border: none;
-  border-radius: 6px;
+  color: #374151;
+  background-color: white;
   cursor: pointer;
-  font-weight: 600;
-  transition: background-color 0.2s;
-}
-
-.searchButton:hover {
-  background-color: #2563eb;
-}
-
-.writeButton {
-  padding: 10px 20px;
-  background-color: #10b981;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: background-color 0.2s;
-}
-
-.writeButton:hover {
-  background-color: #059669;
+  outline: none;
 }

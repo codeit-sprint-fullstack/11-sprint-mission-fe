@@ -1,86 +1,257 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  min-height: calc(100vh - 200px);
+}
+
+.header {
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 24px;
+  margin-bottom: 32px;
+}
+
+.headerTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.metaRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 프로필 아이콘 공통 */
+.profileWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.profileIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #e5e7eb;
+}
+
+.nickname {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.date {
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+.likes {
+  font-size: 14px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+/* 본문 영역 */
+.content {
+  min-height: 200px;
+  margin-bottom: 60px;
+}
+
+.text {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #374151;
+  white-space: pre-wrap;
+}
+
+/* 케밥 메뉴 (드롭다운) */
+.kebabWrapper {
+  position: relative;
+}
+
+.kebabBtn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #9ca3af;
+  cursor: pointer;
+  padding: 0 8px;
+}
+
+.dropdown {
+  position: absolute;
+  right: 0;
+  top: 30px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  min-width: 100px;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.dropdown button {
+  padding: 12px 16px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #f3f4f6;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.dropdown button:last-child {
+  border-bottom: none;
+}
+
+.dropdown button:hover {
+  background-color: #f9fafb;
+}
+
+.deleteText {
+  color: #ef4444 !important;
+}
+
+/* 댓글 영역 */
 .commentSection {
-  margin-top: 40px;
-  border-top: 1px solid #e5e7eb;
-  padding-top: 20px;
+  margin-top: 60px;
+}
+
+.commentTitle {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
 
 .commentForm {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
+  position: relative;
 }
 
+/* 테두리 없는 회색 텍스트에어리어 */
 .commentInput {
   width: 100%;
-  height: 100px;
-  padding: 12px;
-  border: 1px solid #d1d5db;
-  border-radius: 8px;
+  height: 120px;
+  padding: 16px;
+  background-color: #f3f4f6;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
   resize: none;
+  outline: none;
+}
+
+.commentInput:focus {
+  background-color: #e5e7eb;
 }
 
 .registerBtn {
-  align-self: flex-end;
-  padding: 8px 20px;
-  background-color: #3b82f6;
-  color: white;
-  border-radius: 6px;
-}
-
-.registerBtn:disabled {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  padding: 8px 24px;
   background-color: #9ca3af;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
 }
 
+.registerBtn:not(:disabled) {
+  background-color: #3692ff;
+}
+
+.cancelBtn {
+  padding: 8px 24px;
+  background-color: #e5e7eb;
+  color: #374151;
+  border: none;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* 댓글 리스트 */
 .commentList {
   display: flex;
   flex-direction: column;
 }
 
 .commentItem {
-  padding: 20px 0;
+  padding: 24px 0;
   border-bottom: 1px solid #f3f4f6;
 }
 
-.commentView {
+.commentHeader {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  margin-bottom: 16px;
 }
 
 .commentText {
   font-size: 15px;
-  color: #374151;
+  color: #1f2937;
+  margin: 0;
+  line-height: 1.6;
 }
 
-.commentAction {
-  display: flex;
-  gap: 10px;
-}
-
-.commentAction button {
-  font-size: 13px;
-  color: #6b7280;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.editBox {
+/* 빈 댓글 상태 */
+.emptyComment {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 0;
+  color: #9ca3af;
+  text-align: center;
+  line-height: 1.6;
 }
 
-.editInput {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #3b82f6;
-  border-radius: 6px;
+.emptyIcon {
+  font-size: 40px;
+  margin-bottom: 16px;
+  opacity: 0.5;
 }
 
-.editBtns {
+/* 하단 목록으로 돌아가기 버튼 */
+.bottomWrapper {
   display: flex;
-  justify-content: flex-end;
-  gap: 10px;
+  justify-content: center;
+  margin-top: 80px;
+  padding-bottom: 40px;
+}
+
+.backBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 40px;
+  background-color: #3692ff;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.backBtn:hover {
+  background-color: #2563eb;
 }

@@ -27,6 +27,15 @@ export default async function FreeBoardPage({ searchParams }) {
   const getNickname = (name) => name || '익명 판다';
   const getLikes = (likes, id) => likes ?? id % 50;
 
+  // 날짜를 00. 00. 형식으로 맞춰주는 포맷 함수
+  const formatDate = (dateString) => {
+    const date = new Date(dateString);
+    const y = date.getFullYear();
+    const m = String(date.getMonth() + 1).padStart(2, '0');
+    const d = String(date.getDate()).padStart(2, '0');
+    return `${y}. ${m}. ${d}`;
+  };
+
   return (
     <main className={styles.mainContainer}>
       <h2 className={styles.sectionTitle}>베스트 게시글</h2>
@@ -39,25 +48,45 @@ export default async function FreeBoardPage({ searchParams }) {
             className={styles.link}
           >
             <div className={styles.bestCard}>
-              <img
-                src={getDefaultImage(article.image)}
-                alt="게시글 이미지"
-                className={styles.cardImage}
-              />
-              <div className={styles.cardContent}>
+              <div className={styles.badge}>💡 Best</div>
+
+              <div className={styles.cardHeader}>
                 <h3 className={styles.cardTitle}>{article.title}</h3>
-                <p className={styles.cardInfo}>
-                  {getNickname(article.nickname)}{' '}
-                  <span className={styles.heart}>♥</span>{' '}
-                  {getLikes(article.likeCount, article.id)}
-                </p>
+                <img
+                  src={getDefaultImage(article.image)}
+                  alt="게시글"
+                  className={styles.cardThumb}
+                />
+              </div>
+
+              <div className={styles.cardFooter}>
+                <div className={styles.profileWrapper}>
+                  <div className={styles.profileIcon}></div>
+                  <span className={styles.nickname}>
+                    {getNickname(article.nickname)}
+                  </span>
+                </div>
+                <div className={styles.metaWrapper}>
+                  <span className={styles.heartIcon}>
+                    ♡ {getLikes(article.likeCount, article.id)}
+                  </span>
+                  <span className={styles.date}>
+                    {formatDate(article.createdAt)}
+                  </span>
+                </div>
               </div>
             </div>
           </Link>
         ))}
       </div>
 
-      <h2 className={styles.sectionTitle}>자유게시판</h2>
+      <div className={styles.sectionHeader}>
+        <h2 className={styles.sectionTitle}>게시글</h2>
+        <Link href="/boards/free/write" className={styles.writeBtn}>
+          글쓰기
+        </Link>
+      </div>
+
       <BoardSearch defaultKeyword={q} defaultOrderBy={orderBy} />
 
       <div className={styles.normalList}>
@@ -73,13 +102,20 @@ export default async function FreeBoardPage({ searchParams }) {
             <div className={styles.normalItem}>
               <div className={styles.normalInfo}>
                 <h3 className={styles.normalTitle}>{article.title}</h3>
-                <p className={styles.normalMeta}>
-                  {getNickname(article.nickname)} |{' '}
-                  {new Date(article.createdAt).toLocaleDateString()}
-                </p>
+                <div className={styles.normalFooter}>
+                  <div className={styles.profileWrapper}>
+                    <div className={styles.profileIcon}></div>
+                    <span className={styles.nickname}>
+                      {getNickname(article.nickname)}
+                    </span>
+                  </div>
+                  <span className={styles.date}>
+                    {formatDate(article.createdAt)}
+                  </span>
+                </div>
               </div>
               <div className={styles.normalLikes}>
-                좋아요 {getLikes(article.likeCount, article.id)}
+                ♡ {getLikes(article.likeCount, article.id)}
               </div>
             </div>
           </Link>

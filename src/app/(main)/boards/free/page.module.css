@@ -4,11 +4,34 @@
   margin: 0 auto;
 }
 
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
 .sectionTitle {
   font-size: 24px;
   font-weight: 700;
-  margin-bottom: 20px;
   color: #1f2937;
+  margin: 0;
+}
+
+.writeBtn {
+  padding: 10px 24px;
+  background-color: #3692ff;
+  color: white;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.writeBtn:hover {
+  background-color: #2563eb;
 }
 
 .link {
@@ -17,115 +40,153 @@
   display: block;
 }
 
-/* 베스트 게시글 스타일 */
+/* 베스트 게시글 카드 */
 .bestList {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
 .bestCard {
   border: 1px solid #e5e7eb;
   border-radius: 12px;
-  overflow: hidden;
+  padding: 20px;
+  background-color: white;
   transition:
     transform 0.2s,
     box-shadow 0.2s;
-  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
 }
 
 .bestCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
 }
 
-.cardImage {
-  width: 100%;
-  height: 180px;
+.badge {
+  display: inline-block;
+  background-color: #3692ff;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  align-self: flex-start;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.cardTitle {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.4;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  flex: 1;
+}
+
+.cardThumb {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
   object-fit: cover;
   background-color: #f3f4f6;
 }
 
-.cardContent {
-  padding: 16px;
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
 }
 
-.cardTitle {
-  font-size: 18px;
-  font-weight: 600;
-  margin: 0 0 8px 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+.profileWrapper {
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
-.cardInfo {
-  font-size: 14px;
+/* 동그란 기본 프로필 아이콘 */
+.profileIcon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #d1d5db;
+}
+
+.nickname {
+  font-size: 13px;
+  color: #4b5563;
+  font-weight: 500;
+}
+
+.metaWrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+.heartIcon {
   color: #6b7280;
-  margin: 0;
 }
 
-.heart {
-  color: #ef4444;
+.date {
+  color: #9ca3af;
 }
 
-/* 일반 게시글 스타일 */
+/* 일반 게시글 리스트 */
 .normalList {
   display: flex;
   flex-direction: column;
-  gap: 12px;
 }
 
 .normalItem {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
-  border: 1px solid #e5e7eb;
-  border-radius: 8px;
+  padding: 20px 0;
+  border-bottom: 1px solid #e5e7eb;
   background-color: white;
-  transition: border-color 0.2s;
-}
-
-.normalItem:hover {
-  border-color: #3b82f6;
 }
 
 .normalTitle {
   font-size: 16px;
-  font-weight: 500;
-  margin: 0 0 4px 0;
+  font-weight: 600;
+  margin: 0 0 12px 0;
   color: #111827;
 }
 
-.normalInfo {
+.normalFooter {
   display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.normalMeta {
-  font-size: 13px;
-  color: #9ca3af;
-  margin: 0;
+  align-items: center;
+  gap: 12px;
 }
 
 .normalLikes {
   font-size: 14px;
-  font-weight: 600;
-  color: #4b5563;
-  min-width: 80px;
-  text-align: right;
+  color: #6b7280;
+  font-weight: 500;
 }
 
 .emptyMsg {
   text-align: center;
   color: #6b7280;
-  padding: 40px;
+  padding: 60px;
 }
 
-/* 반응형 디자인 (심화 요구사항 미리 대비) */
 @media (max-width: 768px) {
   .bestList {
     grid-template-columns: 1fr;

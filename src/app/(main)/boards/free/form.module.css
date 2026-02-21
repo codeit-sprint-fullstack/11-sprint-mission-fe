@@ -1,75 +1,130 @@
 .container {
   padding: 40px 20px;
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
 .title {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
-  margin-bottom: 30px;
   color: #1f2937;
+}
+
+.submitBtn {
+  padding: 10px 32px;
+  background-color: #3692ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.submitBtn:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
 }
 
 .formGroup {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 32px;
 }
 
 .inputWrapper {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
 }
 
 .label {
-  font-weight: 600;
-  color: #374151;
+  font-weight: 700;
+  font-size: 18px;
+  color: #1f2937;
+}
+
+.required {
+  color: #3692ff;
+  margin-right: 4px;
 }
 
 .input,
 .textarea {
-  padding: 12px;
-  border: 1px solid #d1d5db;
-  border-radius: 6px;
+  width: 100%;
+  padding: 16px 24px;
+  background-color: #f3f4f6;
+  border: none;
+  border-radius: 12px;
   font-size: 16px;
+  color: #1f2937;
   outline: none;
-  transition: border-color 0.2s;
+  transition: background-color 0.2s;
 }
 
 .input:focus,
 .textarea:focus {
-  border-color: #3b82f6;
+  background-color: #e5e7eb;
 }
 
 .textarea {
-  min-height: 300px;
+  min-height: 280px;
   resize: none;
+  font-family: inherit;
 }
 
-.buttonWrapper {
+.imageUploadBox {
+  width: 240px;
+  height: 240px;
+  background-color: #f3f4f6;
+  border-radius: 12px;
   display: flex;
-  justify-content: flex-end;
-  margin-top: 20px;
-}
-
-.submitButton {
-  padding: 12px 24px;
-  background-color: #3b82f6;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-weight: 600;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   transition: background-color 0.2s;
+  color: #9ca3af;
 }
 
-.submitButton:hover {
-  background-color: #2563eb;
+.imageUploadBox:hover {
+  background-color: #e5e7eb;
 }
 
-.submitButton:disabled {
-  background-color: #9ca3af;
-  cursor: not-allowed;
+.imagePlusIcon {
+  font-size: 40px;
+  font-weight: 300;
+  margin-bottom: 8px;
+  color: #9ca3af;
+}
+
+.imageUploadText {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* 반응형 (모바일) */
+@media (max-width: 743px) {
+  .header {
+    margin-bottom: 24px;
+  }
+  .imageUploadBox {
+    width: 100px;
+    height: 100px;
+  }
+  .imagePlusIcon {
+    font-size: 24px;
+    margin-bottom: 4px;
+  }
+  .imageUploadText {
+    font-size: 12px;
+  }
 }
