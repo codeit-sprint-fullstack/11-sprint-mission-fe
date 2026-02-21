@@ -26,9 +26,16 @@ export async function getProducts({
   return await response.json();
 }
 
+// GET 상품 상세조회
+export async function getProductById(id) {
+  const response = await fetch(`${BASE_URL}/products/${id}`);
+  if (!response.ok) throw new Error('상품 상세 조회 실패');
+  return await response.json();
+}
+
 // POST 새 상품 등록
 export async function createProduct(productData) {
-  const response = await fetch(`BASE_URL/products`, {
+  const response = await fetch(`${BASE_URL}/products`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -37,7 +44,8 @@ export async function createProduct(productData) {
   });
 
   if (!response.ok) {
-    throw new Error('상품 등록에 실패했습니다.');
+    const errorBody = await response.json().catch(() => ({}));
+    throw new Error(errorBody.message || '상품 등록 실패');
   }
 
   return await response.json();
@@ -62,6 +70,15 @@ export async function getArticles({
 
   if (!response.ok) {
     throw new Error('게시글 목록 로딩 실패');
+  }
+  return await response.json();
+}
+
+// GET 게시글 상세 조회
+export async function getArticleById(id) {
+  const response = await fetch(`${BASE_URL}/articles/${id}`);
+  if (!response.ok) {
+    throw new Error('게시글 상세 정보를 불러오는데 실패했습니다.');
   }
   return await response.json();
 }

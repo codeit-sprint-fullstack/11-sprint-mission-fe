@@ -1,18 +1,16 @@
 'use client';
 
-import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import clsx from 'clsx';
 import styles from '../styles/Header.module.css';
 // import styles from '../App.module.css';
 
 const Header = () => {
   const pathname = usePathname();
 
-  // 현재 페이지가 '중고마켓'인지 확인
+  const isFreeBoard = pathname.startsWith('/boards/free');
   const isItemsPage = pathname === '/items';
-
-  // 현재 페이지가 '랜딩 페이지'인지 확인
   const isLandingPage = pathname === '/';
 
   return (
@@ -26,15 +24,20 @@ const Header = () => {
           {/* 랜딩페이지가 아닐떄만 보이게 */}
           {!isLandingPage && (
             <nav className={styles.navMenu}>
-              <Link href="/" className={styles.navItem}>
+              <Link
+                href="/boards/free"
+                className={clsx(styles.navItem, {
+                  [styles.navActive]: isFreeBoard,
+                })}
+              >
                 자유게시판
               </Link>
 
               <Link
                 href="/items"
-                className={`${styles.navItem} ${
-                  isItemsPage ? styles.navActive : ''
-                }`}
+                className={clsx(styles.navItem, {
+                  [styles.navActive]: isItemsPage,
+                })}
               >
                 중고마켓
               </Link>

@@ -97,13 +97,15 @@ const RegistrationPage = () => {
         images: [],
       };
 
-      console.log('서버로 보낼 데이터:', productData);
-
       const savedProduct = await createProduct(productData);
       alert('상품 등록 성공!');
-      navigate(`/items/${savedProduct.id}`); // 상세 페이지로 이동
+
+      if (savedProduct && savedProduct.id) {
+        router.push(`/items/${savedProduct.id}`);
+        router.refresh();
+      }
     } catch (error) {
-      console.error(error);
+      console.error('상품 등록 에러:', error);
       alert('등록 실패! 서버 상태를 확인해주세요.');
     }
   };
