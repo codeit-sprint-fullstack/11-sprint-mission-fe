@@ -1,15 +1,20 @@
+'use client';
+
 import logo from '@/assets/logo/logo.svg';
 import { Button } from '@/components/UI/Button';
 import styles from './Header.module.css';
-import { Link, NavLink } from 'react-router';
+import Image from 'next/image';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export function Header() {
+  const pathname = usePathname();
   return (
     <header className={styles.header}>
       <div className={styles.headerContainer}>
         <div className={styles.headerLeft}>
-          <Link to="/">
-            <img
+          <Link href="/">
+            <Image
               src={logo}
               alt="판다마켓 홈"
               width="153"
@@ -19,18 +24,15 @@ export function Header() {
           <nav>
             <ul className="gnb">
               <li>
-                <a href="/">자유게시판</a>
+                <Link href="/communityFeed">자유게시판</Link>
               </li>
               <li>
-                <NavLink
-                  to="/items"
-                  className={({ isActive }) => 
-                    isActive
-                    ? `${styles.active}`
-                    : ''}
+                <Link
+                  href="/items"
+                  className={pathname === '/items' ? `${styles.active}` : ''}
                 >
                   중고마켓
-                </NavLink>
+                </Link>
               </li>
             </ul>
           </nav>

@@ -1,1 +1,1190 @@
-[00:00:01.528] Server  LOG     ✓ Ready in 1194ms
+[00:00:01.423] Server  LOG     ✓ Ready in 1197ms
+[00:00:04.614] Browser WARN    Image with src "/_next/static/media/logo.b0195198.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:00:23.849] Server  ERROR   ⨯ Error: The default export is not a React Component in "/communityFeed/[id]/page"
+[00:00:23.996] Server  ERROR   ⨯ Error: The default export is not a React Component in "/communityFeed/[id]/page"
+[00:00:28.619] Browser WARN    Image with src "/_next/static/media/logo.b0195198.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:00:31.256] Browser WARN    Image with src "/_next/static/media/logo.b0195198.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:01:10.370] Server  ERROR   ⨯ Error: The default export is not a React Component in "/communityFeed/[id]/page"
+[00:01:10.581] Server  ERROR   ⨯ Error: The default export is not a React Component in "/communityFeed/[id]/page"
+[00:01:10.765] Server  ERROR   ⨯ Error: The default export is not a React Component in "/communityFeed/[id]/page"
+[00:01:10.926] Server  ERROR   ⨯ Error: The default export is not a React Component in "/communityFeed/[id]/page"
+[00:01:11.226] Browser ERROR   uncaughtError: Error: The default export is not a React Component in "/communityFeed/[id]/page"
+[00:01:16.480] Browser WARN    Image with src "/_next/static/media/logo.b0195198.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:02:04.650] Browser WARN    Image with src "/_next/static/media/logo.b0195198.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:02:07.561] Browser WARN    Image with src "/_next/static/media/logo.b0195198.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:04:21.681] Server  ERROR   ⨯ ./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+Error:   × Expression expected
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <
+ 5 │       
+ 6 │     </div>
+   ·     ─
+ 7 │   )
+ 8 │ }
+   ╰────
+  × Unterminated regexp literal
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <
+ 5 │       
+ 6 │     </div>
+   ·      ─────
+ 7 │   )
+ 8 │ }
+   ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+./src/app/communityFeed/components/AllArticleSection/AllArticleSection.jsx
+[00:04:21.858] Browser ERROR   ./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+Error:   × Expression expected
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <
+ 5 │       
+ 6 │     </div>
+   ·     ─
+ 7 │   )
+ 8 │ }
+   ╰────
+  × Unterminated regexp literal
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <
+ 5 │       
+ 6 │     </div>
+   ·      ─────
+ 7 │   )
+ 8 │ }
+   ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+./src/app/communityFeed/components/AllArticleSection/AllArticleSection.jsx
+[00:04:21.858] Browser ERROR   ./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+Error:   × Expression expected
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <
+ 5 │       
+ 6 │     </div>
+   ·     ─
+ 7 │   )
+ 8 │ }
+   ╰────
+  × Unterminated regexp literal
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <
+ 5 │       
+ 6 │     </div>
+   ·      ─────
+ 7 │   )
+ 8 │ }
+   ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+./src/app/communityFeed/components/AllArticleSection/AllArticleSection.jsx
+[00:04:53.911] Server  ERROR   ⨯ ./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+Error:   × Expression expected
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <p
+ 5 │       
+ 6 │     </div>
+   ·     ─
+ 7 │   )
+ 8 │ }
+   ╰────
+  × Unterminated regexp literal
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <p
+ 5 │       
+ 6 │     </div>
+   ·      ─────
+ 7 │   )
+ 8 │ }
+   ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+./src/app/communityFeed/components/AllArticleSection/AllArticleSection.jsx
+[00:04:54.857] Browser ERROR   ./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+Error:   × Expression expected
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <
+ 5 │       
+ 6 │     </div>
+   ·     ─
+ 7 │   )
+ 8 │ }
+   ╰────
+  × Unterminated regexp literal
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <
+ 5 │       
+ 6 │     </div>
+   ·      ─────
+ 7 │   )
+ 8 │ }
+   ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+./src/app/communityFeed/components/AllArticleSection/AllArticleSection.jsx
+[00:04:54.857] Browser ERROR   ./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+Error:   × Expression expected
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <p
+ 5 │       
+ 6 │     </div>
+   ·     ─
+ 7 │   )
+ 8 │ }
+   ╰────
+  × Unterminated regexp literal
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <p
+ 5 │       
+ 6 │     </div>
+   ·      ─────
+ 7 │   )
+ 8 │ }
+   ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+./src/app/communityFeed/components/AllArticleSection/AllArticleSection.jsx
+[00:04:55.483] Server  ERROR   ⨯ ./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+Error:   × Expression expected
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <
+ 5 │       
+ 6 │     </div>
+   ·     ─
+ 7 │   )
+ 8 │ }
+   ╰────
+  × Unterminated regexp literal
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <
+ 5 │       
+ 6 │     </div>
+   ·      ─────
+ 7 │   )
+ 8 │ }
+   ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+./src/app/communityFeed/components/AllArticleSection/AllArticleSection.jsx
+[00:04:55.856] Browser ERROR   ./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+Error:   × Expression expected
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <p
+ 5 │       
+ 6 │     </div>
+   ·     ─
+ 7 │   )
+ 8 │ }
+   ╰────
+  × Unterminated regexp literal
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <p
+ 5 │       
+ 6 │     </div>
+   ·      ─────
+ 7 │   )
+ 8 │ }
+   ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+./src/app/communityFeed/components/AllArticleSection/AllArticleSection.jsx
+[00:04:55.856] Browser ERROR   ./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+Error:   × Expression expected
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <
+ 5 │       
+ 6 │     </div>
+   ·     ─
+ 7 │   )
+ 8 │ }
+   ╰────
+  × Unterminated regexp literal
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <
+ 5 │       
+ 6 │     </div>
+   ·      ─────
+ 7 │   )
+ 8 │ }
+   ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+./src/app/communityFeed/components/AllArticleSection/AllArticleSection.jsx
+[00:04:59.316] Server  ERROR   ⨯ ./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+Error:   × Expression expected
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <h
+ 5 │       
+ 6 │     </div>
+   ·     ─
+ 7 │   )
+ 8 │ }
+   ╰────
+  × Unterminated regexp literal
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <h
+ 5 │       
+ 6 │     </div>
+   ·      ─────
+ 7 │   )
+ 8 │ }
+   ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+./src/app/communityFeed/components/AllArticleSection/AllArticleSection.jsx
+[00:04:59.857] Browser ERROR   ./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+Error:   × Expression expected
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <
+ 5 │       
+ 6 │     </div>
+   ·     ─
+ 7 │   )
+ 8 │ }
+   ╰────
+  × Unterminated regexp literal
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <
+ 5 │       
+ 6 │     </div>
+   ·      ─────
+ 7 │   )
+ 8 │ }
+   ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+./src/app/communityFeed/components/AllArticleSection/AllArticleSection.jsx
+[00:04:59.857] Browser ERROR   ./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+Error:   × Expression expected
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <h
+ 5 │       
+ 6 │     </div>
+   ·     ─
+ 7 │   )
+ 8 │ }
+   ╰────
+  × Unterminated regexp literal
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <h
+ 5 │       
+ 6 │     </div>
+   ·      ─────
+ 7 │   )
+ 8 │ }
+   ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+./src/app/communityFeed/components/AllArticleSection/AllArticleSection.jsx
+[00:04:59.857] Browser ERROR   ./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+Error:   × Expression expected
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <h
+ 5 │       
+ 6 │     </div>
+   ·     ─
+ 7 │   )
+ 8 │ }
+   ╰────
+  × Unterminated regexp literal
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <h
+ 5 │       
+ 6 │     </div>
+   ·      ─────
+ 7 │   )
+ 8 │ }
+   ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+./src/app/communityFeed/components/AllArticleSection/AllArticleSection.jsx
+[00:05:01.794] Server  ERROR   ⨯ ./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+Error:   × Expression expected
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <h4
+ 5 │       
+ 6 │     </div>
+   ·     ─
+ 7 │   )
+ 8 │ }
+   ╰────
+  × Unterminated regexp literal
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <h4
+ 5 │       
+ 6 │     </div>
+   ·      ─────
+ 7 │   )
+ 8 │ }
+   ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+./src/app/communityFeed/components/AllArticleSection/AllArticleSection.jsx
+[00:05:02.858] Browser ERROR   ./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+Error:   × Expression expected
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <h
+ 5 │       
+ 6 │     </div>
+   ·     ─
+ 7 │   )
+ 8 │ }
+   ╰────
+  × Unterminated regexp literal
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <h
+ 5 │       
+ 6 │     </div>
+   ·      ─────
+ 7 │   )
+ 8 │ }
+   ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+./src/app/communityFeed/components/AllArticleSection/AllArticleSection.jsx
+[00:05:02.859] Browser ERROR   ./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+Error:   × Expression expected
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <h4
+ 5 │       
+ 6 │     </div>
+   ·     ─
+ 7 │   )
+ 8 │ }
+   ╰────
+  × Unterminated regexp literal
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <h4
+ 5 │       
+ 6 │     </div>
+   ·      ─────
+ 7 │   )
+ 8 │ }
+   ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+./src/app/communityFeed/components/AllArticleSection/AllArticleSection.jsx
+[00:05:04.564] Server  ERROR   ⨯ ./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+Error:   × Expression expected
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <
+ 5 │       
+ 6 │     </div>
+   ·     ─
+ 7 │   )
+ 8 │ }
+   ╰────
+  × Unterminated regexp literal
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <
+ 5 │       
+ 6 │     </div>
+   ·      ─────
+ 7 │   )
+ 8 │ }
+   ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+./src/app/communityFeed/components/AllArticleSection/AllArticleSection.jsx
+[00:05:04.857] Browser ERROR   ./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+Error:   × Expression expected
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <h4
+ 5 │       
+ 6 │     </div>
+   ·     ─
+ 7 │   )
+ 8 │ }
+   ╰────
+  × Unterminated regexp literal
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <h4
+ 5 │       
+ 6 │     </div>
+   ·      ─────
+ 7 │   )
+ 8 │ }
+   ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+./src/app/communityFeed/components/AllArticleSection/AllArticleSection.jsx
+[00:05:04.857] Browser ERROR   ./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+Error:   × Expression expected
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <
+ 5 │       
+ 6 │     </div>
+   ·     ─
+ 7 │   )
+ 8 │ }
+   ╰────
+  × Unterminated regexp literal
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <
+ 5 │       
+ 6 │     </div>
+   ·      ─────
+ 7 │   )
+ 8 │ }
+   ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+./src/app/communityFeed/components/AllArticleSection/AllArticleSection.jsx
+[00:05:04.857] Browser ERROR   ./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+Error:   × Expression expected
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <
+ 5 │       
+ 6 │     </div>
+   ·     ─
+ 7 │   )
+ 8 │ }
+   ╰────
+  × Unterminated regexp literal
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <
+ 5 │       
+ 6 │     </div>
+   ·      ─────
+ 7 │   )
+ 8 │ }
+   ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+./src/app/communityFeed/components/AllArticleSection/AllArticleSection.jsx
+[00:05:11.797] Server  ERROR   ⨯ ./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+Error:   × Expression expected
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <s
+ 5 │       
+ 6 │     </div>
+   ·     ─
+ 7 │   )
+ 8 │ }
+   ╰────
+  × Unterminated regexp literal
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <s
+ 5 │       
+ 6 │     </div>
+   ·      ─────
+ 7 │   )
+ 8 │ }
+   ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+./src/app/communityFeed/components/AllArticleSection/AllArticleSection.jsx
+[00:05:12.857] Browser ERROR   ./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+Error:   × Expression expected
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <
+ 5 │       
+ 6 │     </div>
+   ·     ─
+ 7 │   )
+ 8 │ }
+   ╰────
+  × Unterminated regexp literal
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <
+ 5 │       
+ 6 │     </div>
+   ·      ─────
+ 7 │   )
+ 8 │ }
+   ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+./src/app/communityFeed/components/AllArticleSection/AllArticleSection.jsx
+[00:05:12.857] Browser ERROR   ./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+Error:   × Expression expected
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <s
+ 5 │       
+ 6 │     </div>
+   ·     ─
+ 7 │   )
+ 8 │ }
+   ╰────
+  × Unterminated regexp literal
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <s
+ 5 │       
+ 6 │     </div>
+   ·      ─────
+ 7 │   )
+ 8 │ }
+   ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+./src/app/communityFeed/components/AllArticleSection/AllArticleSection.jsx
+[00:05:13.275] Server  ERROR   ⨯ ./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+Error:   × Expression expected
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <
+ 5 │       
+ 6 │     </div>
+   ·     ─
+ 7 │   )
+ 8 │ }
+   ╰────
+  × Unterminated regexp literal
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <
+ 5 │       
+ 6 │     </div>
+   ·      ─────
+ 7 │   )
+ 8 │ }
+   ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+./src/app/communityFeed/components/AllArticleSection/AllArticleSection.jsx
+[00:05:13.856] Browser ERROR   ./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+Error:   × Expression expected
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <s
+ 5 │       
+ 6 │     </div>
+   ·     ─
+ 7 │   )
+ 8 │ }
+   ╰────
+  × Unterminated regexp literal
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <s
+ 5 │       
+ 6 │     </div>
+   ·      ─────
+ 7 │   )
+ 8 │ }
+   ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+./src/app/communityFeed/components/AllArticleSection/AllArticleSection.jsx
+[00:05:13.856] Browser ERROR   ./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+Error:   × Expression expected
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <
+ 5 │       
+ 6 │     </div>
+   ·     ─
+ 7 │   )
+ 8 │ }
+   ╰────
+  × Unterminated regexp literal
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <
+ 5 │       
+ 6 │     </div>
+   ·      ─────
+ 7 │   )
+ 8 │ }
+   ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+./src/app/communityFeed/components/AllArticleSection/AllArticleSection.jsx
+[00:05:16.536] Server  ERROR   ⨯ ./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+Error:   × Expression expected
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <p
+ 5 │       
+ 6 │     </div>
+   ·     ─
+ 7 │   )
+ 8 │ }
+   ╰────
+  × Unterminated regexp literal
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <p
+ 5 │       
+ 6 │     </div>
+   ·      ─────
+ 7 │   )
+ 8 │ }
+   ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+./src/app/communityFeed/components/AllArticleSection/AllArticleSection.jsx
+[00:05:16.855] Browser ERROR   ./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+Error:   × Expression expected
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <
+ 5 │       
+ 6 │     </div>
+   ·     ─
+ 7 │   )
+ 8 │ }
+   ╰────
+  × Unterminated regexp literal
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <
+ 5 │       
+ 6 │     </div>
+   ·      ─────
+ 7 │   )
+ 8 │ }
+   ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+./src/app/communityFeed/components/AllArticleSection/AllArticleSection.jsx
+[00:05:16.855] Browser ERROR   ./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+Error:   × Expression expected
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <p
+ 5 │       
+ 6 │     </div>
+   ·     ─
+ 7 │   )
+ 8 │ }
+   ╰────
+  × Unterminated regexp literal
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <p
+ 5 │       
+ 6 │     </div>
+   ·      ─────
+ 7 │   )
+ 8 │ }
+   ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+./src/app/communityFeed/components/AllArticleSection/AllArticleSection.jsx
+[00:05:17.856] Browser ERROR   ./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+Error:   × Expression expected
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <p
+ 5 │       
+ 6 │     </div>
+   ·     ─
+ 7 │   )
+ 8 │ }
+   ╰────
+  × Unterminated regexp literal
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:6:1]
+ 3 │     <div>
+ 4 │       <p
+ 5 │       
+ 6 │     </div>
+   ·      ─────
+ 7 │   )
+ 8 │ }
+   ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+./src/app/communityFeed/components/AllArticleSection/AllArticleSection.jsx
+[00:05:21.104] Server  ERROR   ⨯ ./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+Error:   × Expression expected
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:4:1]
+ 1 │ export default function ArticleCard({article}) {
+ 2 │   return(
+ 3 │     <div>
+ 4 │       <p>{</p>
+   ·           ─
+ 5 │       
+ 6 │     </div>
+ 7 │   )
+   ╰────
+  × Unterminated regexp literal
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:4:1]
+ 1 │ export default function ArticleCard({article}) {
+ 2 │   return(
+ 3 │     <div>
+ 4 │       <p>{</p>
+   ·            ───
+ 5 │       
+ 6 │     </div>
+ 7 │   )
+   ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+./src/app/communityFeed/components/AllArticleSection/AllArticleSection.jsx
+[00:05:21.856] Browser ERROR   ./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+Error:   × Expression expected
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:4:1]
+ 1 │ export default function ArticleCard({article}) {
+ 2 │   return(
+ 3 │     <div>
+ 4 │       <p>{</p>
+   ·           ─
+ 5 │       
+ 6 │     </div>
+ 7 │   )
+   ╰────
+  × Unterminated regexp literal
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:4:1]
+ 1 │ export default function ArticleCard({article}) {
+ 2 │   return(
+ 3 │     <div>
+ 4 │       <p>{</p>
+   ·            ───
+ 5 │       
+ 6 │     </div>
+ 7 │   )
+   ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+./src/app/communityFeed/components/AllArticleSection/AllArticleSection.jsx
+[00:05:21.856] Browser ERROR   ./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+Error:   × Expression expected
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:4:1]
+ 1 │ export default function ArticleCard({article}) {
+ 2 │   return(
+ 3 │     <div>
+ 4 │       <p>{</p>
+   ·           ─
+ 5 │       
+ 6 │     </div>
+ 7 │   )
+   ╰────
+  × Unterminated regexp literal
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:4:1]
+ 1 │ export default function ArticleCard({article}) {
+ 2 │   return(
+ 3 │     <div>
+ 4 │       <p>{</p>
+   ·            ───
+ 5 │       
+ 6 │     </div>
+ 7 │   )
+   ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+./src/app/communityFeed/components/AllArticleSection/AllArticleSection.jsx
+[00:05:25.545] Server  ERROR   ⨯ ./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+Error:   × Expression expected
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:4:1]
+ 1 │ export default function ArticleCard({article}) {
+ 2 │   return(
+ 3 │     <div>
+ 4 │       <p>{article.</p>
+   ·                   ─
+ 5 │       
+ 6 │     </div>
+ 7 │   )
+   ╰────
+  × Unterminated regexp literal
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:4:1]
+ 1 │ export default function ArticleCard({article}) {
+ 2 │   return(
+ 3 │     <div>
+ 4 │       <p>{article.</p>
+   ·                    ───
+ 5 │       
+ 6 │     </div>
+ 7 │   )
+   ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+./src/app/communityFeed/components/AllArticleSection/AllArticleSection.jsx
+[00:05:25.856] Browser ERROR   ./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+Error:   × Expression expected
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:4:1]
+ 1 │ export default function ArticleCard({article}) {
+ 2 │   return(
+ 3 │     <div>
+ 4 │       <p>{</p>
+   ·           ─
+ 5 │       
+ 6 │     </div>
+ 7 │   )
+   ╰────
+  × Unterminated regexp literal
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:4:1]
+ 1 │ export default function ArticleCard({article}) {
+ 2 │   return(
+ 3 │     <div>
+ 4 │       <p>{</p>
+   ·            ───
+ 5 │       
+ 6 │     </div>
+ 7 │   )
+   ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+./src/app/communityFeed/components/AllArticleSection/AllArticleSection.jsx
+[00:05:25.856] Browser ERROR   ./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+Error:   × Expression expected
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:4:1]
+ 1 │ export default function ArticleCard({article}) {
+ 2 │   return(
+ 3 │     <div>
+ 4 │       <p>{article.</p>
+   ·                   ─
+ 5 │       
+ 6 │     </div>
+ 7 │   )
+   ╰────
+  × Unterminated regexp literal
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:4:1]
+ 1 │ export default function ArticleCard({article}) {
+ 2 │   return(
+ 3 │     <div>
+ 4 │       <p>{article.</p>
+   ·                    ───
+ 5 │       
+ 6 │     </div>
+ 7 │   )
+   ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+./src/app/communityFeed/components/AllArticleSection/AllArticleSection.jsx
+[00:05:25.856] Browser ERROR   ./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+Error:   × Expression expected
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:4:1]
+ 1 │ export default function ArticleCard({article}) {
+ 2 │   return(
+ 3 │     <div>
+ 4 │       <p>{article.</p>
+   ·                   ─
+ 5 │       
+ 6 │     </div>
+ 7 │   )
+   ╰────
+  × Unterminated regexp literal
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:4:1]
+ 1 │ export default function ArticleCard({article}) {
+ 2 │   return(
+ 3 │     <div>
+ 4 │       <p>{article.</p>
+   ·                    ───
+ 5 │       
+ 6 │     </div>
+ 7 │   )
+   ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+./src/app/communityFeed/components/AllArticleSection/AllArticleSection.jsx
+[00:05:27.251] Server  ERROR   ⨯ ./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+Error:   × Unterminated regexp literal
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:4:1]
+ 1 │ export default function ArticleCard({article}) {
+ 2 │   return(
+ 3 │     <div>
+ 4 │       <p>{article.title</p>
+   ·                         ───
+ 5 │       
+ 6 │     </div>
+ 7 │   )
+   ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+./src/app/communityFeed/components/AllArticleSection/AllArticleSection.jsx
+[00:05:27.856] Browser ERROR   ./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+Error:   × Expression expected
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:4:1]
+ 1 │ export default function ArticleCard({article}) {
+ 2 │   return(
+ 3 │     <div>
+ 4 │       <p>{article.</p>
+   ·                   ─
+ 5 │       
+ 6 │     </div>
+ 7 │   )
+   ╰────
+  × Unterminated regexp literal
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:4:1]
+ 1 │ export default function ArticleCard({article}) {
+ 2 │   return(
+ 3 │     <div>
+ 4 │       <p>{article.</p>
+   ·                    ───
+ 5 │       
+ 6 │     </div>
+ 7 │   )
+   ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+./src/app/communityFeed/components/AllArticleSection/AllArticleSection.jsx
+[00:05:27.856] Browser ERROR   ./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+Error:   × Unterminated regexp literal
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:4:1]
+ 1 │ export default function ArticleCard({article}) {
+ 2 │   return(
+ 3 │     <div>
+ 4 │       <p>{article.title</p>
+   ·                         ───
+ 5 │       
+ 6 │     </div>
+ 7 │   )
+   ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+./src/app/communityFeed/components/AllArticleSection/AllArticleSection.jsx
+[00:05:27.856] Browser ERROR   ./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+Error:   × Unterminated regexp literal
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:4:1]
+ 1 │ export default function ArticleCard({article}) {
+ 2 │   return(
+ 3 │     <div>
+ 4 │       <p>{article.title</p>
+   ·                         ───
+ 5 │       
+ 6 │     </div>
+ 7 │   )
+   ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+./src/app/communityFeed/components/AllArticleSection/AllArticleSection.jsx
+[00:05:28.856] Browser ERROR   ./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+Error:   × Unterminated regexp literal
+   ╭─[/Users/apple/Desktop/sprint_mission/11-sprint-mission-fe-next/src/app/communityFeed/components/ArticleCard/ArticleCard.jsx:4:1]
+ 1 │ export default function ArticleCard({article}) {
+ 2 │   return(
+ 3 │     <div>
+ 4 │       <p>{article.title</p>
+   ·                         ───
+ 5 │       
+ 6 │     </div>
+ 7 │   )
+   ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/communityFeed/components/ArticleCard/ArticleCard.jsx
+./src/app/communityFeed/components/AllArticleSection/AllArticleSection.jsx
+[00:06:55.876] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:06:55.877] Browser ERROR   uncaughtError: ReferenceError: Link is not defined
+[00:06:56.155] Server  ERROR   ⨯ ReferenceError: Link is not defined
+[00:06:57.862] Browser ERROR   uncaughtError: ReferenceError: Link is not defined
+[00:07:02.989] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:07:03.415] Server  ERROR   ⨯ ReferenceError: Link is not defined
+[00:07:04.856] Browser ERROR   uncaughtError: ReferenceError: Link is not defined
+[00:07:05.716] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:08:11.717] Browser WARN    Image with src "/_next/static/media/logo.b0195198.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:08:26.659] Browser WARN    Image with src "/_next/static/media/logo.b0195198.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:08:28.276] Browser WARN    Image with src "/_next/static/media/logo.b0195198.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading

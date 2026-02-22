@@ -3,6 +3,7 @@ import twitterLogo from '@/assets/social/twitter-logo.svg';
 import youtubeLogo from '@/assets/social/youtube-logo.svg';
 import instagramLogo from '@/assets/social/instagram-logo.svg';
 import styles from './Footer.module.css';
+import Image from 'next/image';
 
 
  export function Footer() {
@@ -19,28 +20,28 @@ import styles from './Footer.module.css';
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src={facebookLogo} alt="페이스북" width="20" />
+          <Image src={facebookLogo} alt="페이스북" width="20" />
         </a>
         <a
           href="https://twitter.com/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src={twitterLogo} alt="트위터" width="20" />
+          <Image src={twitterLogo} alt="트위터" width="20" />
         </a>
         <a
           href="https://www.youtube.com/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src={youtubeLogo} alt="유튜브" width="20" />
+          <Image src={youtubeLogo} alt="유튜브" width="20" />
         </a>
         <a
           href="https://www.instagram.com/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src={instagramLogo} alt="인스타그램" width="20" />
+          <Image src={instagramLogo} alt="인스타그램" width="20" />
         </a>
       </div>
     </footer>

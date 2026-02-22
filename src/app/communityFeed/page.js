@@ -4,8 +4,8 @@ import AllArticleSection from './components/AllArticleSection';
 
 
 export default async function communityFeed({ searchParams }) {
-  const { keyword = ''} = searchParams
-  const { orderBy = 'latest'} = searchParams
+  const { keyword = ''} = await searchParams
+  const { orderBy = 'recent'} = await searchParams
   // const keyword = searchParams.keyword || '';
   // const orderBy = searchParams.orderBy || 'latest';
 
@@ -15,8 +15,8 @@ export default async function communityFeed({ searchParams }) {
   ]);
   return (
     <div>
-      <BestArticleSection articles = {bestArticles}/>
-      <AllArticleSection articles = {allArticles} />
+      <BestArticleSection articles = {bestArticles.articles}/>
+      <AllArticleSection articles = {allArticles.articles} />
     </div>
   );
 }

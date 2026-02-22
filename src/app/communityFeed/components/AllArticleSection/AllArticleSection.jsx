@@ -1,7 +1,6 @@
 'use client';
 
 import { Button } from '@/components/UI/Button';
-import FeedCard from '../BestArticleCard/BestArticleCard';
 import { DropdownList } from '@/components/UI/DropdownList';
 import { useEffect, useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
@@ -40,7 +39,7 @@ export default function AllArticleSection({ articles }) {
 
     params.set('orderBy', orderBy);
 
-    router.push(`/board?${params.toString()}`);
+    router.push(`/communityFeed?${params.toString()}`);
   }, [debouncedKeyword, orderBy]);
 
   // 정렬 선택
@@ -49,11 +48,15 @@ export default function AllArticleSection({ articles }) {
     setIsOpen(false);
   };
 
+  if (!articles || articles.length === 0) {
+    return <p>게시글이 없습니다.</p>;
+  }
+
   return (
     <div>
       <div>
         <h1>게시글</h1>
-        <Button onClick={() => router.push('/communityFeed/creatArticle')}>
+        <Button onClick={() => router.push('/communityFeed/writeArticle')}>
           글쓰기
         </Button>
       </div>
@@ -83,7 +86,6 @@ export default function AllArticleSection({ articles }) {
           <ArticleCard article={article} key={article.id} />
         ))}
       </div>
-      <FeedCard />
     </div>
   );
 }
