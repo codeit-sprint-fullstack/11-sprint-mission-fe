@@ -100,20 +100,19 @@ export default async function FreeBoardPage({ searchParams }) {
             className={styles.link}
           >
             <div className={styles.normalItem}>
-              <div className={styles.normalInfo}>
-                <h3 className={styles.normalTitle}>{article.title}</h3>
-                <div className={styles.normalFooter}>
-                  <div className={styles.profileWrapper}>
-                    <div className={styles.profileIcon}></div>
-                    <span className={styles.nickname}>
-                      {getNickname(article.nickname)}
-                    </span>
-                  </div>
-                  <span className={styles.date}>
-                    {formatDate(article.createdAt)}
+              <h3 className={styles.normalTitle}>{article.title}</h3>
+              <div className={styles.normalFooter}>
+                <div className={styles.profileWrapper}>
+                  <div className={styles.profileIcon}></div>
+                  <span className={styles.nickname}>
+                    {getNickname(article.nickname)}
                   </span>
                 </div>
+                <span className={styles.date}>
+                  {formatDate(article.createdAt)}
+                </span>
               </div>
+
               <div className={styles.normalLikes}>
                 ♡ {getLikes(article.likeCount, article.id)}
               </div>
