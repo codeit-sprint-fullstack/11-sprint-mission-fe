@@ -1,6 +1,7 @@
 import { getArticleList, getBestArticleList } from '@/lib/api/ArticleService';
-import AllFeedSection from './components/AllArticleSection';
-import BestFeedSection from './components/BestArticleSection';
+import BestArticleSection from './components/BestArticleSection';
+import AllArticleSection from './components/AllArticleSection';
+
 
 export default async function communityFeed({ searchParams }) {
   const { keyword = ''} = searchParams
