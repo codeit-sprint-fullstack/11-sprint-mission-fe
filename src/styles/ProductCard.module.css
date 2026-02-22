@@ -7,7 +7,7 @@
 
 /* 이미지 영역 (1:1 비율 유지) */
 .imgBox {
-  border-radius: 15px;
+  border-radius: 1.5rem;
   overflow: hidden;
   aspect-ratio: 1/1;
   background: #eee;
@@ -33,7 +33,7 @@
 }
 
 .name {
-  font-size: 16px;
+  font-size: 1.6rem;
   margin: 0;
   font-weight: normal;
   color: #1f2937;
@@ -44,7 +44,7 @@
 }
 
 .price {
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: bold;
   margin: 0;
   color: #1f2937;
@@ -52,15 +52,15 @@
 
 /* 좋아요 (아이콘 + 숫자) */
 .likes {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #666;
   display: flex;
   align-items: center;
-  gap: 2px;
+  gap: 0.2rem;
 }
 
 .heartIcon {
-  font-size: 18px;
+  font-size: 1.8rem;
   color: #333;
   font-weight: bold;
 }

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useParams } from 'next/navigation';
 import {
   getComments,
   createComment,
@@ -9,7 +10,10 @@ import {
 } from '../../../../../api/api';
 import styles from './detail.module.css';
 
-// 👈 상대 시간 변환 함수
+/* eslint-disable no-undef */
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5001/api';
+
+// 상대 시간 변환 함수
 const getRelativeTime = (dateString) => {
   const now = new Date();
   const past = new Date(dateString);
@@ -22,34 +26,40 @@ const getRelativeTime = (dateString) => {
 };
 
 export default function CommentSection({ articleId }) {
+  const params = useParams();
+  const id = articleId || params.id; // props가 없으면 params에서 가져옴
   const [comments, setComments] = useState([]);
   const [newComment, setNewComment] = useState('');
   const [editingId, setEditingId] = useState(null);
   const [editContent, setEditContent] = useState('');
 
-  // 👈 어떤 댓글의 케밥 메뉴가 열려있는지 저장하는 상태
+  // 어떤 댓글의 케밥 메뉴가 열려있는지 저장하는 상태
   const [openMenuId, setOpenMenuId] = useState(null);
 
   useEffect(() => {
     const loadComments = async () => {
-      if (!articleId) return;
+      if (!id) {
+        return;
+      }
       try {
-        const data = await getComments({ articleId });
+        const data = await getComments({ articleId: id, limit: 100 });
         setComments(data.list || []);
       } catch (error) {
         console.error(error);
       }
     };
     loadComments();
-  }, [articleId]);
+  }, [id]);
 
   const handleRegister = async () => {
     if (!newComment.trim()) return;
     try {
-      await createComment({ articleId, content: newComment });
+      const newCommentData = await createComment({
+        articleId: id,
+        content: newComment,
+      });
       setNewComment('');
-      const data = await getComments({ articleId });
-      setComments(data.list || []);
+      setComments((prev) => [newCommentData, ...prev]);
     } catch (error) {
       console.error('댓글 등록 실패:', error);
       alert('댓글 등록 실패');
@@ -60,8 +70,7 @@ export default function CommentSection({ articleId }) {
     if (!confirm('삭제하시겠습니까?')) return;
     try {
       await deleteComment(id);
-      const data = await getComments({ articleId });
-      setComments(data.list || []);
+      setComments((prev) => prev.filter((comment) => comment.id !== id));
     } catch (error) {
       console.error('삭제 실패:', error);
       alert('삭제 실패');
@@ -71,11 +80,15 @@ export default function CommentSection({ articleId }) {
   const handleUpdate = async (id) => {
     if (!editContent.trim()) return;
     try {
-      await updateComment(id, { content: editContent });
+      const updatedComment = await updateComment({
+        commentId: id,
+        content: editContent,
+      });
       setEditingId(null);
       setOpenMenuId(null);
-      const data = await getComments({ articleId });
-      setComments(data.list || []);
+      setComments((prev) =>
+        prev.map((comment) => (comment.id === id ? updatedComment : comment)),
+      );
     } catch (error) {
       console.error('수정 실패:', error);
       alert('수정 실패');
@@ -111,7 +124,7 @@ export default function CommentSection({ articleId }) {
         {/* 댓글 빈 상태 처리 */}
         {comments.length === 0 ? (
           <div className={styles.emptyComment}>
-            <div className={styles.emptyIcon}>💬</div>
+            <img src="/img/Img_reply_empty.png" alt="댓글 없음 아이콘" />
             <p>
               아직 댓글이 없어요,
               <br />

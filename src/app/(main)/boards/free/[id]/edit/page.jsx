@@ -48,11 +48,22 @@ export default function EditPage() {
 
   return (
     <main className={styles.container}>
-      <h2 className={styles.title}>게시글 수정</h2>
+      <div className={styles.header}>
+        <h2 className={styles.title}>게시글 수정하기</h2>
+        <button
+          className={styles.submitBtn}
+          onClick={handleSubmit}
+          disabled={!isValid}
+        >
+          수정하기
+        </button>
+      </div>
 
       <div className={styles.formGroup}>
         <div className={styles.inputWrapper}>
-          <label className={styles.label}>제목</label>
+          <label className={styles.label}>
+            <span className={styles.required}>*</span>제목
+          </label>
           <input
             className={styles.input}
             value={title}
@@ -62,23 +73,15 @@ export default function EditPage() {
         </div>
 
         <div className={styles.inputWrapper}>
-          <label className={styles.label}>내용</label>
+          <label className={styles.label}>
+            <span className={styles.required}>*</span>내용
+          </label>
           <textarea
             className={styles.textarea}
             value={content}
             onChange={(e) => setContent(e.target.value)}
             placeholder="내용을 입력해주세요"
           />
-        </div>
-
-        <div className={styles.buttonWrapper}>
-          <button
-            className={styles.submitButton}
-            onClick={handleSubmit}
-            disabled={!isValid}
-          >
-            수정하기
-          </button>
         </div>
       </div>
     </main>

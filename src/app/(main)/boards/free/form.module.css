@@ -2,29 +2,36 @@
   padding: 40px 20px;
   max-width: 1200px;
   margin: 0 auto;
+  margin-top: 2.4rem;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 40px;
+  margin-top: 2.4rem;
+  margin-bottom: 3.2rem;
 }
 
 .title {
-  font-size: 20px;
+  color: var(--Secondary-800, #1f2937);
+  font-family: Pretendard;
+  font-size: 2rem;
+  font-style: normal;
   font-weight: 700;
-  color: #1f2937;
+  line-height: 3.2rem;
+  margin-top: 2.4rem;
+  margin-bottom: 3.2rem;
 }
 
 .submitBtn {
-  padding: 10px 32px;
+  padding: 1.2rem 2.3rem;
   background-color: #3692ff;
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 0.8rem;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 1.6rem;
   cursor: pointer;
   transition: background-color 0.2s;
 }
@@ -37,19 +44,28 @@
 .formGroup {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 2.4rem;
 }
 
 .inputWrapper {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 1.2rem;
 }
 
 .label {
+  color: var(--Secondary-800, #1f2937);
+  font-family: Pretendard;
+  font-size: 1.8rem;
+  font-style: normal;
   font-weight: 700;
-  font-size: 18px;
-  color: #1f2937;
+  line-height: 2.6rem;
+}
+/* Mobile (375px 이하) */
+@media (max-width: 375px) {
+  .label {
+    font-size: 1.4rem;
+  }
 }
 
 .required {
@@ -79,52 +95,4 @@
   min-height: 280px;
   resize: none;
   font-family: inherit;
-}
-
-.imageUploadBox {
-  width: 240px;
-  height: 240px;
-  background-color: #f3f4f6;
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  transition: background-color 0.2s;
-  color: #9ca3af;
-}
-
-.imageUploadBox:hover {
-  background-color: #e5e7eb;
-}
-
-.imagePlusIcon {
-  font-size: 40px;
-  font-weight: 300;
-  margin-bottom: 8px;
-  color: #9ca3af;
-}
-
-.imageUploadText {
-  font-size: 16px;
-  font-weight: 500;
-}
-
-/* 반응형 (모바일) */
-@media (max-width: 743px) {
-  .header {
-    margin-bottom: 24px;
-  }
-  .imageUploadBox {
-    width: 100px;
-    height: 100px;
-  }
-  .imagePlusIcon {
-    font-size: 24px;
-    margin-bottom: 4px;
-  }
-  .imageUploadText {
-    font-size: 12px;
-  }
 }

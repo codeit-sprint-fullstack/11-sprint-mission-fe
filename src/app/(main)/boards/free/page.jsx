@@ -11,20 +11,20 @@ export default async function FreeBoardPage({ searchParams }) {
   const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5001/api';
 
   const [bestRes, listRes] = await Promise.all([
-    fetch(`${API_URL}/articles?orderBy=recent&limit=3`, { cache: 'no-store' }),
+    fetch(`${API_URL}/articles?orderBy=like&limit=3`, { cache: 'no-store' }),
     fetch(`${API_URL}/articles?orderBy=${orderBy}&keyword=${q}&limit=10`, {
       cache: 'no-store',
     }),
   ]);
 
   const bestData = await bestRes.json();
-  const bestArticles = bestData.list || [];
+  const bestArticles = Array.isArray(bestData) ? bestData : bestData.list || [];
 
   const listData = await listRes.json();
-  const articles = listData.list || [];
+  const articles = Array.isArray(listData) ? listData : listData.list || [];
 
   const getDefaultImage = (img) => img || '/img/img_default.png';
-  const getNickname = (name) => name || '익명 판다';
+  const getNickname = (name) => name || '총명한 판다';
   const getLikes = (likes, id) => likes ?? id % 50;
 
   // 날짜를 00. 00. 형식으로 맞춰주는 포맷 함수
@@ -48,7 +48,7 @@ export default async function FreeBoardPage({ searchParams }) {
             className={styles.link}
           >
             <div className={styles.bestCard}>
-              <div className={styles.badge}>💡 Best</div>
+              <div className={styles.badge}>Best</div>
 
               <div className={styles.cardHeader}>
                 <h3 className={styles.cardTitle}>{article.title}</h3>

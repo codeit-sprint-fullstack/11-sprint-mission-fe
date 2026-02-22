@@ -2,14 +2,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 30px;
-  gap: 20px;
+  margin-bottom: 3rem;
+  gap: 1.6rem;
 }
 
 .inputWrapper {
   position: relative;
   flex: 1;
-  max-width: 400px;
 }
 
 .searchIcon {

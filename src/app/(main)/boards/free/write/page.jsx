@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { createArticle } from '../../../../../api/api';
 import styles from '../form.module.css';
@@ -10,18 +10,8 @@ export default function WritePage() {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
 
-  const [image, setImage] = useState(null);
-  const fileInputRef = useRef(null);
-
   // 제목과 내용이 비어있지 않은지 체크 (버튼 활성화용)
   const isValid = title.trim() !== '' && content.trim() !== '';
-
-  const handleImageChange = (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      setImage(file);
-    }
-  };
 
   const handleSubmit = async () => {
     if (!isValid) {
@@ -81,30 +71,6 @@ export default function WritePage() {
             value={content}
             onChange={(e) => setContent(e.target.value)}
             placeholder="내용을 입력해주세요"
-          />
-        </div>
-
-        {/* 이미지 등록 */}
-        <div className={styles.inputWrapper}>
-          <label className={styles.label}>이미지</label>
-          <div
-            className={styles.imageUploadBox}
-            onClick={() => fileInputRef.current?.click()}
-          >
-            <div className={styles.imagePlusIcon}>+</div>
-            <span className={styles.imageUploadText}>
-              이미지 등록
-              {image ? image.name : '이미지 등록'}
-            </span>
-          </div>
-
-          {/* 동작은 하지만 안보이게 숨겨둔 파일 입력창 */}
-          <input
-            type="file"
-            accept="image/*"
-            ref={fileInputRef}
-            style={{ display: 'none' }}
-            onChange={handleImageChange}
           />
         </div>
       </div>
