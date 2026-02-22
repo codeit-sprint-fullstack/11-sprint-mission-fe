@@ -11,7 +11,7 @@ export default async function FreeBoardPage({ searchParams }) {
   const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5001/api';
 
   const [bestRes, listRes] = await Promise.all([
-    fetch(`${API_URL}/articles?orderBy=like&limit=3`, { cache: 'no-store' }),
+    fetch(`${API_URL}/articles?orderBy=recent&limit=3`, { cache: 'no-store' }),
     fetch(`${API_URL}/articles?orderBy=${orderBy}&keyword=${q}&limit=10`, {
       cache: 'no-store',
     }),
