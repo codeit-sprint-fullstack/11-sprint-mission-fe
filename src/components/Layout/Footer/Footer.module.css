@@ -1,0 +1,49 @@
+/* Mobile styles */
+
+.footer {
+  background-color: var(--Secondary-800);
+  font-size: 1.6rem;
+  color: var(--Secondary-400);
+  padding: 3.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6rem;
+}
+
+.copyright {
+  order: 3;
+  flex-basis: 100%;
+}
+
+.footerMenu {
+  display: flex;
+  gap: 3rem;
+  color: var(--Secondary-300);
+}
+
+.socialMedia {
+  display: flex;
+  gap: 1.2rem;
+}
+
+/* Tablet styles */
+
+@media (min-width: 744px) {
+  .footer {
+    padding: 3.2rem 10.4rem 10.8rem 10.4rem;
+  }
+  .copyright {
+    flex-basis: auto;
+    order: 0;
+  }
+}
+
+/* Desktop styles */
+
+@media (min-width: 1280px) {
+  .footer {
+    padding: 3.2rem 20rem 10.8rem 20rem;
+  }
+}
