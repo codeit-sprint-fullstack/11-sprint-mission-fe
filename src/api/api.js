@@ -29,7 +29,9 @@ export async function getProducts({
 // GET 상품 상세조회
 export async function getProductById(id) {
   const response = await fetch(`${BASE_URL}/products/${id}`);
-  if (!response.ok) throw new Error('상품 상세 조회 실패');
+  if (!response.ok) {
+    throw new Error('상품 상세 조회 실패');
+  }
   return await response.json();
 }
 

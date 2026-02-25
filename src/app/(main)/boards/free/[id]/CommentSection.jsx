@@ -18,10 +18,17 @@ const getRelativeTime = (dateString) => {
   const now = new Date();
   const past = new Date(dateString);
   const diffMin = Math.floor((now - past) / (1000 * 60));
-  if (diffMin < 1) return '방금 전';
-  if (diffMin < 60) return `${diffMin}분 전`;
+  if (diffMin < 1) {
+    return '방금 전';
+  }
+  if (diffMin < 60) {
+    return `${diffMin}분 전`;
+  }
+
   const diffHour = Math.floor(diffMin / 60);
-  if (diffHour < 24) return `${diffHour}시간 전`;
+  if (diffHour < 24) {
+    return `${diffHour}시간 전`;
+  }
   return `${Math.floor(diffHour / 24)}일 전`;
 };
 
@@ -52,7 +59,9 @@ export default function CommentSection({ articleId }) {
   }, [id]);
 
   const handleRegister = async () => {
-    if (!newComment.trim()) return;
+    if (!newComment.trim()) {
+      return;
+    }
     try {
       const newCommentData = await createComment({
         articleId: id,
@@ -67,7 +76,9 @@ export default function CommentSection({ articleId }) {
   };
 
   const handleDelete = async (id) => {
-    if (!confirm('삭제하시겠습니까?')) return;
+    if (!confirm('삭제하시겠습니까?')) {
+      return;
+    }
     try {
       await deleteComment(id);
       setComments((prev) => prev.filter((comment) => comment.id !== id));
@@ -78,7 +89,9 @@ export default function CommentSection({ articleId }) {
   };
 
   const handleUpdate = async (id) => {
-    if (!editContent.trim()) return;
+    if (!editContent.trim()) {
+      return;
+    }
     try {
       const updatedComment = await updateComment({
         commentId: id,
