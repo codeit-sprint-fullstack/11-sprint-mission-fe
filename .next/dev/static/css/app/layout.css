@@ -1,0 +1,180 @@
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/.pnpm/next@16.1.6_@babel+core@7.29.0_babel-plugin-react-compiler@1.0.0_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[16].oneOf[0].use[1]!./node_modules/.pnpm/next@16.1.6_@babel+core@7.29.0_babel-plugin-react-compiler@1.0.0_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[16].oneOf[0].use[2]!./node_modules/.pnpm/@vanilla-extract+webpack-plugin@2.3.25_webpack@5.105.2/node_modules/@vanilla-extract/webpack-plugin/virtualNextFileLoader/dist/vanilla-extract-webpack-plugin-virtualNextFileLoader.cjs.js!./node_modules/.pnpm/@vanilla-extract+webpack-plugin@2.3.25_webpack@5.105.2/node_modules/@vanilla-extract/webpack-plugin/vanilla.virtual.css?%7B%22fileName%22%3A%22src%2Fstyles%2Freset.css.js.vanilla.css%22%2C%22source%22%3A%22aDEsIGgyLCBoMywgaDQsIGg1LCBoNiwgcCwgdWwsIG9sLCBsaSwgZmlndXJlLCBibG9ja3F1b3RlIHsKICBtYXJnaW46IDA7CiAgcGFkZGluZzogMDsKfQp1bCwgb2wgewogIGxpc3Qtc3R5bGU6IG5vbmU7Cn0KYnV0dG9uIHsKICBiYWNrZ3JvdW5kOiBub25lOwogIGJvcmRlcjogbm9uZTsKICBwYWRkaW5nOiAwOwogIGN1cnNvcjogcG9pbnRlcjsKICBmb250OiBpbmhlcml0OwogIGNvbG9yOiBpbmhlcml0Owp9CmlucHV0LCB0ZXh0YXJlYSB7CiAgZm9udDogaW5oZXJpdDsKfQppbWcgewogIG1heC13aWR0aDogMTAwJTsKICBkaXNwbGF5OiBibG9jazsKfQ%22%7D ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+h1, h2, h3, h4, h5, h6, p, ul, ol, li, figure, blockquote {
+  margin: 0;
+  padding: 0;
+}
+ul, ol {
+  list-style: none;
+}
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+}
+input, textarea {
+  font: inherit;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/.pnpm/next@16.1.6_@babel+core@7.29.0_babel-plugin-react-compiler@1.0.0_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[16].oneOf[0].use[1]!./node_modules/.pnpm/next@16.1.6_@babel+core@7.29.0_babel-plugin-react-compiler@1.0.0_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[16].oneOf[0].use[2]!./node_modules/.pnpm/@vanilla-extract+webpack-plugin@2.3.25_webpack@5.105.2/node_modules/@vanilla-extract/webpack-plugin/virtualNextFileLoader/dist/vanilla-extract-webpack-plugin-virtualNextFileLoader.cjs.js!./node_modules/.pnpm/@vanilla-extract+webpack-plugin@2.3.25_webpack@5.105.2/node_modules/@vanilla-extract/webpack-plugin/vanilla.virtual.css?%7B%22fileName%22%3A%22src%2Fstyles%2Fglobals.css.js.vanilla.css%22%2C%22source%22%3A%22aHRtbCwgYm9keSB7CiAgbWFyZ2luOiAwOwogIHBhZGRpbmc6IDA7Cn0KYSB7CiAgdGV4dC1kZWNvcmF0aW9uOiBub25lOwogIGNvbG9yOiBpbmhlcml0Owp9CiogewogIGJveC1zaXppbmc6IGJvcmRlci1ib3g7Cn0%22%7D ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+html, body {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+* {
+  box-sizing: border-box;
+}
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/.pnpm/next@16.1.6_@babel+core@7.29.0_babel-plugin-react-compiler@1.0.0_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[16].oneOf[6].use[2]!./node_modules/.pnpm/next@16.1.6_@babel+core@7.29.0_babel-plugin-react-compiler@1.0.0_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[16].oneOf[6].use[3]!./src/components/UI/Button/Button.module.css ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.Button_button__7F12w {
+  border: none;
+}
+
+.Button_primary__hFGzf {
+  background-color: var(--Primary-100);
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.8rem;
+  padding: 1.15rem 2.3rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.Button_button__7F12w:hover {
+  background-color: var(--Primary-200);
+}
+
+.Button_button__7F12w:focus {
+  background-color: var(--Primary-300);
+}
+
+.Button_button__7F12w:disabled {
+  background-color: var(--Secondary-400);
+  cursor: default;
+  pointer-events: none;
+}
+
+.Button_pill__YgWD3 {
+  background-color: var(--Primary-100);
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+  border-radius: 99.9rem;
+  padding: 1.6rem 12.4rem;
+}
+
+.Button_full-width__f1nr2 {
+  width: 100%;
+}
+
+@media (min-width: 744px) {
+  .Button_pill-button__yzCZp {
+    font-size: 20px;
+    font-weight: 700;
+    padding: 16px 126px;
+  }
+}
+
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/.pnpm/next@16.1.6_@babel+core@7.29.0_babel-plugin-react-compiler@1.0.0_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[16].oneOf[6].use[2]!./node_modules/.pnpm/next@16.1.6_@babel+core@7.29.0_babel-plugin-react-compiler@1.0.0_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[16].oneOf[6].use[3]!./src/components/Layout/Header/Header.module.css ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/* Mobile styles */
+
+.Header_header__hfMjL {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  line-height: 7rem;
+  background-color: #ffffff;
+  border-bottom: 0.1rem solid #dfdfdf;
+  z-index: 1;
+}
+
+.Header_headerContainer__A3rdw {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.6rem;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.Header_headerLogo__zKaHK {
+  display: block;
+  margin-right: 1.6rem;
+}
+
+.Header_headerLeft__g2Rv4 {
+  display: flex;
+  align-items: center;
+}
+
+.Header_headerLeft__g2Rv4 nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 0.8rem;
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: var(--Secondary-600);
+}
+
+
+.Header_headerLeft__g2Rv4 nav ul li a.Header_active__V2NgE {
+  color: var(--Primary-100);
+}
+
+.Header_headerLeft__g2Rv4 nav ul li a:hover {
+  color: var(--Primary-100);
+}
+
+/* Tablet styles */
+@media (min-width: 744px) {
+  .Header_headerContainer__A3rdw {
+    padding: 0 2.4rem;
+  }
+
+  .Header_headerLeft__g2Rv4 nav ul {
+    gap: 3.6rem;
+    font-size: 1.8rem;
+  }
+
+  .Header_headerLogo__zKaHK {
+    margin-right: 3.5rem;
+  }
+}
+
+/* Desktop styles */
+
+@media (min-width: 1280px) {
+  .Header_headerContainer__A3rdw {
+    padding: 0 2rem;
+  }
+
+  .Header_headerLogo__zKaHK {
+    margin-right: 4.7rem;
+  }
+}
+
