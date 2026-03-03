@@ -14,6 +14,11 @@ export const label = style({
   color: vars.color.gray800,
 });
 
+export const inputWrapper = style({
+  position: 'relative',
+  width: '100%',
+});
+
 const baseInput = style({
   width: '100%',
   backgroundColor: vars.color.gray150,
@@ -37,4 +42,29 @@ export const inputVariants = styleVariants({
   default: [baseInput, { height: '5.6rem' }], // auth
   comment: [baseInput, { minHeight: '10.4rem' }],
   description: [baseInput, { minHeight: '28rem' }],
+});
+
+export const errorInput = style({
+  border: `1px solid ${vars.color.red}`,
+
+  // selectors: {
+  //   '&:focus': {
+  //     border: `1px solid ${vars.color.red}`,
+  //   },
+  // },
+});
+
+export const errorMessage = style({
+  fontSize: vars.fontSize.xxs,
+  fontWeight: vars.fontWeight.semibold,
+  color: vars.color.red,
+  marginTop: '0.8rem',
+});
+
+export const eyeButton = style({
+  position: 'absolute',
+  right: '1.6rem',
+  top: '50%',
+  transform: 'translateY(-50%)',
+  cursor: 'pointer',
 });
