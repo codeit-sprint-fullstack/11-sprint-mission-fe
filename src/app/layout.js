@@ -1,6 +1,7 @@
 import localFont from 'next/font/local';
-import '@/styles/index';
 import AppProviders from '@/providers/AppProviders';
+import Modal from '@/components/common/Modal';
+import '@/styles/index';
 
 const pretendard = localFont({
   src: '../../public/font/PretendardVariable.woff2',
@@ -18,7 +19,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="ko" className={pretendard.variable}>
       <body>
-        <AppProviders>{children}</AppProviders>
+        <AppProviders>
+          {children}
+          <Modal />
+        </AppProviders>
       </body>
     </html>
   );
