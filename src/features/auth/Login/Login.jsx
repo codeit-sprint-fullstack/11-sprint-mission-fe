@@ -2,23 +2,32 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { loginSchema } from '@/utils/schemas/authSchema.js';
 import logoImg from '@/assets/logo/logo_lg.svg';
 import FormField from '@/components/common/FormField';
 import Button from '@/components/common/Button';
 import SocialLogin from '@/components/auth/SocialLogin';
 import * as styles from './Login.css.js';
 
-// 구조만 작성, 기능은 다음 과제에서 구현
 export default function Login() {
-  const [values, setValues] = useState({ email: '', password: '' });
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isValid },
+  } = useForm({
+    resolver: zodResolver(loginSchema), // zod 검사
+    mode: 'onChange',
+    defaultValues: {
+      email: '',
+      password: '',
+    },
+  });
 
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    setValues((prev) => ({ ...prev, [name]: value }));
+  const onSubmit = (data) => {
+    console.log('로그인 시도 데이터:', data);
   };
-
-  const isValid = values.email.trim() !== '' && values.password.trim() !== '';
 
   return (
     <div className={styles.container}>
@@ -29,23 +38,21 @@ export default function Login() {
       </div>
 
       <div className={styles.formWrapper}>
-        <form className={styles.form}>
+        <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
           <FormField
-            name="email"
             type="email"
             label="이메일"
             placeholder="이메일을 입력해주세요"
-            value={values.email}
-            onChange={handleChange}
+            error={errors.email?.message}
+            {...register('email')}
           />
 
           <FormField
-            name="password"
             type="password"
             label="비밀번호"
             placeholder="비밀번호를 입력해주세요"
-            value={values.password}
-            onChange={handleChange}
+            error={errors.password?.message}
+            {...register('password')}
           />
 
           <Button

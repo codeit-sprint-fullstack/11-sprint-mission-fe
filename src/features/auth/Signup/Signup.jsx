@@ -2,32 +2,35 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { signupSchema } from '@/utils/schemas/authSchema.js';
 import logoImg from '@/assets/logo/logo_lg.svg';
 import FormField from '@/components/common/FormField';
 import Button from '@/components/common/Button';
 import SocialLogin from '@/components/auth/SocialLogin';
 import * as styles from './Signup.css.js';
 
-// 구조만 작성, 기능은 다음 과제에서 구현
 export default function Signup() {
-  const [values, setValues] = useState({
-    email: '',
-    nickname: '',
-    password: '',
-    passwordConfirm: '',
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isValid },
+  } = useForm({
+    resolver: zodResolver(signupSchema), // zod 검사
+    mode: 'onChange',
+    defaultValues: {
+      email: '',
+      nickname: '',
+      password: '',
+      passwordConfirm: '',
+    },
   });
 
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    setValues((prev) => ({ ...prev, [name]: value }));
+  const onSubmit = (data) => {
+    const { passwordConfirm, ...signupData } = data;
+    console.log('회원가입 데이터:', signupData);
   };
-
-  const isValid =
-    values.email.trim() !== '' &&
-    values.nickname.trim() !== '' &&
-    values.password.trim() !== '' &&
-    values.password === values.passwordConfirm;
 
   return (
     <div className={styles.container}>
@@ -38,41 +41,37 @@ export default function Signup() {
       </div>
 
       <div className={styles.formWrapper}>
-        <form className={styles.form}>
+        <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
           <FormField
-            name="email"
             type="email"
             label="이메일"
             placeholder="이메일을 입력해주세요"
-            value={values.email}
-            onChange={handleChange}
+            error={errors.email?.message}
+            {...register('email')}
           />
 
           <FormField
-            name="nickname"
             type="text"
             label="닉네임"
             placeholder="닉네임을 입력해주세요"
-            value={values.nickname}
-            onChange={handleChange}
+            error={errors.nickname?.message}
+            {...register('nickname')}
           />
 
           <FormField
-            name="password"
             type="password"
             label="비밀번호"
             placeholder="비밀번호를 입력해주세요"
-            value={values.password}
-            onChange={handleChange}
+            error={errors.password?.message}
+            {...register('password')}
           />
 
           <FormField
-            name="passwordConfirm"
             type="password"
             label="비밀번호 확인"
             placeholder="비밀번호를 다시 한 번 입력해주세요"
-            value={values.passwordConfirm}
-            onChange={handleChange}
+            error={errors.passwordConfirm?.message}
+            {...register('passwordConfirm')}
           />
 
           <Button

@@ -5,13 +5,13 @@ import { style } from '@vanilla-extract/css';
 export const inputSection = style({
   display: 'flex',
   flexDirection: 'column',
-  gap: '1.2rem',
 });
 
 export const label = style({
   fontSize: vars.fontSize.sm,
   fontWeight: vars.fontWeight.bold,
   color: vars.color.gray800,
+  marginBottom: '1.2rem',
 });
 
 export const inputWrapper = style({
@@ -47,11 +47,11 @@ export const inputVariants = styleVariants({
 export const errorInput = style({
   border: `1px solid ${vars.color.red}`,
 
-  // selectors: {
-  //   '&:focus': {
-  //     border: `1px solid ${vars.color.red}`,
-  //   },
-  // },
+  selectors: {
+    '&:focus': {
+      border: `1px solid ${vars.color.red}`,
+    },
+  },
 });
 
 export const errorMessage = style({
@@ -59,6 +59,7 @@ export const errorMessage = style({
   fontWeight: vars.fontWeight.semibold,
   color: vars.color.red,
   marginTop: '0.8rem',
+  marginLeft: '1.8rem',
 });
 
 export const eyeButton = style({
