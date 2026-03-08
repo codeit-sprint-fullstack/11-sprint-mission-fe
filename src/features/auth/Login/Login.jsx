@@ -2,32 +2,26 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { loginSchema } from '@/utils/schemas/authSchema.js';
+import { useLoginForm } from '@/hooks/auth/useLoginForm.js';
 import logoImg from '@/assets/logo/logo_lg.svg';
 import FormField from '@/components/common/FormField';
 import Button from '@/components/common/Button';
 import SocialLogin from '@/components/auth/SocialLogin';
 import * as styles from './Login.css.js';
+import { useEffect } from 'react';
+import { useRouter } from 'next/navigation.js';
+import { useUser } from '@/hooks/auth/useUser.js';
 
 export default function Login() {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors, isValid },
-  } = useForm({
-    resolver: zodResolver(loginSchema), // zod 검사
-    mode: 'onChange',
-    defaultValues: {
-      email: '',
-      password: '',
-    },
-  });
+  const { register, handleSubmit, errors, isValid, isLoading } = useLoginForm();
+  const { isLoggedIn } = useUser();
+  const router = useRouter();
 
-  const onSubmit = (data) => {
-    console.log('로그인 시도 데이터:', data);
-  };
+  useEffect(() => {
+    if (isLoggedIn) {
+      router.push('/items');
+    }
+  }, [isLoggedIn, router]);
 
   return (
     <div className={styles.container}>
@@ -38,7 +32,7 @@ export default function Login() {
       </div>
 
       <div className={styles.formWrapper}>
-        <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+        <form className={styles.form} onSubmit={handleSubmit}>
           <FormField
             type="email"
             label="이메일"
@@ -58,11 +52,11 @@ export default function Login() {
           <Button
             shape="round"
             size="xl"
-            color={isValid ? 'primary' : 'inactive'}
-            disabled={!isValid}
+            color={isValid && !isLoading ? 'primary' : 'inactive'}
+            disabled={!isValid || isLoading}
             className={styles.loginButton}
           >
-            로그인
+            {isLoading ? '로그인 중...' : '로그인'}
           </Button>
         </form>
 

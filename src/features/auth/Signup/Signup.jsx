@@ -2,35 +2,26 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { signupSchema } from '@/utils/schemas/authSchema.js';
+import { useSignUpForm } from '@/hooks/auth/useSignUpForm.js';
 import logoImg from '@/assets/logo/logo_lg.svg';
 import FormField from '@/components/common/FormField';
 import Button from '@/components/common/Button';
 import SocialLogin from '@/components/auth/SocialLogin';
 import * as styles from './Signup.css.js';
+import { useEffect } from 'react';
+import { useRouter } from 'next/navigation.js';
+import { useUser } from '@/hooks/auth/useUser.js';
 
 export default function Signup() {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors, isValid },
-  } = useForm({
-    resolver: zodResolver(signupSchema), // zod 검사
-    mode: 'onChange',
-    defaultValues: {
-      email: '',
-      nickname: '',
-      password: '',
-      passwordConfirm: '',
-    },
-  });
+  const { register, handleSubmit, errors, isValid, isLoading } = useSignUpForm();
+  const { isLoggedIn } = useUser();
+  const router = useRouter();
 
-  const onSubmit = (data) => {
-    const { passwordConfirm, ...signupData } = data;
-    console.log('회원가입 데이터:', signupData);
-  };
+  useEffect(() => {
+    if (isLoggedIn) {
+      router.push('/items');
+    }
+  }, [isLoggedIn, router]);
 
   return (
     <div className={styles.container}>
@@ -41,7 +32,7 @@ export default function Signup() {
       </div>
 
       <div className={styles.formWrapper}>
-        <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+        <form className={styles.form} onSubmit={handleSubmit}>
           <FormField
             type="email"
             label="이메일"
@@ -70,18 +61,18 @@ export default function Signup() {
             type="password"
             label="비밀번호 확인"
             placeholder="비밀번호를 다시 한 번 입력해주세요"
-            error={errors.passwordConfirm?.message}
-            {...register('passwordConfirm')}
+            error={errors.passwordConfirmation?.message}
+            {...register('passwordConfirmation')}
           />
 
           <Button
             shape="round"
             size="xl"
-            color={isValid ? 'primary' : 'inactive'}
-            disabled={!isValid}
+            color={isValid && !isLoading ? 'primary' : 'inactive'}
+            disabled={!isValid || isLoading}
             className={styles.loginButton}
           >
-            회원가입
+            {isLoading ? '가입 처리 중...' : '회원가입'}
           </Button>
         </form>
 
