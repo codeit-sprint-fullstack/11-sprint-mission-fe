@@ -1,5 +1,6 @@
 'use client';
 
+import { MINUTE_MS } from '@/utils/constants';
 import {
   isServer,
   QueryClient,
@@ -7,13 +8,11 @@ import {
 } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 
-const ONE_MINUTE_MS = 60_000;
-
 function makeQueryClient() {
   return new QueryClient({
     defaultOptions: {
       queries: {
-        staleTime: ONE_MINUTE_MS,
+        staleTime: MINUTE_MS,
       },
     },
   });

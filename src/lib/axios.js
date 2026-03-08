@@ -1,8 +1,7 @@
 import { SECOND_MS } from '@/utils/constants';
 import axios from 'axios';
 
-
-const BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL;
 
 export const publicApi = axios.create({
   baseURL: BASE_URL,
@@ -32,7 +31,10 @@ api.interceptors.request.use(
 
     return config;
   },
-  (error) => Promise.reject(error),
+
+  (error) => {
+    return Promise.reject(error);
+  },
 );
 
 api.interceptors.response.use(
