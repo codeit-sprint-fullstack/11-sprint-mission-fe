@@ -10,16 +10,25 @@ import * as styles from './ProductList.css.js';
 export default async function ProductList({ searchParams }) {
   const params = await searchParams;
   const page = Number(params.page) || 1;
-  const sort = params.sort || 'recent';
+  const orderBy = params.orderBy || 'recent';
   const keyword = params.q || '';
 
-  const { products, pagination } = await getProductList({
+  // const { products, pagination } = await getProductList({
+  //   page,
+  //   keyword,
+  //   sort,
+  // });
+
+  // const totalPages = Math.ceil(pagination.totalCount / PRODUCT_PAGESIZE) || 1;
+
+  const { list: products, totalCount } = await getProductList({
     page,
     keyword,
-    sort,
+    orderBy,
+    pageSize: PRODUCT_PAGESIZE, 
   });
 
-  const totalPages = Math.ceil(pagination.totalCount / PRODUCT_PAGESIZE) || 1;
+  const totalPages = Math.ceil(totalCount / PRODUCT_PAGESIZE) || 1;
 
   return (
     <section className={styles.productList}>
@@ -34,7 +43,7 @@ export default async function ProductList({ searchParams }) {
           </Link>
         </div>
 
-        <ListControls currentSort={sort} currentKeyword={keyword} />
+        <ListControls currentSort={orderBy} currentKeyword={keyword} />
       </div>
 
       {/* 반응형 + 페이지네이션 수정 필요!! */}

@@ -1,9 +1,16 @@
 import ProductCard from '@/components/products/ProductCard';
-import { getBestProducts } from '@/services/productService';
+import { getProductList } from '@/services/productService';
 import * as styles from './BestProducts.css.js';
 
 export default async function BestProducts() {
-  const bestProducts = await getBestProducts();
+  // const bestProducts = await getBestProducts();
+  const response = await getProductList({ 
+    orderBy: 'favorite', 
+    pageSize: 4 
+  });
+
+  // 2. 서버 응답 객체에서 list 배열을 안전하게 꺼냅니다.
+  const bestProducts = response.list || [];
 
   if (bestProducts.length === 0) {
     return null;
