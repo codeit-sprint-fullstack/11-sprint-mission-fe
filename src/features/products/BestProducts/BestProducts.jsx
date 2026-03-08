@@ -1,16 +1,18 @@
+'use client';
+
 import ProductCard from '@/components/products/ProductCard';
-import { getProductList } from '@/services/productService';
+import { MINUTE_MS } from '@/utils/constants.js';
+import { queryKeys } from '@/lib/queryKeys.js';
+import { productsAPI } from '@/services/productsApi.js';
+import { useSuspenseQuery } from '@tanstack/react-query';
 import * as styles from './BestProducts.css.js';
 
-export default async function BestProducts() {
-  // const bestProducts = await getBestProducts();
-  const response = await getProductList({ 
-    orderBy: 'favorite', 
-    pageSize: 4 
+export default function BestProducts() {
+  const { data: bestProducts } = useSuspenseQuery({
+    queryKey: queryKeys.products.best(),
+    queryFn: productsAPI.getBestProducts,
+    staleTime: MINUTE_MS * 10,
   });
-
-  // 2. 서버 응답 객체에서 list 배열을 안전하게 꺼냅니다.
-  const bestProducts = response.list || [];
 
   if (bestProducts.length === 0) {
     return null;

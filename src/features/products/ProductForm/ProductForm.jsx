@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Button from '@/components/common/Button';
 import FormField from '@/components/common/FormField';
-import { createProduct, updateProduct } from '@/services/productService.js';
+import { createProduct, updateProduct } from '@/services/productsApi.js';
 import { useFormSubmit, useTagInput } from '@/hooks';
 import { IoIosCloseCircle } from 'react-icons/io';
 import * as styles from './ProductForm.css.js';
