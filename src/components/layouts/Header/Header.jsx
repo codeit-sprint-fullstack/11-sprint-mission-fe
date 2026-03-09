@@ -8,9 +8,12 @@ import Button from '@/components/common/Button';
 import logoMobile from '@/assets/logo/logo_text.svg';
 import logoDesktop from '@/assets/logo/logo_sm.svg';
 import * as styles from './Header.css.js';
+import { useUser } from '@/hooks/auth/useUser.js';
+import Profile from '@/components/auth/Profile';
 
 export default function Header() {
   const pathname = usePathname(); // 현재 경로
+  const { isLoggedIn, isLoading } = useUser();
 
   return (
     <header className={styles.header}>
@@ -43,10 +46,10 @@ export default function Header() {
             </li>
             <li>
               <Link
-                href="/products"
+                href="/items"
                 className={clsx(
                   styles.navLink,
-                  pathname === '/products' && styles.activeLink,
+                  pathname === '/items' && styles.activeLink,
                 )}
               >
                 중고마켓
@@ -56,11 +59,16 @@ export default function Header() {
         </div>
 
         <div className={styles.headerButton}>
-          <Link href="/login">
-            <Button shape="square" size="md" color="primary">
-              로그인
-            </Button>
-          </Link>
+          {!isLoading &&
+            (isLoggedIn ? (
+              <Profile />
+            ) : (
+              <Link href="/login">
+                <Button shape="square" size="md" color="primary">
+                  로그인
+                </Button>
+              </Link>
+            ))}
         </div>
       </div>
     </header>

@@ -3,22 +3,23 @@ import Link from 'next/link';
 import clsx from 'clsx';
 import { FiHeart } from 'react-icons/fi';
 import { formatCount } from '@/utils';
+import defaultImg from '@/assets/images/Img_product_lg.svg';
 import * as styles from './ProductCard.css.js';
 
 export default function ProductCard({ product, type = 'list' }) {
-  const { id, name, image, price, _count } = product;
-  const likeCount = formatCount(_count.likes);
-  const thumbnail = image?.[0] || null;
+  const { id, name, images, price, favoriteCount } = product;
+  const likeCount = formatCount(favoriteCount || 0);
+  const thumbnail = images?.[0] || defaultImg;
 
   return (
     <Link
-      href={`/products/${id}`}
+      href={`/items/${id}`}
       className={clsx(styles.cardBase, styles.cardType[type])}
     >
       <div className={styles.imageContainer}>
         <Image
           src={thumbnail}
-          alt={name}
+          alt={name || '상품 이미지'}
           fill
           className={styles.productImg}
         />

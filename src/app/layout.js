@@ -1,4 +1,6 @@
 import localFont from 'next/font/local';
+import AppProviders from '@/providers/AppProviders';
+import Modal from '@/components/common/Modal';
 import '@/styles/index';
 
 const pretendard = localFont({
@@ -16,7 +18,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ko" className={pretendard.variable}>
-      <body>{children}</body>
+      <body>
+        <AppProviders>
+          {children}
+          <Modal />
+        </AppProviders>
+      </body>
     </html>
   );
 }

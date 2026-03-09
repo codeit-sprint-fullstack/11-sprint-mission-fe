@@ -1,9 +1,18 @@
+'use client';
+
 import ProductCard from '@/components/products/ProductCard';
-import { getBestProducts } from '@/services/productService';
+import { MINUTE_MS } from '@/utils/constants.js';
+import { queryKeys } from '@/lib/queryKeys.js';
+import { productsAPI } from '@/services/productsApi.js';
+import { useSuspenseQuery } from '@tanstack/react-query';
 import * as styles from './BestProducts.css.js';
 
-export default async function BestProducts() {
-  const bestProducts = await getBestProducts();
+export default function BestProducts() {
+  const { data: bestProducts } = useSuspenseQuery({
+    queryKey: queryKeys.products.best(),
+    queryFn: productsAPI.getBestProducts,
+    staleTime: MINUTE_MS * 10,
+  });
 
   if (bestProducts.length === 0) {
     return null;

@@ -9,7 +9,7 @@ export default function HomePage() {
       <Banner
         title={`일상의 모든 물건을\n거래해 보세요`}
         buttonText={`구매하러 가기`}
-        buttonLink="/products"
+        buttonLink="/items"
         imageSrc={TopBannerImg}
       />
 

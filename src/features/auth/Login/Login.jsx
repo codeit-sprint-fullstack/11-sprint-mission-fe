@@ -2,23 +2,26 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useLoginForm } from '@/hooks/auth/useLoginForm.js';
 import logoImg from '@/assets/logo/logo_lg.svg';
 import FormField from '@/components/common/FormField';
 import Button from '@/components/common/Button';
 import SocialLogin from '@/components/auth/SocialLogin';
 import * as styles from './Login.css.js';
+import { useEffect } from 'react';
+import { useRouter } from 'next/navigation.js';
+import { useUser } from '@/hooks/auth/useUser.js';
 
-// 구조만 작성, 기능은 다음 과제에서 구현
 export default function Login() {
-  const [values, setValues] = useState({ email: '', password: '' });
+  const { register, handleSubmit, errors, isValid, isLoading } = useLoginForm();
+  const { isLoggedIn } = useUser();
+  const router = useRouter();
 
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    setValues((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const isValid = values.email.trim() !== '' && values.password.trim() !== '';
+  useEffect(() => {
+    if (isLoggedIn) {
+      router.push('/items');
+    }
+  }, [isLoggedIn, router]);
 
   return (
     <div className={styles.container}>
@@ -29,33 +32,31 @@ export default function Login() {
       </div>
 
       <div className={styles.formWrapper}>
-        <form className={styles.form}>
+        <form className={styles.form} onSubmit={handleSubmit}>
           <FormField
-            name="email"
             type="email"
             label="이메일"
             placeholder="이메일을 입력해주세요"
-            value={values.email}
-            onChange={handleChange}
+            error={errors.email?.message}
+            {...register('email')}
           />
 
           <FormField
-            name="password"
             type="password"
             label="비밀번호"
             placeholder="비밀번호를 입력해주세요"
-            value={values.password}
-            onChange={handleChange}
+            error={errors.password?.message}
+            {...register('password')}
           />
 
           <Button
             shape="round"
             size="xl"
-            color={isValid ? 'primary' : 'inactive'}
-            disabled={!isValid}
+            color={isValid && !isLoading ? 'primary' : 'inactive'}
+            disabled={!isValid || isLoading}
             className={styles.loginButton}
           >
-            로그인
+            {isLoading ? '로그인 중...' : '로그인'}
           </Button>
         </form>
 

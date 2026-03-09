@@ -1,25 +1,35 @@
+'use client';
+
 import Link from 'next/link';
 import Button from '@/components/common/Button';
 import ListControls from '@/components/common/ListControls';
 import ProductCard from '@/components/products/ProductCard';
 import Pagination from '@/components/common/Pagination';
-import { getProductList } from '@/services/productService';
-import { PAGE_RANGE, PRODUCT_PAGESIZE } from '@/utils/constants.js';
+import { productsAPI } from '@/services/productsApi.js';
+import { MINUTE_MS, PAGE_RANGE, PRODUCT_PAGESIZE } from '@/utils/constants.js';
+import { useSuspenseQuery } from '@tanstack/react-query';
+import { queryKeys } from '@/lib/queryKeys.js';
+import { useSearchParams } from 'next/navigation.js';
 import * as styles from './ProductList.css.js';
 
-export default async function ProductList({ searchParams }) {
-  const params = await searchParams;
-  const page = Number(params.page) || 1;
-  const sort = params.sort || 'recent';
-  const keyword = params.q || '';
+export default function ProductList() {
+  const searchParams = useSearchParams();
 
-  const { products, pagination } = await getProductList({
-    page,
-    keyword,
-    sort,
+  const page = Number(searchParams.get('page')) || 1;
+  const orderBy = searchParams.get('orderBy') || 'recent';
+  const keyword = searchParams.get('q') || '';
+
+  const params = { page, orderBy, keyword, pageSize: PRODUCT_PAGESIZE };
+
+  const { data } = useSuspenseQuery({
+    queryKey: queryKeys.products.list(params),
+    queryFn: () => productsAPI.getProductList(params),
+    staleTime: MINUTE_MS,
   });
 
-  const totalPages = Math.ceil(pagination.totalCount / PRODUCT_PAGESIZE) || 1;
+  const products = data?.list || [];
+  const totalCount = data?.totalCount || 0;
+  const totalPages = Math.ceil(totalCount / PRODUCT_PAGESIZE) || 1;
 
   return (
     <section className={styles.productList}>
@@ -34,7 +44,7 @@ export default async function ProductList({ searchParams }) {
           </Link>
         </div>
 
-        <ListControls currentSort={sort} currentKeyword={keyword} />
+        <ListControls currentSort={orderBy} currentKeyword={keyword} />
       </div>
 
       {/* 반응형 + 페이지네이션 수정 필요!! */}

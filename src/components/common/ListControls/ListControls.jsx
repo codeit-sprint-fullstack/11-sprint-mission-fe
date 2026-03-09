@@ -48,13 +48,13 @@ function ListControlsInner({ currentSort, currentKeyword }) {
       >
         <div
           className={styles.sortOption}
-          onClick={() => handleUpdate('sort', 'recent')}
+          onClick={() => handleUpdate('orderBy', 'recent')}
         >
           최신순
         </div>
         <div
           className={styles.sortOption}
-          onClick={() => handleUpdate('sort', 'likes')}
+          onClick={() => handleUpdate('orderBy', 'favorite')}
         >
           좋아요순
         </div>

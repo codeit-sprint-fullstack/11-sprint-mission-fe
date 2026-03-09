@@ -1,4 +1,4 @@
-import { getProductById } from '@/services/productService';
+import { getProductById } from '@/services/productsApi';
 import ProductDetail from './ProductDetail';
 
 export default async function ProductDetailContainer({ id }) {
